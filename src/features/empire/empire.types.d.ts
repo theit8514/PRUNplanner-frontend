@@ -2,7 +2,20 @@ import {
 	PLAN_COGCPROGRAM_TYPE,
 	PLAN_FACTION,
 } from "@/stores/planningStore.types";
-import { IMaterialIO } from "@/features/planning/usePlanCalculation.types";
+import {
+	IMaterialIO,
+	IProductionBuildingRecipeCOGM,
+} from "@/features/planning/usePlanCalculation.types";
+
+export interface IEmpireCOGMRow {
+	planUuid: string;
+	planName: string;
+	planetNaturalId: string;
+	ticker: string;
+	amount: number;
+	costSplit: number;
+	cogm: IProductionBuildingRecipeCOGM;
+}
 
 interface IEmpirePlanListData {
 	uuid: string;

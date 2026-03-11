@@ -6,6 +6,7 @@
 		ref,
 		Ref,
 		toRef,
+		watch,
 	} from "vue";
 
 	// Unhead
@@ -13,6 +14,9 @@
 	useHead({
 		title: "Empire | PRUNplanner",
 	});
+
+	// Stores
+	import { usePlanningStore } from "@/stores/planningStore";
 
 	// Composables
 	import { useQuery } from "@/lib/query_cache/useQuery";
@@ -48,16 +52,27 @@
 
 	// Types & Interfaces
 	import { IPlan, IPlanEmpireElement } from "@/stores/planningStore.types";
-	import { IPlanResult } from "@/features/planning/usePlanCalculation.types";
+	import {
+		IPlanResult,
+		IProductionBuildingRecipeCOGM,
+	} from "@/features/planning/usePlanCalculation.types";
 	import {
 		IEmpireCostOverview,
 		IEmpireMaterialIO,
 		IEmpirePlanListData,
 		IEmpirePlanMaterialIO,
+		IEmpireCOGMRow,
 	} from "@/features/empire/empire.types";
 
 	// UI
-	import { PForm, PFormItem, PSelect, PButton, PSpin } from "@/ui";
+	import {
+		PForm,
+		PFormItem,
+		PSelect,
+		PButton,
+		PButtonGroup,
+		PSpin,
+	} from "@/ui";
 
 	const props = defineProps({
 		empireUuid: {
@@ -99,14 +114,27 @@
 
 	const cacheCalculatedPlans = new Map<string, IPlanResult>();
 
-	async function calculateEmpire(clearCache = false): Promise<void> {
-		isCalculating.value = true;
-
-		calculatedPlans.value = {};
-		progressTotal.value = planData.value.length;
-		progressCurrent.value = 0;
+	/**
+	 * Recalculates empire plans. When silent is true, runs in the background
+	 * without showing the full-screen progress or unmounting content (preserves
+	 * filter state). Use silent for e.g. CX preference updates from the COGM popup.
+	 */
+	async function calculateEmpire(
+		clearCache = false,
+		silent = false
+	): Promise<void> {
+		if (!silent) {
+			isCalculating.value = true;
+			calculatedPlans.value = {};
+			progressTotal.value = planData.value.length;
+			progressCurrent.value = 0;
+		}
 
 		if (clearCache) cacheCalculatedPlans.clear();
+
+		const nextPlans: Record<string, IPlanResult> = silent
+			? { ...calculatedPlans.value }
+			: {};
 
 		for (const plan of planData.value) {
 			// note, calculation depends on empire + cx, so a plan is only
@@ -115,9 +143,8 @@
 			const cacheKey: string = `${plan.uuid}#${selectedCXUuid.value}#${selectedCXUuid.value}`;
 
 			if (cacheCalculatedPlans.has(cacheKey)) {
-				calculatedPlans.value[plan.uuid!] =
-					cacheCalculatedPlans.get(cacheKey)!;
-				progressCurrent.value++;
+				nextPlans[plan.uuid!] = cacheCalculatedPlans.get(cacheKey)!;
+				if (!silent) progressCurrent.value++;
 			} else {
 				await Promise.resolve();
 
@@ -129,18 +156,16 @@
 				);
 
 				const result = await calculate();
-				calculatedPlans.value[plan.uuid!] = result;
-				progressCurrent.value++;
-
-				// cache
+				nextPlans[plan.uuid!] = result;
 				cacheCalculatedPlans.set(cacheKey, result);
-				// yield back to vue and update DOM
-				await new Promise((r) => setTimeout(r, 0));
+				if (!silent) progressCurrent.value++;
+
+				if (!silent)
+					await new Promise((r) => setTimeout(r, 0));
 			}
 		}
 
-		isCalculating.value = false;
-
+		if (!silent) isCalculating.value = false;
 		empireMaterialIOState(
 			selectedEmpire.value,
 			combinedEmpireMaterialIO.value
@@ -152,6 +177,21 @@
 				}).execute();
 		});
 	}
+
+	// When the selected CX is updated in the store (e.g. Save/Reload in COGM popup),
+	// recalculate silently so the grid and popup stay in sync — same as Plan view,
+	// where usePlanCalculation watches store.cxs and recalculates automatically.
+	watch(
+		() =>
+			selectedCXUuid.value
+				? planningStore.cxs[selectedCXUuid.value]
+				: undefined,
+		() => {
+			if (selectedCXUuid.value && planData.value.length)
+				calculateEmpire(true, true);
+		},
+		{ deep: true }
+	);
 
 	/**
 	 * Reloads empires forcefully by triggering store reload
@@ -277,6 +317,71 @@
 	);
 
 	/**
+	 * Stable signature for recipe inputs (ticker:amount pairs, sorted by ticker)
+	 * so rows with the same plan, inputs and output can be deduplicated.
+	 */
+	function getCogmInputSignature(cogm: IProductionBuildingRecipeCOGM): string {
+		return cogm.inputCost
+			.slice()
+			.sort((a, b) => a.ticker.localeCompare(b.ticker))
+			.map((c) => `${c.ticker}:${c.amount}`)
+			.join(",");
+	}
+
+	/**
+	 * Holds computed COGM rows for the currently selected empire.
+	 * Rows with the same plan, input set and output ticker are merged (e.g. two
+	 * H2O→DW lines become one); recipes with different inputs stay separate.
+	 *
+	 * @type {ComputedRef<IEmpireCOGMRow[]>} COGM Rows
+	 */
+	const empireCogm: ComputedRef<IEmpireCOGMRow[]> = computed(() => {
+		const rawRows: { key: string; row: IEmpireCOGMRow }[] = [];
+
+		for (const [planUuid, planResult] of Object.entries(
+			calculatedPlans.value
+		)) {
+			const plan = planData.value.find((p) => p.uuid === planUuid);
+			const planName = plan?.plan_name ?? planUuid ?? "Unknown";
+			const planetNaturalId = plan?.planet_natural_id ?? "";
+
+			for (const building of planResult.production.buildings) {
+				for (const recipe of building.activeRecipes) {
+					if (
+						recipe.cogm?.outputCOGM == null ||
+						recipe.cogm.visible !== true
+					)
+						continue;
+
+					for (const output of recipe.cogm.outputCOGM) {
+						rawRows.push({
+							key: `${planUuid}|${getCogmInputSignature(recipe.cogm)}|${output.ticker}`,
+							row: {
+								planUuid,
+								planName,
+								planetNaturalId,
+								ticker: output.ticker,
+								amount: output.amount,
+								costSplit: output.costSplit,
+								cogm: recipe.cogm,
+							},
+						});
+					}
+				}
+			}
+		}
+
+		const grouped = new Map<string, IEmpireCOGMRow>();
+		for (const r of rawRows) {
+			const k = r.key;
+			if (!grouped.has(k)) {
+				grouped.set(k, r.row);
+			}
+		}
+		return Array.from(grouped.values());
+	});
+
+	/**
 	 * Holds computed empire options
 	 *
 	 * @author jplacht
@@ -290,19 +395,8 @@
 		})
 	);
 
-	const mainContent = ref<"materialio" | "analysis">("materialio");
+	const mainContent = ref<"materialio" | "analysis" | "cogm">("materialio");
 
-	const switchText = computed(() =>
-		mainContent.value === "materialio"
-			? "Empire Analysis"
-			: "Empire Material I/O"
-	);
-
-	// dafuq does Vite complain it would change a computed here?
-	function switchMainContent(): void {
-		mainContent.value =
-			mainContent.value === "materialio" ? "analysis" : "materialio";
-	}
 </script>
 
 <template>
@@ -347,9 +441,35 @@
 								<PSpin v-if="isCalculating" />
 							</div>
 							<div class="gap-3 flex flex-row flex-wrap">
-								<PButton @click="switchMainContent">
-									{{ switchText }}
-								</PButton>
+								<PButtonGroup>
+									<PButton
+										:type="
+											mainContent === 'materialio'
+												? 'primary'
+												: 'secondary'
+										"
+										@click="mainContent = 'materialio'">
+										Material I/O
+									</PButton>
+									<PButton
+										:type="
+											mainContent === 'analysis'
+												? 'primary'
+												: 'secondary'
+										"
+										@click="mainContent = 'analysis'">
+										Analysis
+									</PButton>
+									<PButton
+										:type="
+											mainContent === 'cogm'
+												? 'primary'
+												: 'secondary'
+										"
+										@click="mainContent = 'cogm'">
+										COGM
+									</PButton>
+								</PButtonGroup>
 								<HelpDrawer file-name="empire" />
 							</div>
 						</div>
@@ -408,7 +528,9 @@
 									:empire-material-i-o="
 										combinedEmpireMaterialIO
 									"
-									:plan-list-data="planListData" />
+									:empire-cogm="empireCogm"
+									:plan-list-data="planListData"
+									:cx-uuid="selectedCXUuid" />
 							</div>
 						</div>
 					</div>

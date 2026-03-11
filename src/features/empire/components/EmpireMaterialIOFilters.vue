@@ -22,6 +22,10 @@
 			type: Boolean,
 			required: true,
 		},
+		hideDisplayConsumables: {
+			type: Boolean,
+			default: false,
+		},
 		filterMaterials: {
 			type: Array as PropType<string[]>,
 			required: true,
@@ -84,7 +88,7 @@
 <template>
 	<div class="grid grid-cols-1 xl:grid-cols-[max-content_auto] gap-6">
 		<div>
-			<PForm>
+			<PForm v-if="!hideDisplayConsumables">
 				<PFormItem label="Display">
 					<PButtonGroup>
 						<PButton
