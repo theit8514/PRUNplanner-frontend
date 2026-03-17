@@ -50,6 +50,12 @@
 		showDetails.value = true;
 	}
 
+	function getDifferenceClass(diff: number): string {
+		if (diff > 0) return 'text-positive';
+		if (diff < 0) return 'text-negative';
+		return '';
+	}
+
 	// When rows are recalculated (e.g. after Save/Reload in popup), refresh the modal data if it's open.
 	watch(
 		() => props.rows,
@@ -108,10 +114,56 @@
 			</template>
 		</XNDataTableColumn>
 		<XNDataTableColumn key="costSplit" title="COGM" sorter="default">
+			<template #title>
+				<div class="text-end">COGM</div>
+			</template>
 			<template #render-cell="{ rowData }">
 				<div class="text-nowrap text-end">
 					{{ formatNumber(rowData.costSplit) }}
 					<span class="pl-1 font-light text-white/50"> $ </span>
+				</div>
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="cxSellValue" title="CX Sell" sorter="default">
+			<template #title>
+				<div class="text-end">CX Sell</div>
+			</template>
+			<template #render-cell="{ rowData }">
+				<div class="text-nowrap text-end">
+					<template
+						v-if="
+							rowData.cxSellValue !== undefined &&
+							rowData.cxSellValue !== null
+						">
+						{{ formatNumber(rowData.cxSellValue) }}
+						<span class="pl-1 font-light text-white/50"> $ </span>
+					</template>
+					<template v-else>—</template>
+				</div>
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="sellMinusCogm" title="Estimated Profit" sorter="default">
+			<template #title>
+				<div class="text-end">Estimated Profit</div>
+			</template>
+			<template #render-cell="{ rowData }">
+				<div
+					class="text-nowrap text-end"
+					:class="
+						rowData.sellMinusCogm !== undefined &&
+						rowData.sellMinusCogm !== null
+							? getDifferenceClass(rowData.sellMinusCogm)
+							: ''
+					">
+					<template
+						v-if="
+							rowData.sellMinusCogm !== undefined &&
+							rowData.sellMinusCogm !== null
+						">
+						{{ formatNumber(rowData.sellMinusCogm) }}
+						<span class="pl-1 font-light text-white/50"> $ </span>
+					</template>
+					<template v-else>—</template>
 				</div>
 			</template>
 		</XNDataTableColumn>

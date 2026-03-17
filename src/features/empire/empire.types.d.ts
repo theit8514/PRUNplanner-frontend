@@ -15,6 +15,10 @@ export interface IEmpireCOGMRow {
 	amount: number;
 	costSplit: number;
 	cogm: IProductionBuildingRecipeCOGM;
+	/** CX sell price per unit (when CX selected); set during enrichment. */
+	cxSellValue?: number | null;
+	/** cxSellValue - costSplit; set during enrichment. */
+	sellMinusCogm?: number | null;
 }
 
 interface IEmpirePlanListData {

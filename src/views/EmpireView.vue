@@ -24,6 +24,7 @@
 	import { usePlanCalculation } from "@/features/planning/usePlanCalculation";
 	import { useMaterialIOUtil } from "@/features/planning/util/materialIO.util";
 	import { usePreferences } from "@/features/preferences/usePreferences";
+	import { usePrice } from "@/features/cx/usePrice";
 	const { combineEmpireMaterialIO, empireMaterialIOState } =
 		await useMaterialIOUtil();
 	const { defaultEmpireUuid } = usePreferences();
@@ -386,6 +387,40 @@
 		return Array.from(grouped.values());
 	});
 
+	const empireCogmEnriched: Ref<IEmpireCOGMRow[]> = ref([]);
+	watch(
+		[empireCogm, selectedCXUuid],
+		async () => {
+			const base = empireCogm.value;
+			const enriched: IEmpireCOGMRow[] = base.map((r) => ({
+				...r,
+				cxSellValue: null,
+				sellMinusCogm: null,
+			}));
+			if (!selectedCXUuid.value || base.length === 0) {
+				empireCogmEnriched.value = enriched;
+				return;
+			}
+			const byPlanet = new Map<string, IEmpireCOGMRow[]>();
+			for (const row of enriched) {
+				const list = byPlanet.get(row.planetNaturalId) ?? [];
+				list.push(row);
+				byPlanet.set(row.planetNaturalId, list);
+			}
+			for (const [planetId, rows] of byPlanet) {
+				const planetRef = ref(planetId);
+				const { getPrice } = await usePrice(selectedCXUuid, planetRef);
+				for (const row of rows) {
+					const sell = await getPrice(row.ticker, "SELL");
+					row.cxSellValue = sell;
+					row.sellMinusCogm = sell - row.costSplit;
+				}
+			}
+			empireCogmEnriched.value = enriched;
+		},
+		{ immediate: true, deep: true }
+	);
+
 	/**
 	 * Holds computed empire options
 	 *
@@ -534,7 +569,7 @@
 									:empire-material-i-o="
 										combinedEmpireMaterialIO
 									"
-									:empire-cogm="empireCogm"
+									:empire-cogm="empireCogmEnriched"
 									:plan-list-data="planListData"
 									:cx-uuid="selectedCXUuid" />
 							</div>
