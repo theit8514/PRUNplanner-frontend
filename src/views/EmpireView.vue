@@ -17,6 +17,7 @@
 
 	// Stores
 	import { usePlanningStore } from "@/stores/planningStore";
+	const planningStore = usePlanningStore();
 
 	// Composables
 	import { useQuery } from "@/lib/query_cache/useQuery";
@@ -125,6 +126,7 @@
 	): Promise<void> {
 		if (!silent) {
 			isCalculating.value = true;
+
 			calculatedPlans.value = {};
 			progressTotal.value = planData.value.length;
 			progressCurrent.value = 0;
@@ -132,11 +134,12 @@
 
 		if (clearCache) cacheCalculatedPlans.clear();
 
-		const nextPlans: Record<string, IPlanResult> = silent
-			? { ...calculatedPlans.value }
-			: {};
+		// Always build the next state from current `planData` only.
+		// (When switching empires, `planData` changes and we must not retain stale plans.)
+		const nextPlans: Record<string, IPlanResult> = {};
 
 		for (const plan of planData.value) {
+			if (!plan.uuid) continue;
 			// note, calculation depends on empire + cx, so a plan is only
 			// calculated properly within this context
 
@@ -157,15 +160,18 @@
 
 				const result = await calculate();
 				nextPlans[plan.uuid!] = result;
-				cacheCalculatedPlans.set(cacheKey, result);
 				if (!silent) progressCurrent.value++;
 
-				if (!silent)
-					await new Promise((r) => setTimeout(r, 0));
+				// cache
+				cacheCalculatedPlans.set(cacheKey, result);
+				// yield back to vue and update DOM
+				if (!silent) await new Promise((r) => setTimeout(r, 0));
 			}
 		}
 
+		calculatedPlans.value = nextPlans;
 		if (!silent) isCalculating.value = false;
+
 		empireMaterialIOState(
 			selectedEmpire.value,
 			combinedEmpireMaterialIO.value
@@ -374,9 +380,8 @@
 		const grouped = new Map<string, IEmpireCOGMRow>();
 		for (const r of rawRows) {
 			const k = r.key;
-			if (!grouped.has(k)) {
-				grouped.set(k, r.row);
-			}
+			// First match wins: dedupe by plan+inputs+output and drop the rest.
+			if (!grouped.has(k)) grouped.set(k, r.row);
 		}
 		return Array.from(grouped.values());
 	});
@@ -402,6 +407,7 @@
 <template>
 	<WrapperPlanningDataLoader
 		empire-list
+		load-c-x
 		:empire-uuid="selectedEmpireUuid"
 		@data:empire:plans="(value: IPlan[]) => (planData = value)"
 		@update:empire-uuid="(value: string) => (selectedEmpireUuid = value)"
