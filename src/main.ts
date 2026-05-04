@@ -21,6 +21,22 @@ app.config.performance = true;
 app.use(router);
 app.use(pinia);
 
+// locale
+import { i18n } from "@/lib/i18n";
+import { useLocaleStore } from "@/stores/localeStore";
+const localeStore = useLocaleStore();
+
+try {
+	await localeStore.initLocale();
+} catch (error) {
+	console.error(
+		"Failed to initialize locale, falling back to default",
+		error
+	);
+}
+
+app.use(i18n);
+
 // axios
 import axiosSetup from "@/util/axiosSetup";
 axiosSetup();

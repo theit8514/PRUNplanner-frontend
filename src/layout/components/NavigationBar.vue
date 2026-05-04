@@ -10,6 +10,8 @@
 	import { usePreferences } from "@/features/preferences/usePreferences";
 	const { layoutNavigationStyle } = usePreferences();
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
 
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
@@ -80,30 +82,30 @@
 
 	const menuItems: ComputedRef<IMenuSection[]> = computed(() => [
 		{
-			label: "Planning",
-			labelShort: "Plan",
+			label: t("common.navigation.planning"),
+			labelShort: t("common.navigation.planning_short"),
 			display: true,
 			children: [
 				{
-					label: "Empire",
+					label: t("common.navigation.empire"),
 					display: true,
 					routerLink: "/",
 					icon: HomeSharp,
 				},
 				{
-					label: "Planet Search",
+					label: t("common.navigation.planet_search"),
 					display: true,
 					routerLink: "/search",
 					icon: SearchRound,
 				},
 				{
-					label: "Management",
+					label: t("common.navigation.management"),
 					display: true,
 					routerLink: "/manage",
 					icon: SettingsRound,
 				},
 				{
-					label: "Exchanges",
+					label: t("common.navigation.exchanges"),
 					display: true,
 					routerLink: "/exchanges",
 					icon: ShoppingBasketSharp,
