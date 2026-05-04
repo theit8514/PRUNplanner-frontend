@@ -1,31 +1,31 @@
 {
 	"common": {
 		"buttons": {
-			"save": "Save",
-			"reload": "Reload",
-			"show": "Show",
-			"hide": "Hide"
+			"save": "Speichern",
+			"reload": "Aktualisieren",
+			"show": "Anzeigen",
+			"hide": "Verstecken"
 		}
 	},
 	"terms": {
 		"plan": "Plan",
 		"empire": "Empire | Empires",
-		"planets": "Planet | Planets",
+		"planets": "Planet | Planeten",
 		"cogc": "COGC",
 		"permits": "Permit | Permits",
 		"profit": "Profit",
-		"revenue": "Revenue",
-		"cost": "Cost",
+		"revenue": "Umsatz",
+		"cost": "Kosten",
 		"profit_per_area": "Profit / Area",
 		"hq": "HQ",
 		"buffer": "Buffer"
 	},
 	"empire": {
 		"configuration": {
-			"title": "Configuration",
+			"title": "Konfiguration",
 			"form": {
 				"name": "Name",
-				"faction": "Faction",
+				"faction": "Fraktion",
 				"permits_total": "@:terms.permits(2) Total",
 				"permits_used": "@:terms.permits(2) Used"
 			},
