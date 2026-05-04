@@ -1,5 +1,7 @@
 import { computed, ComputedRef, watch, WritableComputedRef } from "vue";
 import { debounce, isEqual } from "lodash";
+import { i18n, SupportedLocale } from "@/lib/i18n";
+import { Composer } from "vue-i18n";
 
 // Stores
 import { useUserStore } from "@/stores/userStore";
@@ -102,6 +104,16 @@ export function usePreferences() {
 			get: () => userStore.preferences.layoutNavigationStyle,
 			set: (v) => userStore.setPreference("layoutNavigationStyle", v),
 		});
+
+	const locale: WritableComputedRef<string> = computed({
+		get: () => userStore.preferences.locale,
+		set: (v: SupportedLocale) => {
+			userStore.setPreference("locale", v);
+			userStore
+				.setLocale(v, i18n.global as unknown as Composer)
+				.catch(console.error);
+		},
+	});
 
 	/**
 	 * Computed overview array of users plan specific settings, checks settings
@@ -226,6 +238,7 @@ export function usePreferences() {
 		planSettings,
 		planSettingsOverview,
 		layoutNavigationStyle,
+		locale,
 		// functions
 		cleanPlanPreferences,
 		getBurnDisplayClass,

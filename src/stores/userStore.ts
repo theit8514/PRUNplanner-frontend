@@ -1,5 +1,13 @@
 import { defineStore } from "pinia";
-import { computed, ComputedRef, Reactive, reactive, ref, Ref } from "vue";
+import {
+	computed,
+	ComputedRef,
+	nextTick,
+	Reactive,
+	reactive,
+	ref,
+	Ref,
+} from "vue";
 import merge from "lodash/merge";
 
 // API
@@ -34,6 +42,8 @@ import {
 	IPreferencePerPlan,
 } from "@/features/preferences/userPreferences.types";
 import { preferenceDefaults } from "@/features/preferences/userDefaults";
+import { Composer } from "vue-i18n";
+import { locales, SupportedLocale } from "@/lib/i18n";
 
 export const useUserStore = defineStore(
 	"prunplanner_user",
@@ -87,6 +97,33 @@ export const useUserStore = defineStore(
 
 		function clearPlanPreference(planUuid: string): void {
 			delete preferences.planOverrides[planUuid];
+		}
+
+		async function initLocale(composer: Composer) {
+			await setLocale(preferences.locale, composer);
+		}
+
+		async function setLocale(v: SupportedLocale, composer: Composer) {
+			const path = `/src/locales/${v}.json`;
+
+			if (!(path in locales)) {
+				console.error(`Locale file ${path} not found.`);
+				return;
+			}
+
+			if (!composer.availableLocales.includes(v)) {
+				const loader = locales[path] as () => Promise<{
+					default: Record<string, unknown>;
+				}>;
+				const messages = await loader();
+				composer.setLocaleMessage(v, messages.default);
+			}
+
+			composer.locale.value = v;
+
+			nextTick(() => {
+				document.querySelector("html")?.setAttribute("lang", v);
+			});
 		}
 
 		// getters
@@ -275,6 +312,8 @@ export const useUserStore = defineStore(
 			setPlanPreference,
 			clearPlanPreference,
 			getPlanPreference,
+			setLocale,
+			initLocale,
 			// functions
 			setToken,
 			logout,

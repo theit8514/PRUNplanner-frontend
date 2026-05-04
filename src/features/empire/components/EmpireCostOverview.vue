@@ -22,9 +22,10 @@
 </script>
 
 <template>
-	<div class="grid grid-cols-[auto_auto] grid-rows-2 sm:grid-rows-1 sm:grid-cols-[1fr_auto_auto_auto_auto_1fr] gap-6 child:child:text-center">
+	<div
+		class="grid grid-cols-[auto_auto] grid-rows-2 sm:grid-rows-1 sm:grid-cols-[1fr_auto_auto_auto_auto_1fr] gap-6 child:child:text-center">
 		<div class="sm:col-2">
-			<div class="text-white/40 text-xs">Profit</div>
+			<div class="text-white/40 text-xs">{{ $t("terms.profit") }}</div>
 			<div class="text-white text-xl">
 				{{ formatNumber(costOverview.totalProfit) }}
 			</div>
@@ -39,13 +40,13 @@
 			</div>
 		</div>
 		<div>
-			<div class="text-white/40 text-xs">Revenue</div>
+			<div class="text-white/40 text-xs">{{ $t("terms.revenue") }}</div>
 			<div class="text-white text-xl">
 				{{ formatNumber(costOverview.totalRevenue) }}
 			</div>
 		</div>
 		<div>
-			<div class="text-white/40 text-xs">Cost</div>
+			<div class="text-white/40 text-xs">{{ $t("terms.cost") }}</div>
 			<div class="text-white text-xl">
 				{{ formatNumber(costOverview.totalCost) }}
 			</div>
@@ -60,7 +61,9 @@
 			</div>
 		</div>
 		<div>
-			<div class="text-white/40 text-xs">Profit / Area</div>
+			<div class="text-white/40 text-xs">
+				{{ $t("terms.profit_per_area") }}
+			</div>
 			<div class="text-white text-xl">
 				{{ formatNumber(profitPerArea) }}
 			</div>

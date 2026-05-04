@@ -23,11 +23,10 @@ app.use(pinia);
 
 // locale
 import { i18n } from "@/lib/i18n";
-import { useLocaleStore } from "@/stores/localeStore";
-const localeStore = useLocaleStore();
+const userStore = useUserStore();
 
 try {
-	await localeStore.initLocale();
+	await userStore.initLocale(i18n.global as unknown as Composer);
 } catch (error) {
 	console.error(
 		"Failed to initialize locale, falling back to default",
@@ -55,6 +54,8 @@ app.use(VueShowdownPlugin, { flavor: "github", tables: true, emoji: true });
 
 // directives
 import clickOutsideDirective from "@/layout/directives/clickOutsideDirective";
+import { useUserStore } from "./stores/userStore";
+import { Composer } from "vue-i18n";
 
 app.directive("click-outside", clickOutsideDirective);
 

@@ -9,6 +9,7 @@ import { IPreferenceDefault } from "@/features/preferences/userPreferences.types
  * @type {IPreferenceDefault}
  */
 export const preferenceDefaults: IPreferenceDefault = {
+	locale: "en_US",
 	defaultEmpireUuid: undefined,
 	defaultCXUuid: undefined,
 	defaultBuyItemsFromCX: true,

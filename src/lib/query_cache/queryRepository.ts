@@ -933,6 +933,7 @@ export function useQueryRepository() {
 		GetPreferences: {
 			key: () => ["user", "profile"],
 			fetchFn: async () => {
+				// TODO: Don't plain override here.
 				const prefs = await callGetUserPreferences();
 				userStore.preferences = prefs;
 
