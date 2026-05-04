@@ -4,13 +4,11 @@
 			"planning": "Planning",
 			"planning_short": "Plan",
 			"empire": "Empire",
-			"planet_search": "Planet Search",
 			"management": "Management",
 			"exchanges": "Exchanges"
 		}
 	},
 	"terms": {
-		"plan": "Plan",
 		"empire": "Empire | Empires",
 		"planets": "Planet | Planets",
 		"cogc": "COGC",
