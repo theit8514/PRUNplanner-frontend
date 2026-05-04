@@ -1,0 +1,12 @@
+{
+	"common": {
+		"navigation": {
+			"planning": "Planen",
+			"planning_short": "Plan",
+			"empire": "Empire",
+			"planet_search": "Planetensuche",
+			"management": "Verwaltung",
+			"exchanges": "Marktplätze"
+		}
+	}
+}
