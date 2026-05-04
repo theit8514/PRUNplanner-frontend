@@ -1,15 +1,17 @@
 <script setup lang="ts">
-	import { computed, ComputedRef, watch } from "vue";
+	import { computed, ComputedRef, ref, watch } from "vue";
 
 	// Stores
 	import { useUserStore } from "@/stores/userStore";
 	import { useQueryStore } from "@/lib/query_cache/queryStore";
 	import { usePlanningStore } from "@/stores/planningStore";
+	import { useLocaleStore } from "@/stores/localeStore";
 
 	// Composables
 	import { usePreferences } from "@/features/preferences/usePreferences";
 	const { layoutNavigationStyle } = usePreferences();
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
+	import { SupportedLanguages, SupportedLocale } from "@/lib/i18n";
 	import { useI18n } from "vue-i18n";
 	const { t } = useI18n();
 
@@ -26,6 +28,7 @@
 	import { IMenuSection } from "@/layout/components/navigation.types";
 
 	// UI
+	import PSelect from "@/ui/components/PSelect.vue";
 	import { PTag, PTooltip, PTable, PIcon } from "@/ui";
 	import {
 		HomeSharp,
@@ -52,6 +55,10 @@
 	const userStore = useUserStore();
 	const queryStore = useQueryStore();
 	const planningStore = usePlanningStore();
+	const localeStore = useLocaleStore();
+
+	const selectedLanguage = ref<SupportedLocale>(localeStore.currentLocale);
+
 	/*
 	 * FIO Data Refresh, if the user either already has FIO or if this is changed,
 	 * a background refresh of FIO data is triggered in the gamedata store
@@ -340,6 +347,16 @@
 					</RouterLink>
 				</div>
 			</div>
+		</div>
+		<div>
+			<PSelect
+				v-model:value="selectedLanguage"
+				:options="SupportedLanguages"
+				@update:value="
+					(value) => {
+						localeStore.setLocale(value as SupportedLocale);
+					}
+				" />
 		</div>
 		<div class="flex flex-col flex-1 overflow-y-auto">
 			<nav class="flex-1 pt-0 pb-4 text-white/80">

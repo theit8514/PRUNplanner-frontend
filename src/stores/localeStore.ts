@@ -22,7 +22,6 @@ export const useLocaleStore = defineStore("locale", () => {
 			composer.setLocaleMessage(newLocale, messages.default);
 		}
 
-		// 3. Assignment now works correctly
 		composer.locale.value = newLocale;
 		currentLocale.value = newLocale;
 
@@ -31,7 +30,7 @@ export const useLocaleStore = defineStore("locale", () => {
 	}
 
 	async function initLocale() {
-		if (currentLocale.value !== "en-US") {
+		if (currentLocale.value !== "en_US") {
 			await setLocale(currentLocale.value);
 		}
 	}
