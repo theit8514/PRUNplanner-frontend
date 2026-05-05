@@ -1,10 +1,19 @@
 {
 	"common": {
+		"navigation": {
+			"planning": "Planning",
+			"planning_short": "Plan",
+			"empire": "Empire",
+			"planet_search": "Planet Search",
+			"management": "Management",
+			"exchanges": "Exchanges"
+		},
 		"buttons": {
 			"save": "保存",
 			"reload": "刷新",
 			"show": "显示",
-			"hide": "隐藏"
+			"hide": "隐藏",
+			"help": "Help"
 		}
 	},
 	"terms": {
@@ -18,9 +27,75 @@
 		"cost": "成本",
 		"profit_per_area": "利润 / 区域",
 		"hq": "总部",
-		"buffer": "缓冲"
+		"buffer": "缓冲",
+		"material_ticker": "Ticker",
+		"delta": "Delta",
+		"delta_price": "ȼ Delta",
+		"production": "Production",
+		"consumption": "Consumption",
+		"materials": "Material | Materials"
+	},
+	"game": {
+		"building_type": {
+			"INFRASTRUCTURE": "Infrastructure",
+			"PLANETARY": "Planetary",
+			"PRODUCTION": "Production"
+		},
+		"expertise": {
+			"AGRICULTURE": "Agriculture",
+			"CHEMISTRY": "Chemistry",
+			"CONSTRUCTION": "Construction",
+			"ELECTRONICS": "Electronics",
+			"FOOD_INDUSTRIES": "Food Industries",
+			"FUEL_REFINING": "Fuel Refining",
+			"MANUFACTURING": "Manufacturing",
+			"METALLURGY": "Metallurgy",
+			"RESOURCE_EXTRACTION": "Resource Extraction"
+		},
+		"cogc_program": {
+			"Invalid": "Invalid",
+			"NONE": "None",
+			"ADVERTISING_AGRICULTURE": "Agriculture",
+			"ADVERTISING_CHEMISTRY": "Chemistry",
+			"ADVERTISING_CONSTRUCTION": "Construction",
+			"ADVERTISING_ELECTRONICS": "Electronics",
+			"ADVERTISING_FOOD_INDUSTRIES": "Food Industries",
+			"ADVERTISING_FUEL_REFINING": "Fuel Refining",
+			"ADVERTISING_MANUFACTURING": "Manufacturing",
+			"ADVERTISING_METALLURGY": "Metallurgy",
+			"ADVERTISING_RESOURCE_EXTRACTION": "Resource Extraction",
+			"WORKFORCE_PIONEERS": "Pioneers",
+			"WORKFORCE_SETTLERS": "Settlers",
+			"WORKFORCE_TECHNICIANS": "Technicians",
+			"WORKFORCE_ENGINEERS": "Engineers",
+			"WORKFORCE_SCIENTISTS": "Scientists"
+		},
+		"cogc_program_short": {
+			"Invalid": "Invalid",
+			"NONE": "None",
+			"ADVERTISING_AGRICULTURE": "AGRI",
+			"ADVERTISING_CHEMISTRY": "CHEM",
+			"ADVERTISING_CONSTRUCTION": "CONST",
+			"ADVERTISING_ELECTRONICS": "ELEC",
+			"ADVERTISING_FOOD_INDUSTRIES": "FOOD",
+			"ADVERTISING_FUEL_REFINING": "FUEL",
+			"ADVERTISING_MANUFACTURING": "MFG",
+			"ADVERTISING_METALLURGY": "METAL",
+			"ADVERTISING_RESOURCE_EXTRACTION": "RES",
+			"WORKFORCE_PIONEERS": "PIO",
+			"WORKFORCE_SETTLERS": "SET",
+			"WORKFORCE_TECHNICIANS": "TEC",
+			"WORKFORCE_ENGINEERS": "ENG",
+			"WORKFORCE_SCIENTISTS": "SCI"
+		}
 	},
 	"empire": {
+		"view_title": "Empire",
+		"views": {
+			"material_io": "Material I/O",
+			"analysis": "Analysis",
+			"production_opportunities": "Production Opportunities"
+		},
 		"configuration": {
 			"title": "配置",
 			"form": {
@@ -42,6 +117,46 @@
 				"planet_search": "@:common.navigation.planet_search"
 			},
 			"permits_planned": "规划的 @:terms.permits 总数：{permits}"
+		},
+		"material_io": {
+			"production_planets": "Production Planets",
+			"consumption_planets": "Consumption Planets"
+		},
+		"filters": {
+			"display": "Display",
+			"consumables": "Consumables",
+			"all": "All",
+			"loadbalance": "Loadbalance"
+		},
+		"analysis": {
+			"profitable_plans": "Profitable Plans",
+			"material_profits": "Material Profits",
+			"material_costs": "Material Costs",
+			"net_production": "Net Production",
+			"net_consumption": "Net Consumption",
+			"exclusive_production": "Exclusive Production",
+			"exclusive_consumption": "Exclusive Consumption"
+		},
+		"opportunities": {
+			"headline": "Production Opportunities",
+			"intro": "Find recipe opportunities to convert excess materials into other products. This view identifies production opportunities where your Material I/O shows a positive delta, prioritized by input availability",
+			"please_note": "Please Note:",
+			"note": "Do not rely on the available opportunity alone. Cross-reference trade volumes and exchange overviews (via hover on the material) to assess market liquidity and potential ROI. Use indicators to identify which specific material is bottlenecking your scaling potential or if selling your available delta is more profitable than moving to another production.",
+			"tiles": {
+				"opportunities": "Opportunities",
+				"delta_required": "Delta Required",
+				"material_missing": "Material Missing"
+			},
+			"table": {
+				"building": "Building",
+				"flow_inputs": "Production (Inputs &rarr; Outputs)",
+				"analysis": "Analysis",
+				"sell_inputs": "Sell Inputs",
+				"sell_outputs": "Sell Outputs",
+				"potential_batches": "Potential Batches",
+				"delta_required": "Delta Required",
+				"missing_material": "Missing Material"
+			}
 		}
 	}
 }
