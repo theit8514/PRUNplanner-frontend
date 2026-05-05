@@ -2,69 +2,69 @@
 	"view_title": "Empire",
 	"views": {
 		"material_io": "Material I/O",
-		"analysis": "Analysis",
-		"production_opportunities": "Production Opportunities"
+		"analysis": "Analyse",
+		"production_opportunities": "Produktionschancen"
 	},
 	"configuration": {
-		"title": "Configuration",
+		"title": "Konfiguration",
 		"form": {
 			"name": "Name",
-			"faction": "Faction",
-			"permits_total": "@:terms.permits(2) Total",
-			"permits_used": "@:terms.permits(2) Used"
+			"faction": "Fraktion",
+			"permits_total": "@:terms.permits(2) gesamt",
+			"permits_used": "@:terms.permits(2) benutzt"
 		},
 		"sync_warning": {
-			"title": "Mismatch Detected:",
-			"body": "@:empire.configuration.sync_warning.title {configured} configured vs. {planned} planned permits. Please synchronize these values using your in-game {hq_buffer} to ensure accurate faction bonus calculations."
+			"title": "Unstimmigkeit erkannt:",
+			"body": "@:empire.configuration.sync_warning.title {configured} konfiguriert vs. {planned} geplante Flächen. Bitte synchronisiere diese Werte mit deinem In-Game {hq_buffer} , um eine genaue Fraktionsbonusberechnungen zu gewährleisten."
 		}
 	},
 	"plan_list": {
-		"no_plans": "No Plans in @:terms.empire",
-		"setup_prompt": "Assign existing plans in {management} or use {search} to create one.",
+		"no_plans": "Keine Pläne im @:terms.empire",
+		"setup_prompt": "Weise bestehende Pläne im {management} zu oder benutze die {search}, um neue zu erstellen.",
 		"links": {
-			"management": "@:common.navigation.management",
-			"planet_search": "@:common.navigation.planet_search"
+			"management": "Management",
+			"planet_search": "Planet Search"
 		},
-		"permits_planned": "Total @:terms.permits planned: {permits}"
+		"permits_planned": "Insgesamt @:terms.permits geplant: {permits}"
 	},
 	"material_io": {
-		"production_planets": "Production Planets",
-		"consumption_planets": "Consumption Planets"
+		"production_planets": "Produzierende Planeten",
+		"consumption_planets": "Verbrauchende Planeten"
 	},
 	"filters": {
-		"display": "Display",
-		"consumables": "Consumables",
-		"all": "All",
+		"display": "Anzeige",
+		"consumables": "Verbrauchsmaterialien",
+		"all": "Alle",
 		"loadbalance": "Loadbalance"
 	},
 	"analysis": {
-		"profitable_plans": "Profitable Plans",
-		"material_profits": "Material Profits",
-		"material_costs": "Material Costs",
-		"net_production": "Net Production",
-		"net_consumption": "Net Consumption",
-		"exclusive_production": "Exclusive Production",
-		"exclusive_consumption": "Exclusive Consumption"
+		"profitable_plans": "Profitable Pläne",
+		"material_profits": "Material Gewinn",
+		"material_costs": "Material Kosten",
+		"net_production": "Nettoproduktion",
+		"net_consumption": "Nettoverbrauch",
+		"exclusive_production": "Exklusive Produktion",
+		"exclusive_consumption": "Exklusiver Verbrauch"
 	},
 	"opportunities": {
-		"headline": "Production Opportunities",
-		"intro": "Find recipe opportunities to convert excess materials into other products. This view identifies production opportunities where your Material I/O shows a positive delta, prioritized by input availability",
-		"please_note": "Please Note:",
-		"note": "Do not rely on the available opportunity alone. Cross-reference trade volumes and exchange overviews (via hover on the material) to assess market liquidity and potential ROI. Use indicators to identify which specific material is bottlenecking your scaling potential or if selling your available delta is more profitable than moving to another production.",
+		"headline": "Produktionschancen",
+		"intro": "Finde Chancen, um überschüssige Materialien in andere Produkte umzuwandeln. Diese Ansicht identifiziert Produktionsmöglichkeiten, in denen das Material I/O ein positives Delta anzeigt, priorisiert durch die Verfügbarkeit der Produktionsvorlagen-Inputs.",
+		"please_note": "Beachte bitte:",
+		"note": "Verlasse dich nicht auf die Produktionschance allein, sondern prüfe gegen das gehandelte Volumen und die Marktplatz-Übersicht, um die Marktliquidität zu verstehen. Verwende die Indikatoren, ob ein Material dein Engpass ist oder es profitabler ist, dass überschüssige Material direkt zu verkaufen statt in einem anderen Auftrag weiterzuverarbeiten.",
 		"tiles": {
-			"opportunities": "Opportunities",
-			"delta_required": "Delta Required",
-			"material_missing": "Material Missing"
+			"opportunities": "Chancen",
+			"delta_required": "Delta benötigt",
+			"material_missing": "Material fehlt"
 		},
 		"table": {
-			"building": "Building",
-			"flow_inputs": "Production (Inputs &rarr; Outputs)",
-			"analysis": "Analysis",
-			"sell_inputs": "Sell Inputs",
-			"sell_outputs": "Sell Outputs",
-			"potential_batches": "Potential Batches",
-			"delta_required": "Delta Required",
-			"missing_material": "Missing Material"
+			"building": "Gebäude",
+			"flow_inputs": "Produktion (Input &arr; Output)",
+			"analysis": "Analyse",
+			"sell_inputs": "Inputs verkaufen",
+			"sell_outputs": "Outputs verkaufen",
+			"potential_batches": "Mögliche Batches",
+			"delta_required": "Delta erforderlich",
+			"missing_material": "fehlende Materialien"
 		}
 	}
 }
