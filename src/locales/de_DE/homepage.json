@@ -34,7 +34,7 @@
 			"text": "Prevent shortages and bottlenecks with detailed management tools. PRUNplanner tracks your resources and consumables, ensuring you have everything you need right when you need it, keeping your operations seamless."
 		},
 		"market_exploration": {
-			"label": "Market Exploration",
+			"label": "Marktübersicht",
 			"text": "Explore historic market trends from past years and uncover how markets truly behave. Spot exciting opportunities, and effortlessly calculate Return on Investment for every recipe and resource — giving you the strategic edge you need for smarter planning."
 		},
 		"tools": {
@@ -54,18 +54,18 @@
 			"text": "An Empire is a collection of plans (e.g. all the bases you currently have settled in Prosperous Universe, or that you would like to settle, all interconnected together). Each empire is like a container that consists of multiple plans. Additionally, an exchange preference can be assigned to each Empire."
 		},
 		"exchanges": {
-			"label": "Exchanges",
+			"label": "Marktplätze",
 			"text": "The Exchange Settings allow you to define market preferences for the pricing of materials. Each preference can be used in multiple Empires. However, each Empire can only have a single Exchange preference assigned to it. This ensures that prices are properly calculated for all individual plans that are part of the Empire."
 		}
 	},
 	"tools": {
-		"section_title": "Powered by tools we love to use"
+		"section_title": "Unterstützt von Tools, die wir gerne verwenden"
 	},
 	"open_source": {
-		"section_title": "Free &amp; Open Source",
-		"section_lead": "PRUNplanner is completely free to use, and its frontend is fully {link}.",
-		"prompt": "Love it? We'd be thrilled if you contributed!",
+		"section_title": "Kostenlos &amp; Open Source",
+		"section_lead": "PRUNplanner ist völlig frei zu verwenden und {link}.",
+		"prompt": "Du magst es? Wir würden uns freuen, wenn du mitmachst!",
 		"link_open_source": "Open Source"
 	},
-	"love": "Made with ♥  in Munich, with contributions from around the world."
+	"love": "Mit ♥️ aus München und Beteiligten aus aller Welt."
 }
