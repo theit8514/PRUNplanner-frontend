@@ -31,6 +31,7 @@
 		}
 	},
 	"buttons": {
+		"create": "Create",
 		"save": "Save",
 		"reload": "Reload",
 		"show": "Show",
@@ -38,6 +39,10 @@
 		"help": "Help",
 		"search": "Search",
 		"default": "Default",
-		"select_all": "Select All"
+		"select_all": "Select All",
+		"yes": "Yes",
+		"no": "No",
+		"delete": "Delete",
+		"cancel": "Cancel"
 	}
 }

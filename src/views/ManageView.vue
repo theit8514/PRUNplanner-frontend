@@ -1,10 +1,13 @@
 <script setup lang="ts">
 	import { defineAsyncComponent, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Unhead
 	import { useHead } from "@unhead/vue";
 	useHead({
-		title: "Management | PRUNplanner",
+		title: `${t("management.view_title")} | PRUNplanner`,
 	});
 
 	// Composables
@@ -58,7 +61,9 @@
 		@complete="planOnComplete">
 		<div
 			class="px-6 py-3 border-b border-white/10 flex flex-row justify-between gap-x-3">
-			<h1 class="text-2xl font-bold my-auto">Management</h1>
+			<h1 class="text-2xl font-bold my-auto">
+				{{ $t("management.title") }}
+			</h1>
 			<HelpDrawer file-name="management" />
 		</div>
 		<div

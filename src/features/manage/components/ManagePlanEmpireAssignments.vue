@@ -9,6 +9,9 @@
 		WritableComputedRef,
 	} from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { usePlanetData } from "@/database/services/usePlanetData";
 	const { planetNames, loadPlanetName } = usePlanetData();
@@ -259,10 +262,10 @@
 
 	function handleDeleteConfirm(planUuid: string): void {
 		dialog.warning({
-			title: "Confirm Plan Deletion",
-			content: "Are you sure? Deleting the Plan can't be reversed.",
-			positiveText: "Delete",
-			negativeText: "Cancel",
+			title: t("management.assignments.deletion.title"),
+			content: t("management.assignments.deletion.content"),
+			positiveText: t("common.buttons.delete"),
+			negativeText: t("common.buttons.cancel"),
 			onPositiveClick: () => {
 				deletePlan(planUuid);
 			},
@@ -287,22 +290,22 @@
 
 <template>
 	<div class="flex flex-row flex-wrap gap-3 justify-between">
-		<h2 class="text-xl font-bold my-auto">Plan ↔ Empire Assignments</h2>
+		<h2 class="text-xl font-bold my-auto">
+			{{ $t("management.assignments.title") }}
+		</h2>
 		<div class="flex gap-x-3">
 			<PButton :loading="refIsPatching" @click="patchJunctions">
 				<template #icon><SaveSharp /></template>
-				Update Plan Assignments
+				{{ $t("management.assignments.buttons.update_assignments") }}
 			</PButton>
 			<PButton @click="reload">
 				<template #icon><ChangeCircleOutlined /></template>
-				Reload
+				{{ $t("management.assignments.buttons.reload") }}
 			</PButton>
 		</div>
 	</div>
 	<div class="py-3 text-white/60">
-		Every planned base can be assigned to multiple empires. This allows you
-		to simultaneously keep track of your existing Prosperous Universe
-		empire, corporation production chains or future expansion plans.
+		{{ $t("management.assignments.description") }}
 	</div>
 
 	<ManageAssignmentFilters
@@ -318,7 +321,7 @@
 		:pagination="{ pageSize: 50 }">
 		<x-n-data-table-column
 			key="planName"
-			title="Plan"
+			:title="t('management.assignments.table.plan')"
 			sorter="default"
 			default-sort-order="ascend">
 			<template #render-cell="{ rowData }">
@@ -331,7 +334,10 @@
 				</div>
 			</template>
 		</x-n-data-table-column>
-		<x-n-data-table-column key="planetId" title="Planet" sorter="default">
+		<x-n-data-table-column
+			key="planetId"
+			:title="t('management.assignments.table.planet')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<div class="w-43.75 text-wrap">
 					{{
@@ -343,7 +349,9 @@
 			</template>
 		</x-n-data-table-column>
 
-		<x-n-data-table-column key="options" title="Configuration">
+		<x-n-data-table-column
+			key="options"
+			:title="t('management.assignments.table.configuration')">
 			<template #render-cell="{ rowData }">
 				<div class="flex flex-row flex-wrap gap-1">
 					<PButton
@@ -402,15 +410,11 @@
 		</x-n-data-table-column>
 		<template #empty>
 			<div class="flex flex-col gap-y-3">
-				<div class="text-center">No Plans available.</div>
 				<div class="text-center">
-					Use
-					<router-link
-						to="/search"
-						class="text-link-primary hover:underline">
-						Planet Search
-					</router-link>
-					to create your first plan.
+					{{ $t("management.assignments.table.nodata_title") }}
+				</div>
+				<div class="text-center">
+					{{ $t("management.assignments.table.nodata_label") }}
 				</div>
 			</div>
 		</template>

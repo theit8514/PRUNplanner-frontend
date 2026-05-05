@@ -1,7 +1,11 @@
 {
-	"plan": "Plan",
+	"plan": "Plan | Plans",
+	"plans_plural": "Plans",
 	"empire": "Empire | Empires",
+	"cx": "CX | CXs",
+	"cx_plural": "CXs",
 	"planets": "Planet | Planets",
+	"faction": "Faction",
 	"cogc": "COGC",
 	"permits": "Permit | Permits",
 	"permits_plural": "Permits",
