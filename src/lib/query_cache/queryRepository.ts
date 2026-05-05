@@ -929,6 +929,9 @@ export function useQueryRepository() {
 		PatchPreferences: {
 			key: () => ["user", "profile", "patch"],
 			fetchFn: async (prefs: IPreference) => {
+				// dont try to patch if not logged in, d'oh!
+				if (!userStore.isLoggedIn) return;
+
 				return await callPatchUserPreferences(prefs);
 			},
 			autoRefetch: false,
