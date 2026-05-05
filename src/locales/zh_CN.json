@@ -1,47 +1,47 @@
 {
 	"common": {
 		"buttons": {
-			"save": "Save",
-			"reload": "Reload",
-			"show": "Show",
-			"hide": "Hide"
+			"save": "保存",
+			"reload": "刷新",
+			"show": "显示",
+			"hide": "隐藏"
 		}
 	},
 	"terms": {
-		"plan": "Plan",
-		"empire": "Empire | Empires",
-		"planets": "Planet | Planets",
+		"plan": "计划",
+		"empire": "帝国 | 帝国",
+		"planets": "行星 | 行星",
 		"cogc": "COGC",
-		"permits": "Permit | Permits",
-		"profit": "Profit",
-		"revenue": "Revenue",
-		"cost": "Cost",
-		"profit_per_area": "Profit / Area",
-		"hq": "HQ",
-		"buffer": "Buffer"
+		"permits": "许可证 | 许可证",
+		"profit": "利润",
+		"revenue": "收入",
+		"cost": "成本",
+		"profit_per_area": "利润 / 区域",
+		"hq": "总部",
+		"buffer": "缓冲"
 	},
 	"empire": {
 		"configuration": {
-			"title": "Configuration",
+			"title": "配置",
 			"form": {
-				"name": "Name",
-				"faction": "Faction",
-				"permits_total": "@:terms.permits(2) Total",
-				"permits_used": "@:terms.permits(2) Used"
+				"name": "名称",
+				"faction": "派系",
+				"permits_total": "@:terms.permits(2) 总数",
+				"permits_used": "@:terms.permits(2) 已使用"
 			},
 			"sync_warning": {
-				"title": "Mismatch Detected:",
-				"body": "@:empire.configuration.sync_warning.title {configured} configured vs. {planned} planned permits. Please synchronize these values using your in-game {hq_buffer} to ensure accurate faction bonus calculations."
+				"title": "检测到不匹配：",
+				"body": "@:empire.configuration.sync_warning.title 已配置许可：{configured}，规划许可：{planned}。请使用游戏内的 {hq_buffer} 同步这些数值，以确保派系加成计算准确。"
 			}
 		},
 		"plan_list": {
-			"no_plans": "No Plans in @:terms.empire",
-			"setup_prompt": "Assign existing plans in {management} or use {search} to create one.",
+			"no_plans": "@:terms.empire 中没有规划",
+			"setup_prompt": "在 {management} 中分配已有规划，或使用 {search} 创建一个。",
 			"links": {
 				"management": "@:common.navigation.management",
 				"planet_search": "@:common.navigation.planet_search"
 			},
-			"permits_planned": "Total @:terms.permits planned: {permits}"
+			"permits_planned": "规划的 @:terms.permits 总数：{permits}"
 		}
 	}
 }
