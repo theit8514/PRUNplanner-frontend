@@ -40,9 +40,9 @@
 		"search": "Search",
 		"default": "Default",
 		"select_all": "Select All",
-		"yes": "Yes",
-		"no": "No",
-		"delete": "Delete",
-		"cancel": "Cancel"
+		"yes": "Ja",
+		"no": "Nein",
+		"delete": "Löschen",
+		"cancel": "Abbrechen"
 	}
 }
