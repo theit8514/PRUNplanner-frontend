@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { usePlanetSearchResults } from "@/features/planet_search/usePlanetSearchResults";
 	import { usePathfinder } from "@/features/pathfinding/usePathfinder";
@@ -84,7 +87,10 @@
 
 <template>
 	<XNDataTable :data="tableResults" striped :pagination="{ pageSize: 50 }">
-		<XNDataTableColumn key="Plan" title="Plan" width="50">
+		<XNDataTableColumn
+			key="Plan"
+			:title="t('planet_search.results.columns.plan')"
+			width="50">
 			<template #render-cell="{ rowData }">
 				<router-link :to="`/plan/${rowData.planetId}`">
 					<PButton size="sm">
@@ -95,7 +101,10 @@
 				</router-link>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="planetName" title="Planet" sorter="default">
+		<XNDataTableColumn
+			key="planetName"
+			:title="t('planet_search.results.columns.planet')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span
 					v-if="rowData.planetName === rowData.planetId"
@@ -107,7 +116,10 @@
 				</span>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="fertility" title="Fertility" sorter="default">
+		<XNDataTableColumn
+			key="fertility"
+			:title="t('planet_search.results.columns.fertility')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span v-if="rowData.fertility === 0">&mdash;</span>
 				<span v-else>
@@ -137,7 +149,9 @@
 				</div>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="additionalResources" title="Resources">
+		<XNDataTableColumn
+			key="additionalResources"
+			:title="t('planet_search.results.columns.resources')">
 			<template #render-cell="{ rowData }">
 				<div class="flex flex-row flex-wrap gap-1 child:text-nowrap">
 					<MaterialTile
@@ -149,7 +163,9 @@
 				</div>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="popr" title="POPR">
+		<XNDataTableColumn
+			key="popr"
+			:title="t('planet_search.results.columns.popr')">
 			<template #render-cell="{ rowData }">
 				<PlanetPOPRButton
 					:planet-natural-id="rowData.planetId"
@@ -158,7 +174,7 @@
 		</XNDataTableColumn>
 		<XNDataTableColumn
 			key="cogcProgram"
-			title="COGC Program"
+			:title="t('planet_search.results.columns.cogc_program')"
 			sorter="default">
 			<template #render-cell="{ rowData }">
 				{{
@@ -168,7 +184,9 @@
 				}}
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="environment" title="Environment">
+		<XNDataTableColumn
+			key="environment"
+			:title="t('planet_search.results.columns.environment')">
 			<template #render-cell="{ rowData }">
 				<div class="flex flex-row flex-wrap gap-1">
 					<PTooltip v-if="rowData.environmentSurface.length !== 0">
@@ -179,7 +197,7 @@
 									:ticker="rowData.environmentSurface[0]" />
 							</div>
 						</template>
-						Surface
+						{{ $t("terms.surface") }}
 					</PTooltip>
 					<PTooltip v-if="rowData.environmentGravity.length !== 0">
 						<template #trigger>
@@ -189,7 +207,7 @@
 									:ticker="rowData.environmentGravity[0]" />
 							</div>
 						</template>
-						Gravity
+						{{ $t("terms.gravity") }}
 					</PTooltip>
 					<PTooltip
 						v-if="rowData.environmentTemperature.length !== 0">
@@ -202,7 +220,7 @@
 									" />
 							</div>
 						</template>
-						Temperature
+						{{ $t("terms.temperature") }}
 					</PTooltip>
 					<PTooltip v-if="rowData.environmentPressure.length !== 0">
 						<template #trigger>
@@ -212,12 +230,14 @@
 									:ticker="rowData.environmentPressure[0]" />
 							</div>
 						</template>
-						Pressure
+						{{ $t("terms.pressure") }}
 					</PTooltip>
 				</div>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="infrastructures" title="Infrastructure">
+		<XNDataTableColumn
+			key="infrastructures"
+			:title="t('planet_search.results.columns.infrastructure')">
 			<template #render-cell="{ rowData }">
 				{{ rowData.infrastructures.join(", ") }}
 			</template>
@@ -225,7 +245,7 @@
 		<XNDataTableColumn
 			v-if="tableCheckDistances !== null"
 			key="checkDistance"
-			:title="`Distance ${tableCheckDistances}`"
+			:title="`${t('planet_search.results.columns.distance')} ${tableCheckDistances}`"
 			sorter="default" />
 		<XNDataTableColumn
 			key="distanceAI1"
@@ -234,7 +254,7 @@
 			<template #render-cell="{ rowData }">
 				<PTooltip v-if="rowData.distanceAI1 == -1">
 					<template #trigger> ∞ </template>
-					Colony Ship Required
+					{{ $t("planet_search.results.colony_ship_required") }}
 				</PTooltip>
 				<span v-else>{{ rowData.distanceAI1 }}</span>
 			</template>
@@ -246,7 +266,7 @@
 			<template #render-cell="{ rowData }">
 				<PTooltip v-if="rowData.distanceCI1 == -1">
 					<template #trigger> ∞ </template>
-					Colony Ship Required
+					{{ $t("planet_search.results.colony_ship_required") }}
 				</PTooltip>
 				<span v-else>{{ rowData.distanceCI1 }}</span>
 			</template>
@@ -258,7 +278,7 @@
 			<template #render-cell="{ rowData }">
 				<PTooltip v-if="rowData.distanceIC1 == -1">
 					<template #trigger> ∞ </template>
-					Colony Ship Required
+					{{ $t("planet_search.results.colony_ship_required") }}
 				</PTooltip>
 				<span v-else>{{ rowData.distanceIC1 }}</span>
 			</template>
@@ -270,7 +290,7 @@
 			<template #render-cell="{ rowData }">
 				<PTooltip v-if="rowData.distanceNC1 == -1">
 					<template #trigger> ∞ </template>
-					Colony Ship Required
+					{{ $t("planet_search.results.colony_ship_required") }}
 				</PTooltip>
 				<span v-else>{{ rowData.distanceNC1 }}</span>
 			</template>

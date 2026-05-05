@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -47,20 +50,21 @@
 
 <template>
 	<div class="flex flex-row flex-wrap gap-3 justify-between">
-		<h2 class="text-lg font-bold my-auto">Plan Name or ID</h2>
+		<h2 class="text-lg font-bold my-auto">
+			{{ $t("planet_search.basic.title") }}
+		</h2>
 		<PButton :loading="isLoading" :disabled="!canSearch" @click="doSearch">
 			<template #icon><SearchSharp /></template>
-			Search
+			{{ $t("common.buttons.search") }}
 		</PButton>
 	</div>
 
 	<div class="py-3 text-white/60">
-		Search must include at least 3 characters. Example Searches: "OT-580b",
-		"Montem", "OT-"" or "580".
+		{{ $t("planet_search.basic.description") }}
 	</div>
 
 	<PForm>
-		<PFormItem label="ID">
+		<PFormItem :label="t('planet_search.basic.form_id')">
 			<PInput v-model:value="refSearchId" class="w-full" />
 		</PFormItem>
 	</PForm>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, ref, Ref, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -188,17 +191,20 @@
 
 <template>
 	<div class="flex flex-row justify-between pb-3">
-		<h2 class="text-lg font-bold my-auto">Advanced Search</h2>
+		<h2 class="text-lg font-bold my-auto">
+			{{ $t("planet_search.advanced.title") }}
+		</h2>
 		<PButton :loading="refIsLoading" @click="doSearch">
 			<template #icon><SearchSharp /></template>
-			Search
+			{{ $t("common.buttons.search") }}
 		</PButton>
 	</div>
 
 	<div class="grid grid-cols-1 xl:grid-cols-[40%_auto] gap-x-6">
 		<div>
 			<PForm>
-				<PFormItem label="Materials">
+				<PFormItem
+					:label="t('planet_search.advanced.labels.materials')">
 					<PSelectMultiple
 						v-model:value="inputMaterials"
 						:options="PLANETSEARCHOPTIONMATERIALS"
@@ -216,7 +222,7 @@
 				</PFormItem>
 				<PFormItem
 					v-if="inputMaterials.length > 0"
-					label="Min. Richness %">
+					:label="t('planet_search.advanced.labels.min_richness')">
 					<div class="flex flex-col gap-1 w-full">
 						<div
 							v-for="material in inputMaterials"
@@ -234,7 +240,7 @@
 						</div>
 					</div>
 				</PFormItem>
-				<PFormItem label="COGC">
+				<PFormItem :label="t('planet_search.advanced.labels.cogc')">
 					<PSelectMultiple
 						v-model:value="inputCOGC"
 						:options="PLANETSEARCHCOGC"
@@ -242,7 +248,8 @@
 						searchable
 						class="w-full" />
 				</PFormItem>
-				<PFormItem label="Planet Features">
+				<PFormItem
+					:label="t('planet_search.advanced.labels.planet_features')">
 					<PSelectMultiple
 						v-model:value="inputInfrastructure"
 						:options="PLANETSEARCHINFRASTRUCTURE"
@@ -250,7 +257,8 @@
 						clearable
 						class="w-full" />
 				</PFormItem>
-				<PFormItem label="System Distance">
+				<PFormItem
+					:label="t('planet_search.advanced.labels.system_distance')">
 					<PSelect
 						v-model:value="inputSystem"
 						:options="PLANETSEARCHSYSTEMS"
@@ -266,16 +274,18 @@
 			</PForm>
 		</div>
 		<div>
-			<h3 class="pb-3">Planet Environment</h3>
+			<h3 class="pb-3">
+				{{ $t("planet_search.advanced.labels.planet_environment") }}
+			</h3>
 
 			<div class="flex flex-row gap-x-3">
 				<PTable class="w-full">
 					<tbody>
 						<tr class="child:w-[25%]">
-							<td>Surface</td>
-							<td>Gravity</td>
-							<td>Temperature</td>
-							<td>Pressure</td>
+							<td>{{ $t("terms.surface") }}</td>
+							<td>{{ $t("terms.gravity") }}</td>
+							<td>{{ $t("terms.temperature") }}</td>
+							<td>{{ $t("terms.pressure") }}</td>
 						</tr>
 						<tr>
 							<td>
@@ -283,7 +293,7 @@
 									class="flex flex-row gap-x-3 child:my-auto">
 									<PCheckbox
 										v-model:checked="inputIncludeRocky" />
-									Rocky
+									{{ $t("terms.rocky") }}
 								</div>
 							</td>
 							<td>
@@ -293,7 +303,7 @@
 										v-model:checked="
 											inputIncludeLowGravity
 										" />
-									Low
+									{{ $t("terms.low") }}
 								</div>
 							</td>
 							<td>
@@ -303,7 +313,7 @@
 										v-model:checked="
 											inputIncludeLowTemperature
 										" />
-									Low
+									{{ $t("terms.low") }}
 								</div>
 							</td>
 							<td>
@@ -313,7 +323,7 @@
 										v-model:checked="
 											inputIncludeLowPressure
 										" />
-									Low
+									{{ $t("terms.low") }}
 								</div>
 							</td>
 						</tr>
@@ -323,7 +333,7 @@
 									class="flex flex-row gap-x-3 child:my-auto">
 									<PCheckbox
 										v-model:checked="inputIncludeGaseous" />
-									Gaseous
+									{{ $t("terms.gaseous") }}
 								</div>
 							</td>
 							<td>
@@ -333,7 +343,7 @@
 										v-model:checked="
 											inputIncludeHighGravity
 										" />
-									High
+									{{ $t("terms.high") }}
 								</div>
 							</td>
 							<td>
@@ -343,7 +353,7 @@
 										v-model:checked="
 											inputIncludeHighTemperature
 										" />
-									High
+									{{ $t("terms.high") }}
 								</div>
 							</td>
 							<td>
@@ -353,7 +363,7 @@
 										v-model:checked="
 											inputIncludeHighPressure
 										" />
-									High
+									{{ $t("terms.high") }}
 								</div>
 							</td>
 						</tr>
@@ -362,10 +372,10 @@
 
 				<div class="flex flex-col gap-y-3">
 					<PButton secondary @click="environmentDefault">
-						Default
+						{{ $t("common.buttons.default") }}
 					</PButton>
 					<PButton secondary @click="environmentAll">
-						Select All
+						{{ $t("common.buttons.select_all") }}
 					</PButton>
 				</div>
 			</div>

@@ -16,5 +16,16 @@
 	"delta_price": "ȼ Delta",
 	"production": "Production",
 	"consumption": "Consumption",
-	"materials": "Material | Materials"
+	"materials": "Material | Materials",
+	"materials_plural": "Materials",
+	"surface": "Surface",
+	"gravity": "Gravity",
+	"temperature": "Temperature",
+	"pressure": "Pressure",
+	"high": "High",
+	"low": "Low",
+	"rocky": "Rocky",
+	"gaseous": "Gaseous",
+	"fertility": "Fertility",
+	"popr": "POPR"
 }
