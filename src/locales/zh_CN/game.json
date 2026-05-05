@@ -1,0 +1,54 @@
+{
+	"building_type": {
+		"INFRASTRUCTURE": "Infrastructure",
+		"PLANETARY": "Planetary",
+		"PRODUCTION": "Production"
+	},
+	"expertise": {
+		"AGRICULTURE": "农业",
+		"CHEMISTRY": "化工",
+		"CONSTRUCTION": "土木",
+		"ELECTRONICS": "电子",
+		"FOOD_INDUSTRIES": "食品",
+		"FUEL_REFINING": "燃料",
+		"MANUFACTURING": "制造",
+		"METALLURGY": "冶金",
+		"RESOURCE_EXTRACTION": "开采"
+	},
+	"cogc_program": {
+		"Invalid": "无效",
+		"NONE": "无",
+		"ADVERTISING_AGRICULTURE": "农业",
+		"ADVERTISING_CHEMISTRY": "化工",
+		"ADVERTISING_CONSTRUCTION": "土木",
+		"ADVERTISING_ELECTRONICS": "电子",
+		"ADVERTISING_FOOD_INDUSTRIES": "食品",
+		"ADVERTISING_FUEL_REFINING": "燃料",
+		"ADVERTISING_MANUFACTURING": "制造",
+		"ADVERTISING_METALLURGY": "冶金",
+		"ADVERTISING_RESOURCE_EXTRACTION": "开采",
+		"WORKFORCE_PIONEERS": "先驱者",
+		"WORKFORCE_SETTLERS": "定居者",
+		"WORKFORCE_TECHNICIANS": "职技工",
+		"WORKFORCE_ENGINEERS": "工程师",
+		"WORKFORCE_SCIENTISTS": "科学家"
+	},
+	"cogc_program_short": {
+		"Invalid": "无效",
+		"NONE": "无",
+		"ADVERTISING_AGRICULTURE": "农业",
+		"ADVERTISING_CHEMISTRY": "化工",
+		"ADVERTISING_CONSTRUCTION": "土木",
+		"ADVERTISING_ELECTRONICS": "电子",
+		"ADVERTISING_FOOD_INDUSTRIES": "食品",
+		"ADVERTISING_FUEL_REFINING": "燃料",
+		"ADVERTISING_MANUFACTURING": "制造",
+		"ADVERTISING_METALLURGY": "冶金",
+		"ADVERTISING_RESOURCE_EXTRACTION": "开采",
+		"WORKFORCE_PIONEERS": "先驱者",
+		"WORKFORCE_SETTLERS": "定居者",
+		"WORKFORCE_TECHNICIANS": "职技工",
+		"WORKFORCE_ENGINEERS": "工程师",
+		"WORKFORCE_SCIENTISTS": "科学家"
+	}
+}

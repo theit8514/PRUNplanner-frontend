@@ -1,0 +1,70 @@
+{
+	"view_title": "Empire",
+	"views": {
+		"material_io": "Material I/O",
+		"analysis": "Analyse",
+		"production_opportunities": "Produktionschancen"
+	},
+	"configuration": {
+		"title": "Konfiguration",
+		"form": {
+			"name": "Name",
+			"faction": "Fraktion",
+			"permits_total": "@:terms.permits(2) gesamt",
+			"permits_used": "@:terms.permits(2) benutzt"
+		},
+		"sync_warning": {
+			"title": "Unstimmigkeit erkannt:",
+			"body": "@:empire.configuration.sync_warning.title {configured} konfiguriert vs. {planned} geplante Flächen. Bitte synchronisiere diese Werte mit deinem In-Game {hq_buffer} , um eine genaue Fraktionsbonusberechnungen zu gewährleisten."
+		}
+	},
+	"plan_list": {
+		"no_plans": "Keine Pläne im @:terms.empire",
+		"setup_prompt": "Weise bestehende Pläne im {management} zu oder benutze die {search}, um neue zu erstellen.",
+		"links": {
+			"management": "Management",
+			"planet_search": "Planet Search"
+		},
+		"permits_planned": "Insgesamt @:terms.permits geplant: {permits}"
+	},
+	"material_io": {
+		"production_planets": "Produzierende Planeten",
+		"consumption_planets": "Verbrauchende Planeten"
+	},
+	"filters": {
+		"display": "Anzeige",
+		"consumables": "Verbrauchsmaterialien",
+		"all": "Alle",
+		"loadbalance": "Loadbalance"
+	},
+	"analysis": {
+		"profitable_plans": "Profitable Pläne",
+		"material_profits": "Material Gewinn",
+		"material_costs": "Material Kosten",
+		"net_production": "Nettoproduktion",
+		"net_consumption": "Nettoverbrauch",
+		"exclusive_production": "Exklusive Produktion",
+		"exclusive_consumption": "Exklusiver Verbrauch"
+	},
+	"opportunities": {
+		"headline": "Produktionschancen",
+		"intro": "Finde Chancen, um überschüssige Materialien in andere Produkte umzuwandeln. Diese Ansicht identifiziert Produktionsmöglichkeiten, in denen das Material I/O ein positives Delta anzeigt, priorisiert durch die Verfügbarkeit der Produktionsvorlagen-Inputs.",
+		"please_note": "Beachte bitte:",
+		"note": "Verlasse dich nicht auf die Produktionschance allein, sondern prüfe gegen das gehandelte Volumen und die Marktplatz-Übersicht, um die Marktliquidität zu verstehen. Verwende die Indikatoren, ob ein Material dein Engpass ist oder es profitabler ist, dass überschüssige Material direkt zu verkaufen statt in einem anderen Auftrag weiterzuverarbeiten.",
+		"tiles": {
+			"opportunities": "Chancen",
+			"delta_required": "Delta benötigt",
+			"material_missing": "Material fehlt"
+		},
+		"table": {
+			"building": "Gebäude",
+			"flow_inputs": "Produktion (Input &arr; Output)",
+			"analysis": "Analyse",
+			"sell_inputs": "Inputs verkaufen",
+			"sell_outputs": "Outputs verkaufen",
+			"potential_batches": "Mögliche Batches",
+			"delta_required": "Delta erforderlich",
+			"missing_material": "fehlende Materialien"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"plan": "Plan",
+	"empire": "Empire | Empires",
+	"planets": "Planet | Planets",
+	"cogc": "COGC",
+	"permits": "Permit | Permits",
+	"profit": "Profit",
+	"revenue": "Revenue",
+	"cost": "Cost",
+	"profit_per_area": "Profit / Area",
+	"hq": "HQ",
+	"buffer": "Buffer",
+	"material_ticker": "Ticker",
+	"delta": "Delta",
+	"delta_price": "ȼ Delta",
+	"production": "Production",
+	"consumption": "Consumption",
+	"materials": "Material | Materials"
+}

@@ -1,0 +1,54 @@
+{
+	"building_type": {
+		"INFRASTRUCTURE": "Infrastructure",
+		"PLANETARY": "Planetary",
+		"PRODUCTION": "Production"
+	},
+	"expertise": {
+		"AGRICULTURE": "Agriculture",
+		"CHEMISTRY": "Chemistry",
+		"CONSTRUCTION": "Construction",
+		"ELECTRONICS": "Electronics",
+		"FOOD_INDUSTRIES": "Food Industries",
+		"FUEL_REFINING": "Fuel Refining",
+		"MANUFACTURING": "Manufacturing",
+		"METALLURGY": "Metallurgy",
+		"RESOURCE_EXTRACTION": "Resource Extraction"
+	},
+	"cogc_program": {
+		"Invalid": "Invalid",
+		"NONE": "None",
+		"ADVERTISING_AGRICULTURE": "Agriculture",
+		"ADVERTISING_CHEMISTRY": "Chemistry",
+		"ADVERTISING_CONSTRUCTION": "Construction",
+		"ADVERTISING_ELECTRONICS": "Electronics",
+		"ADVERTISING_FOOD_INDUSTRIES": "Food Industries",
+		"ADVERTISING_FUEL_REFINING": "Fuel Refining",
+		"ADVERTISING_MANUFACTURING": "Manufacturing",
+		"ADVERTISING_METALLURGY": "Metallurgy",
+		"ADVERTISING_RESOURCE_EXTRACTION": "Resource Extraction",
+		"WORKFORCE_PIONEERS": "Pioneers",
+		"WORKFORCE_SETTLERS": "Settlers",
+		"WORKFORCE_TECHNICIANS": "Technicians",
+		"WORKFORCE_ENGINEERS": "Engineers",
+		"WORKFORCE_SCIENTISTS": "Scientists"
+	},
+	"cogc_program_short": {
+		"Invalid": "Invalid",
+		"NONE": "None",
+		"ADVERTISING_AGRICULTURE": "AGRI",
+		"ADVERTISING_CHEMISTRY": "CHEM",
+		"ADVERTISING_CONSTRUCTION": "CONST",
+		"ADVERTISING_ELECTRONICS": "ELEC",
+		"ADVERTISING_FOOD_INDUSTRIES": "FOOD",
+		"ADVERTISING_FUEL_REFINING": "FUEL",
+		"ADVERTISING_MANUFACTURING": "MFG",
+		"ADVERTISING_METALLURGY": "METAL",
+		"ADVERTISING_RESOURCE_EXTRACTION": "RES",
+		"WORKFORCE_PIONEERS": "PIO",
+		"WORKFORCE_SETTLERS": "SET",
+		"WORKFORCE_TECHNICIANS": "TEC",
+		"WORKFORCE_ENGINEERS": "ENG",
+		"WORKFORCE_SCIENTISTS": "SCI"
+	}
+}

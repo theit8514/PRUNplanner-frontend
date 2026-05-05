@@ -1,0 +1,19 @@
+{
+	"plan": "计划",
+	"empire": "帝国 | 帝国",
+	"planets": "行星 | 行星",
+	"cogc": "COGC",
+	"permits": "许可证 | 许可证",
+	"profit": "利润",
+	"revenue": "收入",
+	"cost": "成本",
+	"profit_per_area": "利润 / 区域",
+	"hq": "总部",
+	"buffer": "缓冲",
+	"material_ticker": "Ticker",
+	"delta": "Delta",
+	"delta_price": "ȼ Delta",
+	"production": "Production",
+	"consumption": "Consumption",
+	"materials": "Material | Materials"
+}

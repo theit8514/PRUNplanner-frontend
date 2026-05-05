@@ -1,0 +1,70 @@
+{
+	"view_title": "帝国",
+	"views": {
+		"material_io": "Material I/O",
+		"analysis": "Analysis",
+		"production_opportunities": "Production Opportunities"
+	},
+	"configuration": {
+		"title": "配置",
+		"form": {
+			"name": "名称",
+			"faction": "派系",
+			"permits_total": "@:terms.permits(2) 总数",
+			"permits_used": "@:terms.permits(2) 已使用"
+		},
+		"sync_warning": {
+			"title": "检测到不匹配：",
+			"body": "@:empire.configuration.sync_warning.title 已配置许可：{configured}，规划许可：{planned}。请使用游戏内的 {hq_buffer} 同步这些数值，以确保派系加成计算准确。"
+		}
+	},
+	"plan_list": {
+		"no_plans": "@:terms.empire 中没有规划",
+		"setup_prompt": "在 {management} 中分配已有规划，或使用 {search} 创建一个。",
+		"links": {
+			"management": "@:common.navigation.management",
+			"planet_search": "@:common.navigation.planet_search"
+		},
+		"permits_planned": "规划的 @:terms.permits 总数：{permits}"
+	},
+	"material_io": {
+		"production_planets": "Production Planets",
+		"consumption_planets": "Consumption Planets"
+	},
+	"filters": {
+		"display": "Display",
+		"consumables": "Consumables",
+		"all": "All",
+		"loadbalance": "Loadbalance"
+	},
+	"analysis": {
+		"profitable_plans": "Profitable Plans",
+		"material_profits": "Material Profits",
+		"material_costs": "Material Costs",
+		"net_production": "Net Production",
+		"net_consumption": "Net Consumption",
+		"exclusive_production": "Exclusive Production",
+		"exclusive_consumption": "Exclusive Consumption"
+	},
+	"opportunities": {
+		"headline": "Production Opportunities",
+		"intro": "Find recipe opportunities to convert excess materials into other products. This view identifies production opportunities where your Material I/O shows a positive delta, prioritized by input availability",
+		"please_note": "Please Note:",
+		"note": "Do not rely on the available opportunity alone. Cross-reference trade volumes and exchange overviews (via hover on the material) to assess market liquidity and potential ROI. Use indicators to identify which specific material is bottlenecking your scaling potential or if selling your available delta is more profitable than moving to another production.",
+		"tiles": {
+			"opportunities": "Opportunities",
+			"delta_required": "Delta Required",
+			"material_missing": "Material Missing"
+		},
+		"table": {
+			"building": "Building",
+			"flow_inputs": "Production (Inputs &rarr; Outputs)",
+			"analysis": "Analysis",
+			"sell_inputs": "Sell Inputs",
+			"sell_outputs": "Sell Outputs",
+			"potential_batches": "Potential Batches",
+			"delta_required": "Delta Required",
+			"missing_material": "Missing Material"
+		}
+	}
+}
