@@ -387,7 +387,8 @@
 							class="min-h-screen w-[600px] flex flex-col gap-6 justify-items-start">
 							<div>
 								<PForm>
-									<PFormItem label="Switch Empire">
+									<PFormItem
+										:label="t('empire.switch_empire')">
 										<PSelect
 											v-model:value="selectedEmpireUuid"
 											class="w-full"
