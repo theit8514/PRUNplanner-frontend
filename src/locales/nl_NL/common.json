@@ -19,30 +19,30 @@
 		"fio_repair": "FIO Reparatie",
 		"account": "Rekening",
 		"account_short": "Acc",
-		"profile": "Profile",
+		"profile": "Profiel",
 		"api": "API",
-		"help": "Help",
-		"logout": "Logout",
+		"help": "Hulp",
+		"logout": "uitloggen",
 		"fio": {
-			"backend": "Backend",
+			"backend": "backend",
 			"fio": "FIO",
-			"fio_active": "FIO Active",
-			"fio_inactive": "FIO Inactive"
+			"fio_active": "FIO Actief",
+			"fio_inactive": "FIO inactief"
 		}
 	},
 	"buttons": {
-		"create": "Create",
-		"save": "Save",
-		"reload": "Reload",
-		"show": "Show",
-		"hide": "Hide",
-		"help": "Help",
-		"search": "Search",
-		"default": "Default",
-		"select_all": "Select All",
-		"yes": "Yes",
-		"no": "No",
-		"delete": "Delete",
-		"cancel": "Cancel"
+		"create": "Maken",
+		"save": "Opslaan",
+		"reload": "Herladen",
+		"show": "Tonen",
+		"hide": "Verbergen",
+		"help": "Hulp",
+		"search": "Zoeken",
+		"default": "Standaard",
+		"select_all": "Alles Selecteren",
+		"yes": "Ja",
+		"no": "Nee",
+		"delete": "Verwijderen",
+		"cancel": "Annuleren"
 	}
 }
