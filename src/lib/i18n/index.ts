@@ -4,13 +4,21 @@ import en_US from "@/locales/en_US.json";
 import { PSelectOption } from "@/ui/ui.types";
 
 export type MessageSchema = typeof en_US;
-export type SupportedLocale =
-	| "en_US"
-	| "de_DE"
-	| "es_ES"
-	| "fr_FR"
-	| "it_IT"
-	| "zh-CN";
+
+export const SUPPORTED_LOCALES = [
+	"de_DE",
+	"en_US",
+	"es_ES",
+	"fr_FR",
+	"it_IT",
+	"ja_JP",
+	"ko_KR",
+	"nl_NL",
+	"pt_PT",
+	"zh_CN",
+] as const;
+
+export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
 export const SupportedLanguages: PSelectOption[] = [
 	{
@@ -24,6 +32,34 @@ export const SupportedLanguages: PSelectOption[] = [
 	{
 		label: "ES",
 		value: "es_ES",
+	},
+	{
+		label: "FR",
+		value: "fr_FR",
+	},
+	{
+		label: "IT",
+		value: "it_IT",
+	},
+	{
+		label: "JP",
+		value: "ja_JP",
+	},
+	{
+		label: "KR",
+		value: "ko_KR",
+	},
+	{
+		label: "NL",
+		value: "nl_NL",
+	},
+	{
+		label: "PT",
+		value: "pt_PT",
+	},
+	{
+		label: "CN",
+		value: "zh_CN",
 	},
 ];
 

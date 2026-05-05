@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { computed, ComputedRef, ref, watch } from "vue";
+	import { computed, ComputedRef, watch } from "vue";
 
 	// Stores
 	import { useUserStore } from "@/stores/userStore";
@@ -8,9 +8,9 @@
 
 	// Composables
 	import { usePreferences } from "@/features/preferences/usePreferences";
-	const { layoutNavigationStyle, locale } = usePreferences();
+	const { layoutNavigationStyle } = usePreferences();
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
-	import { SupportedLanguages } from "@/lib/i18n";
+
 	import { useI18n } from "vue-i18n";
 	const { t } = useI18n();
 
@@ -27,7 +27,6 @@
 	import { IMenuSection } from "@/layout/components/navigation.types";
 
 	// UI
-	import PSelect from "@/ui/components/PSelect.vue";
 	import { PTag, PTooltip, PTable, PIcon } from "@/ui";
 	import {
 		HomeSharp,
@@ -344,10 +343,7 @@
 				</div>
 			</div>
 		</div>
-		<div>
-			{{ locale ?? "none" }}
-			<PSelect v-model:value="locale" :options="SupportedLanguages" />
-		</div>
+
 		<div class="flex flex-col flex-1 overflow-y-auto">
 			<nav class="flex-1 pt-0 pb-4 text-white/80">
 				<template

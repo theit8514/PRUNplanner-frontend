@@ -68,7 +68,13 @@
 		<XNDataTableColumn key="cogc" :title="t('terms.cogc')" sorter="default">
 			<template #render-cell="{ rowData }">
 				<div class="text-nowrap">
-					{{ cogcTextMapping[rowData.cogc as PLAN_COGCPROGRAM_TYPE] }}
+					{{
+						$t(
+							cogcTextMapping[
+								rowData.cogc as PLAN_COGCPROGRAM_TYPE
+							]
+						)
+					}}
 				</div>
 			</template>
 		</XNDataTableColumn>

@@ -30,21 +30,22 @@ const cogcValues: string[] = [
 ];
 
 export const cogcTextMapping: Record<PLAN_COGCPROGRAM_TYPE, string> = {
-	"---": "None",
-	AGRICULTURE: "AGRI",
-	CHEMISTRY: "CHEM",
-	CONSTRUCTION: "CONST",
-	ELECTRONICS: "ELEC",
-	FOOD_INDUSTRIES: "FOOD",
-	FUEL_REFINING: "FUEL",
-	MANUFACTURING: "MFG",
-	METALLURGY: "METAL",
-	RESOURCE_EXTRACTION: "RES",
-	PIONEERS: "PIO",
-	SETTLERS: "SET",
-	TECHNICIANS: "TECH",
-	ENGINEERS: "ENG",
-	SCIENTISTS: "SCI",
+	"---": "game.cogc_program_short.NONE",
+	AGRICULTURE: "game.cogc_program_short.ADVERTISING_AGRICULTURE",
+	CHEMISTRY: "game.cogc_program_short.ADVERTISING_CHEMISTRY",
+	CONSTRUCTION: "game.cogc_program_short.ADVERTISING_CONSTRUCTION",
+	ELECTRONICS: "game.cogc_program_short.ADVERTISING_ELECTRONICS",
+	FOOD_INDUSTRIES: "game.cogc_program_short.ADVERTISING_FOOD_INDUSTRIES",
+	FUEL_REFINING: "game.cogc_program_short.ADVERTISING_FUEL_REFINING",
+	MANUFACTURING: "game.cogc_program_short.ADVERTISING_MANUFACTURING",
+	METALLURGY: "game.cogc_program_short.ADVERTISING_METALLURGY",
+	RESOURCE_EXTRACTION:
+		"game.cogc_program_short.ADVERTISING_RESOURCE_EXTRACTION",
+	PIONEERS: "game.cogc_program_short.WORKFORCE_PIONEERS",
+	SETTLERS: "game.cogc_program_short.WORKFORCE_SETTLERS",
+	TECHNICIANS: "game.cogc_program_short.WORKFORCE_TECHNICIANS",
+	ENGINEERS: "game.cogc_program_short.WORKFORCE_ENGINEERS",
+	SCIENTISTS: "game.cogc_program_short.WORKFORCE_SCIENTISTS",
 };
 
 export function usePlan() {

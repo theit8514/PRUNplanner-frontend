@@ -1,5 +1,8 @@
 <script setup lang="ts">
-	import { PropType, ref, Ref, watch } from "vue";
+	import { computed, PropType, ref, Ref, watch } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n({ useScope: "global" });
 
 	import { PButton } from "@/ui";
 	import { NDrawer, NDrawerContent } from "naive-ui";
@@ -30,12 +33,12 @@
 		drawerTitle: {
 			type: String,
 			required: false,
-			default: "Help",
+			default: undefined,
 		},
 		buttonTitle: {
 			type: String,
 			required: false,
-			default: "Help",
+			default: undefined,
 		},
 		buttonSize: {
 			type: String as PropType<"sm" | "md">,
@@ -59,6 +62,13 @@
 			markdownContent.value = await loadMarkdown();
 		}
 	});
+
+	const displayDrawerTitle = computed(
+		() => props.drawerTitle ?? t("common.buttons.help")
+	);
+	const displayButtonTitle = computed(
+		() => props.buttonTitle ?? t("common.buttons.help")
+	);
 </script>
 
 <template>
@@ -67,12 +77,12 @@
 		:class="buttonClass"
 		type="secondary"
 		@click="() => (showDrawer = !showDrawer)">
-		{{ buttonTitle }}
+		{{ displayButtonTitle }}
 	</PButton>
 	<n-drawer v-model:show="showDrawer" :width="drawerWidth" placement="right">
 		<n-drawer-content closable>
 			<template #header>
-				{{ drawerTitle }}
+				{{ displayDrawerTitle }}
 			</template>
 			<div v-if="markdownContent != ''" id="markdown">
 				<VueShowdown :markdown="markdownContent" />

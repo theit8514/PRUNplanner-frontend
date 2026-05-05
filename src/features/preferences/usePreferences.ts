@@ -1,5 +1,5 @@
 import { computed, ComputedRef, watch, WritableComputedRef } from "vue";
-import { debounce, isEqual } from "lodash";
+import { debounce, isEqual, cloneDeep } from "lodash";
 import { i18n, SupportedLocale } from "@/lib/i18n";
 import { Composer } from "vue-i18n";
 
@@ -40,10 +40,9 @@ export function usePreferences() {
 	const { getPlanNamePlanet } = usePlan();
 
 	watch(
-		() => userStore.preferences,
+		() => cloneDeep(userStore.preferences),
 		(newVal, oldVal) => {
 			if (isEqual(newVal, oldVal)) return;
-
 			syncToBackend(newVal);
 		},
 		{ deep: true }
