@@ -2,27 +2,27 @@
 	const screenshots: { image: string; text: string }[] = [
 		{
 			image: "/images/homepage/homepage-empire.png",
-			text: "Empire: Track production, supply chains, and growth across all your planets.",
+			text: "homepage.images.empire",
 		},
 		{
 			image: "/images/homepage/homepage-plan.png",
-			text: "Plan: Strategize and analyze without spending in-game resources.",
+			text: "homepage.images.plan",
 		},
 		{
 			image: "/images/homepage/homepage-management.png",
-			text: "Management: Coordinate plans, expansions, and your next moves effortlessly.",
+			text: "homepage.images.management",
 		},
 		{
 			image: "/images/homepage/homepage-exchanges.png",
-			text: "Exchanges: Optimize in-game pricing and trading strategies.",
+			text: "homepage.images.exchanges",
 		},
 		{
 			image: "/images/homepage/homepage-market-exploration.png",
-			text: "Exploration: Analyze years of market data for smarter insights.",
+			text: "homepage.images.market_exploration",
 		},
 		{
 			image: "/images/homepage/homepage-planet-search.png",
-			text: "Search: Find the exact planets and resources you need instantly.",
+			text: "homepage.images.planet_search",
 		},
 	];
 </script>
@@ -32,21 +32,19 @@
 		<div class="lg:mb-10">
 			<h1
 				class="bg-linear-to-b bg-clip-text pb-4 text-7xl font-extrabold leading-tight text-transparent from-white/50 to-white">
-				Plan your empire. <br />
-				Rule Prosperous Universe.
+				{{ $t("homepage.hero.title") }} <br />
+				{{ $t("homepage.hero.subtitle") }}
 			</h1>
 			<p class="text-xl text-white/60 font-mono">
-				Say goodbye to cumbersome spreadsheets and hello to seamless
-				management of your in-game assets.
+				{{ $t("homepage.hero.lead") }}
 			</p>
 		</div>
 
 		<h1 class="pb-4 text-4xl tracking-tight text-white text-center mt-30">
-			Powerful Features, Free For Everyone
+			{{ $t("homepage.features.section_title") }}
 		</h1>
 		<p class="text-white/60 text-center text-xl mb-10">
-			Streamline your planning and resource management, ensure you stay
-			ahead in the galaxy.
+			{{ $t("homepage.features.section_lead") }}
 		</p>
 
 		<div
@@ -54,80 +52,60 @@
 			<div class="bg-black">
 				<div class="flex flex-col">
 					<div class="text-white text-2xl font-bold mb-2">
-						Base Simulation
+						{{ $t("homepage.features.simulation.label") }}
 					</div>
 					<div class="text-white/60 text-lg font-mono">
-						PRUNplanner lets you design and try new bases without
-						spending in-game resources. It mirrors all aspects of a
-						base, from habitation and production buildings to COGC
-						programs and planet resources.
+						{{ $t("homepage.features.simulation.text") }}
 					</div>
 				</div>
 			</div>
 			<div class="bg-black">
 				<div class="flex flex-col">
 					<div class="text-white text-2xl font-bold mb-2">
-						Empire Planning
+						{{ $t("homepage.features.planning.label") }}
 					</div>
 					<div class="text-white/60 text-lg font-mono">
-						Effortlessly organize and manage your entire empire.
-						With PRUNplanner, you can plan across multiple bases and
-						complex supply chains, ensuring your material flows
-						remain on schedule and your empire runs smoothly.
+						{{ $t("homepage.features.planning.text") }}
 					</div>
 				</div>
 			</div>
 			<div class="bg-black">
 				<div class="flex flex-col">
 					<div class="text-white text-2xl font-bold mb-2">
-						Game Data
+						{{ $t("homepage.features.gamedata.label") }}
 					</div>
 					<div class="text-white/60 text-lg font-mono">
-						Stay ahead with up-to-date market information integrated
-						directly from the game's community API (FIO). Make
-						informed planning and expansion decisions based on
-						actual markets and the best ROI.
+						{{ $t("homepage.features.gamedata.text") }}
 					</div>
 				</div>
 			</div>
 			<div class="bg-black">
 				<div class="flex flex-col">
 					<div class="text-white text-2xl font-bold mb-2">
-						Burn & Repair
+						{{ $t("homepage.features.burn_repair.label") }}
 					</div>
 					<div class="text-white/60 text-lg font-mono">
-						Prevent shortages and bottlenecks with detailed
-						management tools. PRUNplanner tracks your resources and
-						consumables, ensuring you have everything you need right
-						when you need it, keeping your operations seamless.
+						{{ $t("homepage.features.burn_repair.text") }}
 					</div>
 				</div>
 			</div>
 			<div class="bg-black">
 				<div class="flex flex-col">
 					<div class="text-white text-2xl font-bold mb-2">
-						Market Exploration
+						{{ $t("homepage.features.market_exploration.label") }}
 					</div>
 					<div class="text-white/60 text-lg font-mono">
-						Explore historic market trends from past years and
-						uncover how markets truly behave. Spot exciting
-						opportunities, and effortlessly calculate Return on
-						Investment for every recipe and resource — giving you
-						the strategic edge you need for smarter planning.
+						{{ $t("homepage.features.market_exploration.text") }}
 					</div>
 				</div>
 			</div>
 			<div class="bg-black">
 				<div class="flex flex-col">
 					<div class="text-white text-2xl font-bold mb-2">
-						A Wealth of Additional Tools
+						{{ $t("homepage.features.tools.label") }}
 					</div>
 					<div class="text-white/60 text-lg font-mono">
-						Explore material prices from now to years past, know the
-						optimal times for repairing production buildings,
-						monitor expert spawn times, and optimize habitation
-						buildings for minimal area or cost. PRUNplanner offers
-						these features and many more.
+						{{ $t("homepage.features.tools.text") }}
 					</div>
 				</div>
 			</div>
@@ -136,12 +114,10 @@
 		<div>
 			<h1
 				class="pb-4 text-4xl tracking-tight text-white text-center mt-30">
-				Command Your Empire from Anywhere
+				{{ $t("homepage.images.section_title") }}
 			</h1>
 			<p class="text-white/60 text-center text-xl mb-10">
-				Monitor bases, manage production, and control your plans
-				effortlessly. With intuitive, powerful tools, you can
-				strategize, expand, and outsmart your rivals wherever you are.
+				{{ $t("homepage.images.section_lead") }}
 			</p>
 			<div class="grid grid-cols-1 xl:grid-cols-3 gap-3">
 				<div
@@ -150,7 +126,7 @@
 					:class="[index >= 3 ? 'hidden xl:block' : '']">
 					<img :src="screenshot.image" :alt="screenshot.text" />
 					<div class="text-center font-mono text-white/60 px-2">
-						{{ screenshot.text }}
+						{{ $t(screenshot.text) }}
 					</div>
 				</div>
 			</div>
@@ -159,52 +135,42 @@
 
 	<div class="mx-auto w-full max-w-7xl px-5 md:px-10 lg:px-0">
 		<h1 class="pb-4 text-4xl tracking-tight text-white text-center mt-30">
-			Core Concepts
+			{{ $t("homepage.concepts.section_title") }}
 		</h1>
 		<p class="text-white/60 text-center text-xl mb-10">
-			PRUNplanner consists of three main components that allow you to plan
-			and manage your Prosperous Universe empire.
+			{{ $t("homepage.concepts.section_lead") }}
 		</p>
 		<div
 			class="grid grid-cols-1 lg:grid-cols-3 divide-x divide-white/20 child:p-10 mb-10">
 			<div>
-				<div class="text-white text-2xl font-bold mb-2">Plans</div>
+				<div class="text-white text-2xl font-bold mb-2">
+					{{ $t("homepage.concepts.plans.label") }}
+				</div>
 				<div class="text-lg font-mono text-white/60">
-					Plans are the backbone of what you do in PRUNplanner. They
-					consist of all buildings, productions and bonuses of a base
-					you can put down in Prosperous Universe. You can create new
-					plans by searching for the planet you would like to create a
-					base for. Also, a plan should be assigned a CX Exchange
-					preference, as well as be assigned to an Empire.
+					{{ $t("homepage.concepts.plans.text") }}
 				</div>
 			</div>
 			<div>
-				<div class="text-white text-2xl font-bold mb-2">Empires</div>
+				<div class="text-white text-2xl font-bold mb-2">
+					{{ $t("homepage.concepts.empires.label") }}
+				</div>
 				<div class="text-lg font-mono text-white/60">
-					An Empire is a collection of plans (e.g. all the bases you
-					currently have settled in Prosperous Universe, or that you
-					would like to settle, all interconnected together). Each
-					empire is like a container that consists of multiple plans.
-					Additionally, an exchange preference can be assigned to each
-					Empire.
+					{{ $t("homepage.concepts.empires.text") }}
 				</div>
 			</div>
 			<div class="">
-				<div class="text-white text-2xl font-bold mb-2">Exchanges</div>
+				<div class="text-white text-2xl font-bold mb-2">
+					{{ $t("homepage.concepts.exchanges.label") }}
+				</div>
 				<div class="text-lg font-mono text-white/60">
-					The Exchange Settings allow you to define market preferences
-					for the pricing of materials. Each preference can be used in
-					multiple Empires. However, each Empire can only have a
-					single Exchange preference assigned to it. This ensures that
-					prices are properly calculated for all individual plans that
-					are part of the Empire.
+					{{ $t("homepage.concepts.exchanges.text") }}
 				</div>
 			</div>
 		</div>
 	</div>
 	<div>
 		<h1 class="pb-4 text-4xl tracking-tight text-white text-center mt-20">
-			Powered by tools we love to use
+			{{ $t("homepage.tools.section_title") }}
 		</h1>
 		<div class="flex flex-row items-center justify-center pt-3 gap-10">
 			<a href="https://posthog.com/" target="_blank">
@@ -218,17 +184,21 @@
 		Free &amp; Open Source
 	</h1>
 	<p class="text-white/60 text-center text-xl mb-5">
-		PRUNplanner is completely free to use, and its frontend is fully
-		<a
-			href="https://github.com/PRUNplanner/frontend"
-			target="_blank"
-			class="underline"
-			>Open Source</a
-		>.
+		<i18n-t keypath="homepage.open_source.section_lead" tag="span">
+			<template #link>
+				<a
+					href="https://github.com/PRUNplanner/frontend"
+					target="_blank"
+					class="underline hover:text-blue-400">
+					{{ $t("homepage.open_source.link_open_source") }}
+				</a>
+			</template>
+		</i18n-t>
 		<br />
-		Love it? We'd be thrilled if you contributed!
+
+		<span>{{ $t("homepage.open_source.prompt") }}</span>
 	</p>
 	<p class="text-white/60 text-center font-mono">
-		Made with &hearts; in Munich, with contributions from around the world.
+		{{ $t("homepage.love") }}
 	</p>
 </template>
