@@ -42,52 +42,123 @@
 			"PRODUCTION": "Production"
 		},
 		"expertise": {
-			"AGRICULTURE": "Agriculture",
-			"CHEMISTRY": "Chemistry",
-			"CONSTRUCTION": "Construction",
-			"ELECTRONICS": "Electronics",
-			"FOOD_INDUSTRIES": "Food Industries",
-			"FUEL_REFINING": "Fuel Refining",
-			"MANUFACTURING": "Manufacturing",
-			"METALLURGY": "Metallurgy",
-			"RESOURCE_EXTRACTION": "Resource Extraction"
+			"AGRICULTURE": "农业",
+			"CHEMISTRY": "化工",
+			"CONSTRUCTION": "土木",
+			"ELECTRONICS": "电子",
+			"FOOD_INDUSTRIES": "食品",
+			"FUEL_REFINING": "燃料",
+			"MANUFACTURING": "制造",
+			"METALLURGY": "冶金",
+			"RESOURCE_EXTRACTION": "开采"
 		},
 		"cogc_program": {
-			"Invalid": "Invalid",
-			"NONE": "None",
-			"ADVERTISING_AGRICULTURE": "Agriculture",
-			"ADVERTISING_CHEMISTRY": "Chemistry",
-			"ADVERTISING_CONSTRUCTION": "Construction",
-			"ADVERTISING_ELECTRONICS": "Electronics",
-			"ADVERTISING_FOOD_INDUSTRIES": "Food Industries",
-			"ADVERTISING_FUEL_REFINING": "Fuel Refining",
-			"ADVERTISING_MANUFACTURING": "Manufacturing",
-			"ADVERTISING_METALLURGY": "Metallurgy",
-			"ADVERTISING_RESOURCE_EXTRACTION": "Resource Extraction",
-			"WORKFORCE_PIONEERS": "Pioneers",
-			"WORKFORCE_SETTLERS": "Settlers",
-			"WORKFORCE_TECHNICIANS": "Technicians",
-			"WORKFORCE_ENGINEERS": "Engineers",
-			"WORKFORCE_SCIENTISTS": "Scientists"
+			"Invalid": "无效",
+			"NONE": "无",
+			"ADVERTISING_AGRICULTURE": "农业",
+			"ADVERTISING_CHEMISTRY": "化工",
+			"ADVERTISING_CONSTRUCTION": "土木",
+			"ADVERTISING_ELECTRONICS": "电子",
+			"ADVERTISING_FOOD_INDUSTRIES": "食品",
+			"ADVERTISING_FUEL_REFINING": "燃料",
+			"ADVERTISING_MANUFACTURING": "制造",
+			"ADVERTISING_METALLURGY": "冶金",
+			"ADVERTISING_RESOURCE_EXTRACTION": "开采",
+			"WORKFORCE_PIONEERS": "先驱者",
+			"WORKFORCE_SETTLERS": "定居者",
+			"WORKFORCE_TECHNICIANS": "职技工",
+			"WORKFORCE_ENGINEERS": "工程师",
+			"WORKFORCE_SCIENTISTS": "科学家"
 		},
 		"cogc_program_short": {
-			"Invalid": "Invalid",
-			"NONE": "None",
-			"ADVERTISING_AGRICULTURE": "AGRI",
-			"ADVERTISING_CHEMISTRY": "CHEM",
-			"ADVERTISING_CONSTRUCTION": "CONST",
-			"ADVERTISING_ELECTRONICS": "ELEC",
-			"ADVERTISING_FOOD_INDUSTRIES": "FOOD",
-			"ADVERTISING_FUEL_REFINING": "FUEL",
-			"ADVERTISING_MANUFACTURING": "MFG",
-			"ADVERTISING_METALLURGY": "METAL",
-			"ADVERTISING_RESOURCE_EXTRACTION": "RES",
-			"WORKFORCE_PIONEERS": "PIO",
-			"WORKFORCE_SETTLERS": "SET",
-			"WORKFORCE_TECHNICIANS": "TEC",
-			"WORKFORCE_ENGINEERS": "ENG",
-			"WORKFORCE_SCIENTISTS": "SCI"
+			"Invalid": "无效",
+			"NONE": "无",
+			"ADVERTISING_AGRICULTURE": "农业",
+			"ADVERTISING_CHEMISTRY": "化工",
+			"ADVERTISING_CONSTRUCTION": "土木",
+			"ADVERTISING_ELECTRONICS": "电子",
+			"ADVERTISING_FOOD_INDUSTRIES": "食品",
+			"ADVERTISING_FUEL_REFINING": "燃料",
+			"ADVERTISING_MANUFACTURING": "制造",
+			"ADVERTISING_METALLURGY": "冶金",
+			"ADVERTISING_RESOURCE_EXTRACTION": "开采",
+			"WORKFORCE_PIONEERS": "先驱者",
+			"WORKFORCE_SETTLERS": "定居者",
+			"WORKFORCE_TECHNICIANS": "职技工",
+			"WORKFORCE_ENGINEERS": "工程师",
+			"WORKFORCE_SCIENTISTS": "科学家"
 		}
+	},
+	"homepage": {
+		"images": {
+			"section_title": "Command Your Empire from Anywhere",
+			"section_lead": "Monitor bases, manage production, and control your plans effortlessly. With intuitive, powerful tools, you can strategize, expand, and outsmart your rivals wherever you are.",
+			"empire": "Empire: Track production, supply chains, and growth across all your planets.",
+			"plan": "Plan: Strategize and analyze without spending in-game resources.",
+			"management": "Management: Coordinate plans, expansions, and your next moves effortlessly.",
+			"exchanges": "Exchanges: Optimize in-game pricing and trading strategies.",
+			"market_exploration": "Exploration: Analyze years of market data for smarter insights.",
+			"planet_search": "Search: Find the exact planets and resources you need instantly."
+		},
+		"hero": {
+			"title": "Plan your empire",
+			"subtitle": "Rule Prosperous Universe",
+			"lead": "Say goodbye to cumbersome spreadsheets and hello to seamless management of your in-game assets."
+		},
+		"features": {
+			"section_title": "Powerful Features, Free For Everyone",
+			"section_lead": "Streamline your planning and resource management, ensure you stay ahead in the galaxy.",
+			"simulation": {
+				"label": "Base Simulation",
+				"text": "PRUNplanner lets you design and try new bases without spending in-game resources. It mirrors all aspects of a base, from habitation and production buildings to COGC programs and planet resources."
+			},
+			"planning": {
+				"label": "Empire Planning",
+				"text": "Effortlessly organize and manage your entire empire. With PRUNplanner, you can plan across multiple bases and complex supply chains, ensuring your material flows remain on schedule and your empire runs smoothly."
+			},
+			"gamedata": {
+				"label": "Game Data",
+				"text": "Stay ahead with up-to-date market information integrated directly from the game's community API (FIO). Make informed planning and expansion decisions based on actual markets and the best ROI."
+			},
+			"burn_repair": {
+				"label": "Burn & Repair",
+				"text": "Prevent shortages and bottlenecks with detailed management tools. PRUNplanner tracks your resources and consumables, ensuring you have everything you need right when you need it, keeping your operations seamless."
+			},
+			"market_exploration": {
+				"label": "Market Exploration",
+				"text": "Explore historic market trends from past years and uncover how markets truly behave. Spot exciting opportunities, and effortlessly calculate Return on Investment for every recipe and resource — giving you the strategic edge you need for smarter planning."
+			},
+			"tools": {
+				"label": "A Wealth of Additional Tools",
+				"text": "Explore material prices from now to years past, know the optimal times for repairing production buildings, monitor expert spawn times, and optimize habitation buildings for minimal area or cost. PRUNplanner offers these features and many more."
+			}
+		},
+		"concepts": {
+			"section_title": "Core Concepts",
+			"section_lead": "PRUNplanner consists of three main components that allow you to plan and manage your Prosperous Universe empire.",
+			"plans": {
+				"label": "Plans",
+				"text": "Plans are the backbone of what you do in PRUNplanner. They consist of all buildings, productions and bonuses of a base you can put down in Prosperous Universe. You can create new plans by searching for the planet you would like to create a base for. Also, a plan should be assigned a CX Exchange preference, as well as be assigned to an Empire."
+			},
+			"empires": {
+				"label": "Empires",
+				"text": "An Empire is a collection of plans (e.g. all the bases you currently have settled in Prosperous Universe, or that you would like to settle, all interconnected together). Each empire is like a container that consists of multiple plans. Additionally, an exchange preference can be assigned to each Empire."
+			},
+			"exchanges": {
+				"label": "Exchanges",
+				"text": "The Exchange Settings allow you to define market preferences for the pricing of materials. Each preference can be used in multiple Empires. However, each Empire can only have a single Exchange preference assigned to it. This ensures that prices are properly calculated for all individual plans that are part of the Empire."
+			}
+		},
+		"tools": {
+			"section_title": "Powered by tools we love to use"
+		},
+		"open_source": {
+			"section_title": "Free &amp; Open Source",
+			"section_lead": "PRUNplanner is completely free to use, and its frontend is fully {link}.",
+			"prompt": "Love it? We'd be thrilled if you contributed!",
+			"link_open_source": "Open Source"
+		},
+		"love": "Made with ♥  in Munich, with contributions from around the world."
 	},
 	"empire": {
 		"view_title": "Empire",
