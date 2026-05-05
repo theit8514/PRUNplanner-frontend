@@ -1,8 +1,8 @@
 {
 	"navigation": {
 		"planning": "Planning",
-		"planning_short": "Plan",
-		"empire": "Empire",
+		"planning_short": "计划",
+		"empire": "帝国",
 		"planet_search": "Planet Search",
 		"management": "Management",
 		"exchanges": "Exchanges",
@@ -31,10 +31,10 @@
 		}
 	},
 	"buttons": {
-		"save": "Save",
-		"reload": "Reload",
-		"show": "Show",
-		"hide": "Hide",
+		"save": "保存",
+		"reload": "刷新",
+		"show": "显示",
+		"hide": "隐藏",
 		"help": "Help"
 	}
 }
