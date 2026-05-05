@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useQuery } from "@/lib/query_cache/useQuery";
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
@@ -99,17 +102,16 @@
 
 <template>
 	<div class="flex flex-row flex-wrap gap-3 justify-between">
-		<h2 class="text-xl font-bold my-auto">CX Configuration</h2>
+		<h2 class="text-xl font-bold my-auto">
+			{{ $t("management.cx.title") }}
+		</h2>
 		<PButton @click="refShowCreateCX = !refShowCreateCX">
 			<template #icon><PlusSharp /></template>
-			New CX
+			{{ $t("management.cx.buttons.new_cx") }}
 		</PButton>
 	</div>
 	<div class="py-3 text-white/60">
-		Removing a CX preference will delete all its exchange and material
-		settings. Assigned empires will remain unaffected, but they will no
-		longer use the removed preferences. Make sure to assign a new CX
-		preference.
+		{{ $t("management.cx.description") }}
 	</div>
 	<div
 		:class="
@@ -117,23 +119,25 @@
 		"
 		class="transition-all duration-500 border-t border-b border-white/10">
 		<div class="flex gap-x-3 py-2">
-			<div class="my-auto">CX Name</div>
+			<div class="my-auto">{{ $t("management.cx.form.cx_name") }}</div>
 			<div class="grow">
 				<PInput
 					v-model:value="refNewCXName"
-					placeholder="CX Name (max. 100 characters)" />
+					:placeholder="t('management.cx.form.cx_placeholder')" />
 			</div>
 			<PButton
 				:loading="refIsCreating"
 				:disabled="!compCanCreate"
 				@click="createCX">
-				Create
+				{{ $t("common.buttons.create") }}
 			</PButton>
 		</div>
 	</div>
 
 	<x-n-data-table :data="localCX" striped class="pt-3">
-		<x-n-data-table-column key="cx_name" title="Name">
+		<x-n-data-table-column
+			key="cx_name"
+			:title="t('management.cx.table.cx_name')">
 			<template #render-cell="{ rowData }">
 				<router-link
 					:to="`/exchanges/${rowData.uuid}`"
@@ -142,16 +146,20 @@
 				</router-link>
 			</template>
 		</x-n-data-table-column>
-		<x-n-data-table-column key="uuid" title="Assigned to Empire?">
-			<template #title>
-				<div class="text-center">Assigned to Empire?</div>
-			</template>
+		<x-n-data-table-column
+			key="uuid"
+			:title="t('management.cx.table.assigned_to_empire')"
+			title-align="center">
 			<template #render-cell="{ rowData }">
 				<div class="text-center">
 					<PTag v-if="rowData.empires.length > 0" type="success">
-						Yes ({{ rowData.empires.length }})
+						{{ $t("common.buttons.yes") }} ({{
+							rowData.empires.length
+						}})
 					</PTag>
-					<PTag v-else type="error"> No </PTag>
+					<PTag v-else type="error">
+						{{ $t("common.buttons.no") }}
+					</PTag>
 				</div>
 			</template>
 		</x-n-data-table-column>
@@ -170,9 +178,11 @@
 		</x-n-data-table-column>
 		<template #empty>
 			<div class="flex flex-col gap-y-3">
-				<div class="text-center">No CX available.</div>
 				<div class="text-center">
-					Create your first Exchange Preference.
+					{{ $t("management.cx.table.nodata_title") }}
+				</div>
+				<div class="text-center">
+					{{ $t("management.cx.table.nodata_label") }}
 				</div>
 			</div>
 		</template>

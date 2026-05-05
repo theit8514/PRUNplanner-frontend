@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, PropType, ref, Ref, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useQuery } from "@/lib/query_cache/useQuery";
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
@@ -133,22 +136,22 @@
 		</div>
 
 		<PForm>
-			<PFormItem label="Name">
+			<PFormItem :label="t('empire.configuration.form.name')">
 				<PInput v-model:value="localData.empire_name" class="w-full" />
 			</PFormItem>
-			<PFormItem label="Faction">
+			<PFormItem :label="t('empire.configuration.form.faction')">
 				<PSelect
 					v-model:value="localData.empire_faction"
 					class="w-full"
 					:options="factionOptions" />
 			</PFormItem>
-			<PFormItem label="Permits Total">
+			<PFormItem :label="t('empire.configuration.form.permits_total')">
 				<PInputNumber
 					v-model:value="localData.empire_permits_total"
 					show-buttons
 					:min="2" />
 			</PFormItem>
-			<PFormItem label="Permits Used">
+			<PFormItem :label="t('empire.configuration.form.permits_used')">
 				<PInputNumber
 					v-model:value="localData.empire_permits_used"
 					show-buttons

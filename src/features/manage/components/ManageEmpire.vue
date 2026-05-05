@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, ref, Ref, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useQuery } from "@/lib/query_cache/useQuery";
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
@@ -238,25 +241,24 @@
 
 <template>
 	<div class="flex flex-row flex-wrap gap-3 justify-between">
-		<h2 class="text-xl font-bold my-auto">Empire Configuration</h2>
+		<h2 class="text-xl font-bold my-auto">
+			{{ $t("management.empire.title") }}
+		</h2>
 		<div class="flex gap-x-3">
 			<PButton
 				:loading="refIsUpdatingJunctions"
 				@click="updateCXJunctions">
 				<template #icon><SaveSharp /></template>
-				Update CX Assignments
+				{{ $t("management.empire.buttons.update_cx") }}
 			</PButton>
 			<PButton @click="refShowCreateEmpire = !refShowCreateEmpire">
 				<template #icon><PlusSharp /></template>
-				New Empire
+				{{ $t("management.empire.buttons.new_empire") }}
 			</PButton>
 		</div>
 	</div>
 	<div class="py-3 text-white/60">
-		Removing empires will not delete any associated plans — they will simply
-		become unassigned. You can create edit existing empires in the Empire
-		View. To ensure correct plan efficiency calculations, make sure each
-		empire has your Faction and the appropriate Permits.
+		{{ $t("management.empire.description") }}
 	</div>
 	<div
 		:class="
@@ -268,26 +270,28 @@
 		<div class="flex gap-x-3 pt-3 w-1/2 min-w-100">
 			<div class="grow">
 				<PForm>
-					<PFormItem label="Empire Name">
+					<PFormItem :label="t('management.empire.form.empire_name')">
 						<PInput
 							v-model:value="refCreateName"
 							class="w-full"
 							placeholder="Empire Name (max. 100 characters)" />
 					</PFormItem>
-					<PFormItem label="Faction">
+					<PFormItem :label="t('management.empire.form.faction')">
 						<PSelect
 							v-model:value="refCreateFaction"
 							class="w-full"
 							:options="factionOptions" />
 					</PFormItem>
-					<PFormItem label="Permits Total">
+					<PFormItem
+						:label="t('management.empire.form.permits_total')">
 						<PInputNumber
 							v-model:value="refCreatePermitsTotal"
 							show-buttons
 							:min="2"
 							class="w-full" />
 					</PFormItem>
-					<PFormItem label="Permits Used">
+					<PFormItem
+						:label="t('management.empire.form.permits_used')">
 						<PInputNumber
 							v-model:value="refCreatePermitsUsed"
 							show-buttons
@@ -301,7 +305,7 @@
 					:disabled="!compCanCreate"
 					:loading="refIsCreating"
 					@click="createEmpire">
-					Create
+					{{ $t("common.buttons.create") }}
 				</PButton>
 			</div>
 		</div>
@@ -309,7 +313,7 @@
 	<x-n-data-table :data="localEmpires" striped class="pt-3">
 		<x-n-data-table-column
 			key="empire_name"
-			title="Name"
+			:title="t('management.empire.table.empire_name')"
 			sorter="default"
 			default-sort-order="ascend">
 			<template #render-cell="{ rowData }">
@@ -320,23 +324,32 @@
 				</router-link>
 			</template>
 		</x-n-data-table-column>
-		<x-n-data-table-column key="empire_faction" title="Faction">
+		<x-n-data-table-column
+			key="empire_faction"
+			:title="t('management.empire.table.faction')">
 			<template #render-cell="{ rowData }">
 				{{ capitalizeString(rowData.empire_faction) }}
 			</template>
 		</x-n-data-table-column>
-		<x-n-data-table-column key="permits" title="Permits">
+		<x-n-data-table-column
+			key="permits"
+			:title="t('management.empire.table.permits')">
 			<template #render-cell="{ rowData }">
 				{{ rowData.empire_permits_used }} /
 				{{ rowData.empire_permits_total }}
 			</template>
 		</x-n-data-table-column>
-		<x-n-data-table-column key="plans" title="Plans">
+		<x-n-data-table-column
+			key="plans"
+			:title="t('management.empire.table.plans')">
 			<template #render-cell="{ rowData }">
 				{{ rowData.plans.length }}
 			</template>
 		</x-n-data-table-column>
-		<x-n-data-table-column key="cx" title="CX" width="200">
+		<x-n-data-table-column
+			key="cx"
+			:title="t('management.empire.table.cx')"
+			width="200">
 			<template #render-cell="{ rowData }">
 				<div class="max-w-50">
 					<PSelect
@@ -361,8 +374,12 @@
 		</x-n-data-table-column>
 		<template #empty>
 			<div class="flex flex-col gap-y-3">
-				<div class="text-center">No Empires available.</div>
-				<div class="text-center">Create your first Empire.</div>
+				<div class="text-center">
+					{{ $t("management.empire.table.nodata_title") }}
+				</div>
+				<div class="text-center">
+					{{ $t("management.empire.table.nodata_label") }}
+				</div>
 			</div>
 		</template>
 	</x-n-data-table>
