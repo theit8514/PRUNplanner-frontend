@@ -1,9 +1,14 @@
 {
-	"plan": "计划",
+	"plan": "Plan | Plans",
+	"plans_plural": "Plans",
 	"empire": "帝国 | 帝国",
+	"cx": "CX | CXs",
+	"cx_plural": "CXs",
 	"planets": "行星 | 行星",
+	"faction": "Faction",
 	"cogc": "COGC",
 	"permits": "许可证 | 许可证",
+	"permits_plural": "Permits",
 	"profit": "利润",
 	"revenue": "收入",
 	"cost": "成本",
@@ -15,5 +20,16 @@
 	"delta_price": "ȼ Delta",
 	"production": "Production",
 	"consumption": "Consumption",
-	"materials": "Material | Materials"
+	"materials": "Material | Materials",
+	"materials_plural": "Materials",
+	"surface": "Surface",
+	"gravity": "Gravity",
+	"temperature": "Temperature",
+	"pressure": "Pressure",
+	"high": "High",
+	"low": "Low",
+	"rocky": "Rocky",
+	"gaseous": "Gaseous",
+	"fertility": "Fertility",
+	"popr": "POPR"
 }
