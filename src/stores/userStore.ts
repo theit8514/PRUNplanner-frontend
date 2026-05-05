@@ -43,7 +43,7 @@ import {
 } from "@/features/preferences/userPreferences.types";
 import { preferenceDefaults } from "@/features/preferences/userDefaults";
 import { Composer } from "vue-i18n";
-import { locales, SupportedLocale } from "@/lib/i18n";
+import { localeLazyLoaders, SupportedLocale } from "@/lib/i18n";
 
 export const useUserStore = defineStore(
 	"prunplanner_user",
@@ -104,26 +104,57 @@ export const useUserStore = defineStore(
 		}
 
 		async function setLocale(v: SupportedLocale, composer: Composer) {
-			const path = `/src/locales/${v}.json`;
-
-			if (!(path in locales)) {
-				console.error(`Locale file ${path} not found.`);
+			// language already loaded
+			if (composer.availableLocales.includes(v)) {
+				composer.locale.value = v;
 				return;
 			}
 
-			if (!composer.availableLocales.includes(v)) {
-				const loader = locales[path] as () => Promise<{
-					default: Record<string, unknown>;
-				}>;
-				const messages = await loader();
-				composer.setLocaleMessage(v, messages.default);
+			// filter glob for all files in specified locale folder
+			const localeFolderPrefix = `/src/locales/${v}/`;
+			const relevantFiles = Object.keys(localeLazyLoaders).filter(
+				(path) => path.startsWith(localeFolderPrefix)
+			);
+
+			if (relevantFiles.length === 0) {
+				console.error(`No files found for locale: ${v}`);
+				return;
 			}
 
-			composer.locale.value = v;
+			try {
+				// 3. Resolve all loaders in parallel
+				const loadedModules = await Promise.all(
+					relevantFiles.map(async (path) => {
+						const loader = localeLazyLoaders[
+							path
+							// eslint-disable-next-line @typescript-eslint/no-explicit-any
+						] as () => Promise<{ default: any }>;
+						const mod = await loader();
+						const key = path.split("/").pop()?.replace(".json", "");
+						return { key, data: mod.default };
+					})
+				);
 
-			nextTick(() => {
-				document.querySelector("html")?.setAttribute("lang", v);
-			});
+				// 4. Merge into a single message object
+				const messages = loadedModules.reduce(
+					(acc, { key, data }) => {
+						if (key) acc[key] = data;
+						return acc;
+					},
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
+					{} as Record<string, any>
+				);
+
+				// 5. Register and switch
+				composer.setLocaleMessage(v, messages);
+				composer.locale.value = v;
+
+				nextTick(() => {
+					document.querySelector("html")?.setAttribute("lang", v);
+				});
+			} catch (err) {
+				console.error(`Failed to load locale ${v}:`, err);
+			}
 		}
 
 		// getters
