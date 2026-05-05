@@ -168,8 +168,6 @@ describe("usePlanCalculation", async () => {
 		);
 		const { backendData } = calculation;
 
-		console.log(backendData.value);
-
 		expect(backendData.value).toStrictEqual({
 			empire_uuid: undefined,
 			plan_name: "EW COF RAT DW C",

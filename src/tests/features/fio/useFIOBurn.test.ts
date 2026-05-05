@@ -80,7 +80,6 @@ describe("useFIOBurn", async () => {
 		const { burnTable } = useFIOBurn(ref(fakePlans), ref(fakeData));
 
 		const result = burnTable.value;
-		console.log(result);
 
 		expect(result.length).toBe(2);
 		expect(result[0]).toStrictEqual({
