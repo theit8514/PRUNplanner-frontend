@@ -1,68 +1,68 @@
 {
-	"view_title": "Management",
-	"title": "Management",
+	"view_title": "Beheren",
+	"title": "Beheren",
 	"empire": {
-		"title": "Empire Configuration",
-		"description": "Removing empires will not delete any associated plans — they will simply become unassigned. You can create edit existing empires in the Empire View. To ensure correct plan efficiency calculations, make sure each empire has your Faction and the appropriate Permits.",
+		"title": "Rijk Configuratie",
+		"description": "Het verwijderen van een rijk zal geen geassocieerde plannen verwijderen - geassocieerde plannen zullen losgekoppeld worden. Je kunt bestaande rijken bewerken vanuit het rijk overzicht. Zorg dat elk rijk de correcte vergunningen heeft voor jouw factie om zeker te zijn van efficiënte plan berekeningen.",
 		"buttons": {
-			"update_cx": "Update CX Assignments",
-			"new_empire": "New Empire"
+			"update_cx": "CX Toewijzingen Vernieuwen",
+			"new_empire": "Nieuw Rijk"
 		},
 		"form": {
-			"empire_name": "@:terms.empire Name",
-			"faction": "@:terms.faction",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"empire_name": "Naam van Rijk",
+			"faction": "Factie",
+			"permits_total": "Totaal aantal vergunningen",
+			"permits_used": "Gebruikt aantal vergunningen"
 		},
 		"table": {
-			"empire_name": "@:terms.empire",
-			"faction": "@:terms.faction",
-			"permits": "@:terms.permits",
-			"plans": "@:terms.plans_plural",
+			"empire_name": "Rijk",
+			"faction": "Factie",
+			"permits": "Vergunningen",
+			"plans": "Plannen",
 			"cx": "CX",
-			"nodata_title": "No Empires available",
-			"nodata_label": "Create your first Empire"
+			"nodata_title": "Geen Rijk Beschikbaar",
+			"nodata_label": "Creëer je eerste rijk"
 		}
 	},
 	"cx": {
-		"title": "CX Configuration",
-		"description": "Removing a CX preference will delete all its exchange and material settings. Assigned empires will remain unaffected, but they will no longer use the removed preferences. Make sure to assign a new CX preference.",
+		"title": "CX-configuratie",
+		"description": "Het verwijderen van een CX-voorkeur verwijdert alle beurs en materiaal instellingen. Aangewezen rijken zullen ongedeerd zijn, maar ze zullen niet meer de verwijderde voorkeur gebruiken. Zorg dat er een nieuwe CX-voorkeur aangewezen wordt.",
 		"buttons": {
-			"new_cx": "New @:terms.cx"
+			"new_cx": "Nieuw"
 		},
 		"form": {
-			"cx_name": "@:terms.cx Name",
-			"cx_placeholder": "CX Name (max. 100 characters)"
+			"cx_name": "Naam",
+			"cx_placeholder": "CX Naam"
 		},
 		"table": {
-			"cx_name": "@:terms.cx Name",
-			"assigned_to_empire": "Assigned to Empire?",
-			"nodata_title": "No @:terms.cx available.",
-			"nodata_label": "Create your first Exchange Preference."
+			"cx_name": "Naam",
+			"assigned_to_empire": "Toegewezen aan Rijk?",
+			"nodata_title": "Geen.",
+			"nodata_label": "Creëer je eerste beurs voorkeur."
 		}
 	},
 	"filter": {
 		"title": "Filter",
-		"plan": "@:terms.plan",
-		"active_empire": "Active @:terms.empire"
+		"plan": "Plan",
+		"active_empire": "Actief"
 	},
 	"assignments": {
-		"title": "Plan ↔ Empire Assignments",
-		"description": "Every planned base can be assigned to multiple empires. This allows you to simultaneously keep track of your existing Prosperous Universe empire, corporation production chains or future expansion plans.",
+		"title": "Plan <-> Rijk Toewijzingen",
+		"description": "Elke geplande basis kan aan meerdere rijken toegewezen worden. Dit laat je tegelijk je rijk, corporatie productie ketens, of uitbreidingsplannen, in de gaten houden.",
 		"buttons": {
-			"update_assignments": "Update Plan Assignments",
-			"reload": "@:common.buttons.reload"
+			"update_assignments": "Vernieuwen Toegewezen Plan",
+			"reload": "Herladen"
 		},
 		"deletion": {
-			"title": "Confirm Plan Deletion",
-			"content": "Are you sure? Deleting the Plan can't be reversed."
+			"title": "Plan Verwijdering Bevestigen",
+			"content": "Weet je dit zeker? Het verwijderen van dit plan kan niet worden teruggedraaid."
 		},
 		"table": {
-			"plan": "@:terms.plan",
-			"planet": "@:terms.planets",
-			"configuration": "Configuration",
-			"nodata_title": "No @:terms.plans available",
-			"nodata_label": "Use Planet Search to create your first @:terms.plans."
+			"plan": "plan",
+			"planet": "planeet",
+			"configuration": "Configuratie",
+			"nodata_title": "Geen plan beschikbaar",
+			"nodata_label": "Gebruik planeet zoeken om je eerste @:terms.plans te maken."
 		}
 	}
 }
