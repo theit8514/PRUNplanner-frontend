@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, PropType } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useProductionOpportunities } from "@/features/empire/useProductionOpportunities";
 
@@ -38,29 +41,27 @@
 <template>
 	<div
 		class="border rounded-[3px] border-white/15 p-3 flex flex-col flex-1 min-h-0">
-		<h1 class="text-lg font-bold">Production Opportunities</h1>
+		<h1 class="text-lg font-bold">
+			{{ $t("empire.opportunities.headline") }}
+		</h1>
 		<div class="text-white/60 py-3 flex flex-col gap-1.5">
 			<p>
-				Find recipe opportunities to convert excess materials into other
-				products. This view identifies production opportunities where
-				your Material I/O shows a positive delta, prioritized by input
-				availability
+				{{ $t("empire.opportunities.intro") }}
 			</p>
 			<p>
-				<span class="text-prunplanner">Please Note:</span> Do not rely
-				on the available opportunity alone. Cross-reference trade
-				volumes and exchange overviews (via hover on the material) to
-				assess market liquidity and potential ROI. Use indicators to
-				identify which specific material is bottlenecking your scaling
-				potential or if selling your available delta is more profitable
-				than moving to another production.
+				<span class="text-prunplanner">
+					{{ $t("empire.opportunities.please_note") }}
+				</span>
+				{{ $t("empire.opportunities.note") }}
 			</p>
 		</div>
 		<div
 			class="grid grid-cols-1 xl:grid-cols-3 gap-3 pb-3 child:gap-1 child:bg-black">
 			<div
 				class="flex flex-col p-3 rounded border border-white/10 child:text-xs">
-				<span class="uppercase text-white/80"> Opportunities </span>
+				<span class="uppercase text-white/80">
+					{{ $t("empire.opportunities.tiles.opportunities") }}
+				</span>
 				<div
 					class="flex flex-row justify-between items-center font-mono">
 					<span class="text-2xl text-white">
@@ -94,7 +95,9 @@
 			</div>
 			<div
 				class="flex flex-col p-3 rounded border border-white/10 child:text-xs">
-				<span class="uppercase text-white/80"> Delta Required </span>
+				<span class="uppercase text-white/80">
+					{{ $t("empire.opportunities.tiles.delta_required") }}
+				</span>
 				<div
 					class="flex flex-row justify-between items-center font-mono">
 					<span class="text-2xl text-white">
@@ -128,7 +131,9 @@
 			</div>
 			<div
 				class="flex flex-col p-3 rounded border border-white/10 child:text-xs">
-				<span class="uppercase text-white/80"> Material Missing </span>
+				<span class="uppercase text-white/80">
+					{{ $t("empire.opportunities.tiles.material_missing") }}
+				</span>
 				<div
 					class="flex flex-row justify-between items-center font-mono">
 					<span class="text-2xl text-white">
@@ -172,7 +177,7 @@
 				:row-key="(row) => row.recipe.recipe_name">
 				<XNDataTableColumn
 					key="building_recipe"
-					title="Building"
+					:title="t('empire.opportunities.table.building')"
 					width="75">
 					<template #render-cell="{ rowData }">
 						<span class="text-lg font-bold text-nowrap">
@@ -182,7 +187,7 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="flow_inputs"
-					title="Production (Inputs &rarr; Outputs)"
+					:title="t('empire.opportunities.table.flow_inputs')"
 					:title-col-span="2">
 					<template #render-cell="{ rowData }">
 						<div
@@ -245,7 +250,7 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="Analysis"
-					title="Analysis"
+					:title="t('empire.opportunities.table.analysis')"
 					title-align="right">
 					<template #render-cell="{ rowData }">
 						<div class="flex flex-col text-end">
@@ -259,7 +264,11 @@
 							<span
 								v-if="rowData.isFullMatch"
 								class="text-xs text-prunplanner">
-								Potential Batches
+								{{
+									$t(
+										"empire.opportunities.table.potential_batches"
+									)
+								}}
 							</span>
 							<span
 								v-else-if="
@@ -267,17 +276,25 @@
 									rowData.sustainedRuns > 0
 								"
 								class="text-xs text-orange-400">
-								Delta Required
+								{{
+									$t(
+										"empire.opportunities.table.delta_required"
+									)
+								}}
 							</span>
 							<span v-else class="text-xs text-negative">
-								Missing Material
+								{{
+									$t(
+										"empire.opportunities.table.missing_material"
+									)
+								}}
 							</span>
 						</div>
 					</template>
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="inputSellCost"
-					title="Sell Inputs"
+					:title="t('empire.opportunities.table.sell_inputs')"
 					title-align="right"
 					align="right">
 					<template #render-cell="{ rowData }">
@@ -304,7 +321,7 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="outputSellCost"
-					title="Sell Outputs"
+					:title="t('empire.opportunities.table.sell_outputs')"
 					title-align="right"
 					align="right">
 					<template #render-cell="{ rowData }">

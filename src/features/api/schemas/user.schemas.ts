@@ -16,6 +16,7 @@ import {
 	IUserRegistrationResponse,
 } from "@/features/api/userData.types";
 import { IPreference } from "@/features/preferences/userPreferences.types";
+import { SUPPORTED_LOCALES } from "@/lib/i18n";
 
 export const LoginPayloadSchema: z.ZodType<IUserLoginPayload> = z.object({
 	username: z.string().min(1),
@@ -119,6 +120,9 @@ export const UserPasswordResetResponseSchema: z.ZodType<IUserRequestPasswordRese
 	});
 
 export const UserPreferenceSchema: z.ZodType<IPreference> = z.object({
+	locale: z
+		.preprocess((val) => val ?? "en_US", z.enum(SUPPORTED_LOCALES))
+		.catch("en_US"),
 	defaultEmpireUuid: z
 		.string()
 		.nullish()

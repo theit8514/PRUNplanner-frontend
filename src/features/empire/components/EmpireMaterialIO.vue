@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { PropType, computed, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Components
 	import MaterialTile from "@/features/material_tile/components/MaterialTile.vue";
 
@@ -51,14 +54,20 @@
 <template>
 	<div class="h-dvh flex-1">
 		<x-n-data-table :data="localEmpireMaterialIO" striped>
-			<x-n-data-table-column key="ticker" title="Ticker" sorter="default">
+			<x-n-data-table-column
+				key="ticker"
+				:title="t('terms.material_ticker')"
+				sorter="default">
 				<template #render-cell="{ rowData }">
 					<MaterialTile
 						:key="rowData.ticker"
 						:ticker="rowData.ticker" />
 				</template>
 			</x-n-data-table-column>
-			<x-n-data-table-column key="delta" title="Delta" sorter="default">
+			<x-n-data-table-column
+				key="delta"
+				:title="t('terms.delta')"
+				sorter="default">
 				<template #render-cell="{ rowData }">
 					<span
 						class="text-nowrap"
@@ -73,7 +82,7 @@
 			</x-n-data-table-column>
 			<x-n-data-table-column
 				key="output"
-				title="Production"
+				:title="t('terms.production')"
 				sorter="default">
 				<template #render-cell="{ rowData }">
 					<span
@@ -85,7 +94,7 @@
 			</x-n-data-table-column>
 			<x-n-data-table-column
 				key="input"
-				title="Consumption"
+				:title="t('terms.consumption')"
 				sorter="default">
 				<template #render-cell="{ rowData }">
 					<span :class="rowData.input <= 0 ? 'text-white/50' : ''">
@@ -95,7 +104,7 @@
 			</x-n-data-table-column>
 			<x-n-data-table-column
 				key="deltaPrice"
-				title="ȼ Delta"
+				:title="t('terms.delta_price')"
 				sorter="default">
 				<template #render-cell="{ rowData }">
 					<span
@@ -111,7 +120,7 @@
 			</x-n-data-table-column>
 			<x-n-data-table-column
 				key="outputPlanets"
-				title="Production Planets">
+				:title="t('empire.material_io.production_planets')">
 				<template #render-cell="{ rowData }">
 					<div
 						v-for="p in rowData.outputPlanets"
@@ -129,7 +138,7 @@
 			</x-n-data-table-column>
 			<x-n-data-table-column
 				key="inputPlanets"
-				title="Consumption Planets">
+				:title="t('empire.material_io.consumption_planets')">
 				<template #render-cell="{ rowData }">
 					<div
 						v-for="p in rowData.inputPlanets"

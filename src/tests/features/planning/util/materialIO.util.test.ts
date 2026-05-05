@@ -315,7 +315,6 @@ describe("Util: materialIO ", async () => {
 			fakeIEmpireMaterialIO
 		);
 		expect(result).toBeDefined();
-		console.log(result);
 
 		expect(result?.metadata).toBeDefined();
 		expect(result?.empire_total["C"]).toBeDefined();

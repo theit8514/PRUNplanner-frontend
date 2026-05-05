@@ -8,10 +8,13 @@
 		toRef,
 	} from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Unhead
 	import { useHead } from "@unhead/vue";
 	useHead({
-		title: "Empire | PRUNplanner",
+		title: `${t("empire.view_title")} | PRUNplanner`,
 	});
 
 	// Composables
@@ -347,7 +350,7 @@
 											: 'secondary'
 									"
 									@click="() => (mainContent = 'materialio')">
-									Material I/O
+									{{ $t("empire.views.material_io") }}
 								</PButton>
 								<PButton
 									:type="
@@ -356,7 +359,7 @@
 											: 'secondary'
 									"
 									@click="() => (mainContent = 'analysis')">
-									Analysis
+									{{ $t("empire.views.analysis") }}
 								</PButton>
 								<PButton
 									:type="
@@ -367,7 +370,11 @@
 									@click="
 										() => (mainContent = 'opportunities')
 									">
-									Production Opportunities
+									{{
+										$t(
+											"empire.views.production_opportunities"
+										)
+									}}
 								</PButton>
 							</PButtonGroup>
 							<HelpDrawer file-name="empire" />

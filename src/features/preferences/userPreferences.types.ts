@@ -1,3 +1,5 @@
+import { SupportedLocale } from "@/lib/i18n";
+
 export interface IPreferencePerPlan {
 	includeCM?: boolean;
 	visitationMaterialExclusions?: string[];
@@ -5,6 +7,7 @@ export interface IPreferencePerPlan {
 }
 
 export interface IPreference {
+	locale: SupportedLocale;
 	defaultEmpireUuid: string | undefined;
 	defaultCXUuid: string | undefined;
 	defaultBuyItemsFromCX: boolean;

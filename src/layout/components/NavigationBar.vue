@@ -11,6 +11,9 @@
 	const { layoutNavigationStyle } = usePreferences();
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -50,6 +53,7 @@
 	const userStore = useUserStore();
 	const queryStore = useQueryStore();
 	const planningStore = usePlanningStore();
+
 	/*
 	 * FIO Data Refresh, if the user either already has FIO or if this is changed,
 	 * a background refresh of FIO data is triggered in the gamedata store
@@ -80,30 +84,30 @@
 
 	const menuItems: ComputedRef<IMenuSection[]> = computed(() => [
 		{
-			label: "Planning",
-			labelShort: "Plan",
+			label: t("common.navigation.planning"),
+			labelShort: t("common.navigation.planning_short"),
 			display: true,
 			children: [
 				{
-					label: "Empire",
+					label: t("common.navigation.empire"),
 					display: true,
 					routerLink: "/",
 					icon: HomeSharp,
 				},
 				{
-					label: "Planet Search",
+					label: t("common.navigation.planet_search"),
 					display: true,
 					routerLink: "/search",
 					icon: SearchRound,
 				},
 				{
-					label: "Management",
+					label: t("common.navigation.management"),
 					display: true,
 					routerLink: "/manage",
 					icon: SettingsRound,
 				},
 				{
-					label: "Exchanges",
+					label: t("common.navigation.exchanges"),
 					display: true,
 					routerLink: "/exchanges",
 					icon: ShoppingBasketSharp,
@@ -126,30 +130,30 @@
 		// 	],
 		// },
 		{
-			label: "Tools",
-			labelShort: "Tool",
+			label: t("common.navigation.tools"),
+			labelShort: t("common.navigation.tools_short"),
 			display: true,
 			children: [
 				{
-					label: "Market Exploration",
+					label: t("common.navigation.market_exploration"),
 					display: true,
 					routerLink: "/market-exploration",
 					icon: ExploreSharp,
 				},
 				{
-					label: "Market Live",
+					label: t("common.navigation.market_live"),
 					display: true,
 					routerLink: "/market-live",
 					icon: RssFeedSharp,
 				},
 				{
-					label: "Recipe ROI",
+					label: t("common.navigation.recipe_roi"),
 					display: true,
 					routerLink: "/roi-overview",
 					icon: MoneySharp,
 				},
 				{
-					label: "Resource ROI",
+					label: t("common.navigation.resource_roi"),
 					display: true,
 					routerLink: "/resource-roi-overview",
 					icon: TravelExploreSharp,
@@ -181,19 +185,19 @@
 				// 	],
 				// },
 				{
-					label: "HQ Calculator",
+					label: t("common.navigation.hq_calculator"),
 					display: true,
 					routerLink: "/hq-upgrade-calculator",
 					icon: ProductionQuantityLimitsSharp,
 				},
 				{
-					label: "Production Chains",
+					label: t("common.navigation.production_chains"),
 					display: true,
 					routerLink: "/production-chain",
 					icon: CompareSharp,
 				},
 				{
-					label: "Upkeep Prices",
+					label: t("common.navigation.upkeep_price_calculator"),
 					display: true,
 					routerLink: "/upkeep-price-calculator",
 					icon: AccountBalanceSharp,
@@ -211,13 +215,13 @@
 				// 	icon: StarsSharp,
 				// },
 				{
-					label: "FIO Burn",
+					label: t("common.navigation.fio_burn"),
 					display: userStore.hasFIO,
 					routerLink: "/fio/burn",
 					icon: LocalFireDepartmentSharp,
 				},
 				{
-					label: "FIO Repair",
+					label: t("common.navigation.fio_repair"),
 					display: userStore.hasFIO,
 					routerLink: "/fio/repair",
 					icon: AutoFixNormalSharp,
@@ -255,30 +259,30 @@
 			],
 		},
 		{
-			label: "Account",
-			labelShort: "Acc",
+			label: t("common.navigation.account"),
+			labelShort: t("common.navigation.account_short"),
 			display: true,
 			children: [
 				{
-					label: "Profile",
+					label: t("common.navigation.profile"),
 					display: true,
 					routerLink: "/profile",
 					icon: PersonSharp,
 				},
 				{
-					label: "API",
+					label: t("common.navigation.api"),
 					display: true,
 					routerLink: "/apikey",
 					icon: ExtensionSharp,
 				},
 				{
-					label: "Help",
+					label: t("common.navigation.help"),
 					display: true,
 					routerLink: "/help",
 					icon: HelpOutlineSharp,
 				},
 				{
-					label: "Logout",
+					label: t("common.navigation.logout"),
 					display: true,
 					icon: LogOutRound,
 					functionCall: () => {
@@ -339,6 +343,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="flex flex-col flex-1 overflow-y-auto">
 			<nav class="flex-1 pt-0 pb-4 text-white/80">
 				<template
@@ -526,14 +531,24 @@
 					<PTooltip v-if="userStore.hasFIO && storageTimestamp !== 0">
 						<template #trigger>
 							<PTag size="sm" type="success" :bordered="false">
-								{{ isFull ? "FIO Active" : "FIO" }}
+								{{
+									isFull
+										? t("common.navigation.fio.fio_active")
+										: t("common.navigation.fio.fio")
+								}}
 							</PTag>
 						</template>
 						<PTable striped>
 							<thead>
 								<tr>
-									<th>Backend</th>
-									<th>FIO</th>
+									<th>
+										{{
+											$t("common.navigation.fio.backend")
+										}}
+									</th>
+									<th>
+										{{ $t("common.navigation.fio.fio") }}
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -550,7 +565,11 @@
 					</PTooltip>
 					<RouterLink v-else to="/profile">
 						<PTag size="sm" type="warning" :bordered="false">
-							{{ isFull ? "FIO Inactive" : "FIO" }}
+							{{
+								isFull
+									? t("common.navigation.fio.fio_inactive")
+									: t("common.navigation.fio.fio")
+							}}
 						</PTag>
 					</RouterLink>
 				</div>

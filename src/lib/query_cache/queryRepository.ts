@@ -1,5 +1,8 @@
 import { IQueryDefinition } from "@/lib/query_cache/queryCache.types";
 
+// i18n
+import { i18n } from "@/lib/i18n";
+
 // config
 import config from "@/lib/config";
 
@@ -150,6 +153,7 @@ import {
 	APIKeyCreateResponseType,
 	APIKeyListType,
 } from "@/features/api/schemas/apiKeysData.schema";
+import { Composer } from "vue-i18n";
 
 export function useQueryRepository() {
 	const queryStore = useQueryStore();
@@ -925,6 +929,9 @@ export function useQueryRepository() {
 		PatchPreferences: {
 			key: () => ["user", "profile", "patch"],
 			fetchFn: async (prefs: IPreference) => {
+				// dont try to patch if not logged in, d'oh!
+				if (!userStore.isLoggedIn) return;
+
 				return await callPatchUserPreferences(prefs);
 			},
 			autoRefetch: false,
@@ -934,7 +941,13 @@ export function useQueryRepository() {
 			key: () => ["user", "profile"],
 			fetchFn: async () => {
 				const prefs = await callGetUserPreferences();
-				userStore.preferences = prefs;
+				Object.assign(userStore.preferences, prefs);
+
+				// handle locale
+				const userLocale = userStore.preferences.locale || "en_US";
+				userStore
+					.setLocale(userLocale, i18n.global as unknown as Composer)
+					.catch(console.error);
 
 				return prefs;
 			},

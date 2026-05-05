@@ -62,7 +62,7 @@
 		<div>
 			<span>COGC: </span>
 			<span :class="props.cogc === '---' ? 'text-negative' : ''">
-				{{ cogcTextMapping[props.cogc] }}
+				{{ $t(cogcTextMapping[props.cogc]) }}
 			</span>
 		</div>
 		<div>

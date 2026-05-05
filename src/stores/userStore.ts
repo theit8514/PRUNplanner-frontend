@@ -1,5 +1,13 @@
 import { defineStore } from "pinia";
-import { computed, ComputedRef, Reactive, reactive, ref, Ref } from "vue";
+import {
+	computed,
+	ComputedRef,
+	nextTick,
+	Reactive,
+	reactive,
+	ref,
+	Ref,
+} from "vue";
 import merge from "lodash/merge";
 
 // API
@@ -34,6 +42,8 @@ import {
 	IPreferencePerPlan,
 } from "@/features/preferences/userPreferences.types";
 import { preferenceDefaults } from "@/features/preferences/userDefaults";
+import { Composer } from "vue-i18n";
+import { localeLazyLoaders, SupportedLocale } from "@/lib/i18n";
 
 export const useUserStore = defineStore(
 	"prunplanner_user",
@@ -87,6 +97,64 @@ export const useUserStore = defineStore(
 
 		function clearPlanPreference(planUuid: string): void {
 			delete preferences.planOverrides[planUuid];
+		}
+
+		async function initLocale(composer: Composer) {
+			await setLocale(preferences.locale, composer);
+		}
+
+		async function setLocale(v: SupportedLocale, composer: Composer) {
+			// language already loaded
+			if (composer.availableLocales.includes(v)) {
+				composer.locale.value = v;
+				return;
+			}
+
+			// filter glob for all files in specified locale folder
+			const localeFolderPrefix = `/src/locales/${v}/`;
+			const relevantFiles = Object.keys(localeLazyLoaders).filter(
+				(path) => path.startsWith(localeFolderPrefix)
+			);
+
+			if (relevantFiles.length === 0) {
+				console.error(`No files found for locale: ${v}`);
+				return;
+			}
+
+			try {
+				// 3. Resolve all loaders in parallel
+				const loadedModules = await Promise.all(
+					relevantFiles.map(async (path) => {
+						const loader = localeLazyLoaders[
+							path
+							// eslint-disable-next-line @typescript-eslint/no-explicit-any
+						] as () => Promise<{ default: any }>;
+						const mod = await loader();
+						const key = path.split("/").pop()?.replace(".json", "");
+						return { key, data: mod.default };
+					})
+				);
+
+				// 4. Merge into a single message object
+				const messages = loadedModules.reduce(
+					(acc, { key, data }) => {
+						if (key) acc[key] = data;
+						return acc;
+					},
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
+					{} as Record<string, any>
+				);
+
+				// 5. Register and switch
+				composer.setLocaleMessage(v, messages);
+				composer.locale.value = v;
+
+				nextTick(() => {
+					document.querySelector("html")?.setAttribute("lang", v);
+				});
+			} catch (err) {
+				console.error(`Failed to load locale ${v}:`, err);
+			}
 		}
 
 		// getters
@@ -275,6 +343,8 @@ export const useUserStore = defineStore(
 			setPlanPreference,
 			clearPlanPreference,
 			getPlanPreference,
+			setLocale,
+			initLocale,
 			// functions
 			setToken,
 			logout,

@@ -23,7 +23,6 @@ describe("useExchangeData", () => {
 			const { getExchangeTicker } = await useExchangeData();
 
 			const result = await getExchangeTicker("RAT.AI1");
-			console.log(result);
 			expect(result).toBeDefined();
 			expect(result.ticker_id).toBe("RAT.AI1");
 		});

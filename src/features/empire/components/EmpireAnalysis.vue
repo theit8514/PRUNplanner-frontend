@@ -183,31 +183,45 @@
 	<div class="border rounded-[3px] border-white/15 p-3">
 		<div class="grid grid-cols-1 xl:grid-cols-2 gap-3">
 			<div v-if="chartDataProfitablePlans.length >= 3" class="col-span-2">
-				<h2 class="text-lg font-bold pb-3">Profitable Plans</h2>
+				<h2 class="text-lg font-bold pb-3">
+					{{ $t("empire.analysis.profitable_plans") }}
+				</h2>
 				<EmpirePlanMapChart :data="chartDataProfitablePlans" />
 			</div>
 			<div>
-				<h2 class="text-lg font-bold">Material Profits</h2>
+				<h2 class="text-lg font-bold">
+					{{ $t("empire.analysis.material_profits") }}
+				</h2>
 				<EmpirePieChart :data="chartDataMaterialProfit" />
 			</div>
 			<div>
-				<h2 class="text-lg font-bold">Material Costs</h2>
+				<h2 class="text-lg font-bold">
+					{{ $t("empire.analysis.material_costs") }}
+				</h2>
 				<EmpirePieChart :data="chartDataMaterialCost" />
 			</div>
 			<div>
-				<h2 class="text-lg font-bold">Net Production</h2>
+				<h2 class="text-lg font-bold">
+					{{ $t("empire.analysis.net_production") }}
+				</h2>
 				<EmpirePieChart :data="chartDataNetProduction" />
 			</div>
 			<div>
-				<h2 class="text-lg font-bold">Net Consumption</h2>
+				<h2 class="text-lg font-bold">
+					{{ $t("empire.analysis.net_consumption") }}
+				</h2>
 				<EmpirePieChart :data="chartDataNetConsumption" />
 			</div>
 			<div>
-				<h2 class="text-lg font-bold">Exclusive Production</h2>
+				<h2 class="text-lg font-bold">
+					{{ $t("empire.analysis.exclusive_production") }}
+				</h2>
 				<EmpirePieChart :data="chartDataExclusiveProduction" />
 			</div>
 			<div>
-				<h2 class="text-lg font-bold">Exclusive Consumption</h2>
+				<h2 class="text-lg font-bold">
+					{{ $t("empire.analysis.exclusive_consumption") }}
+				</h2>
 				<EmpirePieChart :data="chartDataExclusiveConsumption" />
 			</div>
 		</div>
