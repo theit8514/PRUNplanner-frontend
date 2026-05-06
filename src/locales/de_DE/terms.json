@@ -31,5 +31,7 @@
 	"rocky": "Rocky",
 	"gaseous": "Gaseous",
 	"fertility": "Fertility",
-	"popr": "POPR"
+	"popr": "POPR",
+	"fio": "FIO",
+	"api_key": "API Key"
 }
