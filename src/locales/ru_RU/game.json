@@ -50,5 +50,12 @@
 		"WORKFORCE_TECHNICIANS": "TEC",
 		"WORKFORCE_ENGINEERS": "ENG",
 		"WORKFORCE_SCIENTISTS": "SCI"
+	},
+	"upkeep": {
+		"safety": "Safety",
+		"health": "Health",
+		"comfort": "Comfort",
+		"culture": "Culture",
+		"education": "Education"
 	}
 }
