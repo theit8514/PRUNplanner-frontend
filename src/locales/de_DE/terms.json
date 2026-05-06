@@ -1,9 +1,14 @@
 {
-	"plan": "Plan",
+	"plan": "Plan | Plans",
+	"plans_plural": "Plans",
 	"empire": "Imperium | Imperien",
+	"cx": "CX | CXs",
+	"cx_plural": "CXs",
 	"planets": "Planet | Planeten",
+	"faction": "Faction",
 	"cogc": "COGC",
 	"permits": "Fläche | Fläche",
+	"permits_plural": "Permits",
 	"profit": "Profit",
 	"revenue": "Umsatz",
 	"cost": "Kosten",
@@ -15,5 +20,16 @@
 	"delta_price": "ȼ Delta",
 	"production": "Produktion",
 	"consumption": "Verbrauch",
-	"materials": "Material | Materialien"
+	"materials": "Material | Materialien",
+	"materials_plural": "Materials",
+	"surface": "Surface",
+	"gravity": "Gravity",
+	"temperature": "Temperature",
+	"pressure": "Pressure",
+	"high": "High",
+	"low": "Low",
+	"rocky": "Rocky",
+	"gaseous": "Gaseous",
+	"fertility": "Fertility",
+	"popr": "POPR"
 }

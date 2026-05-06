@@ -1,0 +1,68 @@
+{
+	"view_title": "Beheren",
+	"title": "Beheren",
+	"empire": {
+		"title": "Rijk Configuratie",
+		"description": "Het verwijderen van een rijk zal geen geassocieerde plannen verwijderen - geassocieerde plannen zullen losgekoppeld worden. Je kunt bestaande rijken bewerken vanuit het rijk overzicht. Zorg dat elk rijk de correcte vergunningen heeft voor jouw factie om zeker te zijn van efficiënte plan berekeningen.",
+		"buttons": {
+			"update_cx": "CX Toewijzingen Vernieuwen",
+			"new_empire": "Nieuw Rijk"
+		},
+		"form": {
+			"empire_name": "Naam van Rijk",
+			"faction": "Factie",
+			"permits_total": "Totaal aantal vergunningen",
+			"permits_used": "Gebruikt aantal vergunningen"
+		},
+		"table": {
+			"empire_name": "Rijk",
+			"faction": "Factie",
+			"permits": "Vergunningen",
+			"plans": "Plannen",
+			"cx": "CX",
+			"nodata_title": "Geen Rijk Beschikbaar",
+			"nodata_label": "Creëer je eerste rijk"
+		}
+	},
+	"cx": {
+		"title": "CX-configuratie",
+		"description": "Het verwijderen van een CX-voorkeur verwijdert alle beurs en materiaal instellingen. Aangewezen rijken zullen ongedeerd zijn, maar ze zullen niet meer de verwijderde voorkeur gebruiken. Zorg dat er een nieuwe CX-voorkeur aangewezen wordt.",
+		"buttons": {
+			"new_cx": "Nieuw"
+		},
+		"form": {
+			"cx_name": "Naam",
+			"cx_placeholder": "CX Naam"
+		},
+		"table": {
+			"cx_name": "Naam",
+			"assigned_to_empire": "Toegewezen aan Rijk?",
+			"nodata_title": "Geen.",
+			"nodata_label": "Creëer je eerste beurs voorkeur."
+		}
+	},
+	"filter": {
+		"title": "Filter",
+		"plan": "Plan",
+		"active_empire": "Actief"
+	},
+	"assignments": {
+		"title": "Plan ↔ Rijk Toewijzingen",
+		"description": "Elke geplande basis kan aan meerdere rijken toegewezen worden. Dit laat je tegelijk je rijk, corporatie productie ketens, of uitbreidingsplannen, in de gaten houden.",
+		"buttons": {
+			"update_assignments": "Vernieuwen Toegewezen Plan",
+			"reload": "Herladen"
+		},
+		"deletion": {
+			"title": "Plan Verwijdering Bevestigen",
+			"content": "Weet je dit zeker? Het verwijderen van dit plan kan niet worden teruggedraaid."
+		},
+		"table": {
+			"plan": "plan",
+			"planet": "planeet",
+			"configuration": "Configuratie",
+			"nodata_title": "Geen plan beschikbaar",
+			"nodata_label": "Gebruik planeet zoeken om je eerste @:terms.plans te maken."
+		}
+	}
+}

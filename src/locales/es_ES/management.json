@@ -1,0 +1,68 @@
+{
+	"view_title": "Management",
+	"title": "Management",
+	"empire": {
+		"title": "Empire Configuration",
+		"description": "Removing empires will not delete any associated plans — they will simply become unassigned. You can create edit existing empires in the Empire View. To ensure correct plan efficiency calculations, make sure each empire has your Faction and the appropriate Permits.",
+		"buttons": {
+			"update_cx": "Update CX Assignments",
+			"new_empire": "New Empire"
+		},
+		"form": {
+			"empire_name": "@:terms.empire Name",
+			"faction": "@:terms.faction",
+			"permits_total": "@:terms.permits_plural Total",
+			"permits_used": "@:terms.permits_plural Used"
+		},
+		"table": {
+			"empire_name": "@:terms.empire",
+			"faction": "@:terms.faction",
+			"permits": "@:terms.permits",
+			"plans": "@:terms.plans_plural",
+			"cx": "CX",
+			"nodata_title": "No Empires available",
+			"nodata_label": "Create your first Empire"
+		}
+	},
+	"cx": {
+		"title": "CX Configuration",
+		"description": "Removing a CX preference will delete all its exchange and material settings. Assigned empires will remain unaffected, but they will no longer use the removed preferences. Make sure to assign a new CX preference.",
+		"buttons": {
+			"new_cx": "New @:terms.cx"
+		},
+		"form": {
+			"cx_name": "@:terms.cx Name",
+			"cx_placeholder": "CX Name (max. 100 characters)"
+		},
+		"table": {
+			"cx_name": "@:terms.cx Name",
+			"assigned_to_empire": "Assigned to Empire?",
+			"nodata_title": "No @:terms.cx available.",
+			"nodata_label": "Create your first Exchange Preference."
+		}
+	},
+	"filter": {
+		"title": "Filter",
+		"plan": "@:terms.plan",
+		"active_empire": "Active @:terms.empire"
+	},
+	"assignments": {
+		"title": "Plan ↔ Empire Assignments",
+		"description": "Every planned base can be assigned to multiple empires. This allows you to simultaneously keep track of your existing Prosperous Universe empire, corporation production chains or future expansion plans.",
+		"buttons": {
+			"update_assignments": "Update Plan Assignments",
+			"reload": "@:common.buttons.reload"
+		},
+		"deletion": {
+			"title": "Confirm Plan Deletion",
+			"content": "Are you sure? Deleting the Plan can't be reversed."
+		},
+		"table": {
+			"plan": "@:terms.plan",
+			"planet": "@:terms.planets",
+			"configuration": "Configuration",
+			"nodata_title": "No @:terms.plans available",
+			"nodata_label": "Use Planet Search to create your first @:terms.plans."
+		}
+	}
+}

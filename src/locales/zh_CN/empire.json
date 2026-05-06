@@ -1,5 +1,6 @@
 {
 	"view_title": "帝国",
+	"switch_empire": "Switch Empire",
 	"views": {
 		"material_io": "Material I/O",
 		"analysis": "Analysis",
@@ -10,8 +11,8 @@
 		"form": {
 			"name": "名称",
 			"faction": "派系",
-			"permits_total": "@:terms.permits(2) 总数",
-			"permits_used": "@:terms.permits(2) 已使用"
+			"permits_total": "@:terms.permits_plural Total",
+			"permits_used": "@:terms.permits_plural Used"
 		},
 		"sync_warning": {
 			"title": "检测到不匹配：",

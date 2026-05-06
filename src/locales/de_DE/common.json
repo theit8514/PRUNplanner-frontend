@@ -31,10 +31,18 @@
 		}
 	},
 	"buttons": {
+		"create": "Create",
 		"save": "Speichern",
 		"reload": "Aktualisieren",
 		"show": "Anzeigen",
 		"hide": "Verstecken",
-		"help": "Hilfe"
+		"help": "Hilfe",
+		"search": "Search",
+		"default": "Default",
+		"select_all": "Select All",
+		"yes": "Ja",
+		"no": "Nein",
+		"delete": "Löschen",
+		"cancel": "Abbrechen"
 	}
 }

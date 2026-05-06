@@ -1,5 +1,6 @@
 {
 	"view_title": "Empire",
+	"switch_empire": "Switch Empire",
 	"views": {
 		"material_io": "Material I/O",
 		"analysis": "Analyse",
@@ -10,8 +11,8 @@
 		"form": {
 			"name": "Name",
 			"faction": "Fraktion",
-			"permits_total": "@:terms.permits(2) gesamt",
-			"permits_used": "@:terms.permits(2) benutzt"
+			"permits_total": "@:terms.permits_plural Total",
+			"permits_used": "@:terms.permits_plural Used"
 		},
 		"sync_warning": {
 			"title": "Unstimmigkeit erkannt:",
