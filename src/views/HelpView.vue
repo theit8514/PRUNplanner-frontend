@@ -1,9 +1,13 @@
 <script setup lang="ts">
 	import { onMounted, Ref, ref } from "vue";
-	import { useHead } from "@unhead/vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	// Unhead
+	import { useHead } from "@unhead/vue";
 	useHead({
-		title: "Help | PRUNplanner",
+		title: `${t("help.view_title")} | PRUNplanner`,
 	});
 
 	import HelpTutorial from "@/features/help/components/HelpTutorial.vue";
@@ -32,7 +36,7 @@
 	<div class="min-h-screen flex flex-col">
 		<div
 			class="px-6 py-3 border-b border-white/10 flex flex-row justify-between">
-			<h1 class="text-2xl font-bold my-auto">Help & Changelog</h1>
+			<h1 class="text-2xl font-bold my-auto">{{ $t("help.title") }}</h1>
 		</div>
 
 		<div
@@ -41,7 +45,9 @@
 				<HelpTutorial />
 			</div>
 			<div>
-				<h2 class="text-xl font-bold pb-3">Changelog</h2>
+				<h2 class="text-xl font-bold pb-3">
+					{{ $t("help.changelog.title") }}
+				</h2>
 				<div
 					v-if="markdownContent != ''"
 					id="markdown"
