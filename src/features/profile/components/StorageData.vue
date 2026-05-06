@@ -43,18 +43,21 @@
 </script>
 
 <template>
-	<h2 class="text-white/80 font-bold text-lg my-auto">Browser Storage</h2>
+	<h2 class="text-white/80 font-bold text-lg my-auto">
+		{{ $t("profile.storage_data.title") }}
+	</h2>
 	<div class="py-3 text-white/60">
-		PRUNplanner minimizes API calls by storing data locally in your browser.
-		Data refreshes automatically at set intervals.
+		{{ $t("profile.storage_data.description") }}
 	</div>
 	<div>
 		<PTable striped>
 			<thead>
 				<tr>
-					<th>Storage</th>
-					<th>Records</th>
-					<th class="!text-end">Approx. Size</th>
+					<th>{{ $t("profile.storage_data.table.storage") }}</th>
+					<th>{{ $t("profile.storage_data.table.records") }}</th>
+					<th class="!text-end">
+						{{ $t("profile.storage_data.table.size") }}
+					</th>
 				</tr>
 			</thead>
 			<tbody>

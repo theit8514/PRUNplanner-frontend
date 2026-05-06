@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { onMounted, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Stores
 	import { usePlanningStore } from "@/stores/planningStore";
 
@@ -34,11 +37,14 @@
 		burnDaysYellow,
 		burnResupplyDays,
 		burnOrigin,
+		locale,
 		planSettingsOverview,
 		cleanPlanPreferences,
 	} = usePreferences();
 	let { defaultEmpireUuid, defaultCXUuid, defaultBuyItemsFromCX } =
 		usePreferences();
+
+	import { SupportedLanguages } from "@/lib/i18n";
 
 	const empireOptions: Ref<PSelectOption[]> = ref(
 		Object.values(planningStore.empires).map((e) => {
@@ -71,18 +77,26 @@
 </script>
 
 <template>
-	<h2 class="text-white/80 font-bold text-lg my-auto">Preferences</h2>
+	<h2 class="text-white/80 font-bold text-lg my-auto">
+		{{ $t("profile.preferences.title") }}
+	</h2>
 	<div class="py-3 text-white/60">
-		Your preferences are saved locally in your browser and aren't synced
-		with the backend yet. Use this panel to review and customize your
-		PRUNplanner settings.
+		{{ $t("profile.preferences.description") }}
 	</div>
 
 	<PForm>
 		<PFormSeperator>
-			<h3 class="font-bold pb-3">Tool Preferences</h3>
+			<h3 class="font-bold pb-3">
+				{{ $t("profile.preferences.form.tool_preferences") }}
+			</h3>
 		</PFormSeperator>
-		<PFormItem label="Default Empire">
+		<PFormItem :label="t('profile.preferences.form.language')">
+			<PSelect
+				v-model:value="locale"
+				:options="SupportedLanguages"
+				class="w-full" />
+		</PFormItem>
+		<PFormItem :label="t('profile.preferences.form.default_empire')">
 			<PSelect
 				v-model:value="defaultEmpireUuid"
 				:options="empireOptions"
@@ -95,7 +109,7 @@
 					}
 				" />
 		</PFormItem>
-		<PFormItem label="Default CX">
+		<PFormItem :label="t('profile.preferences.form.default_cx')">
 			<CXPreferenceSelector
 				:cx-uuid="defaultCXUuid"
 				:add-undefined-c-x="false"
@@ -110,52 +124,54 @@
 		</PFormItem>
 
 		<PFormSeperator>
-			<h4 class="font-bold py-1">FIO Burn</h4>
+			<h4 class="font-bold py-1">
+				{{ $t("profile.preferences.form.fio_burn") }}
+			</h4>
 		</PFormSeperator>
 
-		<PFormItem label="Red Threshold">
+		<PFormItem :label="t('profile.preferences.form.red_threshold')">
 			<PInputNumber
 				v-model:value="burnDaysRed"
 				show-button
 				:min="1"
 				class="w-full" />
 		</PFormItem>
-		<PFormItem label="Yellow Threshold">
+		<PFormItem :label="t('profile.preferences.form.yellow_threshold')">
 			<PInputNumber
 				v-model:value="burnDaysYellow"
 				show-button
 				:min="1"
 				class="w-full" />
 		</PFormItem>
-		<PFormItem label="Resupply Days">
+		<PFormItem :label="t('profile.preferences.form.resupply_days')">
 			<PInputNumber
 				v-model:value="burnResupplyDays"
 				show-button
 				:min="1"
 				class="w-full" />
 		</PFormItem>
-		<PFormItem label="XIT Origin">
+		<PFormItem :label="t('profile.preferences.form.xit_origin')">
 			<PSelect
 				v-model:value="burnOrigin"
 				:options="XITSTATIONWAREHOUSES"
 				class="w-full" />
 		</PFormItem>
-		<PFormItem label="XIT Buy from CX">
+		<PFormItem :label="t('profile.preferences.form.buy_from_cx')">
 			<PCheckbox v-model:checked="defaultBuyItemsFromCX" />
 		</PFormItem>
 	</PForm>
 
-	<h3 class="font-bold py-3">Plan-Specific Settings</h3>
+	<h3 class="font-bold py-3">
+		{{ $t("profile.preferences.form.plan_specific") }}
+	</h3>
 	<div class="pb-3 text-white/60">
-		These settings are managed within individual plans. This section
-		provides an overview of the preferences you've customized so far — to
-		modify them, navigate to the corresponding plan.
+		{{ $t("profile.preferences.form.plan_specific_description") }}
 	</div>
 	<PTable striped>
 		<thead>
 			<tr>
-				<th>Plan</th>
-				<th>Preferences</th>
+				<th>{{ $t("profile.preferences.form.plan") }}</th>
+				<th>{{ $t("profile.preferences.form.preferences") }}</th>
 			</tr>
 		</thead>
 		<tbody>

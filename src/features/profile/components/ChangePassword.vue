@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { ComputedRef, computed, Ref, ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -53,36 +56,37 @@
 	<div>
 		<div class="flex flex-row flex-wrap gap-3">
 			<h2 class="grow my-auto text-white/80 font-bold text-lg">
-				Change Password
+				{{ $t("profile.change_password.title") }}
 			</h2>
 			<PButton
 				:disabled="!canChange"
 				:loading="isChanging"
 				@click="patchPassword">
-				Change Password
+				{{ $t("profile.change_password.button") }}
 			</PButton>
 		</div>
 		<div class="py-3 text-white/60">
-			Passwords must be at least 8 characters long.
+			{{ $t("profile.change_password.form.password_info") }}
 		</div>
 		<template v-if="changeStatus !== null">
 			<div
 				v-if="changeStatus"
 				class="mb-3 py-1 px-2 bg-prunplanner text-black">
-				Password changed.
+				{{ $t("profile.change_password.form.change_success") }}
 			</div>
 			<div v-else class="mb-3 py-1 px-2 bg-red-600 text-white">
-				Password changed failed.
+				{{ $t("profile.change_password.form.change_error") }}
 			</div>
 		</template>
 		<PForm>
-			<PFormItem label="Current Password">
+			<PFormItem
+				:label="t('profile.change_password.form.current_password')">
 				<PInput
 					v-model:value="refCurrentPassword"
 					type="password"
 					class="w-full min-w-50 max-w-[50%]" />
 			</PFormItem>
-			<PFormItem label="New Password">
+			<PFormItem :label="t('profile.change_password.form.new_password')">
 				<PInput
 					v-model:value="refNewPassword"
 					type="password"
