@@ -22,9 +22,9 @@
 		"profile": "Profiel",
 		"api": "API",
 		"help": "Hulp",
-		"logout": "uitloggen",
+		"logout": "Uitloggen",
 		"fio": {
-			"backend": "backend",
+			"backend": "Backend",
 			"fio": "FIO",
 			"fio_active": "FIO Actief",
 			"fio_inactive": "FIO inactief"
