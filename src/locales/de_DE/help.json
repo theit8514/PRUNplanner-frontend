@@ -1,14 +1,14 @@
 {
-	"view_title": "Help",
-	"title": "Help & Changelog",
+	"view_title": "Hilfe",
+	"title": "Hilfe & Änderungsprotokoll",
 	"changelog": {
-		"title": "Changelog"
+		"title": "Änderungsprotokoll"
 	},
 	"tutorial": {
 		"intro": "PRUNplanner helps you design bases, organize empires, and calculate profits — without wasting in-game resources. It mirrors nearly every aspect of Prosperous Universe so you can plan smarter and play more confidently."
 	},
 	"getting_started": {
-		"title": "Getting Started",
+		"title": "Erste Schritte",
 		"image_label": "Management",
 		"l1": {
 			"title": "Create an Empire in {link}:",
