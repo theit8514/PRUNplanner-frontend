@@ -1,10 +1,13 @@
 <script setup lang="ts">
 	import { computed, onMounted, ref } from "vue";
 
-	import { useHead } from "@unhead/vue";
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
 
+	// Unhead
+	import { useHead } from "@unhead/vue";
 	useHead({
-		title: "API Keys | PRUNplanner",
+		title: `${t("api_keys.view_title")} | PRUNplanner`,
 	});
 
 	// Composables
@@ -72,18 +75,17 @@
 	<n-modal
 		v-model:show="showCreateModal"
 		preset="dialog"
-		title="Create API Key"
+		:title="t('api_keys.create.title')"
 		:show-icon="false">
-		<template #header>Create API Key</template>
+		<template #header>{{ $t("api_keys.create.title") }}</template>
 		<div v-if="creationStep === 'start'">
 			<PForm>
-				<PFormItem label="Key Name">
+				<PFormItem :label="t('api_keys.create.form.key_name')">
 					<PInput v-model:value="creationAPIKeyName" class="w-full" />
 				</PFormItem>
 				<PFormSeperator>
 					<span class="py-1 text-white/50 text-xs">
-						Give your key a descriptive name to help you identify it
-						later.
+						{{ $t("api_keys.create.form.key_description") }}
 					</span>
 				</PFormSeperator>
 			</PForm>
@@ -96,26 +98,25 @@
 				<CheckSharp class="w-6 h-6" />
 			</div>
 			<h3 class="text-center text-lg font-bold">
-				Key Generated Successfully
+				{{ $t("api_keys.create.form.success_title") }}
 			</h3>
 			<div
 				class="flex flex-col gap-2 items-center bg-white/5 border border-dark-gray border-dashed rounded p-3">
 				<span
 					class="uppercase font-bold text-xs text-center text-white/80">
-					Your Secret Key (Save this Now!)
+					{{ $t("api_keys.create.form.success_key") }}
 				</span>
 				<span class="font-mono text-prunplanner text-nowrap">
 					{{ lastCreatedKey }}
 				</span>
 			</div>
 			<div class="text-red-500">
-				For security, we cannot show this key again. If you lose it, you
-				must revoke and create a new one.
+				{{ $t("api_keys.create.form.success_note") }}
 			</div>
 		</div>
 		<div v-else-if="creationStep === 'error'">
 			<div class="text-center text-red-500">
-				Error creating your API Key. Please try again later.
+				{{ $t("api_keys.create.form.error") }}
 			</div>
 		</div>
 		<template #action>
@@ -128,13 +129,13 @@
 							showCreateModal = false;
 						}
 					">
-					Cancel
+					{{ $t("api_keys.create.buttons.cancel") }}
 				</PButton>
 				<PButton
 					:loading="creationLoading"
 					:disabled="!creationHasName"
 					@click="createKey">
-					Create Key
+					{{ $t("api_keys.create.buttons.create") }}
 				</PButton>
 			</div>
 			<div v-else-if="creationStep === 'key'" class="w-full">
@@ -147,7 +148,7 @@
 							resetCreation();
 						}
 					">
-					I've saved my key
+					{{ $t("api_keys.create.buttons.saved") }}
 				</PButton>
 			</div>
 		</template>
@@ -156,41 +157,29 @@
 	<div class="min-h-screen flex flex-col">
 		<div
 			class="px-6 py-3 border-b border-white/10 flex flex-row justify-between">
-			<h1 class="text-2xl font-bold">API Keys</h1>
+			<h1 class="text-2xl font-bold">{{ $t("api_keys.title") }}</h1>
 		</div>
 		<div>
 			<div
 				class="grid grid-cols-1 lg:grid-cols-3 divide-x divide-white/10 min-h-screen">
 				<div class="xl:col-span-2 flex flex-col gap-3 px-6 py-3">
-					<div class="text-white/80">
-						The
-						<a
-							href="https://api.prunplanner.org/docs"
-							target="_blank"
-							class="font-bold underline hover:text-prunplanner"
-							>PRUNplanner REST API</a
-						>
-						provides programmatic access to all your planning data,
-						ingame metadata (buildings, recipes, materials) and
-						calculated market metrics like VWAP. While public
-						endpoints remain open for community use, access to
-						<strong>private planning data</strong> - including your
-						plan configurations - require secure authentication.
-					</div>
+					<i18n-t keypath="api_keys.info.description.p1" tag="div">
+						<template #link>
+							<a
+								href="https://api.prunplanner.org/docs"
+								target="_blank"
+								class="font-bold underline hover:text-prunplanner"
+								>{{ $t("api_keys.info.description.link") }}</a
+							>
+						</template>
+					</i18n-t>
 					<div>
-						By utilizing these endpoints, you can synchronize your
-						planning operations with external spreadsheets, custom
-						dashboards, or even optimization algorithms.
+						{{ $t("api_keys.info.description.p2") }}
 					</div>
 					<div
 						class="bg-prunplanner/10 border-l-4 border-prunplanner p-3">
 						<p class="text-white font-mono text-xs">
-							API keys grant full access to your account data and
-							remain valid indefinitely. Treat these credentials
-							as sensitive as your password. Never commit keys to
-							public repositories or share them with unverified
-							third-party services. If a key is compromised,
-							revoke it immediately and generate a replacement.
+							{{ $t("api_keys.info.description.warning") }}
 						</p>
 					</div>
 
@@ -198,7 +187,7 @@
 						<div
 							class="flex flex-row justify-between items-center pt-6 pb-3">
 							<h2 class="text-lg font-bold">
-								PRUNplanner API Keys
+								{{ $t("api_keys.info.manage.title") }}
 							</h2>
 							<div class="flex flex-row gap-3">
 								<PButton
@@ -207,7 +196,9 @@
 											showCreateModal = !showCreateModal;
 										}
 									">
-									Create New Key
+									{{
+										$t("api_keys.manage.buttons.new_apikey")
+									}}
 								</PButton>
 								<PButton @click="fetchAPIKeys">
 									<template #icon>
@@ -223,10 +214,34 @@
 								striped>
 								<thead>
 									<tr>
-										<th>Name</th>
-										<th>Key Prefix</th>
-										<th>Created</th>
-										<th>Last Used</th>
+										<th>
+											{{
+												$t(
+													"api_keys.manage.table.apikey_name"
+												)
+											}}
+										</th>
+										<th>
+											{{
+												$t(
+													"api_keys.manage.table.apikey_prefix"
+												)
+											}}
+										</th>
+										<th>
+											{{
+												$t(
+													"api_keys.manage.table.apikey_created"
+												)
+											}}
+										</th>
+										<th>
+											{{
+												$t(
+													"api_keys.manage.table.apikey_lastused"
+												)
+											}}
+										</th>
 										<th></th>
 									</tr>
 								</thead>
@@ -262,7 +277,11 @@
 												@click="
 													deleteAPIKey(apiKey.id)
 												">
-												Revoke
+												{{
+													$t(
+														"api_keys.manage.buttons.revoke_apikey"
+													)
+												}}
 											</PButton>
 										</td>
 									</tr>
@@ -285,7 +304,7 @@
 					<div
 						class="bg-white/5 border border-dark-gray border-dashed rounded flex flex-col gap-3 p-3">
 						<h3 class="uppercase font-bold">
-							Authorization Implementation
+							{{ $t("api_keys.implementation.title") }}
 						</h3>
 						<div class="space-y-4">
 							<div>
@@ -314,7 +333,7 @@
 								href="https://api.prunplanner.org/docs"
 								target="_blank"
 								class="font-mono text-xs font-bold text-white hover:text-prunplanner underline mt-2">
-								View REST API Reference &rarr;
+								{{ $t("api_keys.implementation.link") }}
 							</a>
 						</div>
 					</div>
