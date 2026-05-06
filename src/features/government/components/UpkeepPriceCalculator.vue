@@ -1,13 +1,15 @@
 <script setup lang="ts">
 	import { ComputedRef, Ref, computed, ref, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useUpkeepBuildings } from "@/features/government/composables/useUpkeepBuildings";
 	import { useUpkeepPriceCalculator } from "@/features/government/composables/useUpkeepPriceCalculator";
 
 	// Util
 	import { formatNumber } from "@/util/numbers";
-	import { capitalizeString } from "@/util/text";
 
 	// Components
 	import MaterialTile from "@/features/material_tile/components/MaterialTile.vue";
@@ -82,7 +84,7 @@
 		<div class="text-center w-100 py-3">
 			<PProgressBar :step="1" :total="2" />
 			<div class="pt-3 text-xs text-white/60">
-				Calculating Upkeep Material Prices
+				{{ $t("upkeep_price_calculator.calculator.calculating") }}
 			</div>
 		</div>
 	</div>
@@ -97,7 +99,11 @@
 						selectedNeedType === needType ? 'primary' : 'secondary'
 					"
 					@click="selectedNeedType = needType">
-					{{ capitalizeString(needType) }}
+					{{
+						$t(
+							`upkeep_price_calculator.calculator.needs.${needType}`
+						)
+					}}
 				</PButton>
 			</PButtonGroup>
 		</div>
@@ -105,7 +111,7 @@
 		<!-- Material Details Section -->
 		<div>
 			<h3 class="text-sm font-semibold text-white/80 mb-3">
-				Material Details
+				{{ $t("upkeep_price_calculator.calculator.details.title") }}
 			</h3>
 			<XNDataTable
 				:data="currentResults"
@@ -113,7 +119,11 @@
 				:pagination="{ pageSize: 50 }">
 				<XNDataTableColumn
 					key="ticker"
-					title="Material"
+					:title="
+						t(
+							'upkeep_price_calculator.calculator.details.table.material'
+						)
+					"
 					sorter="default">
 					<template #render-cell="{ rowData }">
 						<MaterialTile
@@ -123,7 +133,11 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="buildingTicker"
-					title="Building"
+					:title="
+						t(
+							'upkeep_price_calculator.calculator.details.table.building'
+						)
+					"
 					sorter="default">
 					<template #render-cell="{ rowData }">
 						<span class="font-bold">{{
@@ -133,11 +147,13 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="pricePerNeed"
-					title="ȼ/Need"
+					:title="
+						t(
+							'upkeep_price_calculator.calculator.details.table.price_need'
+						)
+					"
+					title-align="right"
 					sorter="default">
-					<template #title>
-						<div class="text-end">ȼ/Need</div>
-					</template>
 					<template #render-cell="{ rowData }">
 						<div
 							class="text-end text-nowrap"
@@ -153,11 +169,13 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="cxPrice"
-					title="CX Price"
+					:title="
+						t(
+							'upkeep_price_calculator.calculator.details.table.cx_price'
+						)
+					"
+					title-align="right"
 					sorter="default">
-					<template #title>
-						<div class="text-end">CX Price</div>
-					</template>
 					<template #render-cell="{ rowData }">
 						<div
 							class="text-end text-nowrap"
@@ -177,11 +195,13 @@
 
 				<XNDataTableColumn
 					key="qtyPerDay"
-					title="Qty/Day"
+					:title="
+						t(
+							'upkeep_price_calculator.calculator.details.table.qty_day'
+						)
+					"
+					title-align="right"
 					sorter="default">
-					<template #title>
-						<div class="text-end">Qty/Day</div>
-					</template>
 					<template #render-cell="{ rowData }">
 						<div class="text-end text-nowrap">
 							{{ formatNumber(rowData.qtyPerDay, 2) }}

@@ -21,12 +21,26 @@
 </script>
 
 <template>
-	<h3 class="font-bold py-3">Workforce</h3>
+	<h3 class="font-bold py-3">
+		{{ $t("production_chains.analysis_workforce.title") }}
+	</h3>
 	<PTable striped>
 		<thead>
 			<tr>
-				<th>Workforce</th>
-				<th class="text-end!">Required</th>
+				<th>
+					{{
+						$t(
+							"production_chains.analysis_workforce.table.workforce"
+						)
+					}}
+				</th>
+				<th class="text-end!">
+					{{
+						$t(
+							"production_chains.analysis_workforce.table.required"
+						)
+					}}
+				</th>
 			</tr>
 		</thead>
 		<tbody>

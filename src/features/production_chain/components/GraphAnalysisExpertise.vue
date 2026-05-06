@@ -22,13 +22,27 @@
 </script>
 
 <template>
-	<h3 class="font-bold pb-3">Building Expertises</h3>
+	<h3 class="font-bold pb-3">
+		{{ $t("production_chains.analysis_expertise.title") }}
+	</h3>
 
 	<PTable striped>
 		<thead>
 			<tr>
-				<th>Expertise</th>
-				<th class="text-end!">Materials</th>
+				<th>
+					{{
+						$t(
+							"production_chains.analysis_expertise.table.expertise"
+						)
+					}}
+				</th>
+				<th class="text-end!">
+					{{
+						$t(
+							"production_chains.analysis_expertise.table.materials"
+						)
+					}}
+				</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -39,8 +53,7 @@
 					<span
 						class="py-1 px-2"
 						:style="`background-color:
-											${EXPERTISECOLORS[expertise as
-											BUILDING_EXPERTISE_TYPE]};`">
+											${EXPERTISECOLORS[expertise as BUILDING_EXPERTISE_TYPE]};`">
 						{{ capitalizeString(expertise) }}
 					</span>
 				</td>

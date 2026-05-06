@@ -1,6 +1,13 @@
 <script setup lang="ts">
 	import { ref, Ref } from "vue";
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	// Unhead
 	import { useHead } from "@unhead/vue";
+	useHead({
+		title: `${t("upkeep_price_calculator.view_title")} | PRUNplanner`,
+	});
 
 	// Components
 	import WrapperGameDataLoader from "@/features/wrapper/components/WrapperGameDataLoader.vue";
@@ -8,10 +15,6 @@
 	import HelpDrawer from "@/features/help/components/HelpDrawer.vue";
 	import CXPreferenceSelector from "@/features/exchanges/components/CXPreferenceSelector.vue";
 	import UpkeepPriceCalculator from "@/features/government/components/UpkeepPriceCalculator.vue";
-
-	useHead({
-		title: "Upkeep Price Calculator | PRUNplanner",
-	});
 
 	// UI
 	import { PForm, PFormItem } from "@/ui";
@@ -31,11 +34,16 @@
 					<div
 						class="px-6 py-3 border-b border-white/10 flex flex-row justify-between">
 						<h1 class="text-2xl font-bold my-auto">
-							Upkeep Price Calculator
+							{{ $t("upkeep_price_calculator.title") }}
 						</h1>
 						<div class="flex flex-row gap-x-3">
 							<PForm>
-								<PFormItem label="CX Preference">
+								<PFormItem
+									:label="
+										t(
+											'upkeep_price_calculator.form.cx_preference'
+										)
+									">
 									<CXPreferenceSelector
 										:cx-uuid="refSelectedCXUuid"
 										@update:cxuuid="
@@ -44,7 +52,8 @@
 										" />
 								</PFormItem>
 							</PForm>
-							<HelpDrawer file-name="tools_upkeep_price_calculator" />
+							<HelpDrawer
+								file-name="tools_upkeep_price_calculator" />
 						</div>
 					</div>
 
