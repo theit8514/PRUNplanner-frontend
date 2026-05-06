@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { ComputedRef, PropType, Ref, computed, ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Util
 	import { formatNumber } from "@/util/numbers";
 	import { capitalizeString } from "@/util/text";
@@ -85,7 +88,10 @@
 		:building-options="filterOptionBuilding"
 		:searched-material="searchedMaterial" />
 	<XNDataTable :data="localResult" striped :pagination="{ pageSize: 50 }">
-		<XNDataTableColumn key="planetName" title="Planet" sorter="default">
+		<XNDataTableColumn
+			key="planetName"
+			:title="t('resource_roi.table.planet')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<router-link
 					:to="`/plan/${rowData.planetNaturalId}`"
@@ -94,38 +100,45 @@
 				</router-link>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="production" title="Production">
+		<XNDataTableColumn
+			key="production"
+			:title="t('resource_roi.table.production')">
 			<XNDataTableColumn
 				key="buildingTicker"
-				title="Building"
+				:title="t('resource_roi.table.building')"
 				sorter="default">
 				<template #render-cell="{ rowData }">
 					<span class="font-bold">{{ rowData.buildingTicker }}</span>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="dailyYield" title="Daily" sorter="default">
+			<XNDataTableColumn
+				key="dailyYield"
+				:title="t('resource_roi.table.daily')"
+				sorter="default">
 				<template #render-cell="{ rowData }">
 					{{ formatNumber(rowData.dailyYield) }}
 				</template>
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="percentMaxDailyYield"
-				title="% Max."
+				:title="t('resource_roi.table.percent_max')"
 				sorter="default">
 				<template #render-cell="{ rowData }">
 					{{ formatNumber(rowData.percentMaxDailyYield * 100) }} %
 				</template>
 			</XNDataTableColumn>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="planet" title="Planet">
-			<XNDataTableColumn key="popr" title="POPR">
+		<XNDataTableColumn key="planet" :title="t('resource_roi.table.planet')">
+			<XNDataTableColumn key="popr" :title="t('resource_roi.table.popr')">
 				<template #render-cell="{ rowData }">
 					<PlanetPOPRButton
 						:planet-natural-id="rowData.planetNaturalId"
 						button-size="sm" />
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="planetCOGC" title="COGC">
+			<XNDataTableColumn
+				key="planetCOGC"
+				:title="t('resource_roi.table.cogc')">
 				<template #render-cell="{ rowData }">
 					{{
 						rowData.planetCOGC
@@ -136,7 +149,9 @@
 					}}
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="environment" title="Environment">
+			<XNDataTableColumn
+				key="environment"
+				:title="t('resource_roi.table.environment')">
 				<template #render-cell="{ rowData }">
 					<div class="flex flex-row flex-wrap gap-1">
 						<MaterialTile
@@ -160,13 +175,15 @@
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="planetInfrastructures"
-				title="Infrastructure">
+				:title="t('resource_roi.table.infrastructure')">
 				<template #render-cell="{ rowData }">
 					{{ rowData.planetInfrastructures.join(", ") }}
 				</template>
 			</XNDataTableColumn>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="profit" title="Cost / Profit">
+		<XNDataTableColumn
+			key="profit"
+			:title="t('resource_roi.table.cost_profit')">
 			<XNDataTableColumn key="cogm" title="COGM">
 				<template #render-cell="{ rowData }">
 					<COGMButton :cogm-data="rowData.cogm" />
@@ -174,11 +191,9 @@
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="planCost"
-				title="Plan Cost"
+				:title="t('resource_roi.table.plan_cost')"
+				title-align="right"
 				sorter="default">
-				<template #title>
-					<div class="text-end">Plan Cost</div>
-				</template>
 				<template #render-cell="{ rowData }">
 					<div class="text-end text-nowrap">
 						{{ formatNumber(rowData.planCost) }}
@@ -208,11 +223,9 @@
 			</XNDataTableColumn> -->
 			<XNDataTableColumn
 				key="dailyProfit"
-				title="Daily Profit"
+				:title="t('resource_roi.table.daily_profit')"
+				title-align="right"
 				sorter="default">
-				<template #title>
-					<div class="text-end">Daily Profit</div>
-				</template>
 				<template #render-cell="{ rowData }">
 					<div
 						class="text-end text-nowrap"
@@ -246,10 +259,11 @@
 					</div>
 				</template>
 			</XNDataTableColumn> -->
-			<XNDataTableColumn key="planROI" title="Plan ROI" sorter="default">
-				<template #title>
-					<div class="text-end text-nowrap">Plan ROI</div>
-				</template>
+			<XNDataTableColumn
+				key="planROI"
+				:title="t('resource_roi.table.plan_roi')"
+				title-align="right"
+				sorter="default">
 				<template #render-cell="{ rowData }">
 					<div
 						class="text-end"
@@ -264,7 +278,9 @@
 				</template>
 			</XNDataTableColumn>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="distances" title="Distances">
+		<XNDataTableColumn
+			key="distances"
+			:title="t('resource_roi.table.distances')">
 			<XNDataTableColumn
 				key="distanceAI1"
 				title="AI1"

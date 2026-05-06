@@ -1,9 +1,13 @@
 <script setup lang="ts">
 	import { ref, Ref } from "vue";
-	import { useHead } from "@unhead/vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	// Unhead
+	import { useHead } from "@unhead/vue";
 	useHead({
-		title: "Resource ROI Overview | PRUNplanner",
+		title: `${t("resource_roi.view_title")} | PRUNplanner`,
 	});
 
 	// Composables
@@ -65,18 +69,18 @@
 				<div
 					class="px-6 py-3 border-b border-white/10 flex flex-row justify-between">
 					<h1 class="text-2xl font-bold my-auto grow">
-						Resource ROI Overview
+						{{ $t("resource_roi.title") }}
 					</h1>
 					<div
 						class="flex flex-row flex-wrap gap-3 my-auto child:my-auto">
-						<div>Select Resource</div>
+						<div>{{ $t("resource_roi.resource_select") }}</div>
 						<PSelect
 							v-model:value="refSearchMaterial"
 							:options="PLANETSEARCHOPTIONMATERIALS"
 							placeholder=""
 							searchable
 							class="w-50" />
-						<div>CX Preference</div>
+						<div>{{ $t("resource_roi.cx_select") }}</div>
 						<CXPreferenceSelector
 							:cx-uuid="refSelectedCXUuid"
 							class="w-50"
@@ -87,7 +91,7 @@
 							:disabled="!refSearchMaterial"
 							:loading="refIsLoading"
 							@click="performSearchAndCalculation">
-							Search & Calculate
+							{{ $t("resource_roi.button_calculate") }}
 						</PButton>
 						<HelpDrawer file-name="tools_resource_roi_overview" />
 					</div>
@@ -95,7 +99,7 @@
 
 				<div class="px-6 py-3">
 					<div v-if="!refInitialized" class="text-center py-3">
-						Select a Resource and press "Search & Calculate"
+						{{ $t("resource_roi.info") }}
 					</div>
 					<div
 						v-else-if="refIsLoading"
@@ -104,9 +108,11 @@
 							<div v-if="progressSearchingPlanets">
 								<PSpin size="xl" />
 								<div class="pt-3 text-xs text-white/60">
-									Searching for planets with
-									{{ refSearchMaterial }}. Awaiting backend
-									response.
+									{{
+										$t("resource_roi.calculating", {
+											resource: refSearchMaterial,
+										})
+									}}
 								</div>
 							</div>
 							<div v-else>
@@ -114,7 +120,7 @@
 									:step="progressCurrent"
 									:total="progressTotal" />
 								<div class="pt-3 text-xs text-white/60">
-									Calculating resource ROI for planets.
+									{{ $t("resource_roi.calculating") }}
 								</div>
 							</div>
 						</div>

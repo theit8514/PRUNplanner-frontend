@@ -13,6 +13,8 @@
 	"profit": "Profit",
 	"revenue": "Revenue",
 	"exchanges": "Exchange | Exchanges",
+	"resources": "Resource | Resources",
+	"resources_plural": "Resources",
 	"cost": "Cost",
 	"profit_per_area": "Profit / Area",
 	"hq": "HQ",
