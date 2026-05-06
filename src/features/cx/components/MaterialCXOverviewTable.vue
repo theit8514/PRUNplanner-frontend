@@ -72,17 +72,17 @@
 				<th>CI1</th>
 				<th>IC1</th>
 				<th>NC1</th>
-				<th>UNIVERSE</th>
+				<th>{{ $t("cx_info_table.universe") }}</th>
 			</tr>
 		</thead>
 		<tbody class="child:child:first:font-bold child:child:px-2!">
 			<tr
 				class="border-b-2 border-t-2 border-dark-gray child:bg-dark-gray/50">
-				<td colspan="6">VWAP</td>
+				<td colspan="6">{{ $t("cx_info_table.vwap") }}</td>
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>7D</td>
+				<td>{{ $t("terms.7d") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`vwap_7d#${cx}`"
@@ -92,7 +92,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>30D</td>
+				<td>{{ $t("terms.30d") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`vwap_30d#${cx}`"
@@ -102,7 +102,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>Trend</td>
+				<td>{{ $t("terms.trend") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`vwap_7d#${cx}`"
@@ -148,11 +148,11 @@
 			</tr>
 			<tr
 				class="border-b-2 border-t-2 border-dark-gray child:bg-dark-gray/50">
-				<td colspan="6">Traded Volume</td>
+				<td colspan="6">{{ $t("cx_info_table.traded_volume") }}</td>
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>7D</td>
+				<td>{{ $t("terms.7d") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`sum_traded_7d#${cx}`"
@@ -162,7 +162,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>30D</td>
+				<td>{{ $t("terms.30d") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`sum_traded_30d#${cx}`"
@@ -172,11 +172,13 @@
 			</tr>
 			<tr
 				class="border-b-2 border-t-2 border-dark-gray child:bg-dark-gray/50">
-				<td colspan="6">Market Live Data</td>
+				<td colspan="6">
+					{{ $t("cx_info_table.market_live_data") }}
+				</td>
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>Ask</td>
+				<td>{{ $t("terms.ask") }}</td>
 				<td
 					v-for="cx in exchangeGameTypesArray"
 					:key="`ask#${cx}`"
@@ -187,7 +189,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>Bid</td>
+				<td>{{ $t("terms.bid") }}</td>
 				<td
 					v-for="cx in exchangeGameTypesArray"
 					:key="`bid#${cx}`"
@@ -198,7 +200,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>Spread</td>
+				<td>{{ $t("terms.spread") }}</td>
 				<td
 					v-for="cx in exchangeGameTypesArray"
 					:key="`spread#${cx}`"
@@ -209,7 +211,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray border-t-2 border-dark-gray">
-				<td>S / D</td>
+				<td>{{ $t("cx_info_table.supply_vs_demand") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`supply_demand#${cx}`"
@@ -224,7 +226,7 @@
 			</tr>
 			<tr
 				class="[&>td:nth-child(6)]:border-l-2 [&>td:nth-child(6)]:border-dark-gray">
-				<td>Delta</td>
+				<td>{{ $t("terms.delta") }}</td>
 				<td
 					v-for="cx in exchangeTypesArray"
 					:key="`delta_supply_demand#${cx}`"
@@ -246,7 +248,7 @@
 			</tr>
 			<tr
 				class="border-b-2 border-t-2 border-dark-gray child:bg-dark-gray/50">
-				<td colspan="6">Insights</td>
+				<td colspan="6">{{ $t("cx_info_table.insights") }}</td>
 			</tr>
 			<tr v-if="overviewData.systemic_health" class="">
 				<td colspan="6" class="border-t border-b border-dark-gray">
@@ -255,7 +257,7 @@
 							<div class="flex flex-col">
 								<span
 									class="text-[10px] text-white/50 uppercase">
-									Market Breadth
+									{{ $t("cx_info_table.market_breadth") }}
 								</span>
 								<span class="text-lg font-mono"
 									>{{
@@ -279,7 +281,7 @@
 							<div class="flex flex-col">
 								<span
 									class="text-[10px] text-white/50 uppercase">
-									Liquidity Ratio
+									{{ $t("cx_info_table.liquidity_ratio") }}
 								</span>
 								<span
 									class="text-lg font-mono"
@@ -299,14 +301,14 @@
 								</span>
 								<span
 									class="text-[10px] text-white/50 font-normal">
-									Demand / Supply
+									{{ $t("cx_info_table.demand_vs_supply") }}
 								</span>
 							</div>
 
 							<div class="flex flex-col">
 								<span
 									class="text-[10px] text-white/50 uppercase">
-									Weighted Trend
+									{{ $t("cx_info_table.weighted_trend") }}
 								</span>
 								<span
 									class="text-lg font-mono"
@@ -328,14 +330,18 @@
 								</span>
 								<span
 									class="text-[10px] text-white/50 font-normal">
-									Volume-Adjusted Delta
+									{{
+										$t(
+											"cx_info_table.volume_adjusted_delta"
+										)
+									}}
 								</span>
 							</div>
 
 							<div class="flex flex-col">
 								<span
 									class="text-[10px] text-white/50 uppercase">
-									Price Cohesion
+									{{ $t("cx_info_table.price_cohesion") }}
 								</span>
 								<span
 									class="text-lg font-mono"
@@ -355,7 +361,7 @@
 								</span>
 								<span
 									class="text-[10px] text-white/50 font-normal">
-									Variance Index
+									{{ $t("cx_info_table.variance_index") }}
 								</span>
 							</div>
 						</div>

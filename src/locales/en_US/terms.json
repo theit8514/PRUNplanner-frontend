@@ -37,5 +37,15 @@
 	"fertility": "Fertility",
 	"popr": "POPR",
 	"fio": "FIO",
-	"api_key": "API Key"
+	"api_key": "API Key",
+	"supply": "Supply",
+	"demand": "Demand",
+	"vwap": "VWAP",
+	"volume": "Volume",
+	"7d": "7D",
+	"30d": "30D",
+	"trend": "Trend",
+	"ask": "Ask",
+	"bid": "Bid",
+	"spread": "Spread"
 }
