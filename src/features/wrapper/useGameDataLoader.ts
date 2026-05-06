@@ -1,5 +1,7 @@
 import { computed, reactive, ref, Ref, watch, watchEffect } from "vue";
 
+import { useI18n } from "vue-i18n";
+
 // Stores & Repository
 import { useQueryStore } from "@/lib/query_cache/queryStore";
 
@@ -25,13 +27,15 @@ export function useGameDataLoader(
 	props: GameDataLoaderProps,
 	emits: GameDataLoaderEmits
 ) {
+	const { t } = useI18n();
+
 	const queryStore = useQueryStore();
 	const done: Ref<boolean> = ref(false);
 
 	const stepConfigs: GameDataStepConfigsType = [
 		{
 			key: "material",
-			name: `Material Data`,
+			name: t("wrapper.gamedata.material_data"),
 			enabled: () => !!props.loadMaterials,
 			load: () => {
 				return queryStore.execute("GetMaterials", undefined);
@@ -40,7 +44,7 @@ export function useGameDataLoader(
 		},
 		{
 			key: "exchange",
-			name: `Exchange Data`,
+			name: t("wrapper.gamedata.exchange_data"),
 			enabled: () => !!props.loadExchanges,
 			load: () => {
 				return queryStore.execute("GetExchanges", undefined);
@@ -49,7 +53,7 @@ export function useGameDataLoader(
 		},
 		{
 			key: "building",
-			name: `Building Data`,
+			name: t("wrapper.gamedata.building_data"),
 			enabled: () => !!props.loadBuildings,
 			load: () => {
 				return queryStore.execute("GetBuildings", undefined);
@@ -58,7 +62,7 @@ export function useGameDataLoader(
 		},
 		{
 			key: "recipe",
-			name: `Recipe Data`,
+			name: t("wrapper.gamedata.recipe_data"),
 			enabled: () => !!props.loadRecipes,
 			load: () => {
 				return queryStore.execute("GetRecipes", undefined);
@@ -67,7 +71,7 @@ export function useGameDataLoader(
 		},
 		{
 			key: "planet",
-			name: `Planet '${props.loadPlanet}' Data`,
+			name: t("wrapper.gamedata.planet_data", { name: props.loadPlanet }),
 			enabled: () => !!props.loadPlanet,
 			load: () => {
 				return queryStore.execute("GetPlanet", {
@@ -78,7 +82,9 @@ export function useGameDataLoader(
 		},
 		{
 			key: "planetMultiple",
-			name: `Planet '${props.loadPlanetMultiple?.join(", ")}' Data`,
+			name: t("wrapper.gamedata.planet_multiple_data", {
+				names: props.loadPlanetMultiple?.join(", "),
+			}),
 			enabled: () => !!props.loadPlanetMultiple,
 			load: () => {
 				return queryStore.execute("GetMultiplePlanets", {

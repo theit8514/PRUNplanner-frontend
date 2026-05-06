@@ -1,5 +1,7 @@
 import { computed, reactive, ref, Ref, watch, watchEffect } from "vue";
 
+import { useI18n } from "vue-i18n";
+
 // Stores & Repository
 import { useQueryRepository } from "@/lib/query_cache/queryRepository";
 import { useQueryStore } from "@/lib/query_cache/queryStore";
@@ -37,6 +39,8 @@ export function usePlanningDataLoader(
 		the sharedPlan uuid or other elements like empires, a plan or planet.
 		Loading both is not permitted as it doesn't make sense.
 	*/
+
+	const { t } = useI18n();
 
 	if (
 		props.sharedPlanUuid &&
@@ -92,7 +96,7 @@ export function usePlanningDataLoader(
 	const stepConfigs: PlanningStepConfigsType = [
 		{
 			key: "sharedPlan",
-			name: "Shared Plan Configuration",
+			name: t("wrapper.planning_data.shared_plan"),
 			enabled: () => !!props.sharedPlanUuid,
 			load: () =>
 				queryStore.execute("GetSharedPlan", {
@@ -102,7 +106,7 @@ export function usePlanningDataLoader(
 		},
 		{
 			key: "empireList",
-			name: "Empires Configurations",
+			name: t("wrapper.planning_data.empires"),
 			enabled: () => !!props.empireList,
 			load: () => queryStore.execute("GetAllEmpires", undefined),
 			onSuccess: (data: IPlanEmpireElement[]) => {
@@ -118,7 +122,7 @@ export function usePlanningDataLoader(
 		},
 		{
 			key: "plan",
-			name: "Plan Configuration",
+			name: t("wrapper.planning_data.plan"),
 			enabled: () => !!props.planUuid,
 			load: () =>
 				queryStore.execute("GetPlan", {
@@ -128,7 +132,7 @@ export function usePlanningDataLoader(
 		},
 		{
 			key: "planList",
-			name: "All Plan Configurations",
+			name: t("wrapper.planning_data.plans_all"),
 			enabled: () => !!props.planList,
 			load: () => queryStore.execute("GetAllPlans", undefined),
 			onSuccess: (data: IPlan[]) => {
@@ -142,7 +146,7 @@ export function usePlanningDataLoader(
 		},
 		{
 			key: "planet",
-			name: "Planet Data",
+			name: t("wrapper.planning_data.planet_data"),
 			// If sharedPlanId, wait for sharedPlan; else if planetId, no depends; else never
 			dependsOn: props.sharedPlanUuid ? "sharedPlan" : undefined,
 			enabled: () => !!(props.sharedPlanUuid || props.planetNaturalId),
@@ -166,7 +170,7 @@ export function usePlanningDataLoader(
 		},
 		{
 			key: "cx",
-			name: "CX Configurations",
+			name: t("wrapper.planning_data.cx"),
 			enabled: () => !!props.loadCX,
 			load: () => queryStore.execute("GetAllCX", undefined),
 			onSuccess: (d: ICX[]) => {
@@ -178,14 +182,14 @@ export function usePlanningDataLoader(
 		},
 		{
 			key: "sharedList",
-			name: "Shared Plan Configurations",
+			name: t("wrapper.planning_data.shared_list"),
 			enabled: () => !!props.loadShared,
 			load: () => queryStore.execute("GetAllShared", undefined),
 			onSuccess: (data: IShared[]) => emits("data:shared", data),
 		},
 		{
 			key: "empirePlans",
-			name: "Empire Plans",
+			name: t("wrapper.planning_data.empire_plans"),
 			enabled: () => !!props.empireUuid,
 			load: () =>
 				queryStore.execute("GetEmpirePlans", {
