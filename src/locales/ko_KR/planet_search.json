@@ -2,7 +2,7 @@
 	"view_title": "Planet Search",
 	"title": "Planet Search",
 	"basic": {
-		"title": "Plan Name or ID",
+		"title": "Planet Name or ID",
 		"description": "Search must include at least 3 characters. Example Searches: \"OT-580b\", \"Montem\", \"OT-\" or \"580\".",
 		"form_id": "ID"
 	},
