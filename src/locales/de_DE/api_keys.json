@@ -1,6 +1,6 @@
 {
-	"view_title": "API Keys",
-	"title": "API Keys",
+	"view_title": "API Schlüssel",
+	"title": "API Schlüssel",
 	"info": {
 		"description": {
 			"p1": "The {link} provides programmatic access to all your planning data, ingame metadata (buildings, recipes, materials) and calculated market metrics like VWAP. While public endpoints remain open for community use, access to private planning data - including your plan configurations - require secure authentication.",
@@ -10,36 +10,36 @@
 		}
 	},
 	"manage": {
-		"title": "PRUNplanner API Keys",
+		"title": "PRUNplanner API Schlüssel",
 		"buttons": {
-			"new_apikey": "Create New Key",
-			"revoke_apikey": "Revoke"
+			"new_apikey": "Neuen Schlüssel erstellen",
+			"revoke_apikey": "Widerrufen"
 		},
 		"table": {
 			"apikey_name": "Name",
-			"apikey_prefix": "Prefix",
-			"apikey_created": "Created",
-			"apikey_lastused": "Last Used"
+			"apikey_prefix": "Präfix",
+			"apikey_created": "Erstellt am",
+			"apikey_lastused": "Zuletzt benutzt"
 		}
 	},
 	"implementation": {
-		"title": "Authorization Implementation",
-		"link": "View REST API Reference →"
+		"title": "Autorisierungs-Implementierung",
+		"link": "REST API Referenz anzeigen →"
 	},
 	"create": {
-		"title": "Create API Key",
+		"title": "API-Schlüssel erstellen",
 		"form": {
-			"key_name": "Key Name",
-			"key_description": "Give your key a descriptive name to help you identify it later.",
-			"success_title": "Key Generated Successfully",
-			"success_key": "Your Secret Key (Save this Now!)",
-			"success_note": "For security, we cannot show this key again. If you lose it, you must revoke and create a new one.",
-			"error": "Error creating your API Key. Please try again later."
+			"key_name": "Schlüssel-Name",
+			"key_description": "Gib deinem Schlüssel einen beschreibenden Namen, um in später zu identifizieren.",
+			"success_title": "Schlüssel erfolgreich generiert",
+			"success_key": "Dein geheimer Schlüssel (Jetzt speichern!)",
+			"success_note": "Aus Sicherheitsgründen können wir diesen Schlüssel nicht erneut anzeigen. Wenn du ihn verlierst, musst du ihn widerrufen und dir einen neuen erstellen.",
+			"error": "Fehler beim Erstellen deines API-Schlüssels. Bitte versuche es später erneut."
 		},
 		"buttons": {
 			"create": "@:common.buttons.create",
 			"cancel": "@:common.buttons.cancel",
-			"saved": "I've saved my key"
+			"saved": "Ich habe meinen Schlüssel gespeichert"
 		}
 	}
 }
