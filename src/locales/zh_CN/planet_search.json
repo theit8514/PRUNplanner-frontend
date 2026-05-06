@@ -2,7 +2,7 @@
 	"view_title": "行星搜索",
 	"title": "行星搜索",
 	"basic": {
-		"title": "行星名或编号",
+		"title": "Planet Name or ID",
 		"description": "搜索必须包含至少3个字符。例如：“OT-580b”、“Montem”、“OT-”或“580”。",
 		"form_id": "ID"
 	},
