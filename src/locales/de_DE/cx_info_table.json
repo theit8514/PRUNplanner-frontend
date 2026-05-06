@@ -1,0 +1,15 @@
+{
+	"universe": "UNIVERSUM",
+	"vwap": "@:terms.vwap",
+	"traded_volume": "Handelsvolumen",
+	"market_live_data": "Markt-Live-Daten",
+	"supply_vs_demand": "A / D",
+	"insights": "Einblicke",
+	"market_breadth": "Markt-Breite",
+	"liquidity_ratio": "Liquiditätsverhältnis",
+	"demand_vs_supply": "Nachfrage / Angebot",
+	"weighted_trend": "Gewichteter Trend",
+	"volume_adjusted_delta": "Volumen-bereinigtes Delta",
+	"price_cohesion": "Preis Kohäsion",
+	"variance_index": "Varianz-Index"
+}
