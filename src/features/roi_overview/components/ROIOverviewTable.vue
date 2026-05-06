@@ -9,6 +9,9 @@
 		watch,
 	} from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useROIOverview } from "@/features/roi_overview/useROIOverview";
 
@@ -160,7 +163,7 @@
 		<div class="text-center w-100 py-3">
 			<PProgressBar :step="progressCurrent" :total="progressTotal" />
 			<div class="pt-3 text-xs text-white/60">
-				Calculating Building Recipe ROI
+				{{ $t("recipe_roi.calculating") }}
 			</div>
 		</div>
 	</div>
@@ -181,18 +184,22 @@
 			:pagination="{ pageSize: 50 }">
 			<XNDataTableColumn
 				key="buildingTicker"
-				title="Building"
+				:title="t('recipe_roi.table.building')"
 				sorter="default">
 				<template #render-cell="{ rowData }">
 					<span class="font-bold">{{ rowData.buildingTicker }}</span>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="optimalSetup" title="Optimal Setup">
+			<XNDataTableColumn
+				key="optimalSetup"
+				:title="t('recipe_roi.table.optimal_setup')">
 				<template #render-cell="{ rowData }">
 					{{ formatOptimal(rowData.optimalSetup) }}
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="recipeOutputs" title="Recipe Output">
+			<XNDataTableColumn
+				key="recipeOutputs"
+				:title="t('recipe_roi.table.recipe_output')">
 				<template #render-cell="{ rowData }">
 					<div class="flex flex-row flex-wrap gap-1">
 						<MaterialTile
@@ -203,7 +210,9 @@
 					</div>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="recipeInputs" title="Recipe Input">
+			<XNDataTableColumn
+				key="recipeInputs"
+				:title="t('recipe_roi.table.recipe_input')">
 				<template #render-cell="{ rowData }">
 					<div class="flex flex-row flex-wrap gap-1">
 						<MaterialTile
@@ -214,25 +223,23 @@
 					</div>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="cogc" title="COGC">
+			<XNDataTableColumn key="cogc" :title="t('recipe_roi.table.cogc')">
 				<template #render-cell="{ rowData }">
 					<span class="text-nowrap">
 						{{ capitalizeString(rowData.cogc) }}
 					</span>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="cogm" title="COGM">
+			<XNDataTableColumn key="cogm" :title="t('recipe_roi.table.cogm')">
 				<template #render-cell="{ rowData }">
 					<COGMButton :cogm-data="rowData.cogm" />
 				</template>
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="planCost"
-				title="Plan Cost"
-				sorter="default">
-				<template #title>
-					<div class="text-end">Plan Cost</div>
-				</template>
+				:title="t('recipe_roi.table.plan_cost')"
+				sorter="default"
+				title-align="right">
 				<template #render-cell="{ rowData }">
 					<div class="text-end text-nowrap">
 						{{ formatNumber(rowData.planCost) }}
@@ -242,11 +249,9 @@
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="dailyProfit"
-				title="Daily Profit"
+				:title="t('recipe_roi.table.daily_profit')"
+				title-align="right"
 				sorter="default">
-				<template #title>
-					<div class="text-end">Daily Profit</div>
-				</template>
 				<template #render-cell="{ rowData }">
 					<div
 						class="text-end text-nowrap"
@@ -262,11 +267,9 @@
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="planProfitArea"
-				title="Profit/Area"
+				:title="t('recipe_roi.table.profit_area')"
+				title-align="right"
 				sorter="default">
-				<template #title>
-					<div class="text-end">Profit/Area</div>
-				</template>
 				<template #render-cell="{ rowData }">
 					<div
 						class="text-end"
@@ -280,10 +283,11 @@
 					</div>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="planROI" title="Plan ROI" sorter="default">
-				<template #title>
-					<div class="text-end">Plan ROI</div>
-				</template>
+			<XNDataTableColumn
+				key="planROI"
+				:title="t('recipe_roi.table.plan_roi')"
+				title-align="right"
+				sorter="default">
 				<template #render-cell="{ rowData }">
 					<div
 						class="text-end text-nowrap"

@@ -47,5 +47,7 @@
 	"trend": "Trend",
 	"ask": "Ask",
 	"bid": "Bid",
-	"spread": "Spread"
+	"spread": "Spread",
+	"filter": "Filter",
+	"cogm": "COGM"
 }

@@ -5,7 +5,6 @@
 	import { PSelectOption } from "@/ui/ui.types";
 
 	// UI
-	import PSelect from "@/ui/components/PSelect.vue";
 	import PCheckbox from "@/ui/components/PCheckbox.vue";
 	import PSelectMultiple from "@/ui/components/PSelectMultiple.vue";
 
@@ -86,9 +85,11 @@
 	<div
 		class="w-full p-3 flex flex-row gap-3 flex-wrap items-center justify-between border border-b-0 rounded-[3px] border-white/15">
 		<div class="flex flex-row flex-wrap items-center gap-3">
-			<div class="font-bold pr-3">Filter</div>
+			<div class="font-bold pr-3">
+				{{ $t("recipe_roi.filters.title") }}
+			</div>
 			<div class="flex flex-row gap-3 child:my-auto">
-				<div>Building</div>
+				<div>{{ $t("recipe_roi.filters.building") }}</div>
 				<PSelectMultiple
 					v-model:value="localFilterBuilding"
 					:options="buildingOptions"
@@ -97,7 +98,7 @@
 					class="w-40" />
 			</div>
 			<div class="flex flex-row gap-3 child:my-auto">
-				<div>COGC</div>
+				<div>{{ $t("recipe_roi.filters.cogc") }}</div>
 				<PSelectMultiple
 					v-model:value="localFilterCogc"
 					:options="cogcOptions"
@@ -106,7 +107,7 @@
 					class="w-50" />
 			</div>
 			<div class="flex flex-row gap-3 child:my-auto">
-				<div>Output</div>
+				<div>{{ $t("recipe_roi.filters.output") }}</div>
 				<PSelectMultiple
 					v-model:value="localFilterOutputMaterial"
 					:options="outputMaterialOptions"
@@ -115,7 +116,7 @@
 					class="w-75" />
 			</div>
 			<div class="flex flex-row gap-3 child:my-auto">
-				<div>Input</div>
+				<div>{{ $t("recipe_roi.filters.input") }}</div>
 				<PSelectMultiple
 					v-model:value="localFilterInputMaterial"
 					:options="inputMaterialOptions"
@@ -125,7 +126,7 @@
 			</div>
 		</div>
 		<div class="flex flex-row flex-wrap gap-3 items-center">
-			<div>Positive ROI</div>
+			<div>{{ $t("recipe_roi.filters.positive_roi") }}</div>
 			<PCheckbox v-model:checked="localFilterPositiveROI" />
 		</div>
 	</div>

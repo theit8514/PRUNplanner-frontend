@@ -1,6 +1,14 @@
 <script setup lang="ts">
 	import { ref, Ref } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	// Unhead
 	import { useHead } from "@unhead/vue";
+	useHead({
+		title: `${t("recipe_roi.view_title")} | PRUNplanner`,
+	});
 
 	// Components
 	import WrapperGameDataLoader from "@/features/wrapper/components/WrapperGameDataLoader.vue";
@@ -8,10 +16,6 @@
 	import HelpDrawer from "@/features/help/components/HelpDrawer.vue";
 	import CXPreferenceSelector from "@/features/exchanges/components/CXPreferenceSelector.vue";
 	import ROIOverviewTable from "@/features/roi_overview/components/ROIOverviewTable.vue";
-
-	useHead({
-		title: "ROI Overview | PRUNplanner",
-	});
 
 	// UI
 	import { PForm, PFormItem } from "@/ui";
@@ -37,10 +41,12 @@
 				<div class="min-h-screen flex flex-col">
 					<div
 						class="px-6 py-3 border-b border-white/10 flex flex-row justify-between">
-						<h1 class="text-2xl font-bold my-auto">ROI Overview</h1>
+						<h1 class="text-2xl font-bold my-auto">
+							{{ $t("recipe_roi.title") }}
+						</h1>
 						<div class="flex flex-row gap-x-3">
 							<PForm>
-								<PFormItem label="CX Preference">
+								<PFormItem :label="t('recipe_roi.cx_select')">
 									<CXPreferenceSelector
 										:cx-uuid="refSelectedCXUuid"
 										@update:cxuuid="
