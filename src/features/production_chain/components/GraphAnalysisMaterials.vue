@@ -23,12 +23,24 @@
 </script>
 
 <template>
-	<h3 class="font-bold py-3">Materials</h3>
+	<h3 class="font-bold py-3">
+		{{ $t("production_chains.analysis_materials.title") }}
+	</h3>
 	<PTable striped>
 		<thead>
 			<tr>
-				<th>Material</th>
-				<th>Amount</th>
+				<th>
+					{{
+						$t(
+							"production_chains.analysis_materials.table.material"
+						)
+					}}
+				</th>
+				<th>
+					{{
+						$t("production_chains.analysis_materials.table.amount")
+					}}
+				</th>
 			</tr>
 		</thead>
 		<tbody>
