@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { reactive, watch, Ref, ref, onMounted } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -90,45 +93,42 @@
 	<div>
 		<div class="flex flex-row flex-wrap gap-3">
 			<h2 class="grow my-auto text-white/80 font-bold text-lg">
-				Profile
+				{{ $t("profile.change_profile.title") }}
 			</h2>
 			<PButton
 				:loading="isUpdating"
 				:type="wasSaved ? 'primary' : 'error'"
 				@click="patchProfile">
-				Update Profile
+				{{ $t("profile.change_profile.buttons.update_profile") }}
 			</PButton>
 		</div>
 		<PForm v-if="localProfile">
 			<PFormSeperator>
 				<div class="py-3 text-white/60">
-					FIO Data Updates are handled by PRUNplanners backend
-					automatically.
+					{{ $t("profile.change_profile.fio_info") }}
 				</div>
 			</PFormSeperator>
-			<PFormItem label="FIO API Key">
+			<PFormItem :label="t('profile.change_profile.form.fio_apikey')">
 				<PInput
 					v-model:value="localProfile.fio_apikey"
 					class="w-full min-w-50 max-w-[50%]" />
 			</PFormItem>
-			<PFormItem label="PrUn Username">
+			<PFormItem :label="t('profile.change_profile.form.prun_username')">
 				<PInput
 					v-model:value="localProfile.prun_username"
 					class="w-full min-w-50 max-w-[50%]" />
 			</PFormItem>
 			<PFormSeperator>
 				<div class="py-3 text-white/60">
-					It is not required to provide an email but highly
-					recommended for increased account safety and password
-					recovery.
+					{{ $t("profile.change_profile.form.email_info") }}
 				</div>
 			</PFormSeperator>
-			<PFormItem label="Email Address">
+			<PFormItem :label="t('profile.change_profile.form.email_address')">
 				<PInput
 					v-model:value="localProfile.email"
 					class="w-full min-w-50 max-w-[50%]" />
 			</PFormItem>
-			<PFormItem label="Email Verified">
+			<PFormItem :label="t('profile.change_profile.form.email_verified')">
 				<div class="w-full flex flex-row flex-wrap gap-3">
 					<PCheckbox
 						v-model:checked="localProfile.is_email_verified"
@@ -142,7 +142,11 @@
 							<router-link
 								to="/verify-email"
 								class="text-link-primary hover:cursor-pointer hover:underline">
-								Verify Email
+								{{
+									$t(
+										"profile.change_profile.buttons.verify_email"
+									)
+								}}
 							</router-link>
 						</div>
 						<div>
@@ -150,10 +154,18 @@
 								v-if="!codeResendRequested"
 								class="text-link-primary hover:cursor-pointer hover:underline"
 								@click="requestVerification">
-								Resend Code
+								{{
+									$t(
+										"profile.change_profile.buttons.resend_code"
+									)
+								}}
 							</span>
 							<span v-else class="text-lime-600">
-								Code requested.
+								{{
+									$t(
+										"profile.change_profile.buttons.code_requested"
+									)
+								}}
 							</span>
 						</div>
 					</div>
