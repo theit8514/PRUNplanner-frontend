@@ -36,7 +36,7 @@
 				<div
 					class="min-w-75 max-w-125 bg-black p-8 rounded shadow-lg text-center flex flex-col gap-y-3">
 					<h1 class="text-2xl font-bold font-mono mb-3">
-						Loading Data...
+						{{ $t("wrapper.loading") }}
 					</h1>
 					<div
 						v-for="e in loadingSteps"

@@ -1,9 +1,13 @@
 <script setup lang="ts">
 	import { computed, onMounted, Ref, ref } from "vue";
-	import { useHead } from "@unhead/vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	// Unhead
+	import { useHead } from "@unhead/vue";
 	useHead({
-		title: "Market Exploration | PRUNplanner",
+		title: `${t("market_exploration.view_title")} | PRUNplanner`,
 	});
 
 	// Stores
@@ -48,9 +52,9 @@
 	);
 
 	const intervalOptions: Ref<PSelectOption[]> = ref(
-		["Daily", "Weekly", "Monthly"].map((e) => ({
+		["daily", "weekly", "monthly"].map((e) => ({
 			label: e,
-			value: e.toLowerCase(),
+			value: e,
 		}))
 	);
 
@@ -176,10 +180,14 @@
 		<div class="min-h-screen flex flex-col">
 			<div
 				class="px-6 py-3 border-b border-white/10 flex flex-row justify-between gap-x-3">
-				<h1 class="text-2xl font-bold">Market Exploration</h1>
+				<h1 class="text-2xl font-bold">
+					{{ $t("market_exploration.title") }}
+				</h1>
 				<div>
 					<div class="flex flex-row gap-x-3 child:my-auto">
-						<div>Switch Material</div>
+						<div>
+							{{ $t("market_exploration.switch_material") }}
+						</div>
 						<PSelect
 							v-model:value="selectedMaterial"
 							searchable
@@ -206,7 +214,11 @@
 								<div
 									class="p-3 rounded border border-white/10 flex flex-col">
 									<div class="pb-1 text-white/50">
-										Universe VWAP 7D
+										{{
+											$t(
+												"market_exploration.kpis.universe_vwap_7d"
+											)
+										}}
 									</div>
 									<div class="text-3xl font-bold">
 										{{
@@ -237,14 +249,22 @@
 													true
 												)
 											}}
-											% Trend
+											{{
+												$t(
+													"market_exploration.kpis.percent_trend"
+												)
+											}}
 										</span>
 									</div>
 								</div>
 								<div
 									class="p-3 rounded border border-white/10 flex flex-col">
 									<div class="pb-1 text-white/50">
-										Universe Traded Volume 7D
+										{{
+											$t(
+												"market_exploration.kpis.universe_traded_7d"
+											)
+										}}
 									</div>
 									<div class="text-3xl font-bold">
 										{{
@@ -254,7 +274,7 @@
 										}}
 									</div>
 									<div class="text-white/50">
-										30D:
+										{{ $t("market_exploration.kpis.30d") }}
 										{{
 											formatAmount(
 												materialOverviewData()
@@ -266,7 +286,11 @@
 								<div
 									class="p-3 rounded border border-white/10 flex flex-col">
 									<div class="pb-1 text-white/50">
-										Universe Market Delta
+										{{
+											$t(
+												"market_exploration.kpis.universe_market_delta"
+											)
+										}}
 									</div>
 									<div class="text-3xl font-bold">
 										<span
@@ -288,7 +312,11 @@
 									<div
 										class="text-white/50 flex flex-row justify-between">
 										<div>
-											Supply:
+											{{
+												$t(
+													"market_exploration.kpis.supply"
+												)
+											}}
 											{{
 												formatAmount(
 													materialOverviewData()
@@ -297,7 +325,11 @@
 											}}
 										</div>
 										<div>
-											Demand:
+											{{
+												$t(
+													"market_exploration.kpis.demand"
+												)
+											}}
 											{{
 												formatAmount(
 													materialOverviewData()
@@ -310,7 +342,11 @@
 								<div
 									class="p-3 rounded border border-white/10 flex flex-col">
 									<div class="pb-1 text-white/50">
-										Weighted Trend
+										{{
+											$t(
+												"market_exploration.kpis.weighted_trend"
+											)
+										}}
 									</div>
 									<div class="text-3xl font-bold">
 										<span
@@ -332,13 +368,21 @@
 										</span>
 									</div>
 									<div class="text-white/50">
-										Volume-Adjusted Delta
+										{{
+											$t(
+												"market_exploration.kpis.volume_adjusted_delta"
+											)
+										}}
 									</div>
 								</div>
 								<div
 									class="p-3 rounded border border-white/10 flex flex-col">
 									<div class="pb-1 text-white/50">
-										Price Cohesion
+										{{
+											$t(
+												"market_exploration.kpis.price_cohesion"
+											)
+										}}
 									</div>
 									<div class="text-3xl font-bold">
 										<span
@@ -360,7 +404,11 @@
 										</span>
 									</div>
 									<div class="text-white/50">
-										Variance Index
+										{{
+											$t(
+												"market_exploration.kpis.variance_index"
+											)
+										}}
 									</div>
 								</div>
 							</div>
@@ -374,7 +422,7 @@
 							<div
 								class="flex flex-row pb-3 child:my-auto flex-none">
 								<h3 class="font-bold text-lg grow">
-									Market Chart
+									{{ $t("market_exploration.chart.title") }}
 								</h3>
 								<div class="flex flex-row">
 									<div class="flex flex-row gap-1 pr-3">
@@ -429,7 +477,11 @@
 														}
 													}
 												">
-												{{ option.label }}
+												{{
+													$t(
+														`market_exploration.chart.intervals.${option.label}`
+													)
+												}}
 											</PButton>
 										</template>
 									</div>
@@ -452,7 +504,9 @@
 							</div>
 						</div>
 						<div class="p-3 rounded border border-white/10">
-							<h3 class="font-bold text-lg pb-3">Market Data</h3>
+							<h3 class="font-bold text-lg pb-3">
+								{{ $t("market_exploration.market_data.title") }}
+							</h3>
 
 							<MaterialCXOverviewTable
 								:overview-data="materialOverviewData().overview"
@@ -461,7 +515,9 @@
 					</div>
 				</div>
 
-				<h3 class="font-bold text-lg pb-3">Material Market Overview</h3>
+				<h3 class="font-bold text-lg pb-3">
+					{{ $t("market_exploration.overview.title") }}
+				</h3>
 
 				<XNDataTable
 					:data="dataOverview"
@@ -470,7 +526,7 @@
 					:max-height="800">
 					<XNDataTableColumn
 						key="material_ticker"
-						title="Material"
+						:title="t('market_exploration.overview.table.material')"
 						sorter="default">
 						<template #render-cell="{ rowData }">
 							<MaterialTile
@@ -480,7 +536,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="vwap_universe_7d"
-						title="VWAP 7D"
+						:title="t('market_exploration.overview.table.vwap_7d')"
 						sorter="default">
 						<template #render-cell="{ rowData }">
 							{{ formatNumber(rowData.vwap_universe_7d) }}
@@ -491,7 +547,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="vwap_universe_30d"
-						title="VWAP 30D"
+						:title="t('market_exploration.overview.table.vwap_30d')"
 						sorter="default">
 						<template #render-cell="{ rowData }">
 							{{ formatNumber(rowData.vwap_universe_30d) }}
@@ -502,7 +558,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="weighted_trend"
-						title="Trend"
+						:title="t('market_exploration.overview.table.trend')"
 						sorter="default">
 						<template #render-cell="{ rowData }">
 							<span
@@ -516,7 +572,9 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="volume_7d"
-						title="Volume 7D"
+						:title="
+							t('market_exploration.overview.table.volume_7d')
+						"
 						sorter="default">
 						<template #render-cell="{ rowData }">
 							{{ formatAmount(rowData.volume_7d) }}
@@ -524,13 +582,17 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="volume_30d"
-						title="Volume 30D"
+						:title="
+							t('market_exploration.overview.table.volume_30d')
+						"
 						sorter="default">
 						<template #render-cell="{ rowData }">
 							{{ formatAmount(rowData.volume_30d) }}
 						</template>
 					</XNDataTableColumn>
-					<XNDataTableColumn key="explore" title="Details">
+					<XNDataTableColumn
+						key="explore"
+						:title="t('market_exploration.overview.table.details')">
 						<template #render-cell="{ rowData }">
 							<PButton
 								@click="
