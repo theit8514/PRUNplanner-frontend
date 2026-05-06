@@ -47,7 +47,7 @@
 		"active_empire": "Actief"
 	},
 	"assignments": {
-		"title": "Plan <-> Rijk Toewijzingen",
+		"title": "Plan ↔ Rijk Toewijzingen",
 		"description": "Elke geplande basis kan aan meerdere rijken toegewezen worden. Dit laat je tegelijk je rijk, corporatie productie ketens, of uitbreidingsplannen, in de gaten houden.",
 		"buttons": {
 			"update_assignments": "Vernieuwen Toegewezen Plan",
