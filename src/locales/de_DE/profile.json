@@ -1,41 +1,41 @@
 {
-	"view_title": "Profile",
-	"title": "Profile",
+	"view_title": "Profil",
+	"title": "Profil",
 	"change_password": {
-		"title": "Change Password",
-		"button": "Change Password",
+		"title": "Passwort ändern",
+		"button": "Passwort ändern",
 		"form": {
-			"password_info": "Password must be at least 8 characters long",
-			"current_password": "Current Password",
-			"new_password": "New Password",
-			"change_success": "Password changed.",
-			"change_error": "Password change failed."
+			"password_info": "Passwort muss mindestens 8 Zeichen lang sein",
+			"current_password": "Aktuelles Passwort",
+			"new_password": "Neues Passwort",
+			"change_success": "Passwort geändert.",
+			"change_error": "Passwortänderung fehlgeschlagen."
 		}
 	},
 	"change_profile": {
-		"title": "Profile",
+		"title": "Profil",
 		"buttons": {
-			"update_profile": "Update Profile",
-			"verify_email": "Verify Email",
-			"resend_code": "Resend Code",
-			"code_requested": "Code requested."
+			"update_profile": "Profil aktualisieren",
+			"verify_email": "E-Mail verifizieren",
+			"resend_code": "Code erneut senden",
+			"code_requested": "Code angefordert."
 		},
-		"fio_info": "FIO Data Updates are handled by PRUNplanners backend automatically.",
+		"fio_info": "FIO Updates werden automatisch von PRUNplanner verwaltet.",
 		"form": {
 			"fio_apikey": "FIO API Key",
-			"prun_username": "PrUn Username",
-			"email_info": "It is not required to provide an email but highly recommended for increased account safety and password recovery.",
-			"email_address": "Email Address",
-			"email_verified": "Email Verified"
+			"prun_username": "PrUn Benutzername",
+			"email_info": "Es ist nicht erforderlich, eine E-Mail anzugeben, aber dringend empfohlen, um die Sicherheit zu erhöhen und das Passwort wiederherzustellen.",
+			"email_address": "E-Mail-Adresse",
+			"email_verified": "E-Mail verifiziert"
 		}
 	},
 	"storage_data": {
-		"title": "Browser Storage",
-		"description": "PRUNplanner minimizes API calls by storing data locally in your browser. Data refreshes automatically at set intervals.",
+		"title": "Browser-Speicher",
+		"description": "PRUNplanner minimiert API-Aufrufe, indem Daten lokal in deinem Browser gespeichert werden.",
 		"table": {
-			"storage": "Storage",
-			"records": "Records",
-			"size": "Approx. Size"
+			"storage": "Speicher",
+			"records": "Datensätze",
+			"size": "Ungefähre Größe"
 		}
 	},
 	"fio_information": {
