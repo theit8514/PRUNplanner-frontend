@@ -1,6 +1,6 @@
 {
-	"view_title": "Management",
-	"title": "Management",
+	"view_title": "Verwaltung",
+	"title": "Verwaltung",
 	"empire": {
 		"title": "Empire Configuration",
 		"description": "Removing empires will not delete any associated plans — they will simply become unassigned. You can create edit existing empires in the Empire View. To ensure correct plan efficiency calculations, make sure each empire has your Faction and the appropriate Permits.",
@@ -11,8 +11,8 @@
 		"form": {
 			"empire_name": "@:terms.empire Name",
 			"faction": "@:terms.faction",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"permits_total": "@:terms.permits_plural gesamt",
+			"permits_used": "@:terms.permits_plural benutzt"
 		},
 		"table": {
 			"empire_name": "@:terms.empire",
@@ -54,15 +54,15 @@
 			"reload": "@:common.buttons.reload"
 		},
 		"deletion": {
-			"title": "Confirm Plan Deletion",
-			"content": "Are you sure? Deleting the Plan can't be reversed."
+			"title": "Löschen des Plans bestätigen",
+			"content": "Bist du sicher? Löschen des Plans kann nicht rückgängig gemacht werden."
 		},
 		"table": {
 			"plan": "@:terms.plan",
 			"planet": "@:terms.planets",
-			"configuration": "Configuration",
-			"nodata_title": "No @:terms.plans available",
-			"nodata_label": "Use Planet Search to create your first @:terms.plans."
+			"configuration": "Konfiguration",
+			"nodata_title": "Keine @:terms.plans verfügbar",
+			"nodata_label": "Verwende die Planetensuche, um deine ersten @:terms.plans zu erstellen."
 		}
 	}
 }

@@ -1,0 +1,25 @@
+{
+	"view_title": "HQ",
+	"title": "HQ Upgrade Calculator",
+	"form": {
+		"from_level": "From HQ Level",
+		"to_level": "To HQ Level",
+		"cx_preference": "@:terms.cx Preference",
+		"show_locations": "Show Locations"
+	},
+	"cost": {
+		"total_cost": "Total @:terms.cost",
+		"total_weight": "Total @:terms.weight",
+		"total_volume": "Total @:terms.volume"
+	},
+	"table": {
+		"material": "@:terms.materials",
+		"amount": "@:terms.amount",
+		"storage": "@:terms.storage",
+		"override_stock": "Override Stock",
+		"required": "Required",
+		"cost_unit": "Cost / Unit",
+		"cost_total": "Total Cost",
+		"storage_locations": "@:terms.storage Locations"
+	}
+}

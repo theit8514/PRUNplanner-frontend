@@ -1,0 +1,21 @@
+{
+	"loading": "Daten werden geladen...",
+	"gamedata": {
+		"material_data": "@:terms.materials Daten",
+		"exchange_data": "@:terms.exchanges Daten",
+		"building_data": "@:terms.buildings Daten",
+		"recipe_data": "@:terms.recipes Daten",
+		"planet_data": "@:terms.planets '{name}' Daten",
+		"planet_multiple_data": "@:terms.planet_plural '{names}' Daten"
+	},
+	"planning_data": {
+		"shared_plan": "Freigegebene @:terms.plan Konfiguration",
+		"empires": "@:terms.empire Konfiguration",
+		"plan": "@:terms.plan Konfiguration",
+		"plans_all": "Alle @:terms.plans_plural Konfigurationen",
+		"planet_data": "@:terms.planets '{name}' Daten",
+		"cx": "@:terms.cx '{name}' Konfiguration",
+		"shared_list": "Freigegebene @:terms.plans_plural Konfigurationen",
+		"empire_plans": "@:terms.empire @:terms.plans_plural Konfigurationen"
+	}
+}

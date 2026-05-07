@@ -1,20 +1,20 @@
 {
-	"view_title": "Planet Search",
-	"title": "Planet Search",
+	"view_title": "Planetensuche",
+	"title": "Planetensuche",
 	"basic": {
-		"title": "Plan Name or ID",
-		"description": "Search must include at least 3 characters. Example Searches: \"OT-580b\", \"Montem\", \"OT-\" or \"580\".",
+		"title": "Planet Name or ID",
+		"description": "Suche muss mindestens 3 Zeichen enthalten. Beispiel: \"OT-580b\", \"Montem\", \"OT-\" oder \"580\".",
 		"form_id": "ID"
 	},
 	"advanced": {
-		"title": "Advanced Search",
+		"title": "Erweiterte Suche",
 		"labels": {
 			"materials": "@:terms.materials_plural",
 			"cogc": "@:terms.cogc",
-			"min_richness": "Min. Richness %",
-			"planet_features": "Planet Features",
-			"system_distance": "System Distance",
-			"planet_environment": "Planet Environment"
+			"min_richness": "Min. Reichhaltigkeit %",
+			"planet_features": "Planeten-Eigenschaften",
+			"system_distance": "Systementfernung",
+			"planet_environment": "Planeten-Umwelt"
 		}
 	},
 	"results": {
@@ -22,13 +22,13 @@
 			"plan": "Plan",
 			"planet": "Planet",
 			"fertility": "@:terms.fertility",
-			"resources": "Resources",
+			"resources": "Ressourcen",
 			"popr": "@:terms.popr",
 			"cogc_program": "COGC Program",
-			"environment": "Environment",
-			"infrastructure": "Infrastructure",
-			"distance": "Distance"
+			"environment": "Umwelt",
+			"infrastructure": "Infrastruktur",
+			"distance": "Entfernung"
 		},
-		"colony_ship_required": "Colony Ship Required"
+		"colony_ship_required": "Kolonieschiff erforderlich"
 	}
 }

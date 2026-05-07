@@ -1,0 +1,25 @@
+{
+	"view_title": "总部",
+	"title": "总部升级计算器",
+	"form": {
+		"from_level": "从总部等级",
+		"to_level": "到总部等级",
+		"cx_preference": "@:terms.cx 偏好",
+		"show_locations": "显示位置"
+	},
+	"cost": {
+		"total_cost": "总计 @:terms.cost",
+		"total_weight": "总计 @:terms.weight",
+		"total_volume": "总计 @:terms.volume"
+	},
+	"table": {
+		"material": "@:terms.materials",
+		"amount": "@:terms.amount",
+		"storage": "@:terms.storage",
+		"override_stock": "已覆盖库存",
+		"required": "需要",
+		"cost_unit": "费用/单位",
+		"cost_total": "总费用",
+		"storage_locations": "@:terms.storage 位置"
+	}
+}

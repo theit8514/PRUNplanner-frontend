@@ -1,68 +1,68 @@
 {
-	"view_title": "Management",
-	"title": "Management",
+	"view_title": "管理",
+	"title": "管理",
 	"empire": {
-		"title": "Empire Configuration",
-		"description": "Removing empires will not delete any associated plans — they will simply become unassigned. You can create edit existing empires in the Empire View. To ensure correct plan efficiency calculations, make sure each empire has your Faction and the appropriate Permits.",
+		"title": "帝国配置",
+		"description": "移除帝国将不会删除任何关联的计划——他们将被取消分配。你可以在帝国视图中创建编辑现有的帝国。为了确保正确的计算效率加成，请确保每个帝国都有设置派系和正确的许可。",
 		"buttons": {
-			"update_cx": "Update CX Assignments",
-			"new_empire": "New Empire"
+			"update_cx": "更新商品交易所分配",
+			"new_empire": "新帝国"
 		},
 		"form": {
-			"empire_name": "@:terms.empire Name",
+			"empire_name": "@:terms.empire 名称",
 			"faction": "@:terms.faction",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"permits_total": "@:terms.permits_plural 总计",
+			"permits_used": "@:terms.permits_plural 已用"
 		},
 		"table": {
 			"empire_name": "@:terms.empire",
 			"faction": "@:terms.faction",
 			"permits": "@:terms.permits",
 			"plans": "@:terms.plans_plural",
-			"cx": "CX",
-			"nodata_title": "No Empires available",
-			"nodata_label": "Create your first Empire"
+			"cx": "商品交易所",
+			"nodata_title": "没有可用的帝国",
+			"nodata_label": "创建你的第一个帝国"
 		}
 	},
 	"cx": {
-		"title": "CX Configuration",
-		"description": "Removing a CX preference will delete all its exchange and material settings. Assigned empires will remain unaffected, but they will no longer use the removed preferences. Make sure to assign a new CX preference.",
+		"title": "商品交易所配置",
+		"description": "移除商品交易所偏好将删除其所有市场和材料设置。已分配的帝国将不受影响，但他们将不再使用已删除的偏好。请确保分配一个新的商品交易所偏好。",
 		"buttons": {
-			"new_cx": "New @:terms.cx"
+			"new_cx": "新 @:terms.cx"
 		},
 		"form": {
-			"cx_name": "@:terms.cx Name",
-			"cx_placeholder": "CX Name (max. 100 characters)"
+			"cx_name": "@:terms.cx 名称",
+			"cx_placeholder": "商品交易所名称（最多100字符）"
 		},
 		"table": {
-			"cx_name": "@:terms.cx Name",
-			"assigned_to_empire": "Assigned to Empire?",
-			"nodata_title": "No @:terms.cx available.",
-			"nodata_label": "Create your first Exchange Preference."
+			"cx_name": "@:terms.cx 名称",
+			"assigned_to_empire": "分配给帝国？",
+			"nodata_title": "没有 @:terms.cx 可用。",
+			"nodata_label": "创建你的第一个市场偏好。"
 		}
 	},
 	"filter": {
-		"title": "Filter",
+		"title": "筛选",
 		"plan": "@:terms.plan",
-		"active_empire": "Active @:terms.empire"
+		"active_empire": "当前 @:terms.empire"
 	},
 	"assignments": {
-		"title": "Plan ↔ Empire Assignments",
-		"description": "Every planned base can be assigned to multiple empires. This allows you to simultaneously keep track of your existing Prosperous Universe empire, corporation production chains or future expansion plans.",
+		"title": "计划 ↔ 帝国分配",
+		"description": "每个被计划的基地都可以分配给多个帝国。这允许你同时跟踪现有的PrUn帝国、公司生产链或未来的扩展计划。",
 		"buttons": {
-			"update_assignments": "Update Plan Assignments",
-			"reload": "@:common.buttons.reload"
+			"update_assignments": "更新计划分配",
+			"reload": "@:common.butons.reload"
 		},
 		"deletion": {
-			"title": "Confirm Plan Deletion",
-			"content": "Are you sure? Deleting the Plan can't be reversed."
+			"title": "确认删除计划",
+			"content": "你确定吗？删除操作不能被撤销。"
 		},
 		"table": {
 			"plan": "@:terms.plan",
 			"planet": "@:terms.planets",
-			"configuration": "Configuration",
-			"nodata_title": "No @:terms.plans available",
-			"nodata_label": "Use Planet Search to create your first @:terms.plans."
+			"configuration": "配置",
+			"nodata_title": "没有 @:terms.plans 可用",
+			"nodata_label": "使用行星搜索创建你的第一个 @:terms.plan。"
 		}
 	}
 }

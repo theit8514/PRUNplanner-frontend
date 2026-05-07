@@ -50,5 +50,12 @@
 		"WORKFORCE_TECHNICIANS": "职技工",
 		"WORKFORCE_ENGINEERS": "工程师",
 		"WORKFORCE_SCIENTISTS": "科学家"
+	},
+	"upkeep": {
+		"safety": "Safety",
+		"health": "Health",
+		"comfort": "Comfort",
+		"culture": "Culture",
+		"education": "Education"
 	}
 }

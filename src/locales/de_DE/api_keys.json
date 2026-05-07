@@ -1,0 +1,45 @@
+{
+	"view_title": "API Schlüssel",
+	"title": "API Schlüssel",
+	"info": {
+		"description": {
+			"p1": "The {link} provides programmatic access to all your planning data, ingame metadata (buildings, recipes, materials) and calculated market metrics like VWAP. While public endpoints remain open for community use, access to private planning data - including your plan configurations - require secure authentication.",
+			"p2": "By utilizing these endpoints, you can synchronize your planning operations with external spreadsheets, custom dashboards, or even optimization algorithms.",
+			"link": "PRUNplanner REST API",
+			"warning": "API keys grant full access to your account data and remain valid indefinitely. Treat these credentials as sensitive as your password. Never commit keys to public repositories or share them with unverified third-party services. If a key is compromised, revoke it immediately and generate a replacement."
+		}
+	},
+	"manage": {
+		"title": "PRUNplanner API Schlüssel",
+		"buttons": {
+			"new_apikey": "Neuen Schlüssel erstellen",
+			"revoke_apikey": "Widerrufen"
+		},
+		"table": {
+			"apikey_name": "Name",
+			"apikey_prefix": "Präfix",
+			"apikey_created": "Erstellt am",
+			"apikey_lastused": "Zuletzt benutzt"
+		}
+	},
+	"implementation": {
+		"title": "Autorisierungs-Implementierung",
+		"link": "REST API Referenz anzeigen →"
+	},
+	"create": {
+		"title": "API-Schlüssel erstellen",
+		"form": {
+			"key_name": "Schlüssel-Name",
+			"key_description": "Gib deinem Schlüssel einen beschreibenden Namen, um in später zu identifizieren.",
+			"success_title": "Schlüssel erfolgreich generiert",
+			"success_key": "Dein geheimer Schlüssel (Jetzt speichern!)",
+			"success_note": "Aus Sicherheitsgründen können wir diesen Schlüssel nicht erneut anzeigen. Wenn du ihn verlierst, musst du ihn widerrufen und dir einen neuen erstellen.",
+			"error": "Fehler beim Erstellen deines API-Schlüssels. Bitte versuche es später erneut."
+		},
+		"buttons": {
+			"create": "@:common.buttons.create",
+			"cancel": "@:common.buttons.cancel",
+			"saved": "Ich habe meinen Schlüssel gespeichert"
+		}
+	}
+}

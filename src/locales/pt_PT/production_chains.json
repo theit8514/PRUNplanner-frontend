@@ -1,0 +1,35 @@
+{
+	"view_title": "Production Chains",
+	"title": "Production Chains",
+	"configuration": {
+		"title": "Configuration",
+		"material": "@:terms.materials",
+		"recipe_runs": "Recipe Runs",
+		"node_color": "Node Color",
+		"terminals": "Terminals",
+		"terminals_placeholder": "Comma-separated material tickers",
+		"terminals_info": "Terminals are materials whose inputs are excluded from the graph, useful if you buy them on the CX or locally and don't need to produce them.",
+		"recipe_selection": "Recipe Selection"
+	},
+	"analysis_materials": {
+		"title": "Materials",
+		"table": {
+			"material": "@:terms.materials",
+			"amount": "@:terms.amount"
+		}
+	},
+	"analysis_expertise": {
+		"title": "Building Expertises",
+		"table": {
+			"expertise": "Expertise",
+			"materials": "@:terms.materials_plural"
+		}
+	},
+	"analysis_workforce": {
+		"title": "Workforce",
+		"table": {
+			"workforce": "Workforce",
+			"required": "Required"
+		}
+	}
+}
