@@ -34,7 +34,7 @@
 	},
 	"filters": {
 		"display": "显示",
-		"consumables": "消费品",
+		"consumables": "消耗品",
 		"all": "全部",
 		"loadbalance": "负载平衡"
 	},
