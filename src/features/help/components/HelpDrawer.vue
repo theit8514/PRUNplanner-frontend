@@ -11,12 +11,12 @@
 	const showDrawer: Ref<boolean> = ref(false);
 
 	async function loadMarkdown(): Promise<string> {
-		const markdownFiles = import.meta.glob("@/assets/help/*.md", {
+		const markdownFiles = import.meta.glob("@/assets/help/en_US/*.md", {
 			query: "?raw",
 			import: "default",
 		}) as Record<string, () => Promise<string>>;
 
-		const path = `/src/assets/help/${props.fileName}.md`;
+		const path = `/src/assets/help/en_US/${props.fileName}.md`;
 		const loader = markdownFiles[path];
 		if (!loader)
 			throw new Error(`Markdown file "${props.fileName}" not found.`);
