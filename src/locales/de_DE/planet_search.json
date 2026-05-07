@@ -2,7 +2,7 @@
 	"view_title": "Planetensuche",
 	"title": "Planetensuche",
 	"basic": {
-		"title": "Planet Name or ID",
+		"title": "Planetenname oder ID",
 		"description": "Suche muss mindestens 3 Zeichen enthalten. Beispiel: \"OT-580b\", \"Montem\", \"OT-\" oder \"580\".",
 		"form_id": "ID"
 	},
@@ -24,7 +24,7 @@
 			"fertility": "@:terms.fertility",
 			"resources": "Ressourcen",
 			"popr": "@:terms.popr",
-			"cogc_program": "COGC Program",
+			"cogc_program": "COGC-Programm",
 			"environment": "Umwelt",
 			"infrastructure": "Infrastruktur",
 			"distance": "Entfernung"
