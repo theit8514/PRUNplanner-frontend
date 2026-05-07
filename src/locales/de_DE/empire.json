@@ -1,6 +1,6 @@
 {
 	"view_title": "Empire",
-	"switch_empire": "Switch Empire",
+	"switch_empire": "Imperium wechseln",
 	"views": {
 		"material_io": "Material I/O",
 		"analysis": "Analyse",
@@ -11,8 +11,8 @@
 		"form": {
 			"name": "Name",
 			"faction": "Fraktion",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"permits_total": "@:terms.permits_plural gesamt",
+			"permits_used": "@:terms.permits_plural benutzt"
 		},
 		"sync_warning": {
 			"title": "Unstimmigkeit erkannt:",
@@ -36,7 +36,7 @@
 		"display": "Anzeige",
 		"consumables": "Verbrauchsmaterialien",
 		"all": "Alle",
-		"loadbalance": "Loadbalance"
+		"loadbalance": "Ladeausgleich"
 	},
 	"analysis": {
 		"profitable_plans": "Profitable Pläne",
