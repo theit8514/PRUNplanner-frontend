@@ -57,16 +57,18 @@
 <template>
 	<div class="flex flex-row font-bold child:mr-3">
 		<div :class="corphq ? 'visible' : 'collapse md:invisible'">
-			<span class="text-positive">HQ</span>
+			<span class="text-positive">
+				{{ $t("plan.components.status.hq") }}
+			</span>
 		</div>
 		<div>
-			<span>COGC: </span>
+			<span class="pr-1">{{ $t("plan.components.status.cogc") }}</span>
 			<span :class="props.cogc === '---' ? 'text-negative' : ''">
 				{{ $t(cogcTextMapping[props.cogc]) }}
 			</span>
 		</div>
 		<div>
-			<span>Area: </span>
+			<span class="pr-1">{{ $t("plan.components.status.area") }}</span>
 			<span
 				:class="
 					areaData.areaUsed > areaData.areaTotal
@@ -78,7 +80,7 @@
 			<span>/{{ areaData.areaTotal }}</span>
 		</div>
 		<div>
-			<span>Profit: </span>
+			<span class="pr-1">{{ $t("plan.components.status.profit") }}</span>
 			<span
 				:class="
 					overviewData.profit > 0 ? 'text-positive' : 'text-negative'
@@ -87,7 +89,7 @@
 			</span>
 		</div>
 		<div>
-			<span>Experts: </span>
+			<span class="pr-1">{{ $t("plan.components.status.experts") }}</span>
 			<span :class="expertsString === 'None' ? 'text-negative' : ''">
 				{{ expertsString }}
 			</span>

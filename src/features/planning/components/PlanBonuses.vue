@@ -1,5 +1,9 @@
 <script setup lang="ts">
 	import { computed, PropType, WritableComputedRef } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
 	// Types & Interfaces
 	import { PLAN_COGCPROGRAM_TYPE } from "@/stores/planningStore.types";
@@ -55,40 +59,75 @@
 		},
 	});
 
-	const cogcOptions: PSelectOption[] = [
-		{ value: "---", label: "None" },
-		{ value: "AGRICULTURE", label: "Agriculture" },
-		{ value: "CHEMISTRY", label: "Chemistry" },
-		{ value: "CONSTRUCTION", label: "Construction" },
-		{ value: "ELECTRONICS", label: "Electronics" },
-		{ value: "FOOD_INDUSTRIES", label: "Food Industries" },
-		{ value: "FUEL_REFINING", label: "Fuel Refining" },
-		{ value: "MANUFACTURING", label: "Manufacturing" },
-		{ value: "METALLURGY", label: "Metallurgy" },
-		{ value: "RESOURCE_EXTRACTION", label: "Resource Extraction" },
-		{ value: "PIONEERS", label: "Pioneers" },
-		{ value: "SETTLERS", label: "Settlers" },
-		{ value: "TECHNICIANS", label: "Technicians" },
-		{ value: "ENGINEERS", label: "Engineers" },
-		{ value: "SCIENTISTS", label: "Scientists" },
-	];
+	const cogcOptions = computed<PSelectOption[]>(() => [
+		{ value: "---", label: t("game.cogc_program.NONE") },
+		{
+			value: "AGRICULTURE",
+			label: t("game.cogc_program.ADVERTISING_AGRICULTURE"),
+		},
+		{
+			value: "CHEMISTRY",
+			label: t("game.cogc_program.ADVERTISING_CHEMISTRY"),
+		},
+		{
+			value: "CONSTRUCTION",
+			label: t("game.cogc_program.ADVERTISING_CONSTRUCTION"),
+		},
+		{
+			value: "ELECTRONICS",
+			label: t("game.cogc_program.ADVERTISING_ELECTRONICS"),
+		},
+		{
+			value: "FOOD_INDUSTRIES",
+			label: t("game.cogc_program.ADVERTISING_FOOD_INDUSTRIES"),
+		},
+		{
+			value: "FUEL_REFINING",
+			label: t("game.cogc_program.ADVERTISING_FUEL_REFINING"),
+		},
+		{
+			value: "MANUFACTURING",
+			label: t("game.cogc_program.ADVERTISING_MANUFACTURING"),
+		},
+		{
+			value: "METALLURGY",
+			label: t("game.cogc_program.ADVERTISING_METALLURGY"),
+		},
+		{
+			value: "RESOURCE_EXTRACTION",
+			label: t("game.cogc_program.ADVERTISING_RESOURCE_EXTRACTION"),
+		},
+		{ value: "PIONEERS", label: t("game.cogc_program.WORKFORCE_PIONEERS") },
+		{ value: "SETTLERS", label: t("game.cogc_program.WORKFORCE_SETTLERS") },
+		{
+			value: "TECHNICIANS",
+			label: t("game.cogc_program.WORKFORCE_TECHNICIANS"),
+		},
+		{
+			value: "ENGINEERS",
+			label: t("game.cogc_program.WORKFORCE_ENGINEERS"),
+		},
+		{
+			value: "SCIENTISTS",
+			label: t("game.cogc_program.WORKFORCE_SCIENTISTS"),
+		},
+	]);
 </script>
 
 <template>
 	<PForm>
-		<PFormItem label="Corp. HQ">
+		<PFormItem :label="t('plan.components.bonuses.corp_hq')">
 			<PTooltip>
 				<template #trigger>
 					<PCheckbox
 						v-model:checked="localCorpHQ"
 						:disabled="disabled" />
 				</template>
-				The corporation you belong to has its headquarters on <br />
-				this planet (not your individual company).
+				{{ $t("plan.components.bonuses.corp_hq_tooltip") }}
 			</PTooltip>
 		</PFormItem>
 
-		<PFormItem label="COGC">
+		<PFormItem :label="t('plan.components.bonuses.cogc')">
 			<PSelect
 				v-model:value="localCOGC"
 				class="w-full"

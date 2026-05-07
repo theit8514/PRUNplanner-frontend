@@ -8,7 +8,6 @@
 	import PlanProductionRecipe from "@/features/planning/components/PlanProductionRecipe.vue";
 
 	// Util
-	import { capitalizeString } from "@/util/text";
 	import { formatNumber } from "@/util/numbers";
 
 	// UI
@@ -67,15 +66,6 @@
 		() => props.buildingData
 	);
 
-	const expertiseString = computed(() => {
-		if (localBuildingData.value.expertise) {
-			return localBuildingData.value.expertise
-				.replaceAll("_", " ")
-				.toLowerCase();
-		}
-		return "";
-	});
-
 	const isPlanetCogc = computed(() => {
 		return localBuildingData.value.efficiencyElements.some(
 			(element) => element.efficiencyType === "COGC"
@@ -97,7 +87,9 @@
 		</div>
 		<div
 			class="col-span-6 justify-end xl:justify-normal xl:col-span-4 flex items-center gap-x-1">
-			<span class="text-[10px] text-white/50 pr-1">Qty</span>
+			<span class="text-[10px] text-white/50 pr-1">
+				{{ $t("plan.components.production_building.qty") }}
+			</span>
 			<PInputNumber
 				v-model:value="localBuildingData.amount"
 				size="sm"
@@ -122,7 +114,9 @@
 				:disabled="disabled"
 				@click="emit('add:building:recipe', buildingIndex)">
 				<template #icon><PlusSharp /></template>
-				Recipe
+				{{
+					$t("plan.components.production_building.buttons.add_recipe")
+				}}
 			</PButton>
 		</div>
 		<div
@@ -130,20 +124,30 @@
 			<div class="col-span-3 flex flex-col items-end min-w-0 text-right">
 				<span
 					class="text-[10px] text-white/50 uppercase tracking-wider">
-					Expertise
+					{{
+						$t(
+							"plan.components.production_building.table.expertise"
+						)
+					}}
 				</span>
 				<span class="text-xs font-mono">
 					<span
 						:class="
 							isPlanetCogc ? 'text-positive' : 'text-negative'
-						"
-						>{{ capitalizeString(expertiseString) }}</span
+						">
+						{{
+							$t(`game.expertise.${localBuildingData.expertise}`)
+						}}</span
 					>
 				</span>
 			</div>
 			<div class="col-span-2 flex flex-col items-end text-right">
 				<span class="text-[10px] text-white/50 uppercase tracking-wide">
-					Efficiency
+					{{
+						$t(
+							"plan.components.production_building.table.efficiency"
+						)
+					}}
 				</span>
 				<span class="text-xs font-mono font-bold whitespace-nowrap">
 					<PTooltip>
@@ -165,7 +169,13 @@
 							v-for="element in localBuildingData.efficiencyElements"
 							:key="`${localBuildingData.name}#EFFICIENCY#${element.efficiencyType}`"
 							class="flex flex-row justify-between align-center gap-x-3 child:p-1">
-							<div>{{ element.efficiencyType }}</div>
+							<div>
+								{{
+									$t(
+										`game.efficiency_type.${element.efficiencyType}`
+									)
+								}}
+							</div>
 							<div>{{ formatNumber(element.value * 100) }} %</div>
 						</div>
 					</PTooltip>
@@ -173,7 +183,9 @@
 			</div>
 			<div class="col-span-3 flex flex-col items-end text-right">
 				<span class="text-[10px] text-white/50 uppercase tracking-wide">
-					Revenue
+					{{
+						$t("plan.components.production_building.table.revenue")
+					}}
 				</span>
 				<span
 					class="text-xs font-mono font-bold text-positive whitespace-nowrap"
@@ -188,7 +200,7 @@
 			</div>
 			<div class="col-span-1 flex flex-col items-end text-right">
 				<span class="text-[10px] text-white/50 uppercase tracking-wide">
-					Area
+					{{ $t("plan.components.production_building.table.area") }}
 				</span>
 				<span class="text-xs font-mono font-bold whitespace-nowrap">
 					{{ localBuildingData.areaUsed }}
@@ -196,7 +208,11 @@
 			</div>
 			<div class="col-span-2 flex flex-col items-end text-right">
 				<span class="text-[10px] text-white/50 uppercase tracking-wide">
-					Construction
+					{{
+						$t(
+							"plan.components.production_building.table.construction"
+						)
+					}}
 				</span>
 				<span class="text-xs font-mono font-bold whitespace-nowrap">
 					{{ formatNumber(localBuildingData.constructionCost * -1) }}
@@ -258,8 +274,10 @@
 					" />
 			</div>
 		</div>
-		<div v-else class="h-full w-full flex items-center justify-center">
-			No Active Recipes
+		<div
+			v-else
+			class="h-full w-full flex items-center justify-center py-2 font-mono text-white/60 text-xs">
+			{{ $t("plan.components.production_building.no_recipe") }}
 		</div>
 	</div>
 </template>

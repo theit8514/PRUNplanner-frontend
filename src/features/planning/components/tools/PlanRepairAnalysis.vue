@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, Ref, ref, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { usePrice } from "@/features/cx/usePrice";
 	import { useRepairAnalysis } from "@/features/repair_analysis/useRepairAnalysis";
@@ -201,13 +204,18 @@
 </script>
 
 <template>
-	<h2 class="pb-3 text-white/80 font-bold text-lg">Repair Analysis</h2>
+	<h2 class="pb-3 text-white/80 font-bold text-lg">
+		{{ $t("plan.tools.repair_analysis.title") }}
+	</h2>
 	<div class="grid grid-cols-1 xl:grid-cols-[400px_auto] gap-3 gap-x-6">
 		<div>
-			<h2 class="font-bold pb-3">Plan</h2>
+			<h2 class="font-bold pb-3">
+				{{ $t("plan.tools.repair_analysis.plan") }}
+			</h2>
 
 			<PForm>
-				<PFormItem label="Select Day">
+				<PFormItem
+					:label="t('plan.tools.repair_analysis.table.select_day')">
 					<div class="w-full flex flex-row justify-between">
 						<PSelect
 							v-model:value="selectedDay"
@@ -231,9 +239,14 @@
 			</div>
 		</div>
 		<div>
-			<h2 class="font-bold pb-3">Individual Building</h2>
+			<h2 class="font-bold pb-3">
+				{{ $t("plan.tools.repair_analysis.graph.individual_building") }}
+			</h2>
 			<PForm>
-				<PFormItem label="Select Building">
+				<PFormItem
+					:label="
+						t('plan.tools.repair_analysis.graph.select_building')
+					">
 					<PSelect
 						v-model:value="selectedBuilding"
 						:options="selectionOptions"
@@ -252,7 +265,13 @@
 							:optimal-point="{ x: maxDay, y: maxValue }" />
 					</div>
 					<div>
-						<h2 class="font-bold pb-3">Repair Cost Breakdown</h2>
+						<h2 class="font-bold pb-3">
+							{{
+								$t(
+									"plan.tools.repair_analysis.graph.repair_cost_breakdown"
+								)
+							}}
+						</h2>
 						<PlanRepairCostChart
 							:series="
 								[

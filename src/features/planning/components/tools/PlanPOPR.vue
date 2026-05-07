@@ -48,16 +48,15 @@
 
 <template>
 	<h2 class="pb-3 text-white/80 font-bold text-lg">
-		Latest Population Report
+		{{ $t("plan.tools.popr.title") }}
 	</h2>
 	<div v-if="hasError">
-		Error loading latest population report. The planet might not have
-		population.
+		{{ $t("plan.tools.popr.error") }}
 	</div>
 	<div v-else-if="isLoading" class="text-center">
 		<PSpin size="lg" />
 		<br />
-		Loading Population Report
+		{{ $t("plan.tools.popr.loading") }}
 	</div>
 	<div v-else-if="poprData">
 		<PlanetPOPRTable

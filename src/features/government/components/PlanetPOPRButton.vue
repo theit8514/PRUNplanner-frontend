@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { ref, Ref, computed } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useQuery } from "@/lib/query_cache/useQuery";
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
@@ -53,7 +56,9 @@
 	}
 
 	const compButtonText = computed(() =>
-		!buttonDisabled.value ? buttonText : "No POPR"
+		!buttonDisabled.value
+			? buttonText
+			: t("government.popr_button.buttons.no_popr")
 	);
 
 	const buttonType = computed(() =>

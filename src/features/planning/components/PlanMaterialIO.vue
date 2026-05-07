@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Components
 	import MaterialTile from "@/features/material_tile/components/MaterialTile.vue";
 
@@ -43,21 +46,30 @@
 					:disable-drawer="false" />
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="input" title="In" sorter="default">
+		<XNDataTableColumn
+			key="input"
+			:title="t('plan.components.materialio.table.input')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span :class="rowData.input === 0 ? 'text-white/20' : ''">
 					{{ formatNumber(rowData.input) }}
 				</span>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="output" title="Out" sorter="default">
+		<XNDataTableColumn
+			key="output"
+			:title="t('plan.components.materialio.table.output')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span :class="rowData.output === 0 ? 'text-white/20' : ''">
 					{{ formatNumber(rowData.output) }}
 				</span>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="delta" title="Δ" sorter="default">
+		<XNDataTableColumn
+			key="delta"
+			:title="t('plan.components.materialio.table.delta')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span
 					:class="
@@ -70,7 +82,7 @@
 		<XNDataTableColumn
 			v-if="!localShowBasked"
 			key="price"
-			title="ȼ / day"
+			:title="t('plan.components.materialio.table.cost_day')"
 			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span
@@ -84,7 +96,7 @@
 		<XNDataTableColumn
 			v-if="localShowBasked"
 			key="totalWeight"
-			title="Δ t"
+			:title="t('plan.components.materialio.table.total_weight')"
 			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span
@@ -100,7 +112,7 @@
 		<XNDataTableColumn
 			v-if="localShowBasked"
 			key="totalVolume"
-			title="Δ m³"
+			:title="t('plan.components.materialio.table.total_volume')"
 			sorter="default">
 			<template #render-cell="{ rowData }">
 				<span

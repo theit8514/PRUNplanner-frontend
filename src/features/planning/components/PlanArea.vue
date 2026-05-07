@@ -1,5 +1,9 @@
 <script setup lang="ts">
 	import { computed, PropType, WritableComputedRef } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
 
 	// Types & Interfaces
@@ -42,7 +46,7 @@
 
 <template>
 	<PForm>
-		<PFormItem label="Permits">
+		<PFormItem :label="t('plan.components.area.permits')">
 			<PInputNumber
 				v-model:value="localPermits"
 				:disabled="disabled"
@@ -51,7 +55,7 @@
 				:max="3"
 				class="w-full" />
 		</PFormItem>
-		<PFormItem label="Area">
+		<PFormItem :label="t('plan.components.area.area')">
 			<div class="flex flex-row w-full">
 				<div class="grow">
 					{{ areaData.areaUsed }} / {{ areaData.areaTotal }}
@@ -66,7 +70,7 @@
 						"
 						>{{ areaData.areaLeft }}</span
 					>
-					Free
+					{{ $t("plan.components.area.free") }}
 				</div>
 			</div>
 		</PFormItem>

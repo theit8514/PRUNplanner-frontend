@@ -76,18 +76,26 @@
 	<PTable striped>
 		<thead>
 			<tr>
-				<th>Type</th>
-				<th>Need</th>
-				<th>Supply</th>
-				<th>Open</th>
-				<th colspan="2" class="text-center!">Luxuries</th>
-				<th class="text-end!">Eff. %</th>
+				<th>{{ $t("plan.components.workforce.table.type") }}</th>
+				<th>{{ $t("plan.components.workforce.table.need") }}</th>
+				<th>{{ $t("plan.components.workforce.table.supply") }}</th>
+				<th>{{ $t("plan.components.workforce.table.open") }}</th>
+				<th colspan="2" class="text-center!">
+					{{ $t("plan.components.workforce.table.luxuries") }}
+				</th>
+				<th class="text-end!">
+					{{ $t("plan.components.workforce.table.pct_eff") }}
+				</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr v-for="workforce in localWorkforceData" :key="workforce.name">
 				<td class="font-bold">
-					{{ capitalizeString(workforce.name) }}
+					{{
+						capitalizeString(
+							$t(`game.workforce_type.${workforce.name}`)
+						)
+					}}
 				</td>
 				<td :class="workforce.required === 0 ? 'text-white/50!' : ''">
 					{{ formatAmount(workforce.required) }}

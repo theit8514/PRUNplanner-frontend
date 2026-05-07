@@ -169,39 +169,41 @@
 		">
 		<div>
 			<div class="pb-2 text-white/50 text-xs">
-				The cost of goods manufactured is calculated using plan settings
-				that factor in production efficiency, recipe runtime, building
-				degradation, input material costs, labor requirements, and
-				associated labor costs. The final cost is shown per unit of
-				output, based on quantity or full cost allocation.
+				{{ $t("plan.tools.cogm.info") }}
 			</div>
 			<PlanCOGMTable :data="data" />
 		</div>
 		<div v-if="showCX" class="max-h-150 overflow-y-auto">
 			<div class="flex flex-row flex-wrap justify-between">
-				<h2 class="text-lg font-bold pb-3">Exchange Preferences</h2>
+				<h2 class="text-lg font-bold pb-3">
+					{{ $t("plan.tools.cogm.cx_preferences") }}
+				</h2>
 				<div class="flex flex-row flex-wrap">
 					<PButtonGroup>
 						<PButton :loading="isPatching" @click="patchCX">
 							<template #icon>
 								<SaveSharp />
 							</template>
-							Save
+							{{ $t("common.buttons.save") }}
 						</PButton>
 						<PButton @click="reload">
 							<template #icon>
 								<ChangeCircleOutlined />
 							</template>
-							Reload
+							{{ $t("common.buttons.reload") }}
 						</PButton>
 					</PButtonGroup>
 				</div>
 			</div>
-			<h2 class="font-bold pb-3">Empire Ticker</h2>
+			<h2 class="font-bold pb-3">
+				{{ $t("plan.tools.cogm.empire_ticker") }}
+			</h2>
 			<CXTickerPreference
 				v-if="selectedCX"
 				v-model:cx-options="selectedCX.cx_data.ticker_empire" />
-			<h2 class="font-bold py-3">Planet Ticker</h2>
+			<h2 class="font-bold py-3">
+				{{ $t("plan.tools.cogm.planet_ticker") }}
+			</h2>
 			<CXTickerPreference
 				v-if="planetTickerCX"
 				v-model:cx-options="planetTickerCX" />

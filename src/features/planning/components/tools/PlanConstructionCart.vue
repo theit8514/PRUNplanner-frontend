@@ -328,17 +328,19 @@
 <template>
 	<div class="pb-3 flex flex-row justify-between child:my-auto">
 		<h2 class="text-white/80 font-bold text-lg inline-flex items-center">
-			Construction Cart
+			{{ $t("plan.tools.construction_cart.title") }}
 			<PTooltip v-if="unplannedBuildings.length > 0">
 				<template #trigger>
 					<PIcon class="text-amber-400 ml-1 relative top-px">
 						<WarningAmberRound />
 					</PIcon>
 				</template>
-				Base has unplanned {{ unplannedBuildings.join("+") }} (FIO:
-				{{ fioUpdated }})
-				<br />
-				Demolish to ensure area, habitation and materials are accurate
+				{{
+					$t("plan.tools.construction_cart.unplanned_info", {
+						buildings: unplannedBuildings.join("+"),
+						fio_updated: fioUpdated,
+					})
+				}}
 			</PTooltip>
 		</h2>
 		<div class="flex flex-row gap-x-3 child:my-auto!">
@@ -352,20 +354,35 @@
 		<PTable striped>
 			<thead>
 				<tr>
-					<th>Building</th>
-					<th v-if="constructedMap">Built</th>
-					<th class="inline-flex">
-						Amount
-						<PTooltip v-if="deficitWorkforceTypes.length > 0">
-							<template #trigger>
-								<PIcon class="text-amber-400 ml-1 relative top-px">
-									<WarningAmberRound />
-								</PIcon>
-							</template>
-							Insufficient habitation will reduce production efficiency
-						</PTooltip>
+					<th>
+						{{ $t("plan.tools.construction_cart.table.building") }}
 					</th>
-					<th>Planned</th>
+					<th v-if="constructedMap">
+						{{ $t("plan.tools.construction_cart.table.built") }}
+					</th>
+					<th>
+						<div class="inline-flex">
+							<span>{{
+								$t("plan.tools.construction_cart.table.amount")
+							}}</span>
+							<PTooltip v-if="deficitWorkforceTypes.length > 0">
+								<template #trigger>
+									<PIcon
+										class="text-amber-400 ml-1 relative top-px">
+										<WarningAmberRound />
+									</PIcon>
+								</template>
+								{{
+									$t(
+										"plan.tools.construction_cart.table.habitation_info"
+									)
+								}}
+							</PTooltip>
+						</div>
+					</th>
+					<th>
+						{{ $t("plan.tools.construction_cart.table.planned") }}
+					</th>
 					<th
 						v-for="mat in uniqueMaterials"
 						:key="`CONSTRUCTIONCART#COLUMN#${mat}`"
@@ -423,7 +440,13 @@
 					</td>
 				</tr>
 				<tr class="child:border-t-2! child:border-b-2!">
-					<td :colspan="constructedMap ? 4 : 3">Materials Sum</td>
+					<td :colspan="constructedMap ? 4 : 3">
+						{{
+							$t(
+								"plan.tools.construction_cart.table.materials_sum"
+							)
+						}}
+					</td>
 					<td
 						v-for="mat in uniqueMaterials"
 						:key="`CONSTRUCTIONCART#COLUMN#TOTALS#${mat}`"
@@ -440,7 +463,13 @@
 							class="flex flex-row justify-between child:my-auto">
 							<div
 								class="grid grid-cols-2 gap-x-3 gap-y-1 child:not-even:font-bold">
-								<div>Total Cost</div>
+								<div>
+									{{
+										$t(
+											"plan.tools.construction_cart.table.total_cost"
+										)
+									}}
+								</div>
 								<div>
 									{{ formatNumber(totalInformation.price) }}
 									<span class="pl-1 font-light text-white/50">
@@ -450,14 +479,26 @@
 							</div>
 							<div
 								class="grid grid-cols-2 gap-x-3 gap-y-1 child:text-end child:not-even:font-bold">
-								<div>Total Weight</div>
+								<div>
+									{{
+										$t(
+											"plan.tools.construction_cart.table.total_weight"
+										)
+									}}
+								</div>
 								<div>
 									{{ formatNumber(totalInformation.weight) }}
 									<span class="pl-1 font-light text-white/50">
 										t
 									</span>
 								</div>
-								<div>Total Volume</div>
+								<div>
+									{{
+										$t(
+											"plan.tools.construction_cart.table.total_volume"
+										)
+									}}
+								</div>
 								<div>
 									{{ formatNumber(totalInformation.volume) }}
 									<span class="pl-1 font-light text-white/50">
@@ -474,11 +515,15 @@
 		<div>
 			<div class="py-3 flex flex-row justify-between">
 				<h2 class="text-white/80 font-bold text-lg my-auto">
-					Material
+					{{ $t("plan.tools.construction_cart.table.material") }}
 				</h2>
 				<div class="flex flex-row flex-wrap gap-3">
 					<template v-if="hasStorage">
-						<div class="my-auto font-bold">Storage</div>
+						<div class="my-auto font-bold">
+							{{
+								$t("plan.tools.construction_cart.table.storage")
+							}}
+						</div>
 						<PSelect
 							v-if="storageOptions"
 							v-model:value="refSelectedStorage"
@@ -496,11 +541,31 @@
 			<PTable striped>
 				<thead>
 					<tr>
-						<th>Material</th>
-						<th>Amount</th>
-						<th v-if="hasStorage">Stock</th>
-						<th>Stock Override</th>
-						<th>Need</th>
+						<th>
+							{{
+								$t(
+									"plan.tools.construction_cart.table.material"
+								)
+							}}
+						</th>
+						<th>
+							{{
+								$t("plan.tools.construction_cart.table.amount")
+							}}
+						</th>
+						<th v-if="hasStorage">
+							{{ $t("plan.tools.construction_cart.table.stock") }}
+						</th>
+						<th>
+							{{
+								$t(
+									"plan.tools.construction_cart.table.stock_override"
+								)
+							}}
+						</th>
+						<th>
+							{{ $t("plan.tools.construction_cart.table.need") }}
+						</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -539,7 +604,13 @@
 								class="flex flex-row justify-between child:my-auto">
 								<div
 									class="grid grid-cols-2 gap-x-3 gap-y-1 child:not-even:font-bold">
-									<div>Total Cost</div>
+									<div>
+										{{
+											$t(
+												"plan.tools.construction_cart.table.total_cost"
+											)
+										}}
+									</div>
 									<div>
 										{{
 											formatNumber(
@@ -554,7 +625,13 @@
 								</div>
 								<div
 									class="grid grid-cols-2 gap-x-3 gap-y-1 child:text-end child:not-even:font-bold">
-									<div>Total Weight</div>
+									<div>
+										{{
+											$t(
+												"plan.tools.construction_cart.table.total_weight"
+											)
+										}}
+									</div>
 									<div>
 										{{
 											formatNumber(
@@ -566,7 +643,13 @@
 											t
 										</span>
 									</div>
-									<div>Total Volume</div>
+									<div>
+										{{
+											$t(
+												"plan.tools.construction_cart.table.total_volume"
+											)
+										}}
+									</div>
 									<div>
 										{{
 											formatNumber(
