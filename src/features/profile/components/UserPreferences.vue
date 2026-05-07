@@ -96,6 +96,21 @@
 				:options="SupportedLanguages"
 				class="w-full" />
 		</PFormItem>
+		<PFormSeperator>
+			<i18n-t
+				keypath="profile.preferences.form.language_note"
+				tag="div"
+				class="text-xs text-white/60 pt-1 pb-2">
+				<template #link>
+					<a
+						href="https://crowdin.com/project/prunplanner"
+						target="_blank"
+						class="hover:underline text-prunplanner">
+						Crowdin</a
+					>
+				</template>
+			</i18n-t>
+		</PFormSeperator>
 		<PFormItem :label="t('profile.preferences.form.default_empire')">
 			<PSelect
 				v-model:value="defaultEmpireUuid"
