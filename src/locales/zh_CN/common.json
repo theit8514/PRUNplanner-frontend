@@ -33,6 +33,7 @@
 	"buttons": {
 		"create": "Create",
 		"save": "保存",
+		"save_as": "Save As",
 		"reload": "刷新",
 		"show": "显示",
 		"hide": "隐藏",
@@ -43,6 +44,8 @@
 		"yes": "Yes",
 		"no": "No",
 		"delete": "Delete",
-		"cancel": "Cancel"
+		"cancel": "Cancel",
+		"clone_plan": "Clone Plan",
+		"clone_complete": "Cloning Complete"
 	}
 }
