@@ -1,26 +1,26 @@
 {
-	"view_title": "ROI Overview",
-	"title": "ROI Overview",
-	"calculating": "Calculating Building Recipe ROI",
-	"cx_select": "@:terms.cx Preference",
+	"view_title": "ROI-Übersicht",
+	"title": "ROI-Übersicht",
+	"calculating": "Berechne alle Gebäude-Auftrage und ihr ROI",
+	"cx_select": "@:terms.cx Präferenz",
 	"filters": {
 		"title": "@:terms.filter",
 		"building": "@:terms.buildings",
 		"cogc": "@:terms.cogc",
-		"output": "Output",
-		"input": "Input",
-		"positive_roi": "Positive ROI"
+		"output": "Ausgang",
+		"input": "Eingang",
+		"positive_roi": "Positiver ROI"
 	},
 	"table": {
 		"building": "@:terms.buildings",
-		"optimal_setup": "Optimal Setup",
-		"recipe_output": "@:terms.recipes Output",
-		"recipe_input": "@:terms.recipes Input",
+		"optimal_setup": "Optimale Konfiguration",
+		"recipe_output": "@:terms.recipes Ausgang",
+		"recipe_input": "@:terms.recipes Eingang",
 		"cogc": "@:terms.cogc",
 		"cogm": "@:terms.cogm",
-		"plan_cost": "@:terms.plan Cost",
-		"daily_profit": "Daily Profit",
-		"profit_area": "Profit/Area",
+		"plan_cost": "@:terms.plan Kosten",
+		"daily_profit": "Täglicher Gewinn",
+		"profit_area": "Profit / Fläche",
 		"plan_roi": "@:terms.plan ROI"
 	}
 }
