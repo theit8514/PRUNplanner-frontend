@@ -2,12 +2,12 @@
 	"images": {
 		"section_title": "Verwalte dein Imperium von Überall",
 		"section_lead": "Überwache deine Basen, verwalte Produktionen und steuere deine Pläne mühelos. Mit intuitiven und leistungsstarken Tools kannst du Strategien finden, Erweiterungen planen und deine Rivalen mühelos ausspielen.",
-		"empire": "Empire: Track production, supply chains, and growth across all your planets.",
-		"plan": "Plan: Strategize and analyze without spending in-game resources.",
-		"management": "Management: Coordinate plans, expansions, and your next moves effortlessly.",
-		"exchanges": "Exchanges: Optimize in-game pricing and trading strategies.",
-		"market_exploration": "Exploration: Analyze years of market data for smarter insights.",
-		"planet_search": "Search: Find the exact planets and resources you need instantly."
+		"empire": "Imperium: Verfolge Produktionen, Lieferketten und dein Wachstum über alle Planeten hinweg.",
+		"plan": "Pläne: Plane und analysiere ohne im Spiel Geld ausgeben zu müssen.",
+		"management": "Verwaltung: Koordiniere Pläne, Erweiterungen und deinen nächsten Schritt mühelos.",
+		"exchanges": "Warenbörsen: Optimiere deine Preis- und Handelsstrategien.",
+		"market_exploration": "Entdecken: Analysiere jahrelange Marktdaten und gewinne intelligente Erkenntnisse.",
+		"planet_search": "Planeten Suche: Finde den besten Planeten für deinen Bedarf."
 	},
 	"hero": {
 		"title": "Plane dein Imperium",
