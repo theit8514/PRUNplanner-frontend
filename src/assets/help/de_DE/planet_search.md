@@ -1,5 +1,5 @@
-The **Planet Search** lets you quickly find planets by name or ID, or use the Advanced Search to narrow results with multiple parameters.
+Mit der **Planeten-Suche** kannst du Planeten schnell mit Namen oder ID suchen. Außerdem erlaubt die Erweiterte Suche das Finden von Planeten mit vielfältigen Parametern.
 
-With Advanced Search, you can look for up to four specific materials, filter by COGC programs, or select planets with certain features such as fertility or a warehouse. You can also search by distance from a chosen system or by environment parameters like surface type, gravity, temperature, or pressure.
+Mit der erweiterten Suche suchst du nach speziellen Materialien, dem COGC-Programm oder bestimmte Umgebungskriterien der Planeten wie Fruchtbarkeit oder einem Warenhaus. Du kannst außerdem unter Berücksichtigung der Distanz zu einem gewählten System oder Umgebungsparametern wie Oberfläche, Gravitation, Temperatur und Druck suchen.
 
-Planet Search is also the starting point for creating a new plan: simply find the planet you’re interested in and begin your plan from there.
+Die Planeten-Suche ist der Startpunkt um neue Pläne zu erstellen. Suche einfach nach dem Plan, der dich interessiert und starte von dort.
