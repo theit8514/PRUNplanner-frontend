@@ -178,10 +178,15 @@
 					src="/images/homepage/posthog-logo-white@2x.png"
 					class="h-7.5" />
 			</a>
+			<a href="https://crowdin.com/" target="_blank">
+				<img
+					src="/images/homepage/crowdin-core-logo-white.png"
+					class="h-7.5" />
+			</a>
 		</div>
 	</div>
 	<h1 class="pb-4 text-4xl tracking-tight text-white text-center mt-30">
-		Free &amp; Open Source
+		{{ $t("homepage.open_source.section_title") }}
 	</h1>
 	<p class="text-white/60 text-center text-xl mb-5">
 		<i18n-t keypath="homepage.open_source.section_lead" tag="span">
