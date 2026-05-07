@@ -33,6 +33,7 @@
 	"buttons": {
 		"create": "Create",
 		"save": "Save",
+		"save_as": "Save As",
 		"reload": "Reload",
 		"show": "Show",
 		"hide": "Hide",
@@ -43,6 +44,8 @@
 		"yes": "Yes",
 		"no": "No",
 		"delete": "Delete",
-		"cancel": "Cancel"
+		"cancel": "Cancel",
+		"clone_plan": "Clone Plan",
+		"clone_complete": "Cloning Complete"
 	}
 }
