@@ -4,6 +4,21 @@
 		"PLANETARY": "Planetary",
 		"PRODUCTION": "Production"
 	},
+	"workforce_type": {
+		"pioneer": "Pioneer",
+		"settler": "Settler",
+		"technician": "Technician",
+		"engineer": "Engineer",
+		"scientist": "Scientist"
+	},
+	"efficiency_type": {
+		"WORKFORCE": "Workforce",
+		"HQ": "HQ",
+		"EXPERT": "Experts",
+		"COGC": "COGC",
+		"FERTILITY": "Fertility",
+		"FACTION": "Faction"
+	},
 	"expertise": {
 		"AGRICULTURE": "农业",
 		"CHEMISTRY": "化工",
