@@ -12,7 +12,7 @@
 		"recipe_selection": "Recipe Selection"
 	},
 	"analysis_materials": {
-		"title": "Materials",
+		"title": "物料",
 		"table": {
 			"material": "@:terms.materials",
 			"amount": "@:terms.amount"
