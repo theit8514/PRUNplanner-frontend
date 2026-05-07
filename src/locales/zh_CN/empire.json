@@ -1,18 +1,18 @@
 {
 	"view_title": "帝国",
-	"switch_empire": "Switch Empire",
+	"switch_empire": "切换帝国",
 	"views": {
-		"material_io": "Material I/O",
-		"analysis": "Analysis",
-		"production_opportunities": "Production Opportunities"
+		"material_io": "物料输入/输出",
+		"analysis": "分析",
+		"production_opportunities": "生产机会"
 	},
 	"configuration": {
 		"title": "配置",
 		"form": {
 			"name": "名称",
 			"faction": "派系",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"permits_total": "@:terms.permits_plural 总计",
+			"permits_used": "@:terms.permits_plural 已用"
 		},
 		"sync_warning": {
 			"title": "检测到不匹配：",
@@ -29,43 +29,43 @@
 		"permits_planned": "规划的 @:terms.permits 总数：{permits}"
 	},
 	"material_io": {
-		"production_planets": "Production Planets",
-		"consumption_planets": "Consumption Planets"
+		"production_planets": "生产行星",
+		"consumption_planets": "消费行星"
 	},
 	"filters": {
-		"display": "Display",
-		"consumables": "Consumables",
-		"all": "All",
-		"loadbalance": "Loadbalance"
+		"display": "显示",
+		"consumables": "消费品",
+		"all": "全部",
+		"loadbalance": "负载平衡"
 	},
 	"analysis": {
-		"profitable_plans": "Profitable Plans",
-		"material_profits": "Material Profits",
-		"material_costs": "Material Costs",
-		"net_production": "Net Production",
-		"net_consumption": "Net Consumption",
+		"profitable_plans": "盈利计划",
+		"material_profits": "材料收益",
+		"material_costs": "材料成本",
+		"net_production": "净生产",
+		"net_consumption": "净消耗",
 		"exclusive_production": "Exclusive Production",
 		"exclusive_consumption": "Exclusive Consumption"
 	},
 	"opportunities": {
-		"headline": "Production Opportunities",
-		"intro": "Find recipe opportunities to convert excess materials into other products. This view identifies production opportunities where your Material I/O shows a positive delta, prioritized by input availability",
-		"please_note": "Please Note:",
-		"note": "Do not rely on the available opportunity alone. Cross-reference trade volumes and exchange overviews (via hover on the material) to assess market liquidity and potential ROI. Use indicators to identify which specific material is bottlenecking your scaling potential or if selling your available delta is more profitable than moving to another production.",
+		"headline": "生产机会",
+		"intro": "寻找将多余材料转化为其他产品的配方机会。此视图可识别你的物料输入/输出显示为正增量的生产机会，并按投入可用性进行优先级排序",
+		"please_note": "请注意：",
+		"note": "不要仅依赖现有的机会。请结合交易量及交易所概览（可通过将鼠标悬停在物料上查看）来评估市场流动性和潜在的投资回报率。利用相关指标判断哪些具体物料正限制你的规模化潜力，或者出售你现有的多余物料是否比转向其他生产更具盈利性。",
 		"tiles": {
-			"opportunities": "Opportunities",
-			"delta_required": "Delta Required",
-			"material_missing": "Material Missing"
+			"opportunities": "机会",
+			"delta_required": "所需缺口",
+			"material_missing": "缺少物料"
 		},
 		"table": {
-			"building": "Building",
-			"flow_inputs": "Production (Inputs &rarr; Outputs)",
-			"analysis": "Analysis",
-			"sell_inputs": "Sell Inputs",
-			"sell_outputs": "Sell Outputs",
-			"potential_batches": "Potential Batches",
-			"delta_required": "Delta Required",
-			"missing_material": "Missing Material"
+			"building": "建筑",
+			"flow_inputs": "生产 (输入 &rarr; 输出)",
+			"analysis": "分析",
+			"sell_inputs": "出售输入项",
+			"sell_outputs": "出售输出项",
+			"potential_batches": "潜在批次",
+			"delta_required": "所需缺口",
+			"missing_material": "缺少物料"
 		}
 	}
 }
