@@ -8,6 +8,9 @@
 		WritableComputedRef,
 	} from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Types & Interfaces
 	import {
 		IProductionBuildingRecipe,
@@ -119,7 +122,7 @@
 		:key="`COGM#RECIPE#${recipeData.recipe.building_ticker}#${localRecipeIndex}`"
 		v-model:show="refShowCOGM"
 		preset="card"
-		title="Cost Of Goods Manufactured"
+		:title="t('plan.components.production_recipe.cogm_title')"
 		:class="cogmWithCX ? 'max-w-250' : 'max-w-150'">
 		<PlanCOGM
 			v-if="localRecipeData.cogm && cxUuid"
@@ -197,7 +200,9 @@
 							),
 					})
 				">
-				<XNDataTableColumn key="input" title="Input">
+				<XNDataTableColumn
+					key="input"
+					:title="t('plan.components.production_recipe.table.input')">
 					<template #render-cell="{ rowData }">
 						<div class="flex flex-row flex-wrap gap-1">
 							<span
@@ -214,12 +219,19 @@
 						</div>
 					</template>
 				</XNDataTableColumn>
-				<XNDataTableColumn key="TimeMs" title="Time" sorter="default">
+				<XNDataTableColumn
+					key="TimeMs"
+					:title="t('plan.components.production_recipe.table.time')"
+					sorter="default">
 					<template #render-cell="{ rowData }">
 						{{ humanizeTimeMs(rowData.time_ms) }}
 					</template>
 				</XNDataTableColumn>
-				<XNDataTableColumn key="output" title="Output">
+				<XNDataTableColumn
+					key="output"
+					:title="
+						t('plan.components.production_recipe.table.output')
+					">
 					<template #render-cell="{ rowData }">
 						<div class="flex flex-row gap-1">
 							<MaterialTile
@@ -232,7 +244,11 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="dailyRevenue"
-					title="ȼ / Day"
+					:title="
+						t(
+							'plan.components.production_recipe.table.daily_revenue'
+						)
+					"
 					sorter="default">
 					<template #render-cell="{ rowData }">
 						<span
@@ -248,7 +264,9 @@
 				</XNDataTableColumn>
 				<XNDataTableColumn
 					key="profitPerArea"
-					title="ȼ / Area"
+					:title="
+						t('plan.components.production_recipe.table.profit_area')
+					"
 					sorter="default">
 					<template #render-cell="{ rowData }">
 						<span
@@ -262,7 +280,10 @@
 						</span>
 					</template>
 				</XNDataTableColumn>
-				<XNDataTableColumn key="roi" title="ROI" :sorter="roiSorter">
+				<XNDataTableColumn
+					key="roi"
+					:title="t('plan.components.production_recipe.table.roi')"
+					:sorter="roiSorter">
 					<template #render-cell="{ rowData }">
 						<span
 							:class="
@@ -270,26 +291,29 @@
 									? 'text-positive!'
 									: 'text-negative!'
 							">
-							{{ rowData.roi < 0 ? "—" : formatNumber(rowData.roi) + " d" }}
+							{{
+								rowData.roi < 0
+									? "—"
+									: formatNumber(rowData.roi) + " d"
+							}}
 						</span>
 					</template>
 				</XNDataTableColumn>
 			</XNDataTable>
 
 			<div class="text-xs p-2! text-white/60!">
-				<strong>Revenue / Day</strong> is calculated by taking the daily
-				income generated from a recipe and subtracting both the daily
-				workforce cost (all luxuries provided) and the daily building
-				degradation cost (1/180th of the construction cost). The income
-				from the recipe is based on the difference between the input
-				material costs and the output material values.
-				<strong>ȼ / Area</strong> is the daily revenue divided by the
-				area for one production building and its proportionate share of
-				the area for a CM and habs required for an optimal base of such
-				buildings in Recipe ROI. <strong>ROI (Payback)</strong> is the
-				time required for a continuously operating recipe to generate
-				enough revenue to offset the building's construction cost. This
-				considers daily degradation and workforce costs as well.
+				<strong>{{
+					$t("plan.components.production_recipe.info.p1_strong")
+				}}</strong>
+				{{ $t("plan.components.production_recipe.info.p1") }}
+				<strong>{{
+					$t("plan.components.production_recipe.info.p2_strong")
+				}}</strong>
+				{{ $t("plan.components.production_recipe.info.p2") }}
+				<strong>{{
+					$t("plan.components.production_recipe.info.p3_strong")
+				}}</strong>
+				{{ $t("plan.components.production_recipe.info.p3") }}
 			</div>
 		</div>
 	</n-popover>
@@ -325,11 +349,10 @@
 						}
 					">
 					<template #icon><AnalyticsOutlined /> </template>
-					COGM
+					{{ $t("plan.components.production_recipe.buttons.cogm") }}
 				</PButton>
 			</template>
-			COGM Calculation not possible. Check your Management View if your
-			Empire has a CX assigned.
+			{{ $t("plan.components.production_recipe.cogm_error") }}
 		</PTooltip>
 	</div>
 	<div class="col-span-6 xl:col-span-1 flex xl:justify-end">

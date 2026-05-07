@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useBuildingData } from "@/database/services/useBuildingData";
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
@@ -111,12 +114,14 @@
 </script>
 
 <template>
-	<h2 class="text-white/80 font-bold text-lg">Production</h2>
+	<h2 class="text-white/80 font-bold text-lg">
+		{{ $t("plan.components.production.label") }}
+	</h2>
 	<div
 		class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-3 py-3 child:my-auto">
 		<div class="flex gap-3 child:my-auto">
 			<div v-if="planetResources.length" class="text-sm">
-				Planet Resources
+				{{ $t("plan.components.production.planet_resources") }}
 			</div>
 			<div class="flex flex-wrap gap-1 child:my-auto">
 				<PTooltip
@@ -155,7 +160,9 @@
 		</div>
 		<div class="sm:justify-self-end-safe flex child:my-auto gap-3">
 			<div class="flex gap-3">
-				<div class="text-sm text-nowrap">Match COGC</div>
+				<div class="text-sm text-nowrap">
+					{{ $t("plan.components.production.form.match_cogc") }}
+				</div>
 				<PCheckbox
 					v-model:checked="localMatchCOGC"
 					:disabled="disabled" />
@@ -165,7 +172,9 @@
 				v-model:value="localSelectedBuilding"
 				:disabled="disabled"
 				searchable
-				placeholder="Select Building & Add to Plan"
+				:placeholder="
+					t('plan.components.production.form.select_placeholder')
+				"
 				class="w-full sm:w-75!"
 				:options="
 					getProductionBuildingOptions(
@@ -188,10 +197,18 @@
 	<div class="border border-white/10 rounded overflow-hidden">
 		<div
 			class="grid grid-cols-12 text-xs uppercase p-3 bg-white/5 font-bold">
-			<div class="col-span-3">Building / Recipe</div>
-			<div class="col-span-3">Runtime</div>
-			<div class="col-span-3">Share</div>
-			<div class="col-span-3 text-end">Tools</div>
+			<div class="col-span-3">
+				{{ $t("plan.components.production.table.building_recipe") }}
+			</div>
+			<div class="col-span-3">
+				{{ $t("plan.components.production.table.runtime") }}
+			</div>
+			<div class="col-span-3">
+				{{ $t("plan.components.production.table.share") }}
+			</div>
+			<div class="col-span-3 text-end">
+				{{ $t("plan.components.production.table.tools") }}
+			</div>
 		</div>
 		<template
 			v-for="(building, index) in localProductionData.buildings"

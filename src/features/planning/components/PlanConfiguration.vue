@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, WritableComputedRef } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Types & Interfaces
 	import { IPlanEmpire } from "@/stores/planningStore.types";
 	import { PSelectOption } from "@/ui/ui.types";
@@ -85,14 +88,14 @@
 
 <template>
 	<PForm>
-		<PFormItem label="Name">
+		<PFormItem :label="t('plan.components.configuration.name')">
 			<PInput
 				v-model:value="localPlanName"
 				class="w-full"
 				:disabled="disabled"
 				placeholder="Plan Name" />
 		</PFormItem>
-		<PFormItem label="Empire">
+		<PFormItem :label="t('plan.components.configuration.empire')">
 			<PSelect
 				v-model:value="localActiveEmpireUuid"
 				class="w-full"

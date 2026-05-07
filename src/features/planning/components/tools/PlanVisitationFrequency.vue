@@ -222,15 +222,22 @@
 </script>
 
 <template>
-	<h2 class="pb-3 text-white/80 font-bold text-lg">Visitation Frequency</h2>
+	<h2 class="pb-3 text-white/80 font-bold text-lg">
+		{{ $t("plan.tools.visitation_frequency.title") }}
+	</h2>
 
 	<div class="grid grid-cols-1 lg:grid-cols-[40%_auto] gap-3">
 		<div>
-			<h3 class="font-bold text-lg pb-3">Storage</h3>
+			<h3 class="font-bold text-lg pb-3">
+				{{ $t("plan.tools.visitation_frequency.storage.label") }}
+			</h3>
 
-			<p class="pb-3">
-				<template v-if="storageAmountsForDisplay.length > 0">
-					Your plan involves adding
+			<i18n-t
+				v-if="storageAmountsForDisplay.length > 0"
+				keypath="plan.tools.visitation_frequency.storage.info"
+				tag="p"
+				class="pb-3">
+				<template #storages>
 					<template
 						v-for="(item, index) in storageAmountsForDisplay"
 						:key="item.ticker">
@@ -244,55 +251,106 @@
 							}}
 						</template>
 					</template>
-					, giving you a total storage capacity of
-					<strong>{{ formatAmount(totalWeight) }}</strong> t and
-					<strong>{{ formatAmount(totalVolume) }}</strong> m³.
 				</template>
-				<template v-else>
-					Your plan has a storage capacity of
-					<strong>{{ formatAmount(totalWeight) }}</strong> t and
-					<strong>{{ formatAmount(totalVolume) }}</strong>
-					m³.
-				</template>
-			</p>
+				<template #total_weight>{{
+					formatAmount(totalWeight)
+				}}</template>
+				<template #total_volume>{{
+					formatAmount(totalVolume)
+				}}</template>
+			</i18n-t>
+
+			<i18n-t
+				v-else
+				keypath="plan.tools.visitation_frequency.storage.info_no_storage"
+				tag="p"
+				class="pb-3">
+				<template #total_weight>{{
+					formatAmount(totalWeight)
+				}}</template>
+				<template #total_volume>{{
+					formatAmount(totalVolume)
+				}}</template>
+			</i18n-t>
 
 			<PTable striped>
 				<thead>
 					<tr>
 						<th />
-						<th class="text-center!">t</th>
-						<th class="text-center!">m³</th>
+						<th class="text-center!">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.weight"
+								)
+							}}
+						</th>
+						<th class="text-center!">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.volume"
+								)
+							}}
+						</th>
 					</tr>
 				</thead>
 				<tbody class="child:child:text-center">
 					<tr>
-						<td class="text-left! font-bold">Import</td>
+						<td class="text-left! font-bold">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.import"
+								)
+							}}
+						</td>
 						<td>{{ formatNumber(dailyData.dailyWeightImport) }}</td>
 						<td>{{ formatNumber(dailyData.dailyVolumeImport) }}</td>
 					</tr>
 					<tr>
-						<td class="text-left! font-bold">Export</td>
+						<td class="text-left! font-bold">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.export"
+								)
+							}}
+						</td>
 						<td>{{ formatNumber(dailyData.dailyWeightExport) }}</td>
 						<td>{{ formatNumber(dailyData.dailyVolumeExport) }}</td>
 					</tr>
 					<tr>
-						<td class="text-left! font-bold">&#8721;</td>
+						<td class="text-left! font-bold">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.sum"
+								)
+							}}
+						</td>
 						<td>{{ formatNumber(dailyData.dailyWeight) }}</td>
 						<td>{{ formatNumber(dailyData.dailyVolume) }}</td>
 					</tr>
 					<tr>
-						<td class="text-left! font-bold">Storage Filled</td>
+						<td class="text-left! font-bold">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.storage_filled"
+								)
+							}}
+						</td>
 						<td colspan="2" class="font-bold">
-							{{ formatNumber(dailyData.storageFilled) }} days
+							{{ formatNumber(dailyData.storageFilled) }}
+							{{
+								$t(
+									"plan.tools.visitation_frequency.storage.table.filled_unit"
+								)
+							}}
 						</td>
 					</tr>
 				</tbody>
 			</PTable>
 
 			<p class="py-3">
-				Exclude local materials from visitation frequency calculation
-				for items handled exclusively planet-side, like local market
-				sales, purchases or contracts.
+				{{
+					$t("plan.tools.visitation_frequency.storage.exclusion_info")
+				}}
 			</p>
 
 			<PSelectMultiple
@@ -316,25 +374,71 @@
 				" />
 		</div>
 		<div>
-			<h3 class="font-bold text-lg pb-3">Shipping</h3>
+			<h3 class="font-bold text-lg pb-3">
+				{{ $t("plan.tools.visitation_frequency.shipping.label") }}
+			</h3>
 
 			<PTable striped>
 				<thead>
 					<tr>
-						<th>Ship t</th>
-						<th>Ship m³</th>
-						<th class="text-center!">Visitation (days)</th>
-						<th class="text-center!">Limit</th>
-						<th class="text-center!">Visitation (days)</th>
-						<th class="text-center!">Limit</th>
+						<th>
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.ship_weight"
+								)
+							}}
+						</th>
+						<th>
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.ship_volume"
+								)
+							}}
+						</th>
+						<th class="text-center!">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.visitation_days"
+								)
+							}}
+						</th>
+						<th class="text-center!">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.limit"
+								)
+							}}
+						</th>
+						<th class="text-center!">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.visitation_days"
+								)
+							}}
+						</th>
+						<th class="text-center!">
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.limit"
+								)
+							}}
+						</th>
 					</tr>
 					<tr>
 						<th colspan="2" />
 						<th colspan="2" class="text-center!">
-							Export Frequency
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.export_frequency"
+								)
+							}}
 						</th>
 						<th colspan="2" class="text-center!">
-							Import Frequency
+							{{
+								$t(
+									"plan.tools.visitation_frequency.shipping.table.import_frequency"
+								)
+							}}
 						</th>
 					</tr>
 				</thead>

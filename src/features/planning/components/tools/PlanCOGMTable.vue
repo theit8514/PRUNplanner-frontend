@@ -25,24 +25,33 @@
 	<PTable>
 		<tbody>
 			<tr>
-				<th colspan="4">Parameters</th>
+				<th colspan="4">
+					{{ $t("plan.tools.cogm.table.parameters") }}
+				</th>
 			</tr>
 			<tr>
-				<td class="border-r">Recipe Runtime</td>
+				<td class="border-r">
+					{{ $t("plan.tools.cogm.table.recipe_runtime") }}
+				</td>
 				<td>{{ humanizeTimeMs(data.runtime) }}</td>
 				<td colspan="2" class="text-end">
-					{{ formatNumber(data.runtimeShare * 100) }} % / day
+					{{ formatNumber(data.runtimeShare * 100) }}
+					{{ $t("plan.tools.cogm.table.percent_day") }}
 				</td>
 			</tr>
 			<tr>
-				<td class="border-r">Efficiency</td>
+				<td class="border-r">
+					{{ $t("plan.tools.cogm.table.efficiency") }}
+				</td>
 				<td colspan="3">{{ formatNumber(data.efficiency * 100) }} %</td>
 			</tr>
 			<tr>
-				<th colspan="4">Cost</th>
+				<th colspan="4">{{ $t("plan.tools.cogm.table.cost") }}</th>
 			</tr>
 			<tr>
-				<td class="border-r">Degradation</td>
+				<td class="border-r">
+					{{ $t("plan.tools.cogm.table.degradation") }}
+				</td>
 				<td class="font-bold">
 					{{ formatNumber(data.degradationShare) }}
 					<span class="pl-1 font-light text-white/50"> ȼ </span>
@@ -56,18 +65,20 @@
 			<template v-if="data.inputCost.length > 0">
 				<tr>
 					<td :rowspan="data.inputCost.length + 2" class="border-r">
-						Materials
+						{{ $t("plan.tools.cogm.table.materials") }}
 					</td>
-					<td>Input Total</td>
+					<td>{{ $t("plan.tools.cogm.table.input_total") }}</td>
 					<td colspan="2" class="text-end font-bold">
 						{{ formatNumber(data.inputTotal) }}
 						<span class="pl-1 font-light text-white/50"> ȼ </span>
 					</td>
 				</tr>
 				<tr>
-					<td>Material</td>
-					<td>ȼ / Unit</td>
-					<td class="text-end">ȼ Total</td>
+					<td>{{ $t("plan.tools.cogm.table.material") }}</td>
+					<td>{{ $t("plan.tools.cogm.table.cost_unit") }}</td>
+					<td class="text-end">
+						{{ $t("plan.tools.cogm.table.cost_total_unit") }}
+					</td>
 				</tr>
 				<tr
 					v-for="input in data.inputCost"
@@ -89,7 +100,9 @@
 				</tr>
 			</template>
 			<tr>
-				<td class="border-r">Workforce</td>
+				<td class="border-r">
+					{{ $t("plan.tools.cogm.table.workforce") }}
+				</td>
 				<td class="font-bold">
 					{{ formatNumber(data.workforceCost) }}
 					<span class="pl-1 font-light text-white/50"> ȼ </span>
@@ -101,31 +114,37 @@
 				</td>
 			</tr>
 			<tr class="child:border-t-2!">
-				<td class="border-r">Total Cost</td>
+				<td class="border-r">
+					{{ $t("plan.tools.cogm.table.total_cost") }}
+				</td>
 				<td colspan="3" class="font-bold">
 					{{ formatNumber(data.totalCost) }}
 					<span class="pl-1 font-light text-white/50"> ȼ </span>
 				</td>
 			</tr>
 			<tr class="child:border-b-2!">
-				<td class="border-r">Recipe Profit</td>
+				<td class="border-r">
+					{{ $t("plan.tools.cogm.table.recipe_profit") }}
+				</td>
 				<td colspan="3" class="font-bold">
 					{{ formatNumber(data.totalProfit) }}
 					<span class="pl-1 font-light text-white/50"> ȼ </span>
 				</td>
 			</tr>
 			<tr>
-				<th colspan="4">Cost of Goods Manufactured</th>
+				<th colspan="4">{{ $t("plan.tools.cogm.title") }}</th>
 			</tr>
 			<tr>
 				<td
 					:rowspan="data.outputCOGM.length + 1"
 					class="border-b-0! border-r">
-					COGM
+					{{ $t("plan.tools.cogm.cogm") }}
 				</td>
-				<td>Material</td>
-				<td>Cost Split</td>
-				<td class="text-end">Cost Total</td>
+				<td>{{ $t("plan.tools.cogm.table.material") }}</td>
+				<td>{{ $t("plan.tools.cogm.table.cost_split") }}</td>
+				<td class="text-end">
+					{{ $t("plan.tools.cogm.table.cost_total") }}
+				</td>
 			</tr>
 			<tr
 				v-for="output in data.outputCOGM"

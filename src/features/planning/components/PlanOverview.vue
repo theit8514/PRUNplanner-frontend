@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { PropType, computed } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Util
 	import { formatNumber } from "@/util/numbers";
 
@@ -39,21 +42,31 @@
 <template>
 	<div class="flex flex-row flex-wrap gap-6 child:shrink-0">
 		<div>
-			<slot name="heading" text="Overview"></slot>
+			<slot
+				name="heading"
+				:text="t('plan.components.overview.label')"></slot>
 			<PTable striped>
 				<tbody
 					class="child:child:first:font-bold child:child:last:text-end">
 					<!-- empty row to make the background colors match the other tables-->
 					<tr />
 					<tr>
-						<td>Daily Cost</td>
+						<td>
+							{{
+								$t("plan.components.overview.table.daily_cost")
+							}}
+						</td>
 						<td>
 							{{ formatNumber(overviewData.dailyCost) }}
 							<span class="font-light text-white/50"> ȼ </span>
 						</td>
 					</tr>
 					<tr>
-						<td>Degradation</td>
+						<td>
+							{{
+								$t("plan.components.overview.table.degradation")
+							}}
+						</td>
 						<td>
 							{{
 								formatNumber(overviewData.dailyDegradationCost)
@@ -62,7 +75,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Plan Cost</td>
+						<td>
+							{{ $t("plan.components.overview.table.plan_cost") }}
+						</td>
 						<td>
 							{{
 								formatNumber(overviewData.totalConstructionCost)
@@ -71,7 +86,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Daily Profit</td>
+						<td>
+							{{
+								$t(
+									"plan.components.overview.table.daily_profit"
+								)
+							}}
+						</td>
 						<td
 							:class="
 								overviewData.profit >= 0
@@ -83,7 +104,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>ROI</td>
+						<td>{{ $t("plan.components.overview.table.roi") }}</td>
 						<td
 							:class="
 								overviewData.roi > 0
@@ -95,7 +116,11 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Profit / Area</td>
+						<td>
+							{{
+								$t("plan.components.overview.table.profit_area")
+							}}
+						</td>
 						<td
 							:class="
 								profitPerArea >= 0
@@ -110,18 +135,26 @@
 			</PTable>
 		</div>
 		<div>
-			<slot name="heading" text="Storage"></slot>
+			<slot
+				name="heading"
+				:text="t('plan.components.storage.label')"></slot>
 			<PTable striped>
 				<thead class="child:text-center">
 					<tr>
 						<th />
-						<th class="text-center!">t</th>
-						<th class="text-center!">m³</th>
+						<th class="text-center!">
+							{{ $t("plan.components.storage.table.weight") }}
+						</th>
+						<th class="text-center!">
+							{{ $t("plan.components.storage.table.volume") }}
+						</th>
 					</tr>
 				</thead>
 				<tbody class="child:child:text-center">
 					<tr>
-						<td class="text-left! font-bold">Import</td>
+						<td class="text-left! font-bold">
+							{{ $t("plan.components.storage.table.import") }}
+						</td>
 						<td>
 							{{ formatNumber(visitationData.dailyWeightImport) }}
 						</td>
@@ -130,7 +163,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="text-left! font-bold">Export</td>
+						<td class="text-left! font-bold">
+							{{ $t("plan.components.storage.table.export") }}
+						</td>
 						<td>
 							{{ formatNumber(visitationData.dailyWeightExport) }}
 						</td>
@@ -139,12 +174,16 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="text-left! font-bold">&#8721;</td>
+						<td class="text-left! font-bold">
+							{{ $t("plan.components.storage.table.sum") }}
+						</td>
 						<td>{{ formatNumber(visitationData.dailyWeight) }}</td>
 						<td>{{ formatNumber(visitationData.dailyVolume) }}</td>
 					</tr>
 					<tr>
-						<td class="text-left! font-bold">Filled</td>
+						<td class="text-left! font-bold">
+							{{ $t("plan.components.storage.table.filled") }}
+						</td>
 						<td colspan="2" class="font-bold">
 							{{ formatNumber(visitationData.storageFilled) }}
 							<span class="font-light text-white/50"> d </span>

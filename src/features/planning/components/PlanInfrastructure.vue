@@ -1,5 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, WritableComputedRef } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { trackEvent } from "@/lib/analytics/useAnalytics";
 	import { HabSolverGoal } from "@/features/planning/calculations/habOptimization";
 
@@ -85,15 +89,19 @@
 <template>
 	<div class="mb-3">
 		<PForm>
-			<PFormItem label="Auto-Optimize Habs">
+			<PFormItem
+				:label="t('plan.components.infrastructure.auto_optimize')">
 				<PTooltip>
 					<template #trigger>
 						<PCheckbox
 							v-model:checked="localAutoOptimizeHabs"
 							:disabled="disabled" />
 					</template>
-					Automatically optimize habitations to meet<br />workforce
-					needs as buildings are added.
+					{{
+						$t(
+							"plan.components.infrastructure.auto_optimize_tooltip"
+						)
+					}}
 				</PTooltip>
 			</PFormItem>
 		</PForm>
@@ -103,7 +111,10 @@
 			<div>{{ inf }}</div>
 			<PInputNumber
 				v-model:value="localInfrastructureData[inf]"
-				:disabled="disabled || (localAutoOptimizeHabs && !isStorageInfrastructure(inf))"
+				:disabled="
+					disabled ||
+					(localAutoOptimizeHabs && !isStorageInfrastructure(inf))
+				"
 				show-buttons
 				:min="0"
 				class="min-w-21.25 max-w-25"
@@ -124,14 +135,14 @@
 			<PButton
 				:disabled="disabled || localAutoOptimizeHabs"
 				@click="emit('optimize-habs', 'cost')">
-				Optimize Cost
+				{{ $t("plan.components.infrastructure.buttons.optimize_cost") }}
 			</PButton>
 		</div>
 		<div class="col-span-2 justify-self-center">
 			<PButton
 				:disabled="disabled || localAutoOptimizeHabs"
 				@click="emit('optimize-habs', 'area')">
-				Optimize Area
+				{{ $t("plan.components.infrastructure.buttons.optimize_area") }}
 			</PButton>
 		</div>
 	</div>
