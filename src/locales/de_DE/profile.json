@@ -42,7 +42,7 @@
 		"title": "Was ist FIO & Warum solltest du es benutzen?",
 		"help": {
 			"title": "5 einfache Schritte zur Integration von FIO und PRUNplanner",
-			"p1": "FIO is a community developed {link} that collects your game data, makes it available outside of Prosperous Universe and is completely free to use.",
+			"p1": "FIO ist eine von der Community entwickelte {link}, die Spieldaten sammelt und sie außerhalb von Prosperous Universe verfügbar macht. FIO ist kostenlos benutzbar.",
 			"p2": "Einfach die Chrome- oder Firefox-Erweiterung installiere. Aktualisiere dein Browser-Fenster mit APEX und klicke auf die Erweiterungsschaltfläche oben rechts in deinem Browser, um ein Konto zu erstellen. FIO sammelt automatisch (nur) deine Spieldaten, während du weiterspielst.",
 			"p3": "Du kannst dich jetzt in den {link} einloggen, um deine Daten zu sehen und einen API-Schlüssel für PRUNplanner zu erstellen, der deine Lagerbestände und Standorte (Planeten, Schiffe, Lager) importiert.",
 			"p4": "Das Erstellen des API-Schlüssels ist einfach, wenn du auf {link} Seite gehst und \"Create API Key\" klickst. Gib einen Namen für deinen Key (z.B. \"PRUNplanner\") und dein FIO Passwort ein. Du musst \"Allow Writes\" (\"Schreiben erlauben\") nicht auswählen, da PRUNplanner deine Daten manipulieren, sondern nur lesen möchte.",
@@ -71,7 +71,7 @@
 		"form": {
 			"tool_preferences": "PRUNplanner Einstellungen",
 			"language": "Sprache",
-			"language_note": "We want to make PRUNplanner accessible to everyone. If you'd like to see the tool in your native language - or help us polish an existing translation - join our localization project on {link}.",
+			"language_note": "Wir wollen PRUNplanner für alle zugänglich machen. Wenn du das Tool in deiner Muttersprache sehen oder uns helfen möchtest, eine vorhandene Übersetzung zu verbessern, tritt unserem Lokalisierungsprojekt auf {link} bei.",
 			"default_empire": "Standard-Imperium",
 			"default_cx": "Standard CX",
 			"fio_burn": "FIO Verbrauch",
