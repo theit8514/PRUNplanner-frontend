@@ -52,10 +52,10 @@
 		"WORKFORCE_SCIENTISTS": "WISS"
 	},
 	"upkeep": {
-		"safety": "Safety",
-		"health": "Health",
-		"comfort": "Comfort",
-		"culture": "Culture",
-		"education": "Education"
+		"safety": "Sicherheit",
+		"health": "Gesundheit",
+		"comfort": "Komfort",
+		"culture": "Kultur",
+		"education": "Bildung"
 	}
 }
