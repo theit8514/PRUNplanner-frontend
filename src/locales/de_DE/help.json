@@ -9,10 +9,10 @@
 	},
 	"getting_started": {
 		"title": "Erste Schritte",
-		"image_label": "Management",
+		"image_label": "Verwaltung",
 		"l1": {
-			"title": "Create an Empire in {link}:",
-			"link": "Management",
+			"title": "Erstelle ein Imperium in {link}:",
+			"link": "Verwaltung",
 			"p": "By default, you'll already have one. But you can add more for different factions or regions. Assign a name and faction, and save."
 		},
 		"l2": {
