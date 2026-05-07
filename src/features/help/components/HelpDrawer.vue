@@ -1,8 +1,16 @@
 <script setup lang="ts">
 	import { computed, PropType, ref, Ref, watch } from "vue";
 
+	// pre-parsing glob
+	const HELP_FILES = import.meta.glob("@/assets/help/**/*.md", {
+		query: "?raw",
+		import: "default",
+	}) as Record<string, () => Promise<string>>;
+
 	import { useI18n } from "vue-i18n";
-	const { t } = useI18n({ useScope: "global" });
+	const { t, locale } = useI18n({ useScope: "global" });
+
+	console.log(locale.value);
 
 	import { PButton } from "@/ui";
 	import { NDrawer, NDrawerContent } from "naive-ui";
@@ -11,15 +19,27 @@
 	const showDrawer: Ref<boolean> = ref(false);
 
 	async function loadMarkdown(): Promise<string> {
-		const markdownFiles = import.meta.glob("@/assets/help/en_US/*.md", {
-			query: "?raw",
-			import: "default",
-		}) as Record<string, () => Promise<string>>;
+		const fileName = props.fileName;
+		const currentLocale = locale.value;
+		const fallbackLocale = "en_US";
 
-		const path = `/src/assets/help/en_US/${props.fileName}.md`;
-		const loader = markdownFiles[path];
-		if (!loader)
-			throw new Error(`Markdown file "${props.fileName}" not found.`);
+		const targetPath = `/src/assets/help/${currentLocale}/${fileName}.md`;
+		const fallbackPath = `/src/assets/help/${fallbackLocale}/${fileName}.md`;
+
+		let loader = HELP_FILES[targetPath];
+
+		// fallback
+		if (!loader) {
+			loader = HELP_FILES[fallbackPath];
+		}
+
+		// error if fallback unavailable
+		if (!loader) {
+			throw new Error(
+				`Markdown file "${fileName}" not found in ${currentLocale} or ${fallbackLocale}.`
+			);
+		}
+
 		return await loader();
 	}
 
