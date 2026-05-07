@@ -1,25 +1,25 @@
 {
-	"view_title": "HQ",
-	"title": "HQ Upgrade Calculator",
+	"view_title": "总部",
+	"title": "总部升级计算器",
 	"form": {
-		"from_level": "From HQ Level",
-		"to_level": "To HQ Level",
-		"cx_preference": "@:terms.cx Preference",
-		"show_locations": "Show Locations"
+		"from_level": "从总部等级",
+		"to_level": "到总部等级",
+		"cx_preference": "@:terms.cx 偏好",
+		"show_locations": "显示位置"
 	},
 	"cost": {
-		"total_cost": "Total @:terms.cost",
-		"total_weight": "Total @:terms.weight",
-		"total_volume": "Total @:terms.volume"
+		"total_cost": "总计 @:terms.cost",
+		"total_weight": "总计 @:terms.weight",
+		"total_volume": "总计 @:terms.volume"
 	},
 	"table": {
 		"material": "@:terms.materials",
 		"amount": "@:terms.amount",
 		"storage": "@:terms.storage",
-		"override_stock": "Override Stock",
-		"required": "Required",
-		"cost_unit": "Cost / Unit",
-		"cost_total": "Total Cost",
-		"storage_locations": "@:terms.storage Locations"
+		"override_stock": "已覆盖库存",
+		"required": "需要",
+		"cost_unit": "费用/单位",
+		"cost_total": "总费用",
+		"storage_locations": "@:terms.storage 位置"
 	}
 }
