@@ -33,6 +33,7 @@
 	"buttons": {
 		"create": "Maken",
 		"save": "Opslaan",
+		"save_as": "Save As",
 		"reload": "Herladen",
 		"show": "Tonen",
 		"hide": "Verbergen",
@@ -43,6 +44,8 @@
 		"yes": "Ja",
 		"no": "Nee",
 		"delete": "Verwijderen",
-		"cancel": "Annuleren"
+		"cancel": "Annuleren",
+		"clone_plan": "Clone Plan",
+		"clone_complete": "Cloning Complete"
 	}
 }
