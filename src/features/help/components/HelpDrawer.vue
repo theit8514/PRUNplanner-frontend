@@ -10,8 +10,6 @@
 	import { useI18n } from "vue-i18n";
 	const { t, locale } = useI18n({ useScope: "global" });
 
-	console.log(locale.value);
-
 	import { PButton } from "@/ui";
 	import { NDrawer, NDrawerContent } from "naive-ui";
 	import { VueShowdown } from "vue-showdown";
