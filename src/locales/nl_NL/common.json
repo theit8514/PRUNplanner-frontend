@@ -41,11 +41,24 @@
 		"search": "Zoeken",
 		"default": "Standaard",
 		"select_all": "Alles Selecteren",
+		"discard": "Discard",
 		"yes": "Ja",
 		"no": "Nee",
 		"delete": "Verwijderen",
 		"cancel": "Annuleren",
 		"clone_plan": "Clone Plan",
-		"clone_complete": "Cloning Complete"
+		"clone_complete": "Cloning Complete",
+		"copy": "Copy"
+	},
+	"ui": {
+		"placeholder": {
+			"please_input": "Please Input",
+			"please_select": "Please Select",
+			"search": "Search"
+		},
+		"select": {
+			"no_results": "No Results",
+			"select_options": "Select Options"
+		}
 	}
 }
