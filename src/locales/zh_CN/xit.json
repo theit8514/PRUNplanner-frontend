@@ -1,15 +1,15 @@
 {
 	"form": {
-		"origin": "Origin",
-		"target_days": "Target Days",
-		"buy_from_cx": "Buy From CX",
-		"buy_from_cx_warning": "Only warehouse origin allows purchasing.",
-		"fit_ship": "Fit Ship",
-		"hide_infinite": "Hide Infinite",
+		"origin": "来源地",
+		"target_days": "目标天数",
+		"buy_from_cx": "从 CX 购买",
+		"buy_from_cx_warning": "只有来源地为仓库时才能采购。",
+		"fit_ship": "适配飞船",
+		"hide_infinite": "隐藏无限项",
 		"json": "JSON"
 	},
 	"buttons": {
-		"copy_json": "Copy XIT JSON",
+		"copy_json": "复制 XIT JSON",
 		"copy": "@:common.buttons.copy"
 	},
 	"table": {
