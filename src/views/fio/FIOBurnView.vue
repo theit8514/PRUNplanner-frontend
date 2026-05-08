@@ -8,10 +8,13 @@
 		toRef,
 	} from "vue";
 
-	// Unhead
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { useHead } from "@unhead/vue";
+
 	useHead({
-		title: "Burn | PRUNplanner",
+		title: `${t("fio.burn.view_title")} | PRUNplanner`,
 	});
 
 	// Stores
@@ -175,7 +178,7 @@
 					<div
 						class="px-6 py-3 border-b border-white/10 flex flex-row justify-between">
 						<h1 class="text-2xl font-normal my-auto">
-							FIO Burn:
+							{{ $t("fio.burn.title") }}
 							<span class="font-bold">
 								{{
 									` ${
@@ -188,13 +191,14 @@
 						</h1>
 						<div class="flex flex-row gap-x-3">
 							<div class="my-auto">
-								FIO Data Update:
 								{{
-									relativeFromDate(
-										planningStore.fio_storage_timestamp ??
-											0,
-										true
-									)
+									$t("fio.burn.fio_last_update", {
+										last_updated: relativeFromDate(
+											planningStore.fio_storage_timestamp ??
+												0,
+											true
+										),
+									})
 								}}
 							</div>
 							<HelpDrawer file-name="fio_burn" />
@@ -208,7 +212,7 @@
 								<div>
 									<h2
 										class="text-white/80 font-bold text-lg pb-3">
-										Empire
+										{{ $t("fio.burn.form.empire") }}
 									</h2>
 
 									<PSelect
@@ -225,18 +229,22 @@
 								<div>
 									<h2
 										class="text-white/80 font-bold text-lg pb-3">
-										Burn Thresholds
+										{{
+											$t("fio.burn.form.burn_thresholds")
+										}}
 									</h2>
 
 									<PForm>
-										<PFormItem label="Red">
+										<PFormItem
+											:label="t('fio.burn.form.red')">
 											<PInputNumber
 												v-model:value="burnDaysRed"
 												show-buttons
 												:min="1"
 												class="w-full max-w-100" />
 										</PFormItem>
-										<PFormItem label="Yellow">
+										<PFormItem
+											:label="t('fio.burn.form.yellow')">
 											<PInputNumber
 												v-model:value="burnDaysYellow"
 												show-buttons
@@ -248,7 +256,7 @@
 							</div>
 
 							<h2 class="text-white/80 font-bold text-lg pb-3">
-								Plan Burn Overview
+								{{ $t("fio.burn.components.overview.title") }}
 							</h2>
 
 							<AsyncFIOBurnPlanTable :plan-table="planTable" />

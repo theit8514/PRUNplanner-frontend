@@ -30,11 +30,21 @@
 	<div class="w-full border border-white/10 rounded">
 		<div
 			class="grid grid-cols-12 gap-4 px-4 py-2 bg-gray-dark text-xs uppercase border-b border-white/10">
-			<div class="col-span-2">Ticker / Alert</div>
-			<div class="col-span-1 text-center">Severity</div>
-			<div class="col-span-5">Trigger Logic</div>
-			<div class="col-span-2 text-end">Event</div>
-			<div class="col-span-2 text-end">Time</div>
+			<div class="col-span-2">
+				{{ $t("market_live.components.alert_feed.table.ticker_alert") }}
+			</div>
+			<div class="col-span-1 text-center">
+				{{ $t("market_live.components.alert_feed.table.severity") }}
+			</div>
+			<div class="col-span-5">
+				{{ $t("market_live.components.alert_feed.table.logic") }}
+			</div>
+			<div class="col-span-2 text-end">
+				{{ $t("market_live.components.alert_feed.table.event") }}
+			</div>
+			<div class="col-span-2 text-end">
+				{{ $t("market_live.components.alert_feed.table.time") }}
+			</div>
 		</div>
 
 		<div class="divide-y divide-white/10 overflow-y-auto">
@@ -69,7 +79,11 @@
 									'bg-red-600 text-white':
 										event.severity === 'HIGH',
 								}">
-								{{ event.severity }}
+								{{
+									$t(
+										`market_live.severity_type.${event.severity}`
+									)
+								}}
 							</span>
 						</div>
 
@@ -204,7 +218,7 @@
 			<div
 				v-if="eventLog.length === 0"
 				class="p-6 text-white/50 text-center text-xs">
-				Waiting for market events triggering alerts...
+				{{ $t("market_live.components.alert_feed.waiting") }}
 			</div>
 		</div>
 	</div>

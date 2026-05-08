@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, PropType, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { usePlanetData } from "@/database/services/usePlanetData";
 
@@ -59,12 +62,13 @@
 
 <template>
 	<h2 class="text-xl font-bold my-auto pb-3">
-		Planet Preferences<span v-if="selectedPlanet"
+		{{ $t("exchanges.components.planet_preferences.title")
+		}}<span v-if="selectedPlanet"
 			>:
 			{{
 				planetNames[selectedPlanet] ||
 				loadPlanetName(selectedPlanet) ||
-				"Loading"
+				"..."
 			}}
 		</span>
 	</h2>
@@ -72,7 +76,11 @@
 		v-if="selectedPlanet"
 		class="grid grid-cols-1 xl:grid-cols-[40%_auto] gap-3 pb-3">
 		<div>
-			<h3 class="text-lg font-bold pb-3">Exchange</h3>
+			<h3 class="text-lg font-bold pb-3">
+				{{
+					$t("exchanges.components.planet_preferences.form.exchange")
+				}}
+			</h3>
 			<CXExchangePreference
 				:key="`Exchanges#${selectedPlanet}`"
 				:cx-options="localMap[selectedPlanet].exchanges"
@@ -86,7 +94,9 @@
 				" />
 		</div>
 		<div>
-			<h3 class="text-lg font-bold pb-3">Ticker</h3>
+			<h3 class="text-lg font-bold pb-3">
+				{{ $t("exchanges.components.planet_preferences.form.ticker") }}
+			</h3>
 			<CXTickerPreference
 				:key="`Ticker#${selectedPlanet}`"
 				:cx-options="localMap[selectedPlanet].ticker"
@@ -115,18 +125,25 @@
 				</PButton>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="planet" title="Planet" sorter="default">
+		<XNDataTableColumn
+			key="planet"
+			:title="t('exchanges.components.planet_preferences.table.planet')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				{{
 					planetNames[rowData.planet] ||
 					loadPlanetName(rowData.planet) ||
-					"Loading..."
+					"..."
 				}}
 			</template>
 		</XNDataTableColumn>
 		<XNDataTableColumn
 			key="exchanges"
-			title="Exchange Preferences"
+			:title="
+				t(
+					'exchanges.components.planet_preferences.table.exchange_preference'
+				)
+			"
 			width="20%">
 			<template #render-cell="{ rowData }">
 				<div class="flex flex-col gap-y-1">
@@ -141,14 +158,25 @@
 										? 'error'
 										: 'primary'
 							">
-							{{ exchange.type }}:
+							{{
+								$t(
+									`exchanges.preference_type.${exchange.type}`
+								)
+							}}:
 							<strong>{{ exchange.exchange }}</strong>
 						</PTag>
 					</div>
 				</div>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="ticker" title="Ticker Preferences" width="50%">
+		<XNDataTableColumn
+			key="ticker"
+			:title="
+				t(
+					'exchanges.components.planet_preferences.table.ticker_preference'
+				)
+			"
+			width="50%">
 			<template #render-cell="{ rowData }">
 				<div class="flex flex-wrap gap-3">
 					<div
@@ -166,7 +194,9 @@
 										? 'error'
 										: 'primary'
 							">
-							{{ ticker.type }}:
+							{{
+								$t(`exchanges.preference_type.${ticker.type}`)
+							}}:
 							<strong>{{ formatNumber(ticker.value) }}</strong>
 							<span class="pl-1 font-light opacity-50">ȼ</span>
 						</PTag>

@@ -11,7 +11,9 @@
 </script>
 
 <template>
-	<h2 class="text-lg font-bold pb-3">Data History</h2>
+	<h2 class="text-lg font-bold pb-3">
+		{{ $t("market_live.components.history.title") }}
+	</h2>
 	<template v-for="burst in data" :key="burst.timestamp">
 		<div class="w-full border border-white/10 rounded mb-3">
 			<div class="flex flex-col text-xs uppercase">
@@ -21,7 +23,11 @@
 						{{ relativeFromDate(burst.timestamp) }}
 					</div>
 					<div class="px-4 py-2 text-[10px] text-white/50">
-						{{ burst.tickers.length }} Tickers received
+						{{
+							$t("market_live.components.history.received", {
+								value: burst.tickers.length,
+							})
+						}}
 					</div>
 				</div>
 				<div class="flex flex-wrap gap-1.5 p-2">

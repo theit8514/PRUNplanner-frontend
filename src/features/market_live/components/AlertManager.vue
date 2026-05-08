@@ -1,5 +1,9 @@
 <script setup lang="ts">
 	import { computed } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { storeToRefs } from "pinia";
 
 	// Composables
@@ -31,25 +35,44 @@
 		<header class="flex justify-between pb-3">
 			<div class="my-auto">
 				<h2 class="text-lg font-bold">
-					{{ isEditing ? "Edit Alert" : "Alert Manager" }}
+					{{
+						isEditing
+							? t(
+									"market_live.components.alert_manager.title_editing"
+								)
+							: t("market_live.components.alert_manager.title")
+					}}
 				</h2>
 				<span class="text-xs text-negative!">
-					Alerts are currently stored on this device only and are not
-					synced to your account.
+					{{ $t("market_live.components.alert_manager.info") }}
 				</span>
 			</div>
 
 			<div class="flex gap-3">
 				<PButton v-if="!isEditing" @click="addAlert">
 					<template #icon><PlusSharp /></template>
-					Create New Alert
+					{{
+						$t(
+							"market_live.components.alert_manager.buttons.create_alert"
+						)
+					}}
 				</PButton>
 
 				<template v-else>
 					<PButton type="secondary" @click="cancelEditing">
-						Discard
+						{{
+							$t(
+								"market_live.components.alert_manager.buttons.discard"
+							)
+						}}
 					</PButton>
-					<PButton @click="saveEdit"> Save </PButton>
+					<PButton @click="saveEdit">
+						{{
+							$t(
+								"market_live.components.alert_manager.buttons.save"
+							)
+						}}
+					</PButton>
 				</template>
 			</div>
 		</header>
@@ -63,9 +86,11 @@
 					<div class="">
 						<div class="flex items-center gap-3">
 							<PTag v-if="alert.enabled" type="success">
-								Active
+								{{ $t("market_live.status_type.active") }}
 							</PTag>
-							<PTag v-else type="secondary">Paused</PTag>
+							<PTag v-else type="secondary">
+								{{ $t("market_live.status_type.paused") }}
+							</PTag>
 							<h3 class="font-bold">
 								{{ alert.name }}
 							</h3>
@@ -76,7 +101,11 @@
 						class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
 						<PButton @click="startEditing(alert)"> Edit </PButton>
 						<PButton type="error" @click="deleteAlert(alert.id)">
-							Delete
+							{{
+								$t(
+									"market_live.components.alert_manager.buttons.delete"
+								)
+							}}
 						</PButton>
 					</div>
 				</div>
@@ -84,8 +113,7 @@
 				<div
 					v-if="userAlerts.length === 0"
 					class="text-center py-3 rounded border border-dashed border-white/10">
-					No alerts found. Start by creating your first detector
-					signal.
+					{{ $t("market_live.components.alert_manager.no_alerts") }}
 				</div>
 			</div>
 
@@ -94,7 +122,12 @@
 					<div class="grid grid-cols-3 gap-3">
 						<div>
 							<PForm>
-								<PFormItem label="Alert Name">
+								<PFormItem
+									:label="
+										t(
+											'market_live.components.alert_manager.form.alert_name'
+										)
+									">
 									<PInput
 										v-model:value="activeDraft!.name"
 										class="w-full" />
@@ -103,23 +136,45 @@
 						</div>
 						<div>
 							<PForm>
-								<PFormItem label="Severity">
+								<PFormItem
+									:label="
+										t(
+											'market_live.components.alert_manager.form.severity'
+										)
+									">
 									<PSelect
 										v-model:value="activeDraft!.severity"
 										:options="[
-											{ label: 'Low', value: 'LOW' },
 											{
-												label: 'Medium',
+												label: t(
+													'market_live.severity_type.LOW'
+												),
+												value: 'LOW',
+											},
+											{
+												label: t(
+													'market_live.severity_type.MEDIUM'
+												),
 												value: 'MEDIUM',
 											},
-											{ label: 'High', value: 'HIGH' },
+											{
+												label: t(
+													'market_live.severity_type.HIGH'
+												),
+												value: 'HIGH',
+											},
 										]" />
 								</PFormItem>
 							</PForm>
 						</div>
 						<div>
 							<PForm>
-								<PFormItem label="Status">
+								<PFormItem
+									:label="
+										t(
+											'market_live.components.alert_manager.form.status'
+										)
+									">
 									<PButton
 										:type="
 											activeDraft!.enabled
@@ -132,9 +187,15 @@
 													!activeDraft!.enabled)
 										">
 										<span v-if="activeDraft!.enabled">
-											Active
+											{{
+												$t(
+													"market_live.status_type.active"
+												)
+											}}
 										</span>
-										<span v-else>Inactive</span>
+										<span v-else>{{
+											$t("market_live.status_type.paused")
+										}}</span>
 									</PButton>
 								</PFormItem>
 							</PForm>
@@ -143,7 +204,13 @@
 				</section>
 
 				<section class="p-3 rounded border border-white/10">
-					<h2 class="text-lg font-bold pb-1">Logic Configuration</h2>
+					<h2 class="text-lg font-bold pb-1">
+						{{
+							$t(
+								"market_live.components.alert_manager.form.logic_configuration"
+							)
+						}}
+					</h2>
 
 					<div>
 						<RuleGroup

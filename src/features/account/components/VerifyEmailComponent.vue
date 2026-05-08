@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -51,27 +54,28 @@
 
 <template>
 	<h2 class="text-white/80 font-bold text-lg font-mono">
-		Email Verification
+		{{ $t("account.components.verify_email.title") }}
 	</h2>
 	<div class="py-3 text-xs font-mono text-white/60">
-		Please enter the verification code you received via email. Maybe check
-		your spam folder.
+		{{ $t("account.components.verify_email.info") }}
 	</div>
 	<div class="flex flex-col">
 		<template v-if="verifyStatus !== null">
 			<div
 				v-if="verifyStatus"
 				class="mb-3 py-1 px-2 bg-prunplanner text-black">
-				Email address verified.
+				{{ $t("account.components.verify_email.result.ok") }}
 			</div>
 			<div v-else class="mb-3 py-1 px-2 bg-red-600 text-white">
-				Invalid code or already verified.
+				{{ $t("account.components.verify_email.result.error") }}
 			</div>
 		</template>
 		<div>
 			<PInput
 				v-model:value="refVerificationCode"
-				placeholder="Verification Code"
+				:placeholder="
+					t('account.components.verify_email.form.code_placeholder')
+				"
 				class="w-full" />
 		</div>
 		<div class="pt-3">
@@ -79,7 +83,7 @@
 				:disabled="!canVerify"
 				:loading="isVerifying"
 				@click="verifyEmail">
-				Verify Email
+				{{ $t("account.components.verify_email.buttons.send") }}
 			</PButton>
 		</div>
 	</div>

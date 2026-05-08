@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { ref, Ref, computed } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -45,11 +48,10 @@
 
 <template>
 	<h2 class="text-white/80 font-bold text-lg font-mono">
-		Password Reset Request
+		{{ $t("account.components.request_password_reset.title") }}
 	</h2>
 	<div class="py-3 text-xs font-mono text-white/60">
-		Enter the verified email address linked to your PRUNplanner account. If
-		we recognize it, we'll send you a code to reset your password.
+		{{ $t("account.components.request_password_reset.info") }}
 	</div>
 	<div v-if="requestResponse" class="pb-3 text-xs font-mono text-prunplanner">
 		{{ requestResponse.detail }}.
@@ -57,7 +59,11 @@
 	<div>
 		<PInput
 			v-model:value="inputEmail"
-			placeholder="Email Address"
+			:placeholder="
+				t(
+					'account.components.request_password_reset.form.email_placeholder'
+				)
+			"
 			class="w-full" />
 	</div>
 	<div class="pt-3">
@@ -65,7 +71,7 @@
 			:disabled="!canRequest"
 			:loading="isLoading"
 			@click="requestReset">
-			Send Request
+			{{ $t("account.components.request_password_reset.buttons.send") }}
 		</PButton>
 	</div>
 </template>

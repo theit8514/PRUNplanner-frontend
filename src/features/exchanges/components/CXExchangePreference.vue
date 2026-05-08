@@ -34,7 +34,7 @@
 		canAddExchangePreference,
 		updateExchangePreference,
 		deleteExchangePreference,
-	} = await useCXManagement();
+	} = useCXManagement();
 
 	const selectedType: Ref<PreferenceType> = ref("BOTH");
 	const selectedExchange: Ref<ExchangeType> = ref("UNIVERSE_30D");
@@ -86,7 +86,7 @@
 									? 'error'
 									: 'primary'
 						">
-						{{ preference.type }}
+						{{ $t(`exchanges.preference_type.${preference.type}`) }}
 					</PTag>
 				</td>
 				<td>{{ preference.exchange }}</td>
@@ -109,7 +109,9 @@
 			<tr
 				v-if="localCXOptions.length === 0"
 				class="text-center child:text-white/50!">
-				<td colspan="3">No Exchange Preference Configured</td>
+				<td colspan="3">
+					{{ $t("exchanges.components.exchanges.no_data") }}
+				</td>
 			</tr>
 		</PTable>
 	</div>

@@ -8,6 +8,10 @@
 		ref,
 		watch,
 	} from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { currentlyOpenId } from "@/ui/stateCurrentOpen";
 	import { PSelectOption } from "@/ui/ui.types";
 	import PInput from "./PInput.vue";
@@ -24,7 +28,7 @@
 		searchable = false,
 		disabled = false,
 		clearable = false,
-		placeholder = "Please Select",
+		placeholder = undefined,
 	} = defineProps<{
 		options: PSelectOption[];
 		searchable?: boolean;
@@ -32,6 +36,10 @@
 		clearable?: boolean;
 		placeholder?: string;
 	}>();
+
+	const placeholderText = computed(
+		() => placeholder ?? t("common.ui.placeholder.please_select")
+	);
 
 	const open = ref(false);
 	const searchString: Ref<string | null> = ref(null);
@@ -55,7 +63,7 @@
 
 		return (
 			allOptions.find((f) => f.value === value.value)?.label ??
-			placeholder
+			placeholderText.value
 		);
 	});
 
@@ -221,7 +229,9 @@
 					v-else
 					class="grow child:child:bg-transparent!"
 					@click.stop="ensureOpened">
-					<PInput v-model:value="searchString" placeholder="Search" />
+					<PInput
+						v-model:value="searchString"
+						:placeholder="t('common.ui.placeholder.search')" />
 				</div>
 				<div
 					v-if="value && value !== null && clearable"
@@ -258,7 +268,9 @@
 						@click="(v) => change(v)" />
 
 					<template v-if="filteredOptions.length === 0">
-						<div class="text-center text-xs">No Results</div>
+						<div class="text-center text-xs">
+							{{ $t("common.ui.select.no_results") }}
+						</div>
 					</template>
 				</div>
 			</div>

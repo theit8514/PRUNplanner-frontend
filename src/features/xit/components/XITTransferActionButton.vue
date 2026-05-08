@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, nextTick, PropType, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useXITAction } from "@/features/xit/useXITAction";
 	const { transferJSON } = useXITAction();
@@ -103,12 +106,12 @@
 			<template #header> {{ drawerTitle }} </template>
 
 			<PForm>
-				<PFormItem label="Origin">
+				<PFormItem :label="t('xit.form.origin')">
 					<PSelect
 						v-model:value="burnOrigin"
 						:options="XITSTATIONWAREHOUSES" />
 				</PFormItem>
-				<PFormItem label="Buy From CX">
+				<PFormItem :label="t('xit.form.buy_from_cx')">
 					<div
 						class="w-full flex flex-row gap-1 my-3 h-8 items-center">
 						<PCheckbox
@@ -120,11 +123,11 @@
 						<div
 							v-if="burnOrigin === 'Configure on Execution'"
 							class="pl-3 text-xs text-white/50">
-							Requires origin warehouse to purchase
+							{{ $t("xit.form.buy_from_cx_warning") }}
 						</div>
 					</div>
 				</PFormItem>
-				<PFormItem label="JSON">
+				<PFormItem :label="t('xit.form.json')">
 					<div class="w-full flex flex-row gap-1">
 						<div class="grow">
 							<PInput
@@ -152,7 +155,7 @@
 										);
 									}
 								">
-								Copy
+								{{ $t("xit.buttons.copy") }}
 							</PButton>
 						</div>
 					</div>
@@ -162,8 +165,8 @@
 			<PTable striped class="mt-3">
 				<thead>
 					<tr>
-						<th>Ticker</th>
-						<th>Amount</th>
+						<th>{{ $t("xit.table.ticker") }}</th>
+						<th>{{ $t("xit.table.amount") }}</th>
 					</tr>
 				</thead>
 				<tbody>

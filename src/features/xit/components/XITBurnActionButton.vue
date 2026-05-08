@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, nextTick, PropType, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useBurnXITAction } from "@/features/xit/useBurnXITAction";
 	import { useXITAction } from "@/features/xit/useXITAction";
@@ -126,24 +129,24 @@
 			<div class="mb-3 grid grid-cols-1 xl:grid-cols-[60%_auto] gap-3">
 				<div>
 					<PForm>
-						<PFormItem label="Origin">
+						<PFormItem :label="t('xit.form.origin')">
 							<PSelect
 								v-model:value="burnOrigin"
 								:options="XITSTATIONWAREHOUSES"
 								class="w-full" />
 						</PFormItem>
-						<PFormItem label="Target Days">
+						<PFormItem :label="t('xit.form.target_days')">
 							<PInputNumber
 								v-model:value="burnResupplyDays"
 								:min="0"
 								show-buttons
 								class="w-full" />
 						</PFormItem>
-						<PFormItem label="Buy From CX">
+						<PFormItem :label="t('xit.form.buy_from_cx')">
 							<p
 								v-if="burnOrigin === 'Configure on Execution'"
 								class="text-xs text-negative">
-								Only warehouse origin allows purchasing.
+								{{ $t("xit.form.buy_from_cx_warning") }}
 							</p>
 							<PCheckbox
 								v-else
@@ -152,7 +155,7 @@
 									burnOrigin === 'Configure on Execution'
 								" />
 						</PFormItem>
-						<PFormItem label="Fit Ship">
+						<PFormItem :label="t('xit.form.fit_ship')">
 							<PButtonGroup>
 								<PButton
 									v-for="fitOption in fitOptions"
@@ -173,7 +176,7 @@
 								</PButton>
 							</PButtonGroup>
 						</PFormItem>
-						<PFormItem label="Hide Infinite">
+						<PFormItem :label="t('xit.form.hide_infinite')">
 							<PCheckbox v-model:checked="refHideInfinite" />
 						</PFormItem>
 					</PForm>
@@ -209,7 +212,7 @@
 									);
 								}
 							">
-							Copy XIT JSON
+							{{ $t("xit.buttons.copy_json") }}
 						</PButton>
 					</div>
 					<PInput
@@ -244,12 +247,12 @@
 				<thead>
 					<tr>
 						<th></th>
-						<th>Ticker</th>
-						<th>Stock</th>
-						<th>Delta</th>
-						<th>Burn</th>
-						<th>Amount</th>
-						<th>Override</th>
+						<th>{{ $t("xit.table.ticker") }}</th>
+						<th>{{ $t("xit.table.stock") }}</th>
+						<th>{{ $t("xit.table.delta") }}</th>
+						<th>{{ $t("xit.table.burn") }}</th>
+						<th>{{ $t("xit.table.amount") }}</th>
+						<th>{{ $t("xit.table.override") }}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -257,30 +260,36 @@
 						<td colspan="7">
 							<div class="flex flex-row justify-between">
 								<div>
-									Weight:
 									{{
-										formatNumber(
-											totalWeightVolume.totalWeight
-										)
+										$t("xit.table.weight_value", {
+											value: formatNumber(
+												totalWeightVolume.totalWeight
+											),
+										})
 									}}
 									<span class="pl-1 font-light text-white/50">
 										t
 									</span>
 								</div>
 								<div>
-									Volume:
 									{{
-										formatNumber(
-											totalWeightVolume.totalVolume
-										)
+										$t("xit.table.volume_value", {
+											value: formatNumber(
+												totalWeightVolume.totalVolume
+											),
+										})
 									}}
+
 									<span class="pl-1 font-light text-white/50">
 										m³
 									</span>
 								</div>
 								<div>
-									Price:
-									{{ formatNumber(totalPrice) }}
+									{{
+										$t("xit.table.price_value", {
+											value: formatNumber(totalPrice),
+										})
+									}}
 									<span class="pl-1 font-light text-white/50">
 										ȼ
 									</span>

@@ -86,15 +86,26 @@
 			<div class="flex gap-2">
 				<PButton @click="addCondition">
 					<template #icon><PlusSharp /></template>
-					Condition
+
+					{{
+						$t(
+							"market_live.components.rule_builder.buttons.add_condition"
+						)
+					}}
 				</PButton>
 				<PButton @click="addSubGroup">
 					<template #icon><PlusSharp /></template>
-					Group
+					{{
+						$t(
+							"market_live.components.rule_builder.buttons.add_group"
+						)
+					}}
 				</PButton>
 				<PButton type="error" @click="emit('remove')">
 					<template #icon><ClearSharp /></template>
-					Remove
+					{{
+						$t("market_live.components.rule_builder.buttons.remove")
+					}}
 				</PButton>
 			</div>
 		</div>
@@ -116,14 +127,18 @@
 				<div
 					v-else
 					class="p-2 border border-red-200 bg-red-50 text-red-500 text-[10px]">
-					Error: {{ JSON.stringify(item) }}
+					{{
+						$t("market_live.components.rule_builder.error", {
+							value: JSON.stringify(item),
+						})
+					}}
 				</div>
 			</div>
 
 			<div
 				v-if="group.conditions.length === 0"
 				class="text-[10px] text-slate-400 italic pl-2">
-				Empty Group
+				{{ $t("market_live.components.rule_builder.empty") }}
 			</div>
 		</div>
 	</div>
