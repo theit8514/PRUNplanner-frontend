@@ -1,11 +1,11 @@
 {
-	"info": "This will create an unique link that can be shared with others. They will be able to see your plan, but don't modify it. The link becomes unavailable once you choose to stop sharing or delete the plan.",
-	"share_count": "You're currently sharing this plan. It has been viewed {count} times",
+	"info": "这将创建一个可分享给他人的专属链接。其他人可以查看你的计划，但不能修改。一旦你停止分享或删除该计划，链接将失效。",
+	"share_count": "你正在分享此计划。该计划已被查看 {count} 次",
 	"buttons": {
-		"create_link": "Create Sharing Link",
-		"copy_url": "Copy URL",
-		"stop_sharing": "Stop Sharing",
-		"views": "{count} Views",
-		"share": "Share"
+		"create_link": "创建分享链接",
+		"copy_url": "复制链接",
+		"stop_sharing": "停止分享",
+		"views": "{count} 次查看",
+		"share": "分享"
 	}
 }
