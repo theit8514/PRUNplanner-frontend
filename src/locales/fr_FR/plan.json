@@ -138,6 +138,15 @@
 				"recipe_profit": "@:terms.recipes Profit",
 				"cost_split": "Cost Split"
 			}
+		},
+		"plan_analytics": {
+			"title": "Planning Insights",
+			"info": "Insights are aggregated from active player plans on {planet}. PRUNplanner enforces minimum sample thresholds to ensure both anonymity and statistical accuracy.",
+			"labels": {
+				"experts": "Experts",
+				"production_buildings": "Production @:terms.buildings_plural",
+				"recipes": "@:terms.recipes_plural"
+			}
 		}
 	},
 	"components": {
