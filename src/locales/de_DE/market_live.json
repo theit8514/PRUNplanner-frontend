@@ -1,57 +1,57 @@
 {
-	"view_title": "Market Live",
-	"title": "Market Live",
+	"view_title": "Live Markt",
+	"title": "Live Markt",
 	"status": {
-		"connected": "Connected",
-		"disconnected": "Disconnected"
+		"connected": "Verbunden",
+		"disconnected": "Getrennt"
 	},
 	"severity_type": {
-		"LOW": "LOW",
-		"MEDIUM": "MEDIUM",
-		"HIGH": "HIGH"
+		"LOW": "NIEDRIG",
+		"MEDIUM": "MITTEL",
+		"HIGH": "HOCH"
 	},
 	"status_type": {
-		"active": "Active",
-		"paused": "Paused"
+		"active": "Aktiv",
+		"paused": "Pausiert"
 	},
 	"rule_type": {
-		"static": "Value",
-		"previous": "Previous",
-		"previous_pct": "Offset %",
+		"static": "Wert",
+		"previous": "Vorheriger Wert",
+		"previous_pct": "Unterschied %",
 		"text": "Text"
 	},
 	"components": {
 		"feed": {
-			"title": "Alert Feed",
+			"title": "Alarm Feed",
 			"buttons": {
-				"open_manager": "Open Alert Manager",
-				"close_manager": "Close Alert Manager",
-				"clear_feed": "Clear Feed",
-				"show_overview": "Show Overview",
-				"hide_overview": "Hide Overview"
+				"open_manager": "Alarm-Manager öffnen",
+				"close_manager": "Alarm-Manager schließen",
+				"clear_feed": "Feed leeren",
+				"show_overview": "Übersicht anzeigen",
+				"hide_overview": "Übersicht ausblenden"
 			}
 		},
 		"alert_feed": {
-			"waiting": "Waiting for market events triggering alerts...",
+			"waiting": "Warten auf Marktereignisse, die Alarme auslösen...",
 			"table": {
-				"ticker_alert": "Ticker / Alert",
-				"severity": "Severity",
-				"logic": "Trigger Logic",
-				"event": "Event",
-				"time": "Time"
+				"ticker_alert": "Ticker / Alarm",
+				"severity": "Schweregrad",
+				"logic": "Trigger-Logik",
+				"event": "Ereignis",
+				"time": "Zeit"
 			}
 		},
 		"details": {
-			"price": "Price",
+			"price": "Preis",
 			"ask": "@:{'terms.ask'}: {value}",
 			"bid": "@:{'terms.bid'}: {value}",
 			"spread": "@:{'terms.spread'}",
-			"buy_volume": "Buy Volume",
+			"buy_volume": "Kauf-Volumen",
 			"vwap": "@:{'terms.vwap'}: {value}",
-			"change": "Change: {value}",
-			"sell_volume": "Sell Volume",
-			"buy_volume_value": "Buy Volume: {value}",
-			"sell_volume_value": "Sell Volume: {value}"
+			"change": "Änderung: {value}",
+			"sell_volume": "Verkaufsvolumen",
+			"buy_volume_value": "Kauf-Volumen: {value}",
+			"sell_volume_value": "Verkaufs-Volumen: {value}"
 		},
 		"point_table": {
 			"table": {
@@ -60,41 +60,41 @@
 				"bid": "@:terms.bid",
 				"ask": "@:terms.ask",
 				"spread_pct": "Spread %",
-				"buy_volume": "Buy Vol.",
-				"sell_volume": "Sell Vol."
+				"buy_volume": "Kauf-Vol.",
+				"sell_volume": "Verkauf-Vol."
 			}
 		},
 		"history": {
-			"title": "Data History",
-			"received": "{value} @:terms.material_ticker received"
+			"title": "Datenhistorie",
+			"received": "{value} @:terms.material_ticker erhalten"
 		},
 		"rule_builder": {
-			"new_rule_name": "New Rule",
+			"new_rule_name": "Neue Regel",
 			"buttons": {
-				"add_condition": "Condition",
-				"add_group": "Group",
-				"remove": "Remove"
+				"add_condition": "Bedingung",
+				"add_group": "Gruppe",
+				"remove": "Entfernen"
 			},
-			"error": "Error: {value}",
-			"empty": "Empty Group"
+			"error": "Fehler: {value}",
+			"empty": "Leere Gruppe"
 		},
 		"alert_manager": {
-			"title": "Alert Manager",
-			"title_editing": "Edit Alert",
-			"info": "Alerts are currently stored on this device only and are not synced to your account.",
-			"no_alerts": "No alerts found. Start by creating your first detector signal",
+			"title": "Alarm-Manager",
+			"title_editing": "Alarm bearbeiten",
+			"info": "Alarme werden derzeit nur auf diesem Gerät gespeichert und nicht mit deinem Konto synchronisiert.",
+			"no_alerts": "Keine Alarme gefunden. Erstelle dein erstes Alarm-Signal",
 			"buttons": {
-				"create_alert": "Create New Alert",
+				"create_alert": "Neuen Alarm erstellen",
 				"discard": "@:common.buttons.discard",
 				"save": "@:common.buttons.save",
 				"delete": "@:common.buttons.delete"
 			},
 			"form": {
-				"alert_name": "Alert Name",
-				"severity": "Severity",
+				"alert_name": "Alarmname",
+				"severity": "Schweregrad",
 				"status": "Status",
-				"logic_configuration": "Logic Configuration",
-				"previous_datapoint": "Previous Datepoint"
+				"logic_configuration": "Logik Konfiguration",
+				"previous_datapoint": "Vorheriger Datenpunkt"
 			}
 		}
 	}
