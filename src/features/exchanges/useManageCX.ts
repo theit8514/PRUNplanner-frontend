@@ -15,7 +15,7 @@ import {
 } from "@/features/exchanges/manageCX.types";
 import { PSelectOption } from "@/ui/ui.types";
 
-export async function useCXManagement() {
+export function useCXManagement() {
 	const { t } = useI18n();
 	const { materialSelectOptions } = useMaterialData();
 

@@ -25,7 +25,7 @@ describe("useCXManagement", async () => {
 		updateTickerPreference,
 		deleteExchangePreference,
 		deleteTickerPreference,
-	} = await useCXManagement();
+	} = useCXManagement();
 
 	describe("canAddExchangePreference", () => {
 		it("should allow adding when list is empty", () => {
