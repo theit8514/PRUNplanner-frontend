@@ -1,0 +1,101 @@
+{
+	"view_title": "Market Live",
+	"title": "Market Live",
+	"status": {
+		"connected": "Connected",
+		"disconnected": "Disconnected"
+	},
+	"severity_type": {
+		"LOW": "LOW",
+		"MEDIUM": "MEDIUM",
+		"HIGH": "HIGH"
+	},
+	"status_type": {
+		"active": "Active",
+		"paused": "Paused"
+	},
+	"rule_type": {
+		"static": "Value",
+		"previous": "Previous",
+		"previous_pct": "Offset %",
+		"text": "Text"
+	},
+	"components": {
+		"feed": {
+			"title": "Alert Feed",
+			"buttons": {
+				"open_manager": "Open Alert Manager",
+				"close_manager": "Close Alert Manager",
+				"clear_feed": "Clear Feed",
+				"show_overview": "Show Overview",
+				"hide_overview": "Hide Overview"
+			}
+		},
+		"alert_feed": {
+			"waiting": "Waiting for market events triggering alerts...",
+			"table": {
+				"ticker_alert": "Ticker / Alert",
+				"severity": "Severity",
+				"logic": "Trigger Logic",
+				"event": "Event",
+				"time": "Time"
+			}
+		},
+		"details": {
+			"price": "Price",
+			"ask": "@:{'terms.ask'}: {value}",
+			"bid": "@:{'terms.bid'}: {value}",
+			"spread": "@:{'terms.spread'}",
+			"buy_volume": "Buy Volume",
+			"vwap": "@:{'terms.vwap'}: {value}",
+			"change": "Change: {value}",
+			"sell_volume": "Sell Volume",
+			"buy_volume_value": "Buy Volume: {value}",
+			"sell_volume_value": "Sell Volume: {value}"
+		},
+		"point_table": {
+			"table": {
+				"ticker": "@:terms.material_ticker",
+				"price": "@:terms.price",
+				"bid": "@:terms.bid",
+				"ask": "@:terms.ask",
+				"spread_pct": "Spread %",
+				"buy_volume": "Buy Vol.",
+				"sell_volume": "Sell Vol."
+			}
+		},
+		"history": {
+			"title": "Data History",
+			"received": "{value} @:terms.material_ticker received"
+		},
+		"rule_builder": {
+			"new_rule_name": "New Rule",
+			"buttons": {
+				"add_condition": "Condition",
+				"add_group": "Group",
+				"remove": "Remove"
+			},
+			"error": "Error: {value}",
+			"empty": "Empty Group"
+		},
+		"alert_manager": {
+			"title": "Alert Manager",
+			"title_editing": "Edit Alert",
+			"info": "Alerts are currently stored on this device only and are not synced to your account.",
+			"no_alerts": "No alerts found. Start by creating your first detector signal",
+			"buttons": {
+				"create_alert": "Create New Alert",
+				"discard": "@:common.buttons.discard",
+				"save": "@:common.buttons.save",
+				"delete": "@:common.buttons.delete"
+			},
+			"form": {
+				"alert_name": "Alert Name",
+				"severity": "Severity",
+				"status": "Status",
+				"logic_configuration": "Logic Configuration",
+				"previous_datapoint": "Previous Datepoint"
+			}
+		}
+	}
+}
