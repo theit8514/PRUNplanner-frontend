@@ -2,22 +2,22 @@
 	"information": {
 		"title": "Material Information",
 		"table": {
-			"category": "Category",
-			"weight": "Weight",
-			"volume": "Volume"
+			"category": "Kategorie",
+			"weight": "Gewicht",
+			"volume": "Volumen"
 		}
 	},
 	"indicator": {
-		"value": "Value",
+		"value": "Wert",
 		"max": "Maximum",
 		"pct_max": "% / Max"
 	},
 	"chart": {
-		"title": "Market History",
+		"title": "Markthistorie",
 		"labels": {
-			"traded": "Traded Volume",
-			"low_p": "Daily Minimum Price",
-			"high_p": "Daily Maximum Price"
+			"traded": "Handelsvolumen",
+			"low_p": "Minimaler Tagespreis",
+			"high_p": "Maximaler Tagespreis"
 		}
 	}
 }
