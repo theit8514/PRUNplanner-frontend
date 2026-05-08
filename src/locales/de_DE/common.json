@@ -5,7 +5,7 @@
 		"empire": "Empire",
 		"planet_search": "Planeten Suchen",
 		"management": "Verwaltung",
-		"exchanges": "Handelskammern",
+		"exchanges": "Marktplätze",
 		"tools": "Werkzeuge",
 		"tools_short": "Tool",
 		"market_exploration": "Marktübersicht",
@@ -41,24 +41,24 @@
 		"search": "Suchen",
 		"default": "Standard",
 		"select_all": "Alles Auswählen",
-		"discard": "Discard",
+		"discard": "Verwerfen",
 		"yes": "Ja",
 		"no": "Nein",
 		"delete": "Löschen",
 		"cancel": "Abbrechen",
 		"clone_plan": "Plan duplizieren",
 		"clone_complete": "Klonen abgeschlossen",
-		"copy": "Copy"
+		"copy": "Kopieren"
 	},
 	"ui": {
 		"placeholder": {
-			"please_input": "Please Input",
-			"please_select": "Please Select",
-			"search": "Search"
+			"please_input": "Bitte eingeben",
+			"please_select": "Bitte auswählen",
+			"search": "Suchen"
 		},
 		"select": {
-			"no_results": "No Results",
-			"select_options": "Select Options"
+			"no_results": "Keine Ergebnisse",
+			"select_options": "Optionen wählen"
 		}
 	}
 }
