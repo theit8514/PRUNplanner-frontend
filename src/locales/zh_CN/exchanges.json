@@ -7,8 +7,8 @@
 	},
 	"buttons": {
 		"csv_import_export": "@:exchanges.components.csv_import_export.title",
-		"save": "@:common.buttons.save",
-		"reload": "@:common.buttons.reload"
+		"save": "@:common.butons.save",
+		"reload": "@:common.butons.reload"
 	},
 	"configuration": {
 		"form": {
@@ -34,7 +34,7 @@
 		"planet_preferences": {
 			"title": "Planet Preferences",
 			"form": {
-				"exchange": "@:terms.exchanges",
+				"exchange": "@:terms.exchange",
 				"ticker": "@:terms.material_ticker"
 			},
 			"table": {
