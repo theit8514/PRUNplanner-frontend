@@ -41,11 +41,24 @@
 		"search": "Suchen",
 		"default": "Standard",
 		"select_all": "Alles Auswählen",
+		"discard": "Discard",
 		"yes": "Ja",
 		"no": "Nein",
 		"delete": "Löschen",
 		"cancel": "Abbrechen",
 		"clone_plan": "Plan duplizieren",
-		"clone_complete": "Klonen abgeschlossen"
+		"clone_complete": "Klonen abgeschlossen",
+		"copy": "Copy"
+	},
+	"ui": {
+		"placeholder": {
+			"please_input": "Please Input",
+			"please_select": "Please Select",
+			"search": "Search"
+		},
+		"select": {
+			"no_results": "No Results",
+			"select_options": "Select Options"
+		}
 	}
 }
