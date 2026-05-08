@@ -1,5 +1,9 @@
 <script setup lang="ts">
-	import { ref } from "vue";
+	import { computed, ref } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { SizeKey } from "@/ui/ui.types";
 	import { inputConfig } from "@/ui/styles";
 
@@ -10,7 +14,7 @@
 	const {
 		disabled = false,
 		size = "md",
-		placeholder = "Please Input",
+		placeholder = undefined,
 		rows = 5,
 		type = "input",
 	} = defineProps<{
@@ -22,6 +26,10 @@
 	}>();
 
 	const inputEl = ref<HTMLInputElement | null>(null);
+
+	const placeholderText = computed(
+		() => placeholder ?? t("common.ui.placeholder.please_input")
+	);
 
 	function focus() {
 		inputEl.value?.focus();
@@ -46,7 +54,7 @@
 				:disabled="disabled"
 				type="text"
 				:value="value"
-				:placeholder="placeholder"
+				:placeholder="placeholderText"
 				:class="`${inputConfig.sizes[size].input}`"
 				autocomplete="off"
 				@input="onInput" />
@@ -57,7 +65,7 @@
 				:disabled="disabled"
 				type="password"
 				:value="value"
-				:placeholder="placeholder"
+				:placeholder="placeholderText"
 				:class="`${inputConfig.sizes[size].input}`"
 				autocomplete="off"
 				@input="onInput" />
@@ -69,7 +77,7 @@
 				type="text"
 				:value="value"
 				:rows="rows"
-				:placeholder="placeholder"
+				:placeholder="placeholderText"
 				:class="`${inputConfig.sizes[size].input}`"
 				autocomplete="off"
 				@input="onInput" />

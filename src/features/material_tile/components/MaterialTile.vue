@@ -12,6 +12,9 @@
 		Ref,
 	} from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useMaterialData } from "@/database/services/useMaterialData";
 	import { useExchangeData } from "@/database/services/useExchangeData";
@@ -70,17 +73,17 @@
 		ref(undefined);
 
 	const refChartValue: Ref<string> = ref("traded");
-	const refChartValueOptions: Ref<PSelectOption[]> = ref([
+	const refChartValueOptions: ComputedRef<PSelectOption[]> = computed(() => [
 		{
-			label: "Traded Volume",
+			label: t("material_tile.chart.labels.traded"),
 			value: "traded",
 		},
 		{
-			label: "Daily Minimum Price",
+			label: t("material_tile.chart.labels.low_p"),
 			value: "low_p",
 		},
 		{
-			label: "Daily Maximum Price",
+			label: t("material_tile.chart.labels.high_p"),
 			value: "high_p",
 		},
 	]);
@@ -213,15 +216,15 @@
 				<PTable>
 					<tbody>
 						<tr>
-							<th>Value</th>
+							<th>{{ $t("material_tile.indicator.value") }}</th>
 							<td>{{ formatNumber(amount ?? 0) }}</td>
 						</tr>
 						<tr>
-							<th>Maximum</th>
+							<th>{{ $t("material_tile.indicator.max") }}</th>
 							<td>{{ formatNumber(max) }}</td>
 						</tr>
 						<tr>
-							<th>% / Max</th>
+							<th>{{ $t("material_tile.indicator.pct_max") }}</th>
 							<td>
 								{{ formatNumber(indicatorPercentage) }}
 								%
@@ -238,7 +241,7 @@
 		v-model:show="refShowDrawer"
 		:width="600"
 		placement="right">
-		<n-drawer-content title="Material Information">
+		<n-drawer-content :title="t('material_tile.information.title')">
 			<div class="flex gap-x-5">
 				<div class="flex items-center">
 					<div
@@ -250,16 +253,26 @@
 				<div class="grow">
 					<div
 						class="w-full grid grid-cols-[25%_auto] child:odd:font-bold">
-						<div>Category</div>
 						<div>
-							{{ capitalizeString(material.category_name) }}
+							{{ $t("material_tile.information.table.category") }}
 						</div>
-						<div>Weight</div>
+						<div>
+							{{
+								$t(
+									`game.material_category.${material.category_name.replace(" ", "_")}`
+								)
+							}}
+						</div>
+						<div>
+							{{ $t("material_tile.information.table.weight") }}
+						</div>
 						<div>
 							{{ formatNumber(material.weight, 4) }}
 							t
 						</div>
-						<div>Volume</div>
+						<div>
+							{{ $t("material_tile.information.table.volume") }}
+						</div>
 						<div>
 							{{ formatNumber(material.volume, 4) }}
 							m³
@@ -275,7 +288,9 @@
 
 			<div class="flex py-5">
 				<div class="my-auto grow">
-					<h3 class="font-bold text-lg">Market History</h3>
+					<h3 class="font-bold text-lg">
+						{{ $t("material_tile.chart.title") }}
+					</h3>
 				</div>
 				<div>
 					<PSelect

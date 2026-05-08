@@ -96,7 +96,9 @@
 			class="flex flex-col gap-3 w-100 max-h-[500px] flex-col rounded border border-white/10 bg-gray-dark shadow-lg mb-3">
 			<div
 				class="flex items-center justify-between border-b border-white/10 p-3">
-				<h3 class="font-bold">Planning Insights</h3>
+				<h3 class="font-bold">
+					{{ $t("plan.tools.plan_analytics.title") }}
+				</h3>
 				<button
 					class="text-sm text-white/60 hover:text-white"
 					@click="isOpen = false">
@@ -106,7 +108,9 @@
 
 			<div class="overflow-y-auto px-3 flex flex-col gap-3 pb-3">
 				<div>
-					<h4 class="mb-2 text-xs font-bold uppercase">Experts</h4>
+					<h4 class="mb-2 text-xs font-bold uppercase">
+						{{ $t("plan.tools.plan_analytics.labels.experts") }}
+					</h4>
 
 					<div
 						class="mb-3 flex h-3 w-full overflow-hidden rounded-full bg-white/5 shadow-inner">
@@ -135,7 +139,13 @@
 										getSegmentColor(index),
 									]"></span>
 								<span class="text-white/60"
-									>{{ item.type }}
+									>{{
+										$t(
+											`game.expertise.${item.type
+												.replace(" ", "_")
+												.toUpperCase()}`
+										)
+									}}
 								</span>
 							</div>
 							<span class="font-mono text-white/60">
@@ -147,7 +157,11 @@
 
 				<div>
 					<h4 class="mb-2 text-xs font-bold uppercase">
-						Production Buildings
+						{{
+							$t(
+								"plan.tools.plan_analytics.labels.production_buildings"
+							)
+						}}
 					</h4>
 					<div class="space-y-3">
 						<div
@@ -177,7 +191,9 @@
 				</div>
 
 				<div>
-					<h4 class="mb-2 text-xs font-bold uppercase">Recipes</h4>
+					<h4 class="mb-2 text-xs font-bold uppercase">
+						{{ $t("plan.tools.plan_analytics.labels.recipes") }}
+					</h4>
 
 					<div class="space-y-1">
 						<div
@@ -236,10 +252,11 @@
 					</div>
 				</div>
 				<div class="text-xs text-white/50">
-					Insights are aggregated from active player plans on
-					<strong>{{ planetNaturalId }}</strong
-					>. PRUNplanner enforces minimum sample thresholds to ensure
-					both anonymity and statistical accuracy.
+					{{
+						$t("plan.tools.plan_analytics.info", {
+							planet: planetNaturalId,
+						})
+					}}
 				</div>
 			</div>
 		</div>

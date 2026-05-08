@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { reactive } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Components
 	import RuleGroup from "@/features/market_live/components/RuleGroup.vue";
 
@@ -21,7 +24,7 @@
 
 	const state = reactive<DetectorConfig>({
 		id: crypto.randomUUID(),
-		name: "New Rule",
+		name: t("market_live.components.rule_builder.new_rule_name"),
 		severity: "MEDIUM",
 		enabled: true,
 		logic: { operator: "AND", conditions: [] },

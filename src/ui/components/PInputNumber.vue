@@ -1,4 +1,9 @@
 <script setup lang="ts">
+	import { computed } from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { SizeKey } from "@/ui/ui.types";
 	import { inputNumberConfig } from "@/ui/styles";
 
@@ -14,7 +19,7 @@
 		decimals = false,
 		min = -Infinity,
 		max = Infinity,
-		placeholder = "Please Input",
+		placeholder = undefined,
 	} = defineProps<{
 		disabled?: boolean;
 		size?: SizeKey;
@@ -24,6 +29,10 @@
 		max?: number;
 		placeholder?: string;
 	}>();
+
+	const placeholderText = computed(
+		() => placeholder ?? t("common.ui.placeholder.please_input")
+	);
 
 	function onInput(e: Event) {
 		const target = e.target as HTMLInputElement;
@@ -48,11 +57,11 @@
 
 		// Clamp to min/max, only updating the text field if the value is out of bounds.
 		// Otherwise we may inadvertently move the user's cursor or remove decimal points they are in the process of typing.
-		if (numValue < min || numValue > max) {	
+		if (numValue < min || numValue > max) {
 			numValue = Math.min(Math.max(numValue, min), max);
 			target.value = String(numValue);
 		}
-		
+
 		value.value = numValue;
 	}
 
@@ -83,7 +92,7 @@
 				:min="min"
 				:max="max"
 				:value="value"
-				:placeholder="placeholder"
+				:placeholder="placeholderText"
 				:class="`${inputNumberConfig.input} ${inputNumberConfig.sizes[size].input}`"
 				@input="onInput" />
 

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { ref, Ref, computed } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// API
 	import { useQuery } from "@/lib/query_cache/useQuery";
 
@@ -59,35 +62,44 @@
 
 <template>
 	<h2 class="text-white/80 font-bold text-lg font-mono">
-		Reset your Password
+		{{ $t("account.components.password_reset.title") }}
 	</h2>
 	<div class="py-3 text-xs font-mono text-white/60">
-		Please enter the code sent to your email, along with your new password.
+		{{ $t("account.components.password_reset.info") }}
 	</div>
 	<div v-if="requestResponse" class="pb-3 text-xs font-mono text-prunplanner">
 		{{ requestResponse.detail }}
 	</div>
 	<div>
 		<PForm>
-			<PFormItem label="Email">
+			<PFormItem
+				:label="t('account.components.password_reset.form.email')">
 				<PInput v-model:value="inputEmail" class="w-full" />
 			</PFormItem>
-			<PFormItem label="Code">
+			<PFormItem
+				:label="t('account.components.password_reset.form.code')">
 				<PInput v-model:value="inputCode" class="w-full" />
 			</PFormItem>
-			<PFormItem label="Password">
+			<PFormItem
+				:label="t('account.components.password_reset.form.password')">
 				<PInput
 					v-model:value="inputPassword"
 					type="password"
 					class="w-full" />
-				<template #info> Must be at least 8 characters long. </template>
+				<template #info>
+					{{
+						$t(
+							"account.components.password_reset.form.password_info"
+						)
+					}}
+				</template>
 			</PFormItem>
 			<PFormItem label="">
 				<PButton
 					:disabled="!canSend"
 					:loading="isLoading"
 					@click="requestReset">
-					Send Request
+					{{ $t("account.components.password_reset.buttons.send") }}
 				</PButton>
 			</PFormItem>
 		</PForm>

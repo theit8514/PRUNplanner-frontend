@@ -1,4 +1,7 @@
 <script setup lang="ts">
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Types & Interfaces
 	import { CXDataPoint } from "@/features/market_live/cxExchange.types";
 
@@ -22,8 +25,13 @@
 			flex-height
 			class="h-full"
 			:row-key="(row) => row.ticker">
-			<XNDataTableColumn key="ticker" title="Ticker" />
-			<XNDataTableColumn key="price" title="Price" align="right">
+			<XNDataTableColumn
+				key="ticker"
+				:title="t('market_live.components.point_table.table.ticker')" />
+			<XNDataTableColumn
+				key="price"
+				:title="t('market_live.components.point_table.table.price')"
+				align="right">
 				<template #render-cell="{ rowData }">
 					<div class="text-nowrap">
 						<span v-if="rowData.price !== undefined">
@@ -35,7 +43,10 @@
 					</div>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="bid" title="Bid" align="right">
+			<XNDataTableColumn
+				key="bid"
+				:title="t('market_live.components.point_table.table.bid')"
+				align="right">
 				<template #render-cell="{ rowData }">
 					<div class="font-mono text-sky-500">
 						<span v-if="rowData.bid">
@@ -45,7 +56,10 @@
 					</div>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="ask" title="Ask" align="right">
+			<XNDataTableColumn
+				key="ask"
+				:title="t('market_live.components.point_table.table.ask')"
+				align="right">
 				<template #render-cell="{ rowData }">
 					<div class="font-mono text-rose-600">
 						<span v-if="rowData.ask">
@@ -55,7 +69,12 @@
 					</div>
 				</template>
 			</XNDataTableColumn>
-			<XNDataTableColumn key="spread_pct" title="Spread %" align="right">
+			<XNDataTableColumn
+				key="spread_pct"
+				:title="
+					t('market_live.components.point_table.table.spread_pct')
+				"
+				align="right">
 				<template #render-cell="{ rowData }">
 					<div class="font-mono">
 						<span v-if="rowData.spread_pct">
@@ -67,7 +86,9 @@
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="buy_volume_total"
-				title="Buy Vol."
+				:title="
+					t('market_live.components.point_table.table.buy_volume')
+				"
 				align="right">
 				<template #render-cell="{ rowData }">
 					<span class="font-mono">
@@ -77,7 +98,9 @@
 			</XNDataTableColumn>
 			<XNDataTableColumn
 				key="sell_volume_total"
-				title="Sell Vol."
+				:title="
+					t('market_live.components.point_table.table.sell_volume')
+				"
 				align="right">
 				<template #render-cell="{ rowData }">
 					<span class="font-mono">

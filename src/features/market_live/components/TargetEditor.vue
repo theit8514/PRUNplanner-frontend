@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, watch } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Types & Interfaces
 	import type { ComparisonTarget } from "@/features/market_live/cxDetectors.types";
 
@@ -79,16 +82,22 @@
 			v-if="!isStaticOnly"
 			:value="modelValue.type"
 			:options="[
-				{ label: 'Value', value: 'static' },
-				{ label: 'Previous', value: 'previous' },
-				{ label: 'Offset %', value: 'previous_pct' },
+				{ label: t('market_live.rule_type.static'), value: 'static' },
+				{
+					label: t('market_live.rule_type.previous'),
+					value: 'previous',
+				},
+				{
+					label: t('market_live.rule_type.previous_pct'),
+					value: 'previous_pct',
+				},
 			]"
 			@update:value="(val: any) => setType(val)" />
 
 		<span
 			v-else
 			class="text-[10px] font-bold uppercase px-2 text-slate-400">
-			Text
+			{{ $t("market_live.rule_type.text") }}
 		</span>
 
 		<div class="pl-2">
@@ -118,7 +127,11 @@
 				@update:value="(val) => (internalValue = val ?? undefined)" />
 
 			<span v-if="modelValue.type === 'previous'" class="px-2">
-				Previous Datapoint
+				{{
+					$t(
+						"market_live.components.alert_manager.form.previous_datapoint"
+					)
+				}}
 			</span>
 		</div>
 	</div>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { computed, ComputedRef, PropType, ref, Ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { useCXManagement } from "@/features/exchanges/useManageCX";
 
@@ -9,7 +12,7 @@
 
 	// Types & Interfaces
 	import { ICXDataTickerOption } from "@/stores/planningStore.types";
-	import { PreferenceType } from "../manageCX.types";
+	import { PreferenceType } from "@/features/exchanges/manageCX.types";
 
 	// UI
 	import { PSelect, PButton, PInputNumber, PTag, PTable } from "@/ui";
@@ -62,7 +65,9 @@
 				:options="materialOptions"
 				searchable
 				size="small"
-				placeholder="Material"
+				:placeholder="
+					t('exchanges.components.ticker.material_placeholder')
+				"
 				class="w-full" />
 		</div>
 		<div class="flex-1">
@@ -107,7 +112,7 @@
 									? 'error'
 									: 'primary'
 						">
-						{{ preference.type }}
+						{{ $t(`exchanges.preference_type.${preference.type}`) }}
 					</PTag>
 				</td>
 				<td>
@@ -139,7 +144,9 @@
 			<tr
 				v-if="localCXOptions.length === 0"
 				class="text-center child:text-white/50!">
-				<td colspan="4">No Ticker Preferences Configured</td>
+				<td colspan="4">
+					{{ $t("exchanges.components.ticker.no_data") }}
+				</td>
 			</tr>
 		</PTable>
 	</div>

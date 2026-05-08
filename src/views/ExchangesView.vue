@@ -8,6 +8,15 @@
 		watch,
 	} from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	import { useHead } from "@unhead/vue";
+
+	useHead({
+		title: `${t("exchanges.view_title")} | PRUNplanner`,
+	});
+
 	// Stores
 	import { usePlanningStore } from "@/stores/planningStore";
 
@@ -44,13 +53,6 @@
 		ChangeCircleOutlined,
 		ImportExportOutlined,
 	} from "@vicons/material";
-
-	// Unhead
-	import { useHead } from "@unhead/vue";
-
-	useHead({
-		title: `Exchanges | PRUNplanner`,
-	});
 
 	const planningStore = usePlanningStore();
 
@@ -255,8 +257,8 @@
 		<WrapperGameDataLoader load-exchanges load-materials>
 			<template v-if="!localCXUuid">
 				<AsyncWrapperGenericError
-					message-title="No Preferences"
-					message-text="You don't have exchange preferences. Head to Management and create your first." />
+					:message-title="t('exchanges.errors.title')"
+					:message-text="t('exchanges.errors.message')" />
 			</template>
 			<div v-else class="min-h-screen flex flex-col">
 				<div
@@ -274,14 +276,14 @@
 								{{ cxName }}
 							</div>
 						</n-dropdown>
-						<template v-else>Exchanges</template>
+						<template v-else>{{ $t("exchanges.title") }}</template>
 					</h1>
 					<div class="flex flex-row gap-x-3">
 						<PButton @click="toggleImportExport">
 							<template #icon>
 								<ImportExportOutlined />
 							</template>
-							Import / Export CSV
+							{{ $t("exchanges.buttons.csv_import_export") }}
 						</PButton>
 						<PButton
 							v-if="patchData"
@@ -290,13 +292,13 @@
 							<template #icon>
 								<SaveSharp />
 							</template>
-							Save
+							{{ $t("exchanges.buttons.save") }}
 						</PButton>
 						<PButton @click="reloadCXData">
 							<template #icon>
 								<ChangeCircleOutlined />
 							</template>
-							Reload
+							{{ $t("exchanges.buttons.reload") }}
 						</PButton>
 						<HelpDrawer file-name="exchanges" />
 					</div>
@@ -305,7 +307,13 @@
 					:kex="`EXCHANGE#${localCXUuid}`"
 					class="grow grid grid-cols-1 lg:grid-cols-[350px_auto] divide-x divide-white/10">
 					<div class="px-6 pb-3 pt-4 border-b border-white/10">
-						<h3 class="text-lg font-bold pb-3">Preference Name</h3>
+						<h3 class="text-lg font-bold pb-3">
+							{{
+								$t(
+									"exchanges.configuration.form.preference_name"
+								)
+							}}
+						</h3>
 						<PInput
 							v-model:value="selectedName"
 							:status="
@@ -315,13 +323,21 @@
 							" />
 
 						<h2 class="text-xl font-bold py-3 pt-6 my-auto">
-							Empire Preferences
+							{{
+								$t(
+									"exchanges.configuration.form.empire_preferences"
+								)
+							}}
 						</h2>
-						<h3 class="text-lg font-bold pb-3">Exchange</h3>
+						<h3 class="text-lg font-bold pb-3">
+							{{ $t("exchanges.configuration.form.exchange") }}
+						</h3>
 						<CXExchangePreference
 							v-if="selectedCX"
 							v-model:cx-options="selectedCX.cx_data.cx_empire" />
-						<h3 class="text-lg font-bold py-3">Ticker</h3>
+						<h3 class="text-lg font-bold py-3">
+							{{ $t("exchanges.configuration.form.ticker") }}
+						</h3>
 						<CXTickerPreference
 							v-if="selectedCX"
 							v-model:cx-options="

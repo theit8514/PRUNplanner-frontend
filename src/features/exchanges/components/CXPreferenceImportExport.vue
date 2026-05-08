@@ -93,7 +93,9 @@
 
 <template>
 	<div class="flex flex-row justify-between items-center">
-		<h2 class="text-xl font-bold my-auto">Import / Export CSV</h2>
+		<h2 class="text-xl font-bold my-auto">
+			{{ $t("exchanges.components.csv_import_export.title") }}
+		</h2>
 		<div class="flex flex-row gap-x-3">
 			<input
 				ref="fileInput"
@@ -105,19 +107,21 @@
 				<template #icon>
 					<ArrowDownwardFilled />
 				</template>
-				Import Settings
+				{{
+					$t("exchanges.components.csv_import_export.buttons.import")
+				}}
 			</PButton>
 			<PButton @click="exportSettings">
 				<template #icon>
 					<ArrowUpwardFilled />
 				</template>
-				Export Settings
+				{{
+					$t("exchanges.components.csv_import_export.buttons.export")
+				}}
 			</PButton>
 		</div>
 	</div>
 	<div class="py-3">
-		Warning: Importing deletes all existing properties and imports the new
-		ones. You need to save your imported preferences after uploading the CSV
-		file or use the reload button to discard them.
+		{{ $t("exchanges.components.csv_import_export.warning") }}
 	</div>
 </template>

@@ -1,6 +1,15 @@
 <script setup lang="ts">
 	import { computed, onMounted, onUnmounted, ref } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
+	import { useHead } from "@unhead/vue";
+
+	useHead({
+		title: `${t("market_live.view_title")} | PRUNplanner`,
+	});
+
 	// Composables
 	import { useExchangeSSE } from "@/features/market_live/useExchangeSSE";
 
@@ -56,7 +65,7 @@
 	<div class="h-dvh flex flex-col overflow-hidden">
 		<div
 			class="px-6 py-3 border-b border-white/10 flex flex-row justify-between gap-x-3 shrink-0">
-			<h1 class="text-2xl font-bold">Market Live</h1>
+			<h1 class="text-2xl font-bold">{{ $t("market_live.title") }}</h1>
 			<div>
 				<div class="flex flex-row gap-x-3 child:my-auto">
 					<div class="flex items-center gap-2 font-medium">
@@ -77,7 +86,11 @@
 							:class="
 								isConnected ? 'text-positive' : 'text-negative'
 							">
-							{{ isConnected ? "Connected" : "Disconnected" }}
+							{{
+								isConnected
+									? t("market_live.status.connected")
+									: t("market_live.status.disconnected")
+							}}
 						</span>
 					</div>
 					<HelpDrawer file-name="tools_market_live" />
@@ -93,7 +106,9 @@
 						class="flex-1 flex flex-col min-h-0 rounded border border-white/10 p-3">
 						<div
 							class="pb-3 flex flex-row justify-between items-center shrink-0">
-							<h2 class="text-lg font-bold">Alert Feed</h2>
+							<h2 class="text-lg font-bold">
+								{{ $t("market_live.components.feed.title") }}
+							</h2>
 							<div class="flex flex-row gap-3">
 								<PButton
 									:type="
@@ -109,17 +124,29 @@
 										<EditSharp v-else />
 									</template>
 									<span v-if="showAlertManager">
-										Close Alert Manager
+										{{
+											$t(
+												"market_live.components.feed.buttons.close_manager"
+											)
+										}}
 									</span>
 									<span v-if="!showAlertManager">
-										Open Alert Manager
+										{{
+											$t(
+												"market_live.components.feed.buttons.open_manager"
+											)
+										}}
 									</span>
 								</PButton>
 								<PButton type="error" @click="clearEventLog">
 									<template #icon>
 										<ClearSharp />
 									</template>
-									Clear Feed
+									{{
+										$t(
+											"market_live.components.feed.buttons.clear_feed"
+										)
+									}}
 								</PButton>
 								<PButton
 									:type="
@@ -152,9 +179,19 @@
 										<KeyboardDoubleArrowLeftSharp v-else />
 									</template>
 									<span v-if="showTickerOverview">
-										Hide Overview
+										{{
+											$t(
+												"market_live.components.feed.buttons.hide_overview"
+											)
+										}}
 									</span>
-									<span v-else> Show Overview </span>
+									<span v-else>
+										{{
+											$t(
+												"market_live.components.feed.buttons.show_overview"
+											)
+										}}
+									</span>
 								</PButton>
 							</div>
 						</div>

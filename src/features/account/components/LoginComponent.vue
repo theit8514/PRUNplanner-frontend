@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { ref, Ref, computed } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { useUserStore } from "@/stores/userStore";
 
 	const userStore = useUserStore();
@@ -52,25 +55,30 @@
 
 <template>
 	<div class="mx-auto max-w-100">
-		<div class="text-xl text-white font-bold font-mono pb-3">Login</div>
+		<div class="text-xl text-white font-bold font-mono pb-3">
+			{{ $t("account.components.login.title") }}
+		</div>
 		<div v-if="hasError" class="pb-3 text-red-600">
-			Error logging in. Please check your username and password.
+			{{ $t("account.components.login.error") }}
 		</div>
 		<PForm>
 			<PFormSeperator>
 				<div class="font-mono text-xs text-white/60 pb-3">
-					By using PRUNplanner you agree to the
-					<router-link
-						to="/imprint-tos"
-						class="hover:cursor-pointer underline">
-						Terms of Service.
-					</router-link>
+					<i18n-t keypath="account.components.login.tos" tag="p">
+						<template #tos_link>
+							<router-link
+								to="/imprint-tos"
+								class="hover:cursor-pointer underline">
+								{{ $t("account.components.login.tos_link") }}
+							</router-link>
+						</template>
+					</i18n-t>
 				</div>
 			</PFormSeperator>
-			<PFormItem label="Username">
+			<PFormItem :label="t('account.components.login.form.username')">
 				<PInput v-model:value="inputUsername" class="w-full" />
 			</PFormItem>
-			<PFormItem label="Password">
+			<PFormItem :label="t('account.components.login.form.password')">
 				<PInput
 					v-model:value="inputPassword"
 					type="password"
@@ -78,12 +86,15 @@
 			</PFormItem>
 			<PFormSeperator>
 				<div class="font-mono text-xs text-white/60 py-3">
-					Forgot your password? Request a
-					<router-link
-						to="/request-password-reset"
-						class="hover:cursor-pointer underline">
-						Password Reset.
-					</router-link>
+					<i18n-t keypath="account.components.login.forgot" tag="p">
+						<template #forgot_link>
+							<router-link
+								to="/request-password-reset"
+								class="hover:cursor-pointer underline">
+								{{ $t("account.components.login.forgot_link") }}
+							</router-link>
+						</template>
+					</i18n-t>
 				</div>
 			</PFormSeperator>
 			<PFormItem label="">
@@ -91,7 +102,7 @@
 					:loading="isLoggingIn"
 					:disabled="!canLogin"
 					@click="handleLogin">
-					Login
+					{{ $t("account.components.login.buttons.login") }}
 				</PButton>
 			</PFormItem>
 		</PForm>

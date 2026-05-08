@@ -1,4 +1,5 @@
 import { computed, ComputedRef } from "vue";
+import { useI18n } from "vue-i18n";
 
 // Stores
 import { useMaterialData } from "@/database/services/useMaterialData";
@@ -15,12 +16,22 @@ import {
 import { PSelectOption } from "@/ui/ui.types";
 
 export async function useCXManagement() {
+	const { t } = useI18n();
 	const { materialSelectOptions } = useMaterialData();
 
 	const typeOptions: PSelectOption[] = [
-		{ label: "BOTH" as PreferenceType, value: "BOTH" },
-		{ label: "BUY" as PreferenceType, value: "BUY" },
-		{ label: "SELL" as PreferenceType, value: "SELL" },
+		{
+			label: t("exchanges.preference_type.BOTH"),
+			value: "BOTH" as PreferenceType,
+		},
+		{
+			label: t("exchanges.preference_type.BUY"),
+			value: "BUY" as PreferenceType,
+		},
+		{
+			label: t("exchanges.preference_type.SELL"),
+			value: "SELL" as PreferenceType,
+		},
 	];
 
 	const exchangeOptions: PSelectOption[] = [

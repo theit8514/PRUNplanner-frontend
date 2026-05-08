@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { PropType } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { usePlanetData } from "@/database/services/usePlanetData";
 	import { usePreferences } from "@/features/preferences/usePreferences";
@@ -27,7 +30,10 @@
 
 <template>
 	<XNDataTable :data="planTable" striped>
-		<XNDataTableColumn key="planUuid" title="Plan" sorter="default">
+		<XNDataTableColumn
+			key="planUuid"
+			:title="t('fio.burn.components.overview.table.plan')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<router-link
 					:to="`/plan/${rowData.planetId}/${rowData.planUuid}`"
@@ -36,7 +42,9 @@
 				</router-link>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="planetId" title="Planet">
+		<XNDataTableColumn
+			key="planetId"
+			:title="t('fio.burn.components.overview.table.planet')">
 			<template #render-cell="{ rowData }">
 				{{
 					planetNames[rowData.planetId] ||
@@ -45,7 +53,10 @@
 				}}
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="minDays" title="Burn" sorter="default">
+		<XNDataTableColumn
+			key="minDays"
+			:title="t('fio.burn.components.overview.table.burn')"
+			sorter="default">
 			<template #render-cell="{ rowData }">
 				<div class="text-center">
 					<span

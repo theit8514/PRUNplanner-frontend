@@ -24,19 +24,31 @@
 	<div class="py-2 px-2 border-t border-white/10">
 		<div class="grid grid-cols-4 gap-3">
 			<div class="flex flex-col gap-y-1 uppercase">
-				<div class="text-white/50">Price</div>
+				<div class="text-white/50">
+					{{ $t("market_live.components.details.price") }}
+				</div>
 				<div class="text-lg font-mono text-white">
 					{{ formatNumber(data.price ?? Infinity) }}
 				</div>
 				<div class="text-xs text-white/50">
-					Bid: {{ formatNumber(data.bid ?? Infinity) }}
+					{{
+						$t("market_live.components.details.bid", {
+							value: formatNumber(data.bid ?? Infinity),
+						})
+					}}
 				</div>
 				<div class="text-xs text-white/50">
-					Ask: {{ formatNumber(data.ask ?? Infinity) }}
+					{{
+						$t("market_live.components.details.ask", {
+							value: formatNumber(data.ask ?? Infinity),
+						})
+					}}
 				</div>
 			</div>
 			<div class="flex flex-col gap-y-1 uppercase">
-				<div class="text-white/50">Spread</div>
+				<div class="text-white/50">
+					{{ $t("market_live.components.details.spread") }}
+				</div>
 				<div class="text-lg font-mono text-white">
 					{{ formatNumber(data.spread ?? Infinity) }}
 				</div>
@@ -50,35 +62,60 @@
 					{{ formatAmount(data.buy_volume_total) }}
 				</div>
 				<div class="text-xs text-white/50">
-					VWAP: {{ formatNumber(data.buy_vwap ?? Infinity) }}
+					{{
+						$t("market_live.components.details.vwap", {
+							value: formatNumber(data.buy_vwap ?? Infinity),
+						})
+					}}
 				</div>
 				<div class="text-xs text-white/50">
-					Change: {{ formatAmount(data.buy_volume_change) }}
+					{{
+						$t("market_live.components.details.change", {
+							value: formatAmount(data.buy_volume_change),
+						})
+					}}
 				</div>
 			</div>
 			<div class="flex flex-col gap-y-1 uppercase">
-				<div class="text-white/50">Sell Volume</div>
+				<div class="text-white/50">
+					{{ $t("market_live.components.details.sell_volume") }}
+				</div>
 				<div class="text-lg font-mono text-white">
 					{{ formatAmount(data.sell_volume_total) }}
 				</div>
 				<div class="text-xs text-white/50">
-					VWAP: {{ formatNumber(data.sell_vwap ?? Infinity) }}
+					{{
+						$t("market_live.components.details.vwap", {
+							value: formatNumber(data.sell_vwap ?? Infinity),
+						})
+					}}
 				</div>
 				<div class="text-xs text-white/50">
-					Change: {{ formatAmount(data.sell_volume_change) }}
+					{{
+						$t("market_live.components.details.change", {
+							value: formatAmount(data.sell_volume_change),
+						})
+					}}
 				</div>
 			</div>
 		</div>
 		<div class="mt-2 pt-2 border-t border-white/10">
 			<div
 				class="flex justify-between text-xs text-white/50 mb-1 font-mono uppercase">
-				<span
-					>Buy Volume: {{ formatAmount(data.buy_volume_total) }}</span
-				>
-				<span
-					>Sell Volume:
-					{{ formatAmount(data.sell_volume_total) }}</span
-				>
+				<span>
+					{{
+						$t("market_live.components.details.buy_volume_value", {
+							value: formatAmount(data.buy_volume_total),
+						})
+					}}
+				</span>
+				<span>
+					{{
+						$t("market_live.components.details.sell_volume_value", {
+							value: formatAmount(data.sell_volume_total),
+						})
+					}}
+				</span>
 			</div>
 			<div
 				class="w-full h-1.5 bg-gray-800 rounded-full flex gap-0.5 overflow-hidden">

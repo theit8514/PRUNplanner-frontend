@@ -8,6 +8,10 @@
 		ref,
 		watch,
 	} from "vue";
+
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	import { currentlyOpenId } from "@/ui/stateCurrentOpen";
 	import { PSelectOption } from "@/ui/ui.types";
 	import PInput from "./PInput.vue";
@@ -248,7 +252,9 @@
 							</PTag>
 						</div>
 					</template>
-					<template v-else> Select Options </template>
+					<template v-else>
+						{{ $t("common.ui.select.select_options") }}
+					</template>
 				</div>
 
 				<div
@@ -281,7 +287,7 @@
 						v-if="searchable"
 						ref="searchInputRef"
 						v-model:value="searchString"
-						placeholder="Search"
+						:placeholder="t('common.ui.placeholder.search')"
 						@keydown="onKeyDown" />
 					<PSelectElement
 						v-for="(option, idx) in filteredOptions"
@@ -292,7 +298,9 @@
 						@click="(v) => change(v)" />
 
 					<template v-if="filteredOptions.length === 0">
-						<div class="text-center text-xs">No Results</div>
+						<div class="text-center text-xs">
+							{{ $t("common.ui.select.no_results") }}
+						</div>
 					</template>
 				</div>
 			</div>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { onMounted, ref, Ref, computed, ComputedRef } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n({ useScope: "global" });
+
 	import { PForm, PFormItem, PFormSeperator, PButton, PInput } from "@/ui";
 	import { IUserRegistrationPayload } from "@/features/api/userData.types";
 	import { useQuery } from "@/lib/query_cache/useQuery";
@@ -102,76 +105,115 @@
 		<template v-if="registrationSuccess">
 			<div>
 				<div class="text-xl text-white font-bold font-mono pb-1">
-					Welcome, {{ registrationUsername }}!
+					{{
+						$t("account.components.registration.result.ok_header", {
+							username: registrationUsername,
+						})
+					}}
 				</div>
 				<div class="pt-3">
-					Registration successful. You can now login to PRUNplanner.
+					{{
+						$t("account.components.registration.result.ok_message")
+					}}
 				</div>
 			</div>
 		</template>
 		<template v-else>
 			<div class="text-xl text-white font-bold font-mono pb-1">
-				Account Information
+				{{ $t("account.components.registration.title") }}
 			</div>
 			<div class="pb-3 text-white/60 text-xs font-mono">
-				PRUNplanner is free to use. By creating an account, you
-				acknowledge and agree to the
-				<router-link
-					to="/imprint-tos"
-					class="underline hover:text-link-primary">
-					Terms of Service.
-				</router-link>
+				<i18n-t keypath="account.components.registration.tos" tag="p">
+					<template #tos_link>
+						<router-link
+							to="/imprint-tos"
+							class="hover:cursor-pointer underline">
+							{{ $t("account.components.registration.tos_link") }}
+						</router-link>
+					</template>
+				</i18n-t>
 			</div>
 			<div v-if="hasError" class="pb-3 text-red-600">
-				Error during registration.
+				{{ $t("account.components.registration.result.error") }}
+				<br />
 				{{ hasErrorMessage }}
 			</div>
 			<PForm>
-				<PFormItem label="Username">
+				<PFormItem
+					:label="t('account.components.registration.form.username')">
 					<PInput v-model:value="inputUsername" class="w-full" />
 					<template #info>
-						Must be at least 3 characters long. Can't contain
-						spaces.
+						{{
+							$t(
+								"account.components.registration.form.username_info"
+							)
+						}}
 					</template>
 				</PFormItem>
-				<PFormItem label="Password">
+				<PFormItem
+					:label="t('account.components.registration.form.password')">
 					<PInput
 						v-model:value="inputPassword"
 						type="password"
 						class="w-full" />
 					<template #info>
-						Must be at least 8 characters long.
+						{{
+							$t(
+								"account.components.registration.form.password_info"
+							)
+						}}
 					</template>
 				</PFormItem>
-				<PFormItem label="Email">
+				<PFormItem
+					:label="t('account.components.registration.form.email')">
 					<PInput
 						v-model:value="inputEmail"
-						placeholder="Not mandatory, but recommended."
+						:placeholder="
+							t(
+								'account.components.registration.form.email_placeholder'
+							)
+						"
 						class="w-full" />
 					<template #info>
-						Not mandatory. Increases your account security.
+						{{
+							$t(
+								"account.components.registration.form.email_info"
+							)
+						}}
 					</template>
 				</PFormItem>
 				<PFormSeperator>
 					<div
 						class="text-xl text-white font-bold font-mono pt-3 pb-1">
-						Security Question
+						{{
+							$t(
+								"account.components.registration.form.security_question"
+							)
+						}}
 					</div>
 					<div class="font-mono text-xs text-white/60 pb-3">
-						Enter the name of planet
-						<span
-							class="text-nowrap bg-prunplanner text-black px-1"
-							>{{ activeSecurityOption }}</span
-						>. To find it, open a new Prosperous Universe buffer
-						with the command
-						<span
-							class="text-nowrap bg-prunplanner text-black px-0.5"
-							>{{ `PLI ${activeSecurityOption}` }}</span
-						>. You'll see the planet's name listed under "Name" in
-						the planet information.
+						<i18n-t
+							keypath="account.components.registration.form.question"
+							tag="p">
+							<template #planet>
+								<span
+									class="text-nowrap bg-prunplanner text-black px-1"
+									>{{ activeSecurityOption }}</span
+								>
+							</template>
+							<template #command>
+								<span
+									class="text-nowrap bg-prunplanner text-black px-0.5"
+									>{{ `PLI ${activeSecurityOption}` }}</span
+								>
+							</template>
+						</i18n-t>
 					</div>
 				</PFormSeperator>
-				<PFormItem label="Name">
+				<PFormItem
+					:label="
+						t('account.components.registration.form.planet_name')
+					">
 					<PInput v-model:value="inputPlanetName" class="w-full" />
 				</PFormItem>
 				<PFormItem label="">
@@ -180,7 +222,11 @@
 						:loading="isLoading"
 						class="mt-3"
 						@click="registerUser">
-						Create Account
+						{{
+							$t(
+								"account.components.registration.buttons.register"
+							)
+						}}
 					</PButton>
 				</PFormItem>
 			</PForm>

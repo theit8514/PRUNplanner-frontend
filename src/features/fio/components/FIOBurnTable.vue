@@ -1,6 +1,9 @@
 <script setup lang="ts">
 	import { PropType } from "vue";
 
+	import { useI18n } from "vue-i18n";
+	const { t } = useI18n();
+
 	// Composables
 	import { usePlanetData } from "@/database/services/usePlanetData";
 	import { usePreferences } from "@/features/preferences/usePreferences";
@@ -41,7 +44,7 @@
 				<XNDataTable :data="rowData.burnMaterials" striped>
 					<XNDataTableColumn
 						key="ticker"
-						title="Ticker"
+						:title="t('fio.burn.components.plans.table.ticker')"
 						sorter="default">
 						<template #render-cell="data">
 							<MaterialTile
@@ -51,7 +54,9 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="input"
-						title="Consumption"
+						:title="
+							t('fio.burn.components.plans.table.consumption')
+						"
 						sorter="default">
 						<template #render-cell="data">
 							<span
@@ -66,7 +71,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="output"
-						title="Production"
+						:title="t('fio.burn.components.plans.table.production')"
 						sorter="default">
 						<template #render-cell="data">
 							<span
@@ -81,7 +86,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="delta"
-						title="Delta"
+						:title="t('fio.burn.components.plans.table.delta')"
 						sorter="default">
 						<template #render-cell="data">
 							<span
@@ -96,7 +101,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="stock"
-						title="Stock"
+						:title="t('fio.burn.components.plans.table.stock')"
 						sorter="default">
 						<template #render-cell="data">
 							{{ formatAmount(data.rowData.stock) }}
@@ -104,7 +109,7 @@
 					</XNDataTableColumn>
 					<XNDataTableColumn
 						key="exhaustion"
-						title="Burn"
+						:title="t('fio.burn.components.plans.table.burn')"
 						sorter="default">
 						<template #render-cell="data">
 							<span
@@ -120,11 +125,15 @@
 				</XNDataTable>
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="planName" title="Plan">
+		<XNDataTableColumn
+			key="planName"
+			:title="t('fio.burn.components.plans.table.plan')">
 			<template #title>
 				<div class="flex flex-row justify-between">
-					<div>Plan</div>
-					<div>Exhaustion</div>
+					<div>{{ $t("fio.burn.components.plans.table.plan") }}</div>
+					<div>
+						{{ $t("fio.burn.components.plans.table.exhaustion") }}
+					</div>
 				</div>
 			</template>
 			<template #render-cell="{ rowData }">
@@ -138,7 +147,7 @@
 							{{
 								planetNames[rowData.planetId] ||
 								loadPlanetName(rowData.planetId) ||
-								"Loading..."
+								"..."
 							}}
 						</span>
 					</div>
@@ -154,7 +163,11 @@
 						</div>
 						<div>
 							<XITBurnActionButton
-								:drawer-title="`XIT Resupply: ${rowData.planName}`"
+								:drawer-title="
+									t('fio.burn.components.plans.xit_title', {
+										plan_name: rowData.planName,
+									})
+								"
 								:elements="
 									rowData.burnMaterials.map(
 										(e: IFIOBurnTableElementMaterial) => {
