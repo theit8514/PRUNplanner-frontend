@@ -1,6 +1,6 @@
 {
 	"notifications": {
-		"must_have_name": "Must set a plan name in Configuration to save"
+		"must_have_name": "Zum Speichern muss zuerst ein Plan-Name gesetzt werden"
 	},
 	"tools": {
 		"labels": {
@@ -9,11 +9,11 @@
 			"construction_cart": "Construction Cart",
 			"supply_cart": "Supply Cart",
 			"repair_analysis": "Repair Analysis",
-			"workforce": "Workforce"
+			"workforce": "Belegschaft"
 		},
 		"popr": {
 			"title": "Latest Population Report",
-			"error": "Error loading latest population report. The planet might not have population.",
+			"error": "Fehler beim Laden des neuesten Bevölkerungsberichtes. Der Planet hat möglicherweise keine Bevölkerung.",
 			"loading": "Loading Population Report"
 		},
 		"visitation_frequency": {
@@ -69,12 +69,12 @@
 			"title": "Supply Cart",
 			"info": {
 				"p": "The Supply Cart provides updates on your plans needs combined with existing inventory sourced from FIO. You have the flexibility to opt for alternative storage locations to replenish your base. Tailor your selection based on whether you wish to restock workforce and production supplies or focus on a specific category, and specify the duration for which the supplied stock should sustain. Use the {link} tool for more advanced supply cart options.",
-				"link": "FIO Burn"
+				"link": ""
 			},
 			"buttons": {
-				"all": "All",
-				"workforce": "Workforce",
-				"production": "Production"
+				"all": "Alles",
+				"workforce": "Belegschaft",
+				"production": "Produktion"
 			},
 			"table": {
 				"stock_duration": "Stock Duration (days)",
@@ -137,6 +137,15 @@
 				"total_cost": "Total Cost",
 				"recipe_profit": "@:terms.recipes Profit",
 				"cost_split": "Cost Split"
+			}
+		},
+		"plan_analytics": {
+			"title": "Planning Insights",
+			"info": "Insights are aggregated from active player plans on {planet}. PRUNplanner enforces minimum sample thresholds to ensure both anonymity and statistical accuracy.",
+			"labels": {
+				"experts": "Experts",
+				"production_buildings": "Production @:terms.buildings_plural",
+				"recipes": "@:terms.recipes_plural"
 			}
 		}
 	},
