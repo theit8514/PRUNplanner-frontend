@@ -1,25 +1,25 @@
 {
 	"burn": {
-		"view_title": "FIO Burn",
-		"title": "FIO Burn:",
-		"fio_last_update": "FIO Data Update: {last_updated}",
+		"view_title": "FIO Verbrauch",
+		"title": "FIO Verbrauch:",
+		"fio_last_update": "FIO Datenaktualisierung: {last_updated}",
 		"form": {
 			"empire": "@:terms.empire",
-			"burn_thresholds": "Burn Thresholds",
-			"red": "Red",
-			"yellow": "Yellow"
+			"burn_thresholds": "Verbrauch Grenzwerte",
+			"red": "Rot",
+			"yellow": "Gelb"
 		},
 		"components": {
 			"overview": {
-				"title": "Plan Burn Overview",
+				"title": "Plan-Verbrauch-Übersicht",
 				"table": {
 					"plan": "@:terms.plan",
 					"planet": "@:terms.planets",
-					"burn": "Burn"
+					"burn": "Verbrauch"
 				}
 			},
 			"plans": {
-				"xit_title": "XIT Resupply: {plan_name}",
+				"xit_title": "XIT Nachschub: {plan_name}",
 				"table": {
 					"ticker": "@:terms.material_ticker",
 					"consumption": "@:terms.consumption",
@@ -27,23 +27,23 @@
 					"delta": "@:terms.delta",
 					"stock": "@:terms.stock",
 					"plan": "@:terms.plan",
-					"burn": "Burn",
-					"exhaustion": "Exhaustion"
+					"burn": "Verbrauch",
+					"exhaustion": "Erschöpft"
 				}
 			}
 		}
 	},
 	"repair": {
-		"view_title": "FIO Repair",
-		"title": "FIO Repair",
-		"fio_last_update": "FIO Data Update: {last_updated}",
+		"view_title": "FIO Reparieren",
+		"title": "FIO Reparieren",
+		"fio_last_update": "FIO Datenaktualisierung: {last_updated}",
 		"table": {
 			"title": "@:terms.planet_plural",
 			"planet": "@:terms.planets",
 			"buildings": "@:terms.buildings_plural",
-			"avg_condition": "⌀ Condition",
-			"min_condition": "Min. Condition",
-			"repair_age": "Repair Age"
+			"avg_condition": "⌀ Zustand",
+			"min_condition": "Min. Zustand",
+			"repair_age": "Reparatur-Alter"
 		}
 	}
 }
