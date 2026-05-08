@@ -1,9 +1,9 @@
 {
-	"view_title": "Exchanges",
-	"title": "Exchanges",
+	"view_title": "Marktplätze",
+	"title": "Marktplätze",
 	"errors": {
-		"title": "No Preferences",
-		"message": "You don't have exchange preferences. Head to Management and create your first."
+		"title": "Keine Präferenzen",
+		"message": "Du hast keine Marktplatz-Präferenzen. Gehe zur Verwaltungsseite und erstelle deine erste."
 	},
 	"buttons": {
 		"csv_import_export": "@:exchanges.components.csv_import_export.title",
@@ -12,43 +12,43 @@
 	},
 	"configuration": {
 		"form": {
-			"preference_name": "Preference Name",
-			"empire_preferences": "Empire Preferences",
-			"exchange": "Exchange",
+			"preference_name": "Präferenzname",
+			"empire_preferences": "Imperium-Präferenz",
+			"exchange": "Marktplatz",
 			"ticker": "@:terms.material_ticker"
 		}
 	},
 	"preference_type": {
-		"BUY": "BUY",
-		"SELL": "SELL",
-		"BOTH": "BOTH"
+		"BUY": "KAUF",
+		"SELL": "VERKAUF",
+		"BOTH": "BEIDES"
 	},
 	"components": {
 		"ticker": {
-			"no_data": "No @:terms.material_ticker Preferences Configured",
+			"no_data": "Keine @:terms.material_ticker Präferenzen konfiguriert",
 			"material_placeholder": "@:terms.materials"
 		},
 		"exchanges": {
-			"no_data": "No @:terms.exchanges Preference Configured"
+			"no_data": "Keine @:terms.exchanges Präferenzen konfiguriert"
 		},
 		"planet_preferences": {
-			"title": "Planet Preferences",
+			"title": "Planeten-Präferenzen",
 			"form": {
 				"exchange": "@:terms.exchanges",
 				"ticker": "@:terms.material_ticker"
 			},
 			"table": {
 				"planet": "@:terms.planets",
-				"exchange_preference": "@:terms.exchanges Preferences",
-				"ticker_preference": "@:terms.material_ticker Preferences"
+				"exchange_preference": "@:terms.exchanges Präferenzen",
+				"ticker_preference": "@:terms.material_ticker Präferenzen"
 			}
 		},
 		"csv_import_export": {
-			"title": "Import / Export CSV",
-			"warning": "Warning: Importing deletes all existing properties and imports the new ones. You need to save your imported preferences after uploading the CSV file or use the reload button to discard them.",
+			"title": "CSV-Import / Export",
+			"warning": "Warnung: Der Import löscht alle bestehenden Präferenzen und importiert die neuen. Du musst die importierten Präferenzen nach dem CSV-Upload speichern oder den Neuladen-Button verwenden, um sie zu verwerfen.",
 			"buttons": {
-				"import": "Import Settings",
-				"export": "Export Settings"
+				"import": "Präferenzen Importieren",
+				"export": "Präferenzen Exportieren"
 			}
 		}
 	}
