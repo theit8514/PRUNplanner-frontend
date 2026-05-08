@@ -1,15 +1,19 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 
-import {
-	PreferenceType,
-	ExchangeType,
-} from "@/features/exchanges/manageCX.types";
 import {
 	ICXDataExchangeOption,
 	ICXDataTickerOption,
 } from "@/stores/planningStore.types";
 import { useCXManagement } from "@/features/exchanges/useManageCX";
 import { createPinia, setActivePinia } from "pinia";
+
+vi.mock("vue-i18n", () => ({
+	useI18n: () => ({
+		t: (key: string) => key,
+		d: (key: string) => key,
+		n: (key: string) => key,
+	}),
+}));
 
 describe("useCXManagement", async () => {
 	setActivePinia(createPinia());
