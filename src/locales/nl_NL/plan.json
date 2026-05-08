@@ -127,7 +127,7 @@
 				"efficiency": "Efficiency",
 				"degradation": "Degradation",
 				"cost": "@:terms.cost",
-				"materials": "@:terms.materials_plural",
+				"materials": "@:terms.materials_meervoud",
 				"input_total": "Input Total",
 				"material": "@:terms.materials",
 				"cost_unit": "ȼ / Unit",
