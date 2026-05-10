@@ -1,18 +1,18 @@
 {
-	"view_title": "Management",
-	"title": "Management",
+	"view_title": "Управление",
+	"title": "Управление",
 	"empire": {
-		"title": "Empire Configuration",
-		"description": "Removing empires will not delete any associated plans — they will simply become unassigned. You can create edit existing empires in the Empire View. To ensure correct plan efficiency calculations, make sure each empire has your Faction and the appropriate Permits.",
+		"title": "Конфигурация Империи",
+		"description": "Удаление империй не удалит связанные с ними планы — они просто не будут назначены. Вы можете редактировать существующие империи в просмотре империи. Для обеспечения правильного расчета эффективности плана, убедитесь, что в каждой империи указана ваша Фракция и соответствующие разрешения.",
 		"buttons": {
-			"update_cx": "Update CX Assignments",
-			"new_empire": "New Empire"
+			"update_cx": "Обновить CX Задания",
+			"new_empire": "Новая империя"
 		},
 		"form": {
-			"empire_name": "@:terms.empire Name",
+			"empire_name": "@:terms.empire название",
 			"faction": "@:terms.faction",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"permits_total": "Всего @:terms.permits_plural",
+			"permits_used": "Использовано @:terms.permits_plural"
 		},
 		"table": {
 			"empire_name": "@:terms.empire",
@@ -20,29 +20,29 @@
 			"permits": "@:terms.permits",
 			"plans": "@:terms.plans_plural",
 			"cx": "CX",
-			"nodata_title": "No Empires available",
-			"nodata_label": "Create your first Empire"
+			"nodata_title": "Нет доступных империй",
+			"nodata_label": "Создайте свою первую Империю"
 		}
 	},
 	"cx": {
-		"title": "CX Configuration",
-		"description": "Removing a CX preference will delete all its exchange and material settings. Assigned empires will remain unaffected, but they will no longer use the removed preferences. Make sure to assign a new CX preference.",
+		"title": "Конфигурация CX",
+		"description": "Удаление настроек CX удалит все параметры обмена и материалов. Назначенные империи не будут затронуты, но они больше не будут использовать удаленные настройки. Не забудьте назначить новую конфигурацию CX.",
 		"buttons": {
-			"new_cx": "New @:terms.cx"
+			"new_cx": "Новая @:terms.cx"
 		},
 		"form": {
-			"cx_name": "@:terms.cx Name",
-			"cx_placeholder": "CX Name (max. 100 characters)"
+			"cx_name": "@:terms.cx название",
+			"cx_placeholder": "Имя CX (максимум 100 символов)"
 		},
 		"table": {
 			"cx_name": "@:terms.cx Name",
-			"assigned_to_empire": "Assigned to Empire?",
-			"nodata_title": "No @:terms.cx available.",
-			"nodata_label": "Create your first Exchange Preference."
+			"assigned_to_empire": "Назначить империю?",
+			"nodata_title": "Нет доступных @:terms.cx.",
+			"nodata_label": "Укажите предпочитаемую биржу."
 		}
 	},
 	"filter": {
-		"title": "Filter",
+		"title": "Фильтр",
 		"plan": "@:terms.plan",
 		"active_empire": "Active @:terms.empire"
 	},
@@ -50,19 +50,19 @@
 		"title": "Plan ↔ Empire Assignments",
 		"description": "Every planned base can be assigned to multiple empires. This allows you to simultaneously keep track of your existing Prosperous Universe empire, corporation production chains or future expansion plans.",
 		"buttons": {
-			"update_assignments": "Update Plan Assignments",
+			"update_assignments": "Обновить назначения плана",
 			"reload": "@:common.buttons.reload"
 		},
 		"deletion": {
-			"title": "Confirm Plan Deletion",
-			"content": "Are you sure? Deleting the Plan can't be reversed."
+			"title": "Подтверждение удаления плана",
+			"content": "Вы уверены? Удаление плана нельзя отменить."
 		},
 		"table": {
 			"plan": "@:terms.plan",
 			"planet": "@:terms.planets",
-			"configuration": "Configuration",
-			"nodata_title": "No @:terms.plans available",
-			"nodata_label": "Use Planet Search to create your first @:terms.plans."
+			"configuration": "Конфигурация",
+			"nodata_title": "Нет доступных @:terms.plans",
+			"nodata_label": "Используйте поиск по планете для создания первой @:terms.planes."
 		}
 	}
 }
