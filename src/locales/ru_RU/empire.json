@@ -1,32 +1,32 @@
 {
-	"view_title": "Empire",
-	"switch_empire": "Switch Empire",
+	"view_title": "Империя",
+	"switch_empire": "Сменить империю",
 	"views": {
-		"material_io": "Material I/O",
-		"analysis": "Analysis",
-		"production_opportunities": "Production Opportunities"
+		"material_io": "I/O материалов",
+		"analysis": "Анализ",
+		"production_opportunities": "Производственные возможности"
 	},
 	"configuration": {
-		"title": "Configuration",
+		"title": "Конфигурация",
 		"form": {
-			"name": "Name",
-			"faction": "Faction",
-			"permits_total": "@:terms.permits_plural Total",
-			"permits_used": "@:terms.permits_plural Used"
+			"name": "Имя",
+			"faction": "Фракция",
+			"permits_total": "Всего @:terms.permits_plural",
+			"permits_used": "Использовано @:terms.permits_plural"
 		},
 		"sync_warning": {
-			"title": "Mismatch Detected:",
-			"body": "@:empire.configuration.sync_warning.title {configured} configured vs. {planned} planned permits. Please synchronize these values using your in-game {hq_buffer} to ensure accurate faction bonus calculations."
+			"title": "Обнаружено несоответствие:",
+			"body": "@:empire.configuration.sync_warning.title настроено {configured} использованных разрешений, в то время как запланировано {planned}. Пожалуйста, обновите эти значения в соответствии с информацией в {hq_buffer}, для получения точных бонусов от фракции."
 		}
 	},
 	"plan_list": {
-		"no_plans": "No Plans in @:terms.empire",
-		"setup_prompt": "Assign existing plans in {management} or use {search} to create one.",
+		"no_plans": "Нет планов в @:terms.empire",
+		"setup_prompt": "Назначьте существующие планы в {management} или используйте {search} для создания.",
 		"links": {
 			"management": "@:common.navigation.management",
 			"planet_search": "@:common.navigation.planet_search"
 		},
-		"permits_planned": "Total @:terms.permits planned: {permits}"
+		"permits_planned": "Всего @:terms.permits запланировано: {permits}"
 	},
 	"material_io": {
 		"production_planets": "Production Planets",
