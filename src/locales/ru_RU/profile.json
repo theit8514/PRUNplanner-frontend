@@ -1,47 +1,47 @@
 {
-	"view_title": "Profile",
-	"title": "Profile",
+	"view_title": "Профиль",
+	"title": "Профиль",
 	"change_password": {
-		"title": "Change Password",
-		"button": "Change Password",
+		"title": "Изменить пароль",
+		"button": "Изменить пароль",
 		"form": {
-			"password_info": "Password must be at least 8 characters long",
-			"current_password": "Current Password",
-			"new_password": "New Password",
-			"change_success": "Password changed.",
-			"change_error": "Password change failed."
+			"password_info": "Пароль должен содержать не менее 8 символов",
+			"current_password": "Текущий пароль",
+			"new_password": "Новый пароль",
+			"change_success": "Пароль изменён.",
+			"change_error": "Не удалось изменить пароль."
 		}
 	},
 	"change_profile": {
-		"title": "Profile",
+		"title": "Профиль",
 		"buttons": {
-			"update_profile": "Update Profile",
-			"verify_email": "Verify Email",
-			"resend_code": "Resend Code",
-			"code_requested": "Code requested."
+			"update_profile": "Редактирование профиля",
+			"verify_email": "Подтвердить Email",
+			"resend_code": "Отправить код повторно",
+			"code_requested": "Код запрошен."
 		},
-		"fio_info": "FIO Data Updates are handled by PRUNplanners backend automatically.",
+		"fio_info": "Данные FIO обновляются автоматически через сервера PRUNplanner.",
 		"form": {
 			"fio_apikey": "FIO API Key",
-			"prun_username": "PrUn Username",
-			"email_info": "It is not required to provide an email but highly recommended for increased account safety and password recovery.",
-			"email_address": "Email Address",
-			"email_verified": "Email Verified"
+			"prun_username": "Имя пользователя PrUn",
+			"email_info": "Указывать email необязательно, но настоятельно рекомендуется для повышения безопасности аккаунта и восстановления пароля.",
+			"email_address": "Адрес электронной почты",
+			"email_verified": "Email подтвержден"
 		}
 	},
 	"storage_data": {
-		"title": "Browser Storage",
-		"description": "PRUNplanner minimizes API calls by storing data locally in your browser. Data refreshes automatically at set intervals.",
+		"title": "Хранилище браузера",
+		"description": "PRUNplanner минимизирует количество запросов к API, сохраняя данные локально в вашем браузере. Данные обновляются автоматически с заданными интервалами.",
 		"table": {
-			"storage": "Storage",
-			"records": "Records",
-			"size": "Approx. Size"
+			"storage": "Хранилище",
+			"records": "Записи",
+			"size": "Приблизительный размер"
 		}
 	},
 	"fio_information": {
-		"title": "What is FIO & Why should you use it?",
+		"title": "Что такое FIO & Почему вы должны его использовать?",
 		"help": {
-			"title": "5 Easy Steps to Integrate FIO and PRUNplanner",
+			"title": "5 Простых шагов по интеграции FIO и PRUNplanner",
 			"p1": "FIO is a community developed {link} that collects your game data, makes it available outside of Prosperous Universe and is completely free to use.",
 			"p2": "Just go ahead and install the Chrome or Firefox extension, reload your browser with APEX open and click the extension button in the upper-right in your browser to create an account. FIO will automatically collect (only) your game data while you keep playing.",
 			"p3": "You can now login to the {link} to see your data and create an API-Key PRUNplanner will use to import your storage (materials you have somewhere) and sites (planets, ships, warehouses) data.",
