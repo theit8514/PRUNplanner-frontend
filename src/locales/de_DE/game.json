@@ -4,6 +4,21 @@
 		"PLANETARY": "Planetar",
 		"PRODUCTION": "Produktion"
 	},
+	"workforce_type": {
+		"pioneer": "Pioniere",
+		"settler": "Siedler",
+		"technician": "Techniker",
+		"engineer": "Ingenieur",
+		"scientist": "Wissenschaftler"
+	},
+	"efficiency_type": {
+		"WORKFORCE": "Belegschaft",
+		"HQ": "Firmensitz",
+		"EXPERT": "Experten",
+		"COGC": "COGC",
+		"FERTILITY": "Fruchtbarkeit",
+		"FACTION": "Fraktion"
+	},
 	"expertise": {
 		"AGRICULTURE": "Landwirtschaft",
 		"CHEMISTRY": "Chemie",
@@ -51,11 +66,47 @@
 		"WORKFORCE_ENGINEERS": "ING",
 		"WORKFORCE_SCIENTISTS": "WISS"
 	},
+	"material_category": {
+		"agricultural_products": "Landwirtschaftliche Erzeugnisse",
+		"alloys": "Legierungen",
+		"chemicals": "Chemikalien",
+		"construction_materials": "Baumaterialien",
+		"construction_parts": "Bauteile",
+		"construction_prefabs": "Einheitsbausätze",
+		"consumable_bundles": "Konsumgüterpakete",
+		"consumables_(basic)": "Konsumgüter (Basis)",
+		"consumables_(luxury)": "Komsumgüter (Luxus)",
+		"drones": "Drohnen",
+		"electronic_devices": "Elektronische Geräte",
+		"electronic_parts": "Elektronische Teile",
+		"electronic_pieces": "Elektronische Materialien",
+		"electronic_systems": "Elektronische Systeme",
+		"elements": "Elemente",
+		"energy_systems": "Energiesysteme",
+		"fuels": "Treibstoffe",
+		"gases": "Gase",
+		"liquids": "Flüssigkeiten",
+		"medical_equipment": "Medizinische Ausstattung",
+		"metals": "Metalle",
+		"minerals": "Mineralien",
+		"ores": "Erze",
+		"plastics": "Plastik",
+		"ship_engines": "Schiffsantriebe",
+		"ship_kits": "Schiffsbausätze",
+		"ship_parts": "Schiffsteile",
+		"ship_shields": "Schiffsschilde",
+		"software_components": "Software-Komponenten",
+		"software_systems": "Software-Systeme",
+		"software_tools": "Software-Tools",
+		"textiles": "Textilien",
+		"unit_prefabs": "Bauteile",
+		"utility": "Utility"
+	},
 	"upkeep": {
-		"safety": "Safety",
-		"health": "Health",
-		"comfort": "Comfort",
-		"culture": "Culture",
-		"education": "Education"
+		"safety": "Sicherheit",
+		"health": "Gesundheit",
+		"comfort": "Komfort",
+		"culture": "Kultur",
+		"education": "Bildung"
 	}
 }

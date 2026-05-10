@@ -1,0 +1,55 @@
+{
+	"view_title": "Marktplätze",
+	"title": "Marktplätze",
+	"errors": {
+		"title": "Keine Präferenzen",
+		"message": "Du hast keine Marktplatz-Präferenzen. Gehe zur Verwaltungsseite und erstelle deine erste."
+	},
+	"buttons": {
+		"csv_import_export": "@:exchanges.components.csv_import_export.title",
+		"save": "@:common.buttons.save",
+		"reload": "@:common.buttons.reload"
+	},
+	"configuration": {
+		"form": {
+			"preference_name": "Präferenzname",
+			"empire_preferences": "Imperium-Präferenz",
+			"exchange": "Marktplatz",
+			"ticker": "@:terms.material_ticker"
+		}
+	},
+	"preference_type": {
+		"BUY": "KAUF",
+		"SELL": "VERKAUF",
+		"BOTH": "BEIDES"
+	},
+	"components": {
+		"ticker": {
+			"no_data": "Keine @:terms.material_ticker Präferenzen konfiguriert",
+			"material_placeholder": "@:terms.materials"
+		},
+		"exchanges": {
+			"no_data": "Keine @:terms.exchanges Präferenzen konfiguriert"
+		},
+		"planet_preferences": {
+			"title": "Planeten-Präferenzen",
+			"form": {
+				"exchange": "@:terms.exchanges",
+				"ticker": "@:terms.material_ticker"
+			},
+			"table": {
+				"planet": "@:terms.planets",
+				"exchange_preference": "@:terms.exchanges Präferenzen",
+				"ticker_preference": "@:terms.material_ticker Präferenzen"
+			}
+		},
+		"csv_import_export": {
+			"title": "CSV-Import / Export",
+			"warning": "Warnung: Der Import löscht alle bestehenden Präferenzen und importiert die neuen. Du musst die importierten Präferenzen nach dem CSV-Upload speichern oder den Neuladen-Button verwenden, um sie zu verwerfen.",
+			"buttons": {
+				"import": "Präferenzen Importieren",
+				"export": "Präferenzen Exportieren"
+			}
+		}
+	}
+}

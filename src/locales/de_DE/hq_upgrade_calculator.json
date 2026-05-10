@@ -1,25 +1,25 @@
 {
-	"view_title": "HQ",
-	"title": "HQ Upgrade Calculator",
+	"view_title": "Firmensitz",
+	"title": "Firmensitz Kalkulator",
 	"form": {
-		"from_level": "From HQ Level",
-		"to_level": "To HQ Level",
-		"cx_preference": "@:terms.cx Preference",
-		"show_locations": "Show Locations"
+		"from_level": "Von Level",
+		"to_level": "Zu Level",
+		"cx_preference": "@:terms.cx Präferenz",
+		"show_locations": "Standorte anzeigen"
 	},
 	"cost": {
-		"total_cost": "Total @:terms.cost",
-		"total_weight": "Total @:terms.weight",
-		"total_volume": "Total @:terms.volume"
+		"total_cost": "Gesamt @:terms.cost",
+		"total_weight": "Gesamt @:terms.weight",
+		"total_volume": "Gesamt @:terms.volume"
 	},
 	"table": {
 		"material": "@:terms.materials",
 		"amount": "@:terms.amount",
 		"storage": "@:terms.storage",
-		"override_stock": "Override Stock",
-		"required": "Required",
-		"cost_unit": "Cost / Unit",
-		"cost_total": "Total Cost",
-		"storage_locations": "@:terms.storage Locations"
+		"override_stock": "Bestand überschreiben",
+		"required": "Benötigt",
+		"cost_unit": "Kosten / Einheit",
+		"cost_total": "Gesamtkosten",
+		"storage_locations": "@:terms.storage Standorte"
 	}
 }

@@ -39,50 +39,51 @@
 		}
 	},
 	"fio_information": {
-		"title": "What is FIO & Why should you use it?",
+		"title": "Was ist FIO & Warum solltest du es benutzen?",
 		"help": {
-			"title": "5 Easy Steps to Integrate FIO and PRUNplanner",
-			"p1": "FIO is a community developed {link} that collects your game data, makes it available outside of @:terms.prosperous_universe and is completely free to use.",
-			"p2": "Just go ahead and install the Chrome or Firefox extension, reload your browser with APEX open and click the extension button in the upper-right in your browser to create an account. FIO will automatically collect (only) your game data while you keep playing.",
-			"p3": "You can now login to the {link} to see your data and create an API-Key PRUNplanner will use to import your storage (materials you have somewhere) and sites (planets, ships, warehouses) data.",
-			"p4": "Creating the key is easy, if you head to the {link} page and click the \"Create API Key\" button. Enter a name for your key (e.g., \"PRUNplanner\") and your FIO password. You don't need to \"Allow Writes\" as PRUNplanner will not manipulate any of your data, the tool just reads and uses it.",
-			"p5": "Give PRUNplanner a couple of minutes and your game data will appear, allowing you to see when to repair ships, what buildings you have already constructed when creating or modifying plans or when to resupply your bases.",
+			"title": "5 einfache Schritte zur Integration von FIO und PRUNplanner",
+			"p1": "FIO ist eine von der Community entwickelte {link}, die Spieldaten sammelt und sie außerhalb von Prosperous Universe verfügbar macht. FIO ist kostenlos benutzbar.",
+			"p2": "Einfach die Chrome- oder Firefox-Erweiterung installiere. Aktualisiere dein Browser-Fenster mit APEX und klicke auf die Erweiterungsschaltfläche oben rechts in deinem Browser, um ein Konto zu erstellen. FIO sammelt automatisch (nur) deine Spieldaten, während du weiterspielst.",
+			"p3": "Du kannst dich jetzt in den {link} einloggen, um deine Daten zu sehen und einen API-Schlüssel für PRUNplanner zu erstellen, der deine Lagerbestände und Standorte (Planeten, Schiffe, Lager) importiert.",
+			"p4": "Das Erstellen des API-Schlüssels ist einfach, wenn du auf {link} Seite gehst und \"Create API Key\" klickst. Gib einen Namen für deinen Key (z.B. \"PRUNplanner\") und dein FIO Passwort ein. Du musst \"Allow Writes\" (\"Schreiben erlauben\") nicht auswählen, da PRUNplanner deine Daten manipulieren, sondern nur lesen möchte.",
+			"p5": "Warte einige Minuten, damit PRUNplanner deine Daten von FIO synchronisieren kann und freue dich auf noch mehr Planungsmöglichkeiten. Deine Daten werden regelmäßig, automatisch im Hintergrund aktualisiert.",
 			"steps": {
-				"1": "Download and install the {link}",
-				"2": "Open your game, click the extensions button and register your FIO account",
-				"3": "Head to the FIO website, open your {link} and create an API-Key for PRUNplanner",
-				"4": "Copy and enter your API Key as well as your Prosperous Universe username to your profile above and press the \"Update Profile\" button",
-				"5": "Wait a few minutes for PRUNplanner to get your data and enjoy additional planning capabilities. Your data will be updated automatically in the background, no need to do anything."
+				"1": "Lade und installiere die {link}",
+				"2": "Öffne dein Spiel, klicke den Button der Browser-Erweiterung und erstelle deinen FIO Account",
+				"3": "Gehe zur FIO Webseite, öffne deine {link} und erstelle einen API-Schlüssel für PRUNplanner",
+				"4": "Kopiere den API-Schlüssel und füge ihn auf dieser Seite ein. Fülle außerdem das Feld mit deinem Prosperous Universe Benutzernamen aus und drücke den \"Profil aktualisieren\" Button",
+				"5": "Warte einige Minuten, damit PRUNplanner deine Daten von FIO synchronisieren kann und freue dich auf noch mehr Planungsmöglichkeiten. Deine Daten werden regelmäßig, automatisch im Hintergrund aktualisiert."
 			},
-			"refined_prun": "While you're enhancing your gameplay, also check out {link}: Another browser extension greatly simplifying the user interface and adding tons of features."
+			"refined_prun": "Während du gerade sowieso dein Spielerlebnis verbessert, schaue dir auch {link} an: Eine weitere Browser-Erweiterung, die die Benutzeroberfläche im Spiel verbessert und viele weitere Möglichkeiten mitbringt."
 		},
 		"links": {
-			"browser_extension": "Browser Extension",
+			"browser_extension": "Browser Erweiterung",
 			"fio_website": "FIO Website",
 			"fio_settings": "FIO Settings",
-			"fio_extension": "FIO Browser Extension",
-			"settings_short": "Settings",
+			"fio_extension": "FIO Browser-Erweiterung",
+			"settings_short": "Einstellungen",
 			"refined_prun": "Refined PrUn"
 		}
 	},
 	"preferences": {
-		"title": "Preferences",
-		"description": "Your preferences are saved locally in your browser and aren't synced with the backend yet. Use this panel to review and customize your PRUNplanner settings.",
+		"title": "Einstellungen",
+		"description": "Deine Einstellungen werden lokal in deinem Browser gespeichert und noch nicht vollständig mit dem Backend synchronisiert. Hier kannst du sie anpassen und überprüfen.",
 		"form": {
-			"tool_preferences": "Tool Preferences",
-			"language": "Language",
-			"default_empire": "Default Empire",
-			"default_cx": "Default CX",
-			"fio_burn": "FIO Burn",
-			"red_threshold": "Red Threshold",
-			"yellow_threshold": "Yellow Threshold",
-			"resupply_days": "Resupply Days",
+			"tool_preferences": "PRUNplanner Einstellungen",
+			"language": "Sprache",
+			"language_note": "Wir wollen PRUNplanner für alle zugänglich machen. Wenn du das Tool in deiner Muttersprache sehen oder uns helfen möchtest, eine vorhandene Übersetzung zu verbessern, tritt unserem Lokalisierungsprojekt auf {link} bei.",
+			"default_empire": "Standard-Imperium",
+			"default_cx": "Standard CX",
+			"fio_burn": "FIO Verbrauch",
+			"red_threshold": "Roter Grenzwert",
+			"yellow_threshold": "Gelber Grenzwert",
+			"resupply_days": "Nachschub-Tage",
 			"xit_origin": "XIT Origin",
 			"buy_from_cx": "XIT Buy from CX",
-			"plan_specific": "Plan-Specific Settings",
-			"plan_specific_description": "These settings are managed within individual plans. This section provides an overview of the preferences you've customized so far - to modify them, navigate to the corresponding plan.",
+			"plan_specific": "Planspezifische Einstellungen",
+			"plan_specific_description": "Diese Einstellungen werden in einzelnen Plänen verwaltet. Dieser Abschnitt bietet eine Übersicht über die Einstellungen, die du bisher angepasst hast - um sie zu ändern, wähle den entsprechenden Plan.",
 			"plan": "Plan",
-			"preferences": "Preferences"
+			"preferences": "Einstellungen"
 		}
 	}
 }

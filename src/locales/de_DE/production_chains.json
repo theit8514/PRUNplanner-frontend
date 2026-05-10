@@ -1,35 +1,35 @@
 {
-	"view_title": "Production Chains",
-	"title": "Production Chains",
+	"view_title": "Produktionsketten",
+	"title": "Produktionsketten",
 	"configuration": {
-		"title": "Configuration",
+		"title": "Konfiguration",
 		"material": "@:terms.materials",
-		"recipe_runs": "Recipe Runs",
-		"node_color": "Node Color",
-		"terminals": "Terminals",
-		"terminals_placeholder": "Comma-separated material tickers",
-		"terminals_info": "Terminals are materials whose inputs are excluded from the graph, useful if you buy them on the CX or locally and don't need to produce them.",
-		"recipe_selection": "Recipe Selection"
+		"recipe_runs": "Aufträge-Anzahl",
+		"node_color": "Knotenfarbe",
+		"terminals": "Enden",
+		"terminals_placeholder": "Durch Kommas getrennte Materialien-Ticker",
+		"terminals_info": "Terminals sind Materialien, deren Eingänge vom Diagramm ausgeschlossen sind. Nützlich, wenn Sie sie auf dem Marktplatz oder vor Ort gekauft und nicht produziert werden.",
+		"recipe_selection": "Auftrags-Auswahl"
 	},
 	"analysis_materials": {
-		"title": "Materials",
+		"title": "Materialien",
 		"table": {
 			"material": "@:terms.materials",
 			"amount": "@:terms.amount"
 		}
 	},
 	"analysis_expertise": {
-		"title": "Building Expertises",
+		"title": "Gebäude-Expertise",
 		"table": {
 			"expertise": "Expertise",
 			"materials": "@:terms.materials_plural"
 		}
 	},
 	"analysis_workforce": {
-		"title": "Workforce",
+		"title": "Belegschaft",
 		"table": {
-			"workforce": "Workforce",
-			"required": "Required"
+			"workforce": "Belegschaft",
+			"required": "Benötigt"
 		}
 	}
 }

@@ -1,0 +1,26 @@
+{
+	"form": {
+		"origin": "Origin",
+		"target_days": "Target Days",
+		"buy_from_cx": "Buy From CX",
+		"buy_from_cx_warning": "Only warehouse origin allows purchasing.",
+		"fit_ship": "Fit Ship",
+		"hide_infinite": "Hide Infinite",
+		"json": "JSON"
+	},
+	"buttons": {
+		"copy_json": "Copy XIT JSON",
+		"copy": "@:common.buttons.copy"
+	},
+	"table": {
+		"ticker": "@:terms.material_ticker",
+		"stock": "@:terms.stock",
+		"delta": "@:terms.delta",
+		"burn": "@:terms.burn",
+		"amount": "@:terms.amount",
+		"override": "@:terms.override",
+		"weight_value": "@:{'terms.weight'}: {value}",
+		"volume_value": "@:{'terms.volume'}: {value}",
+		"price_value": "@:{'terms.price'}: {value}"
+	}
+}

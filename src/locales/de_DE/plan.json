@@ -1,0 +1,298 @@
+{
+	"notifications": {
+		"must_have_name": "Zum Speichern muss zuerst ein Plan-Name gesetzt werden"
+	},
+	"tools": {
+		"labels": {
+			"popr": "POPR",
+			"visitation_frequency": "Besuchsfrequenz",
+			"construction_cart": "Konstruktion",
+			"supply_cart": "Versorgung",
+			"repair_analysis": "Reparatur-Analyse",
+			"workforce": "Belegschaft"
+		},
+		"popr": {
+			"title": "Aktuellster Bevölkerungsbericht",
+			"error": "Fehler beim Laden des neuesten Bevölkerungsberichtes. Der Planet hat möglicherweise keine Bevölkerung.",
+			"loading": "Lade Bevölkerungsbericht"
+		},
+		"visitation_frequency": {
+			"title": "Besuchsfrequenz",
+			"storage": {
+				"label": "Lager",
+				"info": "Dein Plan beinhaltet {storages} mit einer Gesamtkapazität von {total_weight} t und {total_volume} m³.",
+				"info_no_storage": "Dein Plan verfügt über eine gesamte Lagerkapazität von {total_weight} t und {total_volume} m³.",
+				"table": {
+					"weight": "t",
+					"volume": "m³",
+					"import": "@:terms.import",
+					"export": "@:terms.export",
+					"sum": "@:terms.sum",
+					"storage_filled": "Lager gefüllt",
+					"filled_unit": "Tage"
+				},
+				"exclusion_info": "Schließe lokale Materialien, die du nur auf diesem Planeten verwaltest, kaufst oder handelst, von der Besuchsfrequenz aus."
+			},
+			"shipping": {
+				"label": "Versand",
+				"table": {
+					"ship_weight": "Schiff t",
+					"ship_volume": "Schiff m³",
+					"visitation_days": "Besuche (Tage)",
+					"limit": "Limit",
+					"export_frequency": "@:terms.export Frequenz",
+					"import_frequency": "@:terms.import Frequenz"
+				}
+			}
+		},
+		"construction_cart": {
+			"title": "Konstruktion",
+			"unplanned_info": "Die Basis hat ungeplante {buildings} (FIO: {fio_updated}). Zerstöre sie, um zu garantieren, dass Fläche und Materialien korrekt sind.",
+			"table": {
+				"building": "@:terms.buildings",
+				"built": "Gebaut",
+				"amount": "Anzahl",
+				"habitation_info": "Unzureichende Gebäude für deine Belegschaft reduzieren die Produktionseffizienz.",
+				"planned": "Geplant",
+				"materials_sum": "Material Summe",
+				"total_cost": "Gesamtkosten",
+				"total_weight": "@:terms.total_weight",
+				"total_volume": "@:terms.total_volume",
+				"material": "Material",
+				"storage": "Lager",
+				"stock": "Lagerbestand",
+				"stock_override": "Bestand überschreiben",
+				"need": "Bedarf"
+			}
+		},
+		"supply_cart": {
+			"title": "Versorgung",
+			"info": {
+				"p": "Dieser Versorgungs-Warenkorb aktualisiert sich auf Basis deines Plans und bestehendem Lagerbestand. Du kannst flexibel einen anderen Lagerort wählen, um deine Basis aufzufüllen. Passe deine Auswahl darauf an, ob du deine Belegschaft oder Produktionsgebäude versorgen und für wie viele Tage du Materialen schicken möchtest. Du kannst {link} verwenden, um mehr Optionen für den Versorgungs-Warenkorb zu bekommen.",
+				"link": "FIO Verbrauch"
+			},
+			"buttons": {
+				"all": "Alles",
+				"workforce": "Belegschaft",
+				"production": "Produktion"
+			},
+			"table": {
+				"stock_duration": "Bestandsverfügbarkeit (Tage)",
+				"storage": "Lager",
+				"xit_name": "Versorgung",
+				"ticker": "Ticker",
+				"daily_need": "Täglicher Bedarf",
+				"daily_cost": "Tägliche Kosten",
+				"stock": "Lagerbestand",
+				"full_need": "Voller Bedarf",
+				"final_need": "Finaler Bedarf",
+				"weight": "t",
+				"volume": "m³",
+				"workforce": "Belegschaft",
+				"production": "Produktion",
+				"total_cost": "Gesamtkosten",
+				"total_weight": "@:terms.total_weight",
+				"total_volume": "@:terms.total_volume"
+			}
+		},
+		"repair_analysis": {
+			"title": "Reparatur-Analyse",
+			"plan": "@:terms.plan",
+			"table": {
+				"select_day": "Tag auswählen",
+				"material": "Material",
+				"amount": "Anzahl",
+				"cost": "Kosten",
+				"total_cost": "Gesamtkosten",
+				"total_weight": "@:terms.total_weight",
+				"total_volume": "@:terms.total_volume"
+			},
+			"graph": {
+				"select_building": "@:terms.buildings auswählen",
+				"individual_building": "Individuelles @:terms.buildings",
+				"repair_cost_breakdown": "Reparaturkosten Aufteilung"
+			}
+		},
+		"cogm": {
+			"title": "Kosten der hergestellten Waren",
+			"cogm": "@:terms.cogm",
+			"info": "Die Kosten der hergestellten Waren werden anhand von Planeinstellungen berechnet, die die Produktionseffizienz erhöhen Rezeptlaufzeit, Bauabbau, Materialkosten, Arbeitsanforderungen und damit verbundene Arbeitskosten. Die Endkosten werden pro Ausgabeeinheit angezeigt, basierend auf der Menge oder der vollen Kostenzuweisung.",
+			"cx_preferences": "@:terms.cx_plural Präferenzen",
+			"empire_ticker": "@:terms.empire Ticker",
+			"planet_ticker": "@:terms.planet Ticker",
+			"table": {
+				"parameters": "Parameter",
+				"recipe_runtime": "@:terms.recipes Laufzeit",
+				"percent_day": "% / Tag",
+				"efficiency": "Effizienz",
+				"degradation": "Abnutzung",
+				"cost": "@:terms.cost",
+				"materials": "@:terms.materials_plural",
+				"input_total": "Input Gesamt",
+				"material": "@:terms.materials",
+				"cost_unit": "ȼ / Einheit",
+				"cost_total": "Gesamtkosten",
+				"cost_total_unit": "ȼ  Gesamt",
+				"workforce": "Belegschaft",
+				"total_cost": "Gesamtkosten",
+				"recipe_profit": "@:terms.recipes Profit",
+				"cost_split": "Kostenteilung"
+			}
+		},
+		"plan_analytics": {
+			"title": "Planungseinblicke",
+			"info": "Einblicke werden aus aktiven Plänen auf {planet} zusammengefasst. PRUNplanner setzt Mindestschwellen ein, um sowohl Anonymität als auch statistische Genauigkeit zu gewährleisten.",
+			"labels": {
+				"experts": "Experten",
+				"production_buildings": "Produktions-@:terms.buildings_plural",
+				"recipes": "@:terms.recipes_plural"
+			}
+		}
+	},
+	"components": {
+		"status": {
+			"hq": "HQ",
+			"cogc": "@:{'terms.cogc'}:",
+			"area": "@:{'terms.area'}:",
+			"profit": "@:{'terms.profit'}:",
+			"experts": "@:{'terms.experts_plural'}:"
+		},
+		"configuration": {
+			"label": "Konfiguration",
+			"name": "Name",
+			"empire": "@:terms.empire"
+		},
+		"area": {
+			"permits": "@:terms.permits_plural",
+			"area": "@:terms.area",
+			"free": "Frei"
+		},
+		"bonuses": {
+			"corp_hq": "Corp. HQ",
+			"corp_hq_tooltip": "Das Unternehmen, zu dem Sie gehören, hat seinen Hauptsitz auf diesem Planeten (nicht Ihr individuelles Unternehmen).",
+			"cogc": "@:terms.cogc"
+		},
+		"infrastructure": {
+			"label": "Infrastruktur",
+			"auto_optimize": "Automatische Optimierung",
+			"auto_optimize_tooltip": "Automatische Optimierung der Belegschaftsgebäude, um die Bedürfnisse der Belegschaft zu befriedigen, wenn Gebäude hinzugefügt werden.",
+			"buttons": {
+				"optimize_cost": "Kosten optimieren",
+				"optimize_area": "Fläche optimieren"
+			}
+		},
+		"experts": {
+			"label": "Experten",
+			"warning": "Maximale Anzahl von Experten auf einer Basis ist 6. Du hast derzeit {expert_number} Experten zugewiesen."
+		},
+		"workforce": {
+			"label": "Belegschaft",
+			"table": {
+				"type": "Typ",
+				"need": "Bedarf",
+				"supply": "Vorrat",
+				"open": "Offen",
+				"luxuries": "Luxusgüter",
+				"pct_eff": "Eff. %"
+			}
+		},
+		"overview": {
+			"label": "Übersicht",
+			"table": {
+				"daily_cost": "Tägliche Kosten",
+				"degradation": "Abnutzung",
+				"plan_cost": "Plankosten",
+				"daily_profit": "Täglicher Gewinn",
+				"roi": "ROI",
+				"profit_area": "@:terms.profit_per_area"
+			}
+		},
+		"storage": {
+			"label": "Lager",
+			"table": {
+				"weight": "t",
+				"volume": "m³",
+				"import": "@:terms.import",
+				"export": "@:terms.export",
+				"sum": "@:terms.sum",
+				"filled": "Gefüllt"
+			}
+		},
+		"materialio": {
+			"label": "Material I/O",
+			"label_production": "Produktion",
+			"label_workforce": "Belegschaft",
+			"buttons": {
+				"toggle_weight_volume": "Gewicht & Volumen umschalten",
+				"toggle_production_workforce": "Produktion & Belegschaft umschalten"
+			},
+			"table": {
+				"input": "Ein",
+				"output": "Aus",
+				"delta": "Δ",
+				"cost_day": "ȼ / Tag",
+				"total_weight": "Δ t",
+				"total_volume": "Δ m3"
+			}
+		},
+		"save_as": {
+			"title": "Speichern als",
+			"form": {
+				"plan_name": "Name",
+				"plan_name_placeholder": "Neuer @:terms.plan-Name",
+				"empire": "@:terms.empire"
+			}
+		},
+		"production": {
+			"label": "Produktion",
+			"planet_resources": "@:terms.planets @:terms.resources_plural",
+			"form": {
+				"match_cogc": "Filter auf @:terms.cogc",
+				"select_placeholder": "@:terms.buildings auswählen & zu @:terms.plan hinzufügen"
+			},
+			"table": {
+				"building_recipe": "@:terms.buildings / @:terms.recipes",
+				"runtime": "Laufzeit",
+				"share": "Anteil",
+				"tools": "Werkzeuge"
+			}
+		},
+		"production_building": {
+			"no_recipe": "Kein aktives @:terms.recipes_plural",
+			"qty": "#",
+			"buttons": {
+				"add_recipe": "@:terms.recipes"
+			},
+			"table": {
+				"expertise": "Expertise",
+				"efficiency": "Effizienz",
+				"revenue": "@:terms.revenue",
+				"area": "@:terms.area",
+				"construction": "Konstruktion"
+			}
+		},
+		"production_recipe": {
+			"cogm_title": "Kosten der hergestellten Waren",
+			"cogm_error": "COGM Berechnung nicht möglich. Überprüfe deinen Verwaltungs-View, ob das Imperium einem Marktplatz zugewiesen ist.",
+			"buttons": {
+				"cogm": "@:terms.cogm"
+			},
+			"table": {
+				"input": "Input",
+				"time": "Zeit",
+				"output": "Output",
+				"daily_revenue": "ȼ / Tag",
+				"profit_area": "ȼ  / Fläche",
+				"roi": "ROI"
+			},
+			"info": {
+				"p1_strong": "Umsatz / Tag",
+				"p1": "wird anhand des nach Auftrag generierten Tageseinkommens berechnet und enthält sowohl die täglichen Personalkosten (alle Luxusgüter) als auch die täglichen Verfallskosten (1/180tel der Baukosten). Die Einnahmen aus dem Auftrag basieren auf der Differenz zwischen den Input und Output Materialkosten.",
+				"p2_strong": "ȼ  / Fläche",
+				"p2": "ist der tägliche Umsatz für ein Produktionsgebäude und sein proportionaler Anteil an der Fläche für eine Kolonisationseinheit und Belegschaftsgebäude für eine optimale Basis für dieses Gebäude und Auftrag.",
+				"p3_strong": "ROI",
+				"p3": "is die benötigte Zeit für einen ständig laufenen Auftrag, um Umsatz zu erzeugen, der alle Konstruktionskosten berücksichtigt. Dies beinhaltet die täglichen Verfalls- und Belegschaftskosten."
+			}
+		}
+	}
+}

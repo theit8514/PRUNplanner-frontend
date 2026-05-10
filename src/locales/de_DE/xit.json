@@ -1,0 +1,26 @@
+{
+	"form": {
+		"origin": "Herkunft",
+		"target_days": "Ziel-Tage",
+		"buy_from_cx": "Von CX Kaufen",
+		"buy_from_cx_warning": "Nur Warenhäuser als Ursprung erlauben den direkten Einkauf.",
+		"fit_ship": "Auf Schiff anpassen",
+		"hide_infinite": "Unendliche ausblenden",
+		"json": "JSON"
+	},
+	"buttons": {
+		"copy_json": "XIT JSON kopieren",
+		"copy": "@:common.buttons.copy"
+	},
+	"table": {
+		"ticker": "@:terms.material_ticker",
+		"stock": "@:terms.stock",
+		"delta": "@:terms.delta",
+		"burn": "@:terms.burn",
+		"amount": "@:terms.amount",
+		"override": "@:terms.override",
+		"weight_value": "@:{'terms.weight'}: {value}",
+		"volume_value": "@:{'terms.volume'}: {value}",
+		"price_value": "@:{'terms.price'}: {value}"
+	}
+}

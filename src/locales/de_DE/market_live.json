@@ -1,0 +1,101 @@
+{
+	"view_title": "Live Markt",
+	"title": "Live Markt",
+	"status": {
+		"connected": "Verbunden",
+		"disconnected": "Getrennt"
+	},
+	"severity_type": {
+		"LOW": "NIEDRIG",
+		"MEDIUM": "MITTEL",
+		"HIGH": "HOCH"
+	},
+	"status_type": {
+		"active": "Aktiv",
+		"paused": "Pausiert"
+	},
+	"rule_type": {
+		"static": "Wert",
+		"previous": "Vorheriger Wert",
+		"previous_pct": "Unterschied %",
+		"text": "Text"
+	},
+	"components": {
+		"feed": {
+			"title": "Alarm Feed",
+			"buttons": {
+				"open_manager": "Alarm-Manager öffnen",
+				"close_manager": "Alarm-Manager schließen",
+				"clear_feed": "Feed leeren",
+				"show_overview": "Übersicht anzeigen",
+				"hide_overview": "Übersicht ausblenden"
+			}
+		},
+		"alert_feed": {
+			"waiting": "Warten auf Marktereignisse, die Alarme auslösen...",
+			"table": {
+				"ticker_alert": "Ticker / Alarm",
+				"severity": "Schweregrad",
+				"logic": "Trigger-Logik",
+				"event": "Ereignis",
+				"time": "Zeit"
+			}
+		},
+		"details": {
+			"price": "Preis",
+			"ask": "@:{'terms.ask'}: {value}",
+			"bid": "@:{'terms.bid'}: {value}",
+			"spread": "@:{'terms.spread'}",
+			"buy_volume": "Kauf-Volumen",
+			"vwap": "@:{'terms.vwap'}: {value}",
+			"change": "Änderung: {value}",
+			"sell_volume": "Verkaufsvolumen",
+			"buy_volume_value": "Kauf-Volumen: {value}",
+			"sell_volume_value": "Verkaufs-Volumen: {value}"
+		},
+		"point_table": {
+			"table": {
+				"ticker": "@:terms.material_ticker",
+				"price": "@:terms.price",
+				"bid": "@:terms.bid",
+				"ask": "@:terms.ask",
+				"spread_pct": "Spread %",
+				"buy_volume": "Kauf-Vol.",
+				"sell_volume": "Verkauf-Vol."
+			}
+		},
+		"history": {
+			"title": "Datenhistorie",
+			"received": "{value} @:terms.material_ticker erhalten"
+		},
+		"rule_builder": {
+			"new_rule_name": "Neue Regel",
+			"buttons": {
+				"add_condition": "Bedingung",
+				"add_group": "Gruppe",
+				"remove": "Entfernen"
+			},
+			"error": "Fehler: {value}",
+			"empty": "Leere Gruppe"
+		},
+		"alert_manager": {
+			"title": "Alarm-Manager",
+			"title_editing": "Alarm bearbeiten",
+			"info": "Alarme werden derzeit nur auf diesem Gerät gespeichert und nicht mit deinem Konto synchronisiert.",
+			"no_alerts": "Keine Alarme gefunden. Erstelle dein erstes Alarm-Signal",
+			"buttons": {
+				"create_alert": "Neuen Alarm erstellen",
+				"discard": "@:common.buttons.discard",
+				"save": "@:common.buttons.save",
+				"delete": "@:common.buttons.delete"
+			},
+			"form": {
+				"alert_name": "Alarmname",
+				"severity": "Schweregrad",
+				"status": "Status",
+				"logic_configuration": "Logik Konfiguration",
+				"previous_datapoint": "Vorheriger Datenpunkt"
+			}
+		}
+	}
+}

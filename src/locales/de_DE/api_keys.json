@@ -3,10 +3,10 @@
 	"title": "API Schlüssel",
 	"info": {
 		"description": {
-			"p1": "The {link} provides programmatic access to all your planning data, ingame metadata (buildings, recipes, materials) and calculated market metrics like VWAP. While public endpoints remain open for community use, access to private planning data - including your plan configurations - require secure authentication.",
-			"p2": "By utilizing these endpoints, you can synchronize your planning operations with external spreadsheets, custom dashboards, or even optimization algorithms.",
+			"p1": "Der {link} bietet programmatischen Zugriff auf alle deine Planungsdaten, Spiel-Metadaten (Gebäude, Aufträge, Materialien) und berechnete Marktmetriken wie VWAP. Während öffentliche Endpunkte für die Community offen bleiben, erfordert der Zugriff auf private Planungsdaten - einschließlich deiner Plankonfigurationen - eine sichere Authentifizierung.",
+			"p2": "Mithilfe dieser Endpunkte kannst du deine Planungsdaten mit externen Tabellen, eigenen Dashboards oder sogar Optimierungsalgorithmen synchronisieren.",
 			"link": "PRUNplanner REST API",
-			"warning": "API keys grant full access to your account data and remain valid indefinitely. Treat these credentials as sensitive as your password. Never commit keys to public repositories or share them with unverified third-party services. If a key is compromised, revoke it immediately and generate a replacement."
+			"warning": "API-Schlüssel gewähren vollen Zugriff auf deine Daten und bleiben unbegrenzt gültig. Diese Zugangsdaten sollten so sensibel wie dein Passwort behandelt werden. Übertrage niemals Schlüssel in öffentliche Repositories oder teile sie mit nicht überprüften Drittanbieterdiensten. Wenn ein Schlüssel kompromittiert ist, widerrufe ihn sofort und erzeuge einen Ersatz."
 		}
 	},
 	"manage": {
@@ -23,7 +23,7 @@
 		}
 	},
 	"implementation": {
-		"title": "Autorisierungs-Implementierung",
+		"title": "Autorisierung-Implementierung",
 		"link": "REST API Referenz anzeigen →"
 	},
 	"create": {

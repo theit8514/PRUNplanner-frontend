@@ -1,11 +1,11 @@
 {
-	"view_title": "Upkeep Price Calculator",
-	"title": "Upkeep Price Calculator",
+	"view_title": "Infrastruktur-Rechner",
+	"title": "Infrakstrukture-Beitrag-Rechner",
 	"form": {
-		"cx_preference": "CX Preference"
+		"cx_preference": "@:terms.cx Präferenz"
 	},
 	"calculator": {
-		"calculating": "Calculating Upkeep Material Prices",
+		"calculating": "Berechne Preise der Infrastruktur Materialien",
 		"needs": {
 			"safety": "@:game.upkeep.safety",
 			"health": "@:game.upkeep.health",
@@ -14,13 +14,13 @@
 			"education": "@:game.upkeep.education"
 		},
 		"details": {
-			"title": "Material Details",
+			"title": "Materialdetails",
 			"table": {
 				"material": "@:terms.materials",
 				"building": "@:terms.buildings",
-				"price_need": "ȼ/Need",
-				"cx_price": "@:terms.cx Price",
-				"qty_day": "Qty/Day"
+				"price_need": "ȼ/Bedarf",
+				"cx_price": "@:terms.cx Preis",
+				"qty_day": "Menge/Tag"
 			}
 		}
 	}

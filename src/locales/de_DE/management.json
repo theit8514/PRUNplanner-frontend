@@ -2,11 +2,11 @@
 	"view_title": "Verwaltung",
 	"title": "Verwaltung",
 	"empire": {
-		"title": "Empire Configuration",
-		"description": "Removing empires will not delete any associated plans — they will simply become unassigned. You can create edit existing empires in the Empire View. To ensure correct plan efficiency calculations, make sure each empire has your Faction and the appropriate Permits.",
+		"title": "Imperium-Konfiguration",
+		"description": "Das Entfernen eines Imperiums löscht keine zugehörigen Pläne - sie sind diesem Imperium einfach nicht mehr zugewiesen. Du kannst bestehende Imperium auf der Imperium-Seite verwalten. Um die korrekte Plan-Kalkulation sicherzustellen, muss jedes Imperium die korrekte Fraktion und Flächen zugewiesen bekommen.",
 		"buttons": {
-			"update_cx": "Update CX Assignments",
-			"new_empire": "New Empire"
+			"update_cx": "Handelskammer-Zuweisungen aktualisieren",
+			"new_empire": "Neues Imperium"
 		},
 		"form": {
 			"empire_name": "@:terms.empire Name",
@@ -19,38 +19,38 @@
 			"faction": "@:terms.faction",
 			"permits": "@:terms.permits",
 			"plans": "@:terms.plans_plural",
-			"cx": "CX",
-			"nodata_title": "No Empires available",
-			"nodata_label": "Create your first Empire"
+			"cx": "Handelskammern",
+			"nodata_title": "Keine Imperien verfügbar",
+			"nodata_label": "Erstelle dein erstes Imperium"
 		}
 	},
 	"cx": {
-		"title": "CX Configuration",
-		"description": "Removing a CX preference will delete all its exchange and material settings. Assigned empires will remain unaffected, but they will no longer use the removed preferences. Make sure to assign a new CX preference.",
+		"title": "Handelskammer-Konfiguration",
+		"description": "Das Entfernen einer Handelskammer-Konfiguration löscht alle Warenbörsen- und Materialeinstellungen. Zugewiesene Imperien bleiben davon unberührt, aber verlieren ihre Preisberechnungen. Stelle sicher, dass du dem Imperium eine neue Handelskammer zuweist.",
 		"buttons": {
-			"new_cx": "New @:terms.cx"
+			"new_cx": "Neue @:terms.cx"
 		},
 		"form": {
 			"cx_name": "@:terms.cx Name",
-			"cx_placeholder": "CX Name (max. 100 characters)"
+			"cx_placeholder": "Handelskammer-Name (max. 100 Zeichen)"
 		},
 		"table": {
 			"cx_name": "@:terms.cx Name",
-			"assigned_to_empire": "Assigned to Empire?",
-			"nodata_title": "No @:terms.cx available.",
-			"nodata_label": "Create your first Exchange Preference."
+			"assigned_to_empire": "Imperium zugewiesen?",
+			"nodata_title": "Keine @:terms.cx verfügbar.",
+			"nodata_label": "Erstelle deine erste Handelskammer-Konfiguration."
 		}
 	},
 	"filter": {
 		"title": "Filter",
 		"plan": "@:terms.plan",
-		"active_empire": "Active @:terms.empire"
+		"active_empire": "Aktive Imperien"
 	},
 	"assignments": {
-		"title": "Plan ↔ Empire Assignments",
-		"description": "Every planned base can be assigned to multiple empires. This allows you to simultaneously keep track of your existing Prosperous Universe empire, corporation production chains or future expansion plans.",
+		"title": "Plan ↔ Imperium Zuweisung",
+		"description": "Jede geplante Basis kann mehreren Imperien zugewiesen werden. Das erlaubt dir, gleichzeitig den Überblick über dein existierendes Prosperous Universe Imperium, Allianz Produktionsketten und Erweiterungspläne zu behalten.",
 		"buttons": {
-			"update_assignments": "Update Plan Assignments",
+			"update_assignments": "Plan-Zuweisungen aktualisieren",
 			"reload": "@:common.buttons.reload"
 		},
 		"deletion": {

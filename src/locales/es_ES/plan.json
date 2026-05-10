@@ -1,0 +1,298 @@
+{
+	"notifications": {
+		"must_have_name": "Must set a plan name in Configuration to save"
+	},
+	"tools": {
+		"labels": {
+			"popr": "POPR",
+			"visitation_frequency": "Visitation Frequency",
+			"construction_cart": "Construction Cart",
+			"supply_cart": "Supply Cart",
+			"repair_analysis": "Repair Analysis",
+			"workforce": "Workforce"
+		},
+		"popr": {
+			"title": "Latest Population Report",
+			"error": "Error loading latest population report. The planet might not have population.",
+			"loading": "Loading Population Report"
+		},
+		"visitation_frequency": {
+			"title": "Visitation Frequency",
+			"storage": {
+				"label": "Storage",
+				"info": "Your plan involves adding {storages} giving you a total storage capacity of {total_weight} t and {total_volume} m³.",
+				"info_no_storage": "Your plan has a total storage capacity of {total_weight} t and {total_volume} m³.",
+				"table": {
+					"weight": "t",
+					"volume": "m³",
+					"import": "@:terms.import",
+					"export": "@:terms.export",
+					"sum": "@:terms.sum",
+					"storage_filled": "Storage Filled",
+					"filled_unit": "days"
+				},
+				"exclusion_info": "Exclude local materials from visitation frequency calculation for items handled exclusively planet-side, like local market sales, purchases or contracts."
+			},
+			"shipping": {
+				"label": "Shipping",
+				"table": {
+					"ship_weight": "Ship t",
+					"ship_volume": "Ship m³",
+					"visitation_days": "Visitation (days)",
+					"limit": "Limit",
+					"export_frequency": "@:terms.export Frequency",
+					"import_frequency": "@:terms.import Frequency"
+				}
+			}
+		},
+		"construction_cart": {
+			"title": "Construction Cart",
+			"unplanned_info": "Base has unplanned {buildings} (FIO: {fio_updated}). Demolish to ensure area, habitation and materials are accurate.",
+			"table": {
+				"building": "@:terms.buildings",
+				"built": "Built",
+				"amount": "Amount",
+				"habitation_info": "Insufficient habitation will reduce production efficiency.",
+				"planned": "Planned",
+				"materials_sum": "Materials Sum",
+				"total_cost": "Total Cost",
+				"total_weight": "@:terms.total_weight",
+				"total_volume": "@:terms.total_volume",
+				"material": "Material",
+				"storage": "Storage",
+				"stock": "Stock",
+				"stock_override": "Stock Override",
+				"need": "Need"
+			}
+		},
+		"supply_cart": {
+			"title": "Supply Cart",
+			"info": {
+				"p": "The Supply Cart provides updates on your plans needs combined with existing inventory sourced from FIO. You have the flexibility to opt for alternative storage locations to replenish your base. Tailor your selection based on whether you wish to restock workforce and production supplies or focus on a specific category, and specify the duration for which the supplied stock should sustain. Use the {link} tool for more advanced supply cart options.",
+				"link": "FIO Burn"
+			},
+			"buttons": {
+				"all": "All",
+				"workforce": "Workforce",
+				"production": "Production"
+			},
+			"table": {
+				"stock_duration": "Stock Duration (days)",
+				"storage": "Storage",
+				"xit_name": "Supply Cart",
+				"ticker": "Ticker",
+				"daily_need": "Daily Need",
+				"daily_cost": "Daily Cost",
+				"stock": "Stock",
+				"full_need": "Full Need",
+				"final_need": "Final Need",
+				"weight": "t",
+				"volume": "m³",
+				"workforce": "Workforce",
+				"production": "Production",
+				"total_cost": "Total Cost",
+				"total_weight": "@:terms.total_weight",
+				"total_volume": "@:terms.total_volume"
+			}
+		},
+		"repair_analysis": {
+			"title": "Repair Analysis",
+			"plan": "@:terms.plan",
+			"table": {
+				"select_day": "Select Day",
+				"material": "Material",
+				"amount": "Amount",
+				"cost": "Cost",
+				"total_cost": "Total Cost",
+				"total_weight": "@:terms.total_weight",
+				"total_volume": "@:terms.total_volume"
+			},
+			"graph": {
+				"select_building": "Select @:terms.buildings",
+				"individual_building": "Individual @:terms.buildings",
+				"repair_cost_breakdown": "Repair Cost Breakdown"
+			}
+		},
+		"cogm": {
+			"title": "Cost of Goods Manufactured",
+			"cogm": "@:terms.cogm",
+			"info": "The cost of goods manufactured is calculated using plan settings that factor in production efficiency, recipe runtime, building degradation, input material costs, labor requirements, and associated labor costs. The final cost is shown per unit of output, based on quantity or full cost allocation.",
+			"cx_preferences": "@:terms.cx_plural Preferences",
+			"empire_ticker": "@:terms.empire Ticker",
+			"planet_ticker": "@:terms.planet Ticker",
+			"table": {
+				"parameters": "Parameters",
+				"recipe_runtime": "@:terms.recipes Runtime",
+				"percent_day": "% / day",
+				"efficiency": "Efficiency",
+				"degradation": "Degradation",
+				"cost": "@:terms.cost",
+				"materials": "@:terms.materials_plural",
+				"input_total": "Input Total",
+				"material": "@:terms.materials",
+				"cost_unit": "ȼ / Unit",
+				"cost_total": "Cost Total",
+				"cost_total_unit": "ȼ Total",
+				"workforce": "Workforce",
+				"total_cost": "Total Cost",
+				"recipe_profit": "@:terms.recipes Profit",
+				"cost_split": "Cost Split"
+			}
+		},
+		"plan_analytics": {
+			"title": "Planning Insights",
+			"info": "Insights are aggregated from active player plans on {planet}. PRUNplanner enforces minimum sample thresholds to ensure both anonymity and statistical accuracy.",
+			"labels": {
+				"experts": "Experts",
+				"production_buildings": "Production @:terms.buildings_plural",
+				"recipes": "@:terms.recipes_plural"
+			}
+		}
+	},
+	"components": {
+		"status": {
+			"hq": "HQ",
+			"cogc": "@:{'terms.cogc'}:",
+			"area": "@:{'terms.area'}:",
+			"profit": "@:{'terms.profit'}:",
+			"experts": "@:{'terms.experts_plural'}:"
+		},
+		"configuration": {
+			"label": "Configuration",
+			"name": "Name",
+			"empire": "@:terms.empire"
+		},
+		"area": {
+			"permits": "@:terms.permits_plural",
+			"area": "@:terms.area",
+			"free": "Free"
+		},
+		"bonuses": {
+			"corp_hq": "Corp. HQ",
+			"corp_hq_tooltip": "The corporation you belong to has its headquarters on this planet (not your individual company).",
+			"cogc": "@:terms.cogc"
+		},
+		"infrastructure": {
+			"label": "Infrastructure",
+			"auto_optimize": "Auto-Optimize Habs",
+			"auto_optimize_tooltip": "Automatically optimize habitations to meet workforce needs as buildings are added.",
+			"buttons": {
+				"optimize_cost": "Optimize Cost",
+				"optimize_area": "Optimize Area"
+			}
+		},
+		"experts": {
+			"label": "Experts",
+			"warning": "Maximum number of experts on a base is 6. You currently have {expert_number} experts assigned."
+		},
+		"workforce": {
+			"label": "Workforce",
+			"table": {
+				"type": "Type",
+				"need": "Need",
+				"supply": "Supply",
+				"open": "Open",
+				"luxuries": "Luxuries",
+				"pct_eff": "Eff. %"
+			}
+		},
+		"overview": {
+			"label": "Overview",
+			"table": {
+				"daily_cost": "Daily Cost",
+				"degradation": "Degradation",
+				"plan_cost": "Plan Cost",
+				"daily_profit": "Daily Profit",
+				"roi": "ROI",
+				"profit_area": "@:terms.profit_per_area"
+			}
+		},
+		"storage": {
+			"label": "Storage",
+			"table": {
+				"weight": "t",
+				"volume": "m³",
+				"import": "@:terms.import",
+				"export": "@:terms.export",
+				"sum": "@:terms.sum",
+				"filled": "Filled"
+			}
+		},
+		"materialio": {
+			"label": "Material I/O",
+			"label_production": "Production",
+			"label_workforce": "Workforce",
+			"buttons": {
+				"toggle_weight_volume": "Toggle Weight & Volume",
+				"toggle_production_workforce": "Toggle Production & Workforce Split"
+			},
+			"table": {
+				"input": "In",
+				"output": "Out",
+				"delta": "Δ",
+				"cost_day": "ȼ / day",
+				"total_weight": "Δ t",
+				"total_volume": "Δ m³"
+			}
+		},
+		"save_as": {
+			"title": "Save As",
+			"form": {
+				"plan_name": "Name",
+				"plan_name_placeholder": "New @:terms.plan Name",
+				"empire": "@:terms.empire"
+			}
+		},
+		"production": {
+			"label": "Production",
+			"planet_resources": "@:terms.planets @:terms.resources_plural",
+			"form": {
+				"match_cogc": "Match @:terms.cogc",
+				"select_placeholder": "Select @:terms.buildings & Add to @:terms.plan"
+			},
+			"table": {
+				"building_recipe": "@:terms.buildings / @:terms.recipes",
+				"runtime": "Runtime",
+				"share": "Share",
+				"tools": "Tools"
+			}
+		},
+		"production_building": {
+			"no_recipe": "No Active @:terms.recipes_plural",
+			"qty": "Qty",
+			"buttons": {
+				"add_recipe": "@:terms.recipes"
+			},
+			"table": {
+				"expertise": "Expertise",
+				"efficiency": "Efficiency",
+				"revenue": "@:terms.revenue",
+				"area": "@:terms.area",
+				"construction": "Construction"
+			}
+		},
+		"production_recipe": {
+			"cogm_title": "Cost Of Goods Manufactured",
+			"cogm_error": "COGM Calculation not possible. Check your Management View if your Empire has a CX assigned.",
+			"buttons": {
+				"cogm": "@:terms.cogm"
+			},
+			"table": {
+				"input": "Input",
+				"time": "Time",
+				"output": "Output",
+				"daily_revenue": "ȼ / Day",
+				"profit_area": "ȼ / Area",
+				"roi": "ROI"
+			},
+			"info": {
+				"p1_strong": "Revenue / Day",
+				"p1": "is calculated by taking the daily income generated from a recipe and subtracting both the daily workforce cost (all luxuries provided) and the daily building degradation cost (1/180th of the construction cost). The income from the recipe is based on the difference between the input material costs and the output material values.",
+				"p2_strong": "ȼ / Area",
+				"p2": "is the daily revenue divided by the area for one production building and its proportionate share of the area for a CM and habs required for an optimal base of such buildings in Recipe ROI.",
+				"p3_strong": "ROI",
+				"p3": "is the time required for a continuously operating recipe to generate enough revenue to offset the building's construction cost. This considers daily degradation and workforce costs as well."
+			}
+		}
+	}
+}

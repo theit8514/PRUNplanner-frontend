@@ -1,0 +1,81 @@
+{
+	"components": {
+		"login": {
+			"title": "Login",
+			"error": "Error logging in. Please check your username and password.",
+			"buttons": {
+				"login": "Login"
+			},
+			"form": {
+				"username": "Username",
+				"password": "Password"
+			},
+			"tos": "By using PRUNplanner you agree to the {tos_link}.",
+			"tos_link": "Terms of Service",
+			"forgot": "Forgot your password? Request a {forgot_link}.",
+			"forgot_link": "Password Reset"
+		},
+		"registration": {
+			"title": "Account Information",
+			"tos": "PRUNplanner is free to use. By creating an account, you acknowledge and agree to the {tos_link}.",
+			"tos_link": "Terms of Service",
+			"result": {
+				"ok_header": "Welcome, {username}!",
+				"ok_message": "Registration succesful. You can now login to PRUNplanner.",
+				"error": "Error during registration."
+			},
+			"buttons": {
+				"register": "Create Account"
+			},
+			"form": {
+				"username": "Username",
+				"username_info": "Must be at least 3 characters long. Can't contain spaces.",
+				"password": "Password",
+				"password_info": "Must be at least 8 characters long.",
+				"email": "Email",
+				"email_placeholder": "Not mandatory, but recommended.",
+				"email_info": "Not mandatory. Increases your account security.",
+				"security_question": "Security Question",
+				"question": "Enter the name of planet {planet}. To find it, open a new Prosperous Universe buffer with the command {command}. You'll see the planets name listed under 'Name' in the planet information",
+				"planet_name": "Name"
+			}
+		},
+		"password_reset": {
+			"title": "Reset your Password",
+			"info": "Please enter the code sent to your email, along with your new password.",
+			"buttons": {
+				"send": "Reset Password"
+			},
+			"form": {
+				"email": "Email",
+				"code": "Code",
+				"password": "Password",
+				"password_info": "Must be at least 8 characters long."
+			}
+		},
+		"request_password_reset": {
+			"title": "Password Reset Request",
+			"info": "Enter the verified email address linked to your PRUNplanner account. If we recognize it, we'll send you a code to reset your password.",
+			"form": {
+				"email_placeholder": "Email Address"
+			},
+			"buttons": {
+				"send": "Request Password Reset"
+			}
+		},
+		"verify_email": {
+			"title": "Email Verification",
+			"info": "Please enter the verification code you received via email. Maybe check your spam folder.",
+			"buttons": {
+				"send": "Verify Email Address"
+			},
+			"form": {
+				"code_placeholder": "Verification Code"
+			},
+			"result": {
+				"ok": "Email address verified.",
+				"error": "Invalid code or already verified."
+			}
+		}
+	}
+}

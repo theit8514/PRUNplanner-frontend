@@ -1,0 +1,23 @@
+{
+	"information": {
+		"title": "Material Information",
+		"table": {
+			"category": "Kategorie",
+			"weight": "Gewicht",
+			"volume": "Volumen"
+		}
+	},
+	"indicator": {
+		"value": "Wert",
+		"max": "Maximum",
+		"pct_max": "% / Max"
+	},
+	"chart": {
+		"title": "Markthistorie",
+		"labels": {
+			"traded": "Handelsvolumen",
+			"low_p": "Minimaler Tagespreis",
+			"high_p": "Maximaler Tagespreis"
+		}
+	}
+}
