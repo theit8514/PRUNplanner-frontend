@@ -29,6 +29,7 @@ export const SUPPORTED_LOCALES = [
 	"ko_KR",
 	"nl_NL",
 	"pt_PT",
+	"ru_RU",
 	"zh_CN",
 ] as const;
 
@@ -36,43 +37,47 @@ export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
 export const SupportedLanguages: PSelectOption[] = [
 	{
-		label: "EN",
+		label: "English",
 		value: "en_US",
 	},
 	{
-		label: "DE",
+		label: "Deutsch",
 		value: "de_DE",
 	},
 	{
-		label: "ES",
+		label: "Español",
 		value: "es_ES",
 	},
 	{
-		label: "FR",
+		label: "Français",
 		value: "fr_FR",
 	},
 	{
-		label: "IT",
+		label: "Italiano",
 		value: "it_IT",
 	},
 	{
-		label: "JP",
+		label: "日本",
 		value: "ja_JP",
 	},
 	{
-		label: "KR",
+		label: "한국어",
 		value: "ko_KR",
 	},
 	{
-		label: "NL",
+		label: "Nederlands",
 		value: "nl_NL",
 	},
 	{
-		label: "PT",
+		label: "Português",
 		value: "pt_PT",
 	},
 	{
-		label: "CN",
+		label: "Русский",
+		value: "ru_RU",
+	},
+	{
+		label: "简体中文",
 		value: "zh_CN",
 	},
 ];
