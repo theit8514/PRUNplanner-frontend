@@ -1,30 +1,30 @@
-# Browser Storage
+# 浏览器存储
 
-To reduce the load on the backend API and improve performance, PRUNplanner stores game data directly in your browser. This allows for faster access and a smoother user experience. The tool also automatically refreshes stored data after a set period to ensure it remains up to date.
+为了降低后端 API 负载并提升性能，PRUNplanner 会将游戏数据直接存储在你的浏览器中。 这可以加快访问速度，并带来更流畅的用户体验。 该工具也会在设定时间后自动刷新已存储的数据，以确保数据保持最新。
 
-## Storage Categories
+## 存储类别
 
-- **Game Data**
-  This includes mostly static information such as materials, buildings, recipes, planetary data, and exchange details. It is sourced from FIO or, in the case of exchange data, calculated by PRUNplanner. Exchange data is refreshed more frequently to ensure accurate profit and cost calculations.
+- **游戏数据**
+  这主要包括相对静态的信息，例如物资、建筑、配方、星球数据和交易所详情。 这些数据来源于 FIO；对于交易所数据，则由 PRUNplanner 计算得出。 交易所数据会更频繁地刷新，以确保利润和成本计算准确。
 
-- **Planning Data**
-  This category contains your personal planning information, including your empires, plans, exchange preferences, and any shared plans.
+- **规划数据**
+  此类别包含你的个人规划信息，包括帝国、计划、交易所偏好设置以及任何共享计划。
 
-- **FIO Data**
-  This refers to your in-game personal data, such as storage and site information. To access this, you can link your Prosperous Universe account by providing your username and a FIO API key. PRUNplanner will periodically check for updates and automatically sync the latest data from the backend.
+- **FIO 数据**
+  这指的是你的游戏内个人数据，例如仓储和站点信息。 要访问这些数据，你可以通过提供用户名和 FIO API Key 来关联你的 Prosperous Universe 账户。 PRUNplanner 会定期检查更新，并自动从后端同步最新数据。
 
 ---
 
-# Preferences
+# 偏好设置
 
-Preferences allow you to save frequently used settings and configurations, making your planning process more efficient and personalized.
+偏好设置可以保存常用设置和配置，让你的规划过程更高效、更个性化。
 
-For example:
+例如：
 
-- **Default Empire**
-  Your preferred empire is automatically loaded when you access the empire view, saving you from having to select it manually each time.
+- **默认帝国**
+  当你打开帝国视图时，系统会自动加载你偏好的帝国，无需每次手动选择。
 
-- **Burn View Thresholds**
-  If you're using PRUNplanner in combination with FIO to monitor your base inventories, you can set red and yellow thresholds for stock levels. These thresholds help you identify when to send resupply ships and are saved in your browser for convenience.
+- **消耗视图阈值**
+  如果你将 PRUNplanner 与 FIO 结合使用来监控基地库存，可以为库存水平设置红色和黄色阈值。 这些阈值可以帮助你判断何时派出补给飞船，并会保存在浏览器中以便后续使用。
 
-Tool-wide preferences can be managed directly from your profile or adjusted within the relevant views. Plan-specific settings can be modified within each linked plan.
+工具全局偏好设置可以直接在个人资料中管理，也可以在相关视图中调整。 计划专属设置可以在各个关联计划中修改。
