@@ -1,4 +1,6 @@
 import { computed } from "vue";
+import { i18n } from "@/lib/i18n";
+import type { Composer } from "vue-i18n";
 
 import { useDB } from "@/database/composables/useDB";
 import { recipesStore, buildingsStore } from "@/database/stores";
@@ -37,6 +39,8 @@ export async function useBuildingData() {
 		get: _getStoreRecipe,
 		preload: preloadRecipes,
 	} = useDB(recipesStore);
+
+	const { t } = i18n.global as unknown as Composer;
 
 	const { getPlanetSpecialMaterials } = usePlanetData();
 	const { combineMaterialIOMinimal } = await useMaterialIOUtil();
@@ -105,19 +109,7 @@ export async function useBuildingData() {
 
 					options.push({
 						value: building.building_ticker,
-						label:
-							building.building_ticker +
-							" (" +
-							building.building_name
-								.replace(/([A-Z])/g, " $1")
-								.trim()
-								.charAt(0)
-								.toUpperCase() +
-							building.building_name
-								.replace(/([A-Z])/g, " $1")
-								.trim()
-								.slice(1) +
-							")",
+						label: `${building.building_ticker} (${t(`game.building.${building.building_ticker}`)})`,
 					});
 				}
 			});
