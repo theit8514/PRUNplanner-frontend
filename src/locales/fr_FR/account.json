@@ -1,42 +1,42 @@
 {
 	"components": {
 		"login": {
-			"title": "Login",
-			"error": "Error logging in. Please check your username and password.",
+			"title": "Se connecter",
+			"error": "Erreur de connexion. Veuillez vérifier votre nom d'utilisateur et mot de passe.",
 			"buttons": {
-				"login": "Login"
+				"login": "Connexion"
 			},
 			"form": {
-				"username": "Username",
-				"password": "Password"
+				"username": "Nom d'utilisateur",
+				"password": "Mot de passe"
 			},
-			"tos": "By using PRUNplanner you agree to the {tos_link}.",
-			"tos_link": "Terms of Service",
-			"forgot": "Forgot your password? Request a {forgot_link}.",
-			"forgot_link": "Password Reset"
+			"tos": "En utilisant PRUNplanner vous acceptez les {tos_link}.",
+			"tos_link": "Conditions d'utilisation",
+			"forgot": "Vous avez oublié votre mot de passe ? Demandez de {forgot_link}.",
+			"forgot_link": "Réinitialiser le mot de passe"
 		},
 		"registration": {
-			"title": "Account Information",
-			"tos": "PRUNplanner is free to use. By creating an account, you acknowledge and agree to the {tos_link}.",
-			"tos_link": "Terms of Service",
+			"title": "Information du compte",
+			"tos": "PRUNplanner est un outil gratuit. En créant un compte, vous reconnaissez et acceptez les {tos_link}.",
+			"tos_link": "Conditions d'utilisation",
 			"result": {
-				"ok_header": "Welcome, {username}!",
-				"ok_message": "Registration succesful. You can now login to PRUNplanner.",
-				"error": "Error during registration."
+				"ok_header": "Bienvenue {username} !",
+				"ok_message": "Inscription réussit. Vous pouvez maintenant vous connecter à PRUNplanner.",
+				"error": "Erreur lors de l'inscription."
 			},
 			"buttons": {
-				"register": "Create Account"
+				"register": "Créer un compte"
 			},
 			"form": {
-				"username": "Username",
-				"username_info": "Must be at least 3 characters long. Can't contain spaces.",
-				"password": "Password",
-				"password_info": "Must be at least 8 characters long.",
-				"email": "Email",
-				"email_placeholder": "Not mandatory, but recommended.",
-				"email_info": "Not mandatory. Increases your account security.",
-				"security_question": "Security Question",
-				"question": "Enter the name of planet {planet}. To find it, open a new Prosperous Universe buffer with the command {command}. You'll see the planets name listed under 'Name' in the planet information",
+				"username": "Nom d'utilisateur",
+				"username_info": "Doit comporter au moins 3 caractères. Ne doit pas contenir d'espaces.",
+				"password": "Mot de passe",
+				"password_info": "Doit comporter au moins 8 caractères.",
+				"email": "E-mail",
+				"email_placeholder": "Pas obligatoire, mais recommandé.",
+				"email_info": "Pas obligatoire. Améliore la sécurité de votre compte.",
+				"security_question": "Questions de sécurité",
+				"question": "Entrez le nom d'une planète ",
 				"planet_name": "Name"
 			}
 		},
