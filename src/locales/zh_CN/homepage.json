@@ -1,4 +1,8 @@
 {
+	"navigation": {
+		"registration": "Create Account",
+		"login": "Login"
+	},
 	"images": {
 		"section_title": "随时随地掌控你的帝国",
 		"section_lead": "轻松监控基地、管理生产并掌控你的计划。借助直观而强大的工具，你可以随时制定策略、扩张，并领先竞争对手一步。",
