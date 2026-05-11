@@ -7,8 +7,8 @@
 	},
 	"buttons": {
 		"csv_import_export": "@:exchanges.components.csv_import_export.title",
-		"save": "@:common.butons.save",
-		"reload": "@:common.butons.reload"
+		"save": "@:common.buttons.save",
+		"reload": "@:common.buttons.reload"
 	},
 	"configuration": {
 		"form": {
