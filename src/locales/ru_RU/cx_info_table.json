@@ -1,15 +1,15 @@
 {
-	"universe": "UNIVERSE",
+	"universe": "ВСЕЛЕННАЯ",
 	"vwap": "@:terms.vwap",
-	"traded_volume": "Traded Volume",
-	"market_live_data": "Market Live Data",
-	"supply_vs_demand": "S / D",
-	"insights": "Insights",
-	"market_breadth": "Market Breadth",
-	"liquidity_ratio": "Liquidity Ratio",
-	"demand_vs_supply": "Demand / Supply",
-	"weighted_trend": "Weighted Trend",
-	"volume_adjusted_delta": "Volume-Adjusted Delta",
-	"price_cohesion": "Price Cohesion",
-	"variance_index": "Variance Index"
+	"traded_volume": "Объем продаж",
+	"market_live_data": "Рыночные данные в реальном времени",
+	"supply_vs_demand": "Пред / Спрос",
+	"insights": "Аналитика",
+	"market_breadth": "Охват рынка",
+	"liquidity_ratio": "Коэффициент ликвидности",
+	"demand_vs_supply": "Предложение / Спрос",
+	"weighted_trend": "Взвешенный тренд",
+	"volume_adjusted_delta": "Изменение с учётом объёма",
+	"price_cohesion": "Ценовая согласованность",
+	"variance_index": "Индекс отклонений"
 }
