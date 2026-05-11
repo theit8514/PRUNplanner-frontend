@@ -44,8 +44,8 @@
 		"material_costs": "材料成本",
 		"net_production": "净生产",
 		"net_consumption": "净消耗",
-		"exclusive_production": "Exclusive Production",
-		"exclusive_consumption": "Exclusive Consumption"
+		"exclusive_production": "仅生产物资",
+		"exclusive_consumption": "仅消耗物资"
 	},
 	"opportunities": {
 		"headline": "生产机会",
