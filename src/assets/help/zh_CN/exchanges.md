@@ -1,33 +1,33 @@
-# Price Calculation: VWAP
+# 价格计算：VWAP
 
-PRUNplanner utilizes a Volume-Weighted Average Price (VWAP) to estimate a material's fair market value. Unlike a simple average, VWAP gives more "weight" to trades with higher volumes, providing a stable and realistic benchmark by focusing on where the bulk of the market liquidity actually sits.
+PRUNplanner 使用成交量加权平均价（VWAP）来估算物资的合理市场价值。 与简单平均价不同，VWAP 会给予成交量更大的交易更高“权重”，通过关注市场主要流动性实际集中在哪里，提供更稳定、更贴近现实的价格基准。
 
-Relying on current Ask (Sell) or Bid (Buy) prices can be misleading because they often represent a single outlier or a tiny fraction of the volume you actually need. These prices change by the day and rarely reflect the true cost. By using VWAP, you filter out market noise and "lowball" orders, ensuring your profit projections are based on actual trades rather than temporary listings.
+仅依赖当前 Ask（卖价）或 Bid（买价）可能会产生误导，因为它们往往只是单个异常报价，或只代表你实际所需成交量中的很小一部分。 这些价格每天都会变化，而且很少能反映真实成本。 使用 VWAP 可以过滤市场噪音和“低价钓鱼”订单，确保你的利润预测基于实际成交，而不是临时挂单。
 
-# Price Priorities
+# 价格优先级
 
-When PRUNplanner calculates prices, it follows this order of preference:
+PRUNplanner 计算价格时，会按照以下优先顺序：
 
-- Planet Material-based
-- Empire Material-based
-- Planet CX-based
-- Empire CX-based
-- Fallback: 30 Day Universe VWAP
+- 星球物资价格
+- 帝国物资价格
+- 星球 CX 价格
+- 帝国 CX 价格
+- 备用：30 天全宇宙 VWAP
 
-# Preference Types
+# 偏好类型
 
-You can set preferences as BUY, SELL, or BOTH:
+你可以将偏好设置为 BUY、SELL 或 BOTH：
 
-- **BUY** is used when the material is consumed.
-- **SELL** is used when the material is produced.
-- **BOTH** applies to both cases.
+- BUY 用于该物资被消耗时。
+- SELL 用于该物资被生产时。
+- BOTH 适用于以上两种情况。
 
-If only one type is set, and the calculation requires the other, PRUNplanner will check for a higher-level preference. If none exists, the value defaults to 0.
+如果只设置了一种类型，而计算需要另一种类型，PRUNplanner 会检查更高层级的偏好设置。 如果不存在，则该值默认为 0。
 
-# Examples
+# 示例
 
-1: The price for LST should be used. You haven’t defined a Material-based preference for Limestone. The system checks your CX preferences: first at the Planet level, then at the Empire level. Since you’ve defined both, the Planet CX preference takes priority.
+1：应使用 LST 的价格。 你尚未为 Limestone 定义基于物资的偏好设置。 系统会检查你的 CX 偏好设置：先检查星球层级，再检查帝国层级。 由于两者都已定义，因此星球 CX 偏好设置优先。
 
-2: The price for NS should be used. You’ve defined Material-based preferences for NS at both the Empire and Planet levels. The Planet Material-based preference overrides the Empire one. Because a Material-based preference exists, no CX preference is applied.
+2：应使用 NS 的价格。 你已在帝国和星球层级都为 NS 定义了基于物资的偏好设置。 星球层级的基于物资偏好设置会覆盖帝国层级的设置。 由于已存在基于物资的偏好设置，因此不会应用 CX 偏好设置。
 
-3: The price for BBH should be used. You have not set any Material-based or CX-based preferences. The price for BBH therefore is calculated with the VWAP 30D Universe metric.
+3：应使用 BBH 的价格。 你尚未设置任何基于物资或基于 CX 的偏好设置。 因此，BBH 的价格会使用 30 天全宇宙 VWAP 指标计算。
