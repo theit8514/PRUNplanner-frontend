@@ -36,7 +36,7 @@
 				"email_placeholder": "Pas obligatoire, mais recommandé.",
 				"email_info": "Pas obligatoire. Améliore la sécurité de votre compte.",
 				"security_question": "Questions de sécurité",
-				"question": "Entrez le nom d'une planète ",
+				"question": "Entrez le nom de la planète {planet}. Pour le trouver, ouvrez un nouvel onglet Prosperous Universe avec la commande {command}. Vous verrez le nom des planètes listées sous 'Nom' dans les informations de la planète",
 				"planet_name": "Name"
 			}
 		},
