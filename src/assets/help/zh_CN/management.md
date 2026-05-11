@@ -1,15 +1,15 @@
-# Core Concepts
+# 核心概念
 
-PRUNplanner consists of three main components that allow you to plan and manage your Prosperous Universe empire:
+PRUNplanner 由三个主要组件组成，帮助你规划并管理 Prosperous Universe 中的帝国：
 
-## Plans
+## 计划
 
-Plans are the backbone of what you do in PRUNplanner. They consist of all buildings, productions and bonuses of a base you can put down in Prosperous Universe. You can create new Plans by searching for the planet you would like to create a base for. Also, a Plan should be assigned a CX Exchange preference, as well as to an Empire. Please note, each Plan can be assigned to multiple empires and therefore reused.
+计划是你在 PRUNplanner 中进行规划的核心。 它们包含你可以在 Prosperous Universe 中建立的一个基地的所有建筑、生产和加成。 你可以通过搜索想要建立基地的星球来创建新计划。 此外，计划还应分配一个 CX 交易所偏好设置，并归属于一个帝国。 请注意，每个计划都可以分配给多个帝国，因此可以重复使用。
 
-## Empires
+## 帝国
 
-An Empire is a collection of Plans (e.g. all the bases you currently have settled in Prosperous Universe, or that you would like to settle, all interconnected together). Each empire is like a container that consists of multiple plans. Additionally, a single CX Exchange preference can be assigned to each Empire.
+帝国是一组计划的集合（例如你当前已在 Prosperous Universe 中建立的所有基地，或你未来想建立并相互连接的基地)。 每个帝国都像一个容器，包含多个计划。 此外，每个帝国都可以分配一个 CX 交易所偏好设置。
 
 ## CX
 
-The CX Settings allow you to define market preferences for the pricing of materials. Each CX Exchange can be used in multiple Empires. However, each Empire can only have a single CX Exchange preference assigned to it. This ensures that prices are properly calculated for individual plans that are part of the Empire.
+CX 设置允许你为物资定价定义市场偏好。 每个 CX 交易所偏好设置都可以用于多个帝国。 但是，每个帝国只能分配一个 CX 交易所偏好设置。 这可以确保该帝国下各个计划的价格都能被正确计算。
