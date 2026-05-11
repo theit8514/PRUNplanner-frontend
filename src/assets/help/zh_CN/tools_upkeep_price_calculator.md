@@ -1,15 +1,15 @@
-The Upkeep Price Calculator helps you find the most cost-effective materials and buildings to fulfill population upkeep needs (Safety, Health, Comfort, Culture, and Education) on governed planets.
+维护价格计算器可以帮助你在受治理星球上，找到满足人口维护需求（安全、健康、舒适、文化和教育）时最具成本效益的物资和建筑。
 
-## Material Details
+## 物资详情
 
-Lists all materials consumed by buildings for the selected need, sorted by cost efficiency.
+列出为满足所选需求而被建筑消耗的所有物资，并按成本效率排序。
 
-- **Material**: The material consumed by the building.
-- **Building**: The infrastructure building that consumes the material.
-- **$/Need**: Cost per unit of need provided. Lower is better.
-- **CX Price**: Market price based on your exchange preferences.
-- **Qty/Day**: Material consumed per day by the building.
+- **物资**：该建筑消耗的物资。
+- **建筑**：消耗该物资的基础设施建筑。
+- **$/需求**：每单位需求的提供成本。 数值越低越好。
+- CX 价格：根据你的交易所偏好设置计算的市场价格。
+- **数量/天**：该建筑每日消耗的物资数量。
 
-Materials without a market price are shown at the bottom of the list.
+没有市场价格的物资会显示在列表底部。
 
-Buildings providing multiple needs (like EMC for Safety+Health, or WCE for Health+Comfort) are accounted for in the calculations.
+能同时提供多种需求的建筑也会计入计算（例如 EMC 提供安全 + 健康，WCE 提供健康 + 舒适）。
