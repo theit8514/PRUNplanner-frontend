@@ -1,11 +1,11 @@
 {
-	"view_title": "Upkeep Price Calculator",
-	"title": "Upkeep Price Calculator",
+	"view_title": "Калькулятор стоимости содержания",
+	"title": "Калькулятор стоимости содержания",
 	"form": {
-		"cx_preference": "CX Preference"
+		"cx_preference": "Настройки CX"
 	},
 	"calculator": {
-		"calculating": "Calculating Upkeep Material Prices",
+		"calculating": "Расчет расходов на материалы за содержание",
 		"needs": {
 			"safety": "@:game.upkeep.safety",
 			"health": "@:game.upkeep.health",
@@ -14,13 +14,13 @@
 			"education": "@:game.upkeep.education"
 		},
 		"details": {
-			"title": "Material Details",
+			"title": "Детали материала",
 			"table": {
 				"material": "@:terms.materials",
 				"building": "@:terms.buildings",
-				"price_need": "ȼ/Need",
-				"cx_price": "@:terms.cx Price",
-				"qty_day": "Qty/Day"
+				"price_need": "ȼ/Нужно",
+				"cx_price": "@:terms.cx Цена",
+				"qty_day": "Кол-во/день"
 			}
 		}
 	}
