@@ -29,23 +29,23 @@
 		"permits_planned": "Всего @:terms.permits запланировано: {permits}"
 	},
 	"material_io": {
-		"production_planets": "Production Planets",
-		"consumption_planets": "Consumption Planets"
+		"production_planets": "Производственные Планеты",
+		"consumption_planets": "Планеты Потребления"
 	},
 	"filters": {
-		"display": "Display",
-		"consumables": "Consumables",
-		"all": "All",
-		"loadbalance": "Loadbalance"
+		"display": "Дисплей",
+		"consumables": "Потребляемые",
+		"all": "Всё",
+		"loadbalance": "Баланс нагрузки"
 	},
 	"analysis": {
-		"profitable_plans": "Profitable Plans",
-		"material_profits": "Material Profits",
-		"material_costs": "Material Costs",
-		"net_production": "Net Production",
-		"net_consumption": "Net Consumption",
-		"exclusive_production": "Exclusive Production",
-		"exclusive_consumption": "Exclusive Consumption"
+		"profitable_plans": "Прибыльные планы",
+		"material_profits": "Материальные Выгоды",
+		"material_costs": "Стоимость материалов",
+		"net_production": "Объем производства",
+		"net_consumption": "Объем потребления",
+		"exclusive_production": "Эксклюзивное производство",
+		"exclusive_consumption": "Эксклюзивное потребление"
 	},
 	"opportunities": {
 		"headline": "Production Opportunities",
