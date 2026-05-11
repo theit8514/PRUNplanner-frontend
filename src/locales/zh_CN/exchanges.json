@@ -1,9 +1,9 @@
 {
-	"view_title": "Exchanges",
-	"title": "Exchanges",
+	"view_title": "交易所",
+	"title": "交易所",
 	"errors": {
-		"title": "No Preferences",
-		"message": "You don't have exchange preferences. Head to Management and create your first."
+		"title": "无偏好设置",
+		"message": "你还没有交易所偏好设置。请前往“管理”创建第一个偏好设置。"
 	},
 	"buttons": {
 		"csv_import_export": "@:exchanges.components.csv_import_export.title",
@@ -12,43 +12,43 @@
 	},
 	"configuration": {
 		"form": {
-			"preference_name": "Preference Name",
-			"empire_preferences": "Empire Preferences",
-			"exchange": "Exchange",
+			"preference_name": "偏好名称",
+			"empire_preferences": "帝国偏好设置",
+			"exchange": "交易所",
 			"ticker": "@:terms.material_ticker"
 		}
 	},
 	"preference_type": {
-		"BUY": "BUY",
-		"SELL": "SELL",
-		"BOTH": "BOTH"
+		"BUY": "买入",
+		"SELL": "卖出",
+		"BOTH": "买入和卖出"
 	},
 	"components": {
 		"ticker": {
-			"no_data": "No @:terms.material_ticker Preferences Configured",
+			"no_data": "未配置 @:terms.material_ticker 偏好设置",
 			"material_placeholder": "@:terms.materials"
 		},
 		"exchanges": {
-			"no_data": "No @:terms.exchanges Preference Configured"
+			"no_data": "未配置 @:terms.exchanges 偏好设置"
 		},
 		"planet_preferences": {
-			"title": "Planet Preferences",
+			"title": "星球偏好设置",
 			"form": {
 				"exchange": "@:terms.exchange",
 				"ticker": "@:terms.material_ticker"
 			},
 			"table": {
 				"planet": "@:terms.planets",
-				"exchange_preference": "@:terms.exchanges Preferences",
-				"ticker_preference": "@:terms.material_ticker Preferences"
+				"exchange_preference": "@:terms.exchanges 偏好设置",
+				"ticker_preference": "@:terms.material_ticker 偏好设置"
 			}
 		},
 		"csv_import_export": {
-			"title": "Import / Export CSV",
-			"warning": "Warning: Importing deletes all existing properties and imports the new ones. You need to save your imported preferences after uploading the CSV file or use the reload button to discard them.",
+			"title": "导入 / 导出 CSV",
+			"warning": "警告：导入会删除所有现有属性并导入新的属性。上传 CSV 文件后，你需要保存导入的偏好设置；也可以使用重新加载按钮放弃更改。",
 			"buttons": {
-				"import": "Import Settings",
-				"export": "Export Settings"
+				"import": "导入设置",
+				"export": "导出设置"
 			}
 		}
 	}
