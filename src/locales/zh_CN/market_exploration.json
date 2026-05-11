@@ -1,41 +1,41 @@
 {
-	"view_title": "Market Exploration",
-	"title": "Market Exploration",
-	"switch_material": "Switch Material",
+	"view_title": "市场探索",
+	"title": "市场探索",
+	"switch_material": "切换物料",
 	"kpis": {
-		"universe_vwap_7d": "Universe VWAP @:terms.7d",
-		"universe_traded_7d": "Universe Traded Volume @:terms.7d",
-		"universe_market_delta": "Universe Market Delta",
-		"percent_trend": "% Trend",
-		"30d": "@:{'terms.30d'}:",
-		"supply": "@:{'terms.supply'}:",
-		"demand": "@:{'terms.demand'}:",
-		"weighted_trend": "Weighted Trend",
-		"volume_adjusted_delta": "Volume-Adjusted Delta",
-		"price_cohesion": "Price Cohesion",
-		"variance_index": "Variance Index"
+		"universe_vwap_7d": "宇宙VWAP @:terms.7d",
+		"universe_traded_7d": "宇宙交易量 @:terms.7d",
+		"universe_market_delta": "宇宙市场差值",
+		"percent_trend": "% 趋势",
+		"30d": "@:{'terms.30d'}：",
+		"supply": "@:{'terms.supply'}：",
+		"demand": "@:{'terms.demand'}：",
+		"weighted_trend": "加权趋势",
+		"volume_adjusted_delta": "成交量调整差值",
+		"price_cohesion": "价格一致性",
+		"variance_index": "方差指数"
 	},
 	"chart": {
-		"title": "Market Chart",
+		"title": "市场图表",
 		"intervals": {
-			"daily": "Daily",
-			"weekly": "Weekly",
-			"monthly": "Monthly"
+			"daily": "每日",
+			"weekly": "每周",
+			"monthly": "每月"
 		}
 	},
 	"market_data": {
-		"title": "Market Data"
+		"title": "市场数据"
 	},
 	"overview": {
-		"title": "Material Market Overview",
+		"title": "材料市场概览",
 		"table": {
 			"material": "@:terms.materials",
 			"vwap_7d": "@:terms.vwap @:terms.7d",
 			"vwap_30d": "@:terms.vwap @:terms.30d",
-			"trend": "Trend",
+			"trend": "趋势",
 			"volume_7d": "@:terms.volume @:terms.7d",
 			"volume_30d": "@:terms.volume @:terms.30d",
-			"details": "Details"
+			"details": "详情"
 		}
 	}
 }
