@@ -1,7 +1,7 @@
-The **Empire view** gives you a complete overview of your plans and their combined production within an empire. Here, you can also adjust your faction and permits, since both affect your production bonuses. Plans can be assigned to an empire in the **Management view**.
+Раздел «Империя» показывает полный обзор ваших планов и их совокупного производства в рамках империи. Здесь вы также можете изменить свою фракцию и разрешения, так как оба параметра влияют на бонусы к производству. Планы можно назначить империи в разделе «Управление».
 
-In addition to tracking production, the empire automatically calculates your **daily profit, costs** (including materials, workforce, and degradation), and total **revenue** based on your personal exchange preferences. These figures aren’t just a simple sum of your plans—they use weighted prices that take both production and consumption into account across the entire empire.
+Помимо отслеживания производства, империя автоматически рассчитывает ваш ежедневный доход, расходы (включая материалы, рабочую силу и износ), а также общую выручку на основе ваших личных настроек биржи. Эти показатели не являются простой суммой ваших планов — они используют взвешенные цены, учитывающие как производство, так и потребление по всей империи.
 
-The **Empire Material I/O** view shows how much of each material your empire produces and where. You can filter consumables in or out, or focus purely on load balancing, comparing production and consumption at a glance.
+Раздел «Материальный ввод/вывод империи» показывает сколько каждого материала производит ваша империя и где именно. Вы можете фильтровать расходные материалы или сосредоточиться исключительно на балансировке нагрузки, сравнивая производство и потребление с первого взгляда.
 
-Finally, the **Empire Analysis** provides charts that break down your profits by plans and materials. You can also explore what your empire net produces or consumes, as well as which materials are produced or consumed exclusively.
+Наконец, раздел «Анализ империи» предоставляет графики с разбивкой вашей прибыли по планам и материалам. Вы также можете посмотреть итоговый баланс производства и потребления империи, а также какие материалы только производятся или только потребляются.
