@@ -1,41 +1,41 @@
 {
-	"view_title": "Market Exploration",
-	"title": "Market Exploration",
-	"switch_material": "Switch Material",
+	"view_title": "Esplorazione Dei Mercati",
+	"title": "Esplorazione Dei Mercati",
+	"switch_material": "Cambia Materiale",
 	"kpis": {
 		"universe_vwap_7d": "Universe VWAP @:terms.7d",
-		"universe_traded_7d": "Universe Traded Volume @:terms.7d",
-		"universe_market_delta": "Universe Market Delta",
-		"percent_trend": "% Trend",
+		"universe_traded_7d": "Volume scambiato nell'universo @:terms.7d",
+		"universe_market_delta": "Delta del Mercato Universale",
+		"percent_trend": "% Tendenza",
 		"30d": "@:{'terms.30d'}:",
 		"supply": "@:{'terms.supply'}:",
 		"demand": "@:{'terms.demand'}:",
-		"weighted_trend": "Weighted Trend",
-		"volume_adjusted_delta": "Volume-Adjusted Delta",
-		"price_cohesion": "Price Cohesion",
-		"variance_index": "Variance Index"
+		"weighted_trend": "Tendenza Pesata",
+		"volume_adjusted_delta": "Delta rispetto al Volume",
+		"price_cohesion": "Stabilità dei prezzi",
+		"variance_index": "Indice di varianza"
 	},
 	"chart": {
-		"title": "Market Chart",
+		"title": "Grafico Del Mercato",
 		"intervals": {
-			"daily": "Daily",
-			"weekly": "Weekly",
-			"monthly": "Monthly"
+			"daily": "Giornaliero",
+			"weekly": "Settimanale",
+			"monthly": "Mensile"
 		}
 	},
 	"market_data": {
-		"title": "Market Data"
+		"title": "Dati di mercato"
 	},
 	"overview": {
-		"title": "Material Market Overview",
+		"title": "Panoramica del Mercato delle Materie",
 		"table": {
 			"material": "@:terms.materials",
 			"vwap_7d": "@:terms.vwap @:terms.7d",
 			"vwap_30d": "@:terms.vwap @:terms.30d",
-			"trend": "Trend",
+			"trend": "Tendenza",
 			"volume_7d": "@:terms.volume @:terms.7d",
 			"volume_30d": "@:terms.volume @:terms.30d",
-			"details": "Details"
+			"details": "Dettagli"
 		}
 	}
 }
