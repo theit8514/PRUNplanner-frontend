@@ -1,5 +1,5 @@
-The **Planet Search** lets you quickly find planets by name or ID, or use the Advanced Search to narrow results with multiple parameters.
+星球搜索 可以让你通过名称或 ID 快速查找星球，也可以使用高级搜索，通过多个参数缩小结果范围。
 
-With Advanced Search, you can look for up to four specific materials, filter by COGC programs, or select planets with certain features such as fertility or a warehouse. You can also search by distance from a chosen system or by environment parameters like surface type, gravity, temperature, or pressure.
+通过高级搜索，你可以查找最多四种指定物资，按 CoGC 项目筛选，或选择具有特定特征的星球，例如肥沃度或仓库。 你也可以按与指定星系的距离搜索，或按环境参数筛选，例如地表类型、重力、温度或压力。
 
-Planet Search is also the starting point for creating a new plan: simply find the planet you’re interested in and begin your plan from there.
+星球搜索也是创建新计划的起点：只需找到你感兴趣的星球，就可以从那里开始创建计划。
