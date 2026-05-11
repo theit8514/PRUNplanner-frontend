@@ -1,12 +1,12 @@
-# Calculations
+# 计算
 
-Plan calculations are based on the production and storage data of your plans. To get accurate results, you’ll need to have your data synced via FIO. Please note that degradation is not included in these calculations.
+计划计算基于你的计划中的生产和仓储数据。 为了获得准确结果，你需要通过 FIO 同步数据。 请注意，这些计算不包含建筑损耗。
 
-# Thresholds
+# 阈值
 
-PRUNplanner uses color thresholds to highlight important values:
+PRUNplanner 使用颜色阈值来突出显示重要数值：
 
-- Yellow indicates that a value is approaching a limit or may need attention soon.
-- Red means the threshold has been exceeded and requires immediate attention.
+- 黄色表示某个数值正在接近限制，或可能很快需要关注。
+- 红色表示已经超过阈值，需要立即关注。
 
-These thresholds help you quickly spot potential issues in your production or storage before they become critical.
+这些阈值可以帮助你在生产或仓储问题变得严重之前，快速发现潜在风险。
