@@ -1,51 +1,51 @@
-This system provides near-real-time monitoring of Commodity Exchanges (CX) via FIO API Webhooks that PRUNplanner processes and streams to your browser. It is designed to allow you to monitor market movements and create alerts for automated reaction to changes.
+该系统通过 FIO API Webhooks 近实时监控商品交易所（CX），并由 PRUNplanner 处理后推送到你的浏览器。 它用于帮助你监控市场变动，并创建提醒，以便自动响应变化。
 
-# Data Stream Mechanics
+# 数据流机制
 
-FIO API receives data from Prosperous Universe once a user sees a change happening and sends data to PRUNplanner bundled every 30 seconds. PRUNplanner itself will persist the last 500 datapoints so you don't start from scratch when opening this view.
+当有用户在 Prosperous Universe 中看到变化时，FIO API 会接收数据，并每 30 秒批量发送给 PRUNplanner。 PRUNplanner 本身会保留最近 500 个数据点，因此你打开此视图时不必从零开始。
 
-Please note: there won't be datapoints for all available materials and exchanges, only those were a change happened and a user accessed it ingame. The live overview will continuously build up the more data was received.
+请注意：并不是所有物资和交易所都会有数据点，只有当某项数据发生变化且有用户在游戏内访问过时，才会产生数据点。 随着接收到更多数据，实时概览会持续累积完善。
 
-# Live View
+# 实时视图
 
-The right hand side of this view display the received datapoints based on their material ticker and exchange combination, showing you the current traded price, bid and ask prices, the spread between them and the currently active buy and sell volumes.
+此视图右侧会按物资代码与交易所组合显示接收到的数据点，包括当前成交价、买价和卖价、买卖价差，以及当前活跃的买入量和卖出量。
 
-Prices have another indicator showing the latest change in percent.
+价格旁还会显示一个指标，表示最新百分比变化。
 
-# Alert Engine
+# 提醒引擎
 
-This system uses a recursive logic engine to evaluate incoming data against previously received data and your custom alert configuration.
+该系统使用递归逻辑引擎，将传入数据与此前接收的数据以及你的自定义提醒配置进行比对。
 
-## Setup
+## 设置
 
-### Logical Operators
+### 逻辑运算符
 
-You can chain conditions to reduce noise:
+你可以串联多个条件来减少噪音：
 
-- **AND**: All conditions must be met (e.g. Price > 100 **AND** Volume != Previous Volume)
-- **OR**: Any single condition triggers the alert
+- **AND**：必须满足所有条件（例如 Price > 100 AND Volume != Previous Volume）
+- **OR**：任一条件满足即可触发提醒
 
-### Comparisons:
+### 比较方式：
 
-- **GT**: Greater Than
-- **LT**: Less Than
-- **EQ**: Equal
-- **NEQ**: Not Equal
+- **GT**：大于
+- **LT**：小于
+- **EQ**：等于
+- **NEQ**：不等于
 
-## Comparison Targets:
+## 比较目标：
 
-- **VALUE**: Compares a field to a fixed number / text.
-  - Hard price floors or ceiling breaks, filter on specific materials or exchanges.
-- **Previous**: Compares current data to the immediate last data.
-  - Detecting "Flash" changes or sudden spikes.
-- **Offset %**: Compares to the last tick with a percentage offset.
-  - Monitoring volatility (e.g. "Alert if prices rise > 2%"). You can setup a OR condition with GT / LT combining positive and negative changes.
+- **VALUE**：将字段与固定数字 / 文本进行比较。
+  - 用于硬性价格下限或突破上限，也可按特定物资或交易所筛选。
+- **Previous**：将当前数据与上一条数据进行比较。
+  - 用于检测“闪变”或突然飙升。
+- **Offset %**：按百分比偏移与上一条 tick 数据进行比较。
+  - 用于监控波动（例如“价格上涨超过 2% 时提醒”）。 你可以使用 GT / LT 组合正向和负向变化，设置 OR 条件。
 
-## Setting up Alerts
+## 设置提醒
 
-- Define the scope: Choose a field
-- Select severity: Low, Medium, High
-- Configure logic: Use operators, comparisons and comparison targets
-- Change the Alerts name
-- Enable the detector
-- Save
+- 定义范围：选择一个字段
+- 选择严重程度：低、中、高
+- 配置逻辑：使用运算符、比较方式和比较目标
+- 修改提醒名称
+- 启用检测器
+- 保存

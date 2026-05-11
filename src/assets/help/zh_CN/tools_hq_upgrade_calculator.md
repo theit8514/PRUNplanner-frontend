@@ -1,1 +1,1 @@
-The HQ Upgrade Calculator helps you see exactly which materials and costs are required to upgrade your company headquarters to the next level. You can also adjust it by overwriting stock detected from your FIO integration, and it will automatically apply your exchange preferences to calculate the upgrade price.
+HQ 升级计算器可以帮助你准确了解将公司总部升级到下一级所需的物资和成本。 你也可以通过覆盖 FIO 集成检测到的库存来进行调整，系统会自动应用你的交易所偏好设置来计算升级价格。

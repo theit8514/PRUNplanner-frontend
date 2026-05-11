@@ -1,4 +1,8 @@
 {
+	"navigation": {
+		"registration": "Create Account",
+		"login": "Login"
+	},
 	"images": {
 		"section_title": "Command Your Empire from Anywhere",
 		"section_lead": "Monitor bases, manage production, and control your plans effortlessly. With intuitive, powerful tools, you can strategize, expand, and outsmart your rivals wherever you are.",
@@ -54,7 +58,7 @@
 			"text": "An Empire is a collection of plans (e.g. all the bases you currently have settled in Prosperous Universe, or that you would like to settle, all interconnected together). Each empire is like a container that consists of multiple plans. Additionally, an exchange preference can be assigned to each Empire."
 		},
 		"exchanges": {
-			"label": "Exchanges",
+			"label": "Borse",
 			"text": "The Exchange Settings allow you to define market preferences for the pricing of materials. Each preference can be used in multiple Empires. However, each Empire can only have a single Exchange preference assigned to it. This ensures that prices are properly calculated for all individual plans that are part of the Empire."
 		}
 	},

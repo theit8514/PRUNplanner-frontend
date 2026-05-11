@@ -1,11 +1,11 @@
-The Resource Overview tool builds upon the optimal planetary setups developed collaboratively with the ROI Overview. The purpose of these ROI tools is to normalize the profitability of all buildings in the game to the profit per unit of area, as that is the only common shared metric. This is extrapolated out to "profit per 500 area" assuming a full base of these buildings. This allows one to compare the profitability of building A to building B purely on the merits of their recipes. This tool identifies planets where your selected resource is available and calculates its extraction using the required COL, RIG, or EXT. All calculations assume COGC alignment, 5 experts, and the planetary conditions provided, while also considering your chosen CX preference.
+资源概览工具基于与 ROI 概览协作开发的最优星球配置。 这些 ROI 工具的目的，是将游戏中所有建筑的盈利能力统一换算为单位区域利润，因为这是唯一通用的比较指标。 在假设整个基地都由这类建筑组成的情况下，该数值会进一步推算为“每 500 区域利润”。 这样就可以仅根据配方本身，对建筑 A 和建筑 B 的盈利能力进行比较。 该工具会识别哪些星球拥有你选择的资源，并使用所需的 COL、RIG 或 EXT 计算其开采收益。 所有计算都假设已匹配 COGC、拥有 5 名专家，并采用所提供的星球条件，同时也会考虑你选择的 CX 偏好设置。
 
-**Please note**: The Resource ROI Overview assumes the COGC being active as "Resource Extraction". Please check with Planet Search if the planet is actually running that program or another one.
+请注意：资源 ROI 概览假设当前生效的 COGC 为“资源开采”。 请通过星球搜索确认该星球实际运行的是该项目还是其他项目。
 
-# Optimal Setups
+# 最优配置
 
-Optimal setups were created with a linear model to calculate the optimal number of production buildings and required habitations to maximize the use of a 500-area base.
+最优配置通过线性模型生成，用于计算生产建筑和所需住房的最佳数量，以最大化利用 500 区域基地。
 
-- **RIG**: 35 RIG, 11 HB1, 1 STO
-- **EXT**: 14 EXT, 8 HB1, 1 HBB, 1 STO
-- **COL**: 22 COL, 11 HB1, 1 STO
+- **RIG**：35 RIG，11 HB1，1 STO
+- **EXT**：14 EXT，8 HB1，1 HBB，1 STO
+- **COL**：22 COL，11 HB1，1 STO

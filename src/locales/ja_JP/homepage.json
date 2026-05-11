@@ -1,4 +1,8 @@
 {
+	"navigation": {
+		"registration": "Create Account",
+		"login": "Login"
+	},
 	"images": {
 		"section_title": "Command Your Empire from Anywhere",
 		"section_lead": "Monitor bases, manage production, and control your plans effortlessly. With intuitive, powerful tools, you can strategize, expand, and outsmart your rivals wherever you are.",

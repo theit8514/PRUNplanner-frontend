@@ -9,10 +9,10 @@
 	},
 	"getting_started": {
 		"title": "Getting Started",
-		"image_label": "Management",
+		"image_label": "Gestione",
 		"l1": {
 			"title": "Create an Empire in {link}:",
-			"link": "Management",
+			"link": "Gestione",
 			"p": "By default, you'll already have one. But you can add more for different factions or regions. Assign a name and faction, and save."
 		},
 		"l2": {
@@ -45,7 +45,7 @@
 			"p": "An Empire is a container of multiple plans - essentially your entire network of bases. Empires keep your supply chains organized and allow you to manage multiple bases together."
 		},
 		"p3": {
-			"title": "Exchanges",
+			"title": "Borse",
 			"p": "Exchange settings define how prices are calculated. Each Empire uses one Exchange for consistency. You can reuse the same Exchange setup across empires if needed."
 		}
 	},
