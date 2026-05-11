@@ -1,5 +1,5 @@
-The Production Chains view lets you explore all the buildings and materials involved in producing a specific good. You can follow the entire chain step by step to see exactly how your chosen product is created.
+生产链视图可以让你探索生产某一特定商品所涉及的所有建筑和物资。 你可以逐步追踪整条生产链，清楚了解所选产品是如何被生产出来的。
 
-To make analysis easier, you can color nodes by material category, workforce type, or required building expertise. If a chain offers multiple recipe options, you can fine-tune your selection until you’ve built the chain that best fits your needs.
+为了便于分析，你可以按物资类别、劳动力类型或所需建筑专业技能为节点着色。 如果某条生产链有多个配方选项，你可以微调选择，直到构建出最符合你需求的生产链。
 
-The tool also provides an overview of all building expertises and workforce types required across the entire chain, giving you a clear picture of what it takes to complete production.
+该工具还会概览整条生产链所需的所有建筑专业技能和劳动力类型，让你清楚了解完成生产所需的条件。
