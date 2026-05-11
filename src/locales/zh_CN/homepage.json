@@ -1,7 +1,7 @@
 {
 	"navigation": {
-		"registration": "Create Account",
-		"login": "Login"
+		"registration": "创建账户",
+		"login": "登录"
 	},
 	"images": {
 		"section_title": "随时随地掌控你的帝国",
