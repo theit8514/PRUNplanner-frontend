@@ -66,14 +66,14 @@
 		}
 	},
 	"preferences": {
-		"title": "Preferences",
+		"title": "Opzioni",
 		"description": "Le opzioni sono salvate localmente nel browser e non sono ancora sincronizzate con il backend. Usa questo pannello per rivedere e personalizzare le opzioni di PRUNplanner.",
 		"form": {
 			"tool_preferences": "Opzioni degli strumenti",
 			"language": "Lingua",
 			"language_note": "Vogliamo rendere PRUNplanner accessibile a tutti. Se vuoi vedere lo strumento nella tua lingua madre - o aiutaci a migliorare una traduzione esistente - unisciti al nostro progetto di localizzazione su {link}.",
 			"default_empire": "Impero Predefinito",
-			"default_cx": "Default CX",
+			"default_cx": "Borsa Predefinita",
 			"fio_burn": "FIO Burn",
 			"red_threshold": "Soglia rosso",
 			"yellow_threshold": "Soglia giallo",
