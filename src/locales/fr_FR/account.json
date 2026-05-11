@@ -37,44 +37,44 @@
 				"email_info": "Pas obligatoire. Améliore la sécurité de votre compte.",
 				"security_question": "Questions de sécurité",
 				"question": "Entrez le nom de la planète {planet}. Pour le trouver, ouvrez un nouvel onglet Prosperous Universe avec la commande {command}. Vous verrez le nom des planètes listées sous 'Nom' dans les informations de la planète",
-				"planet_name": "Name"
+				"planet_name": "Nom"
 			}
 		},
 		"password_reset": {
-			"title": "Reset your Password",
-			"info": "Please enter the code sent to your email, along with your new password.",
+			"title": "Réinitialisez votre mot de passe",
+			"info": "Veuillez entrer le code reçu par e-mail ainsi que votre nouveau mot de passe.",
 			"buttons": {
-				"send": "Reset Password"
+				"send": "Réinitialisation du mot de passe"
 			},
 			"form": {
-				"email": "Email",
+				"email": "E-mail",
 				"code": "Code",
-				"password": "Password",
-				"password_info": "Must be at least 8 characters long."
+				"password": "Mot de passe",
+				"password_info": "Doit comporter au moins 8 caractères."
 			}
 		},
 		"request_password_reset": {
-			"title": "Password Reset Request",
-			"info": "Enter the verified email address linked to your PRUNplanner account. If we recognize it, we'll send you a code to reset your password.",
+			"title": "Demande de réinitialisation de mot de passe",
+			"info": "Entrez l'adresse e-mail vérifiée associée à votre compte PRUNplanner. Si nous la reconnaissons, nous vous enverrons un code pour réinitialiser votre mot de passe.",
 			"form": {
-				"email_placeholder": "Email Address"
+				"email_placeholder": "Adresse e-mail"
 			},
 			"buttons": {
-				"send": "Request Password Reset"
+				"send": "Demande de réinitialisation de mot de passe"
 			}
 		},
 		"verify_email": {
-			"title": "Email Verification",
-			"info": "Please enter the verification code you received via email. Maybe check your spam folder.",
+			"title": "Vérification de l'e-mail",
+			"info": "Veuillez entrer le code de vérification que vous avez reçu par e-mail. Vérifier aussi vos spams.",
 			"buttons": {
-				"send": "Verify Email Address"
+				"send": "Vérifiez l'adresse e-mail"
 			},
 			"form": {
-				"code_placeholder": "Verification Code"
+				"code_placeholder": "Code de vérification"
 			},
 			"result": {
-				"ok": "Email address verified.",
-				"error": "Invalid code or already verified."
+				"ok": "Adresse e-mail vérifiée.",
+				"error": "Code invalide ou adresse déjà vérifiée."
 			}
 		}
 	}
