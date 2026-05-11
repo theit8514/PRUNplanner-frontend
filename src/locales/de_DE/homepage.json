@@ -1,4 +1,8 @@
 {
+	"navigation": {
+		"registration": "Create Account",
+		"login": "Login"
+	},
 	"images": {
 		"section_title": "Verwalte dein Imperium von Überall",
 		"section_lead": "Überwache deine Basen, verwalte Produktionen und steuere deine Pläne mühelos. Mit intuitiven und leistungsstarken Tools kannst du Strategien finden, Erweiterungen planen und deine Rivalen mühelos ausspielen.",
