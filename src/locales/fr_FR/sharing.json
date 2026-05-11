@@ -1,11 +1,11 @@
 {
-	"info": "This will create an unique link that can be shared with others. They will be able to see your plan, but don't modify it. The link becomes unavailable once you choose to stop sharing or delete the plan.",
-	"share_count": "You're currently sharing this plan. It has been viewed {count} times",
+	"info": "Cela créera un lien unique qui peut être partagé avec les autres. Ils pourront voir votre plan, mais pas le modifier. Le lien devient indisponible une fois que vous choisissez d'arrêter le partage ou de supprimer le plan.",
+	"share_count": "Vous partagez actuellement ce plan. Il a été consulté {count} fois",
 	"buttons": {
-		"create_link": "Create Sharing Link",
-		"copy_url": "Copy URL",
-		"stop_sharing": "Stop Sharing",
-		"views": "{count} Views",
-		"share": "Share"
+		"create_link": "Créer un lien pour partager",
+		"copy_url": "Copier l'URL",
+		"stop_sharing": "Arrêter de partager",
+		"views": "{count} Vues",
+		"share": "Partager"
 	}
 }
