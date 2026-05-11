@@ -1,5 +1,5 @@
-The ROI Overview tool is a collaborative creation, developed with insights from Lowstrife, MemoryAlpha, and Laaxus in the PCT and Prosperous Universe Discord communities. The purpose of these ROI tools is to normalize the profitability of all buildings in the game to the profit per unit of area, as that is the only common shared metric. This is extrapolated out to "profit per 500 area" assuming a full base of these buildings. This allows one to compare the profitability of building A to building B purely on the merits of their recipes.
+ROI 概览工具是一项协作成果，结合了 PCT 和 Prosperous Universe Discord 社区中 Lowstrife、MemoryAlpha 和 Laaxus 的见解开发而成。 这些 ROI 工具的目的，是将游戏中所有建筑的盈利能力统一换算为单位区域利润，因为这是唯一通用的比较指标。 在假设整个基地都由这类建筑组成的情况下，该数值会进一步推算为“每 500 区域利润”。 这样就可以仅根据配方本身，对建筑 A 和建筑 B 的盈利能力进行比较。
 
-This tool uses a linear model to calculate the optimal number of production buildings and the required habitation buildings to maximize the use of a 500-area base, factoring in workforce requirements, STO for large or heavy materials, and alignment with 5 experts and COGC. The calculations assume normal planetary conditions—standard surface, temperature, pressure, and gravity—for all available building recipes. The tool will also consider your CX preferences.
+该工具使用线性模型，计算生产建筑和所需住房建筑的最佳数量，以最大化利用 500 区域基地；计算时会考虑劳动力需求、大型或重型物资所需的 STO，以及 5 名专家和 COGC 匹配。 这些计算假设所有可用建筑配方都处于普通星球条件下，即标准地表、温度、压力和重力。 该工具也会考虑你的 CX 偏好设置。
 
-Buildings such as EXT, RIG, COL, and FRM are excluded, as their outputs depend on a planet's unique resources and fertility. Figures for these excluded buildings can be viewed on the Resource ROI Overview.
+EXT、RIG、COL 和 FRM 等建筑会被排除，因为它们的产出取决于星球独有的资源和肥沃度。 这些被排除建筑的数据可以在资源 ROI 概览中查看。
