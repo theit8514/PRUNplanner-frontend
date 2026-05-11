@@ -1,23 +1,23 @@
 {
 	"information": {
-		"title": "Material Information",
+		"title": "Информация о материале",
 		"table": {
-			"category": "Category",
-			"weight": "Weight",
-			"volume": "Volume"
+			"category": "Категория",
+			"weight": "Вес",
+			"volume": "Объем"
 		}
 	},
 	"indicator": {
-		"value": "Value",
-		"max": "Maximum",
-		"pct_max": "% / Max"
+		"value": "Значение",
+		"max": "Максимум",
+		"pct_max": "% / Макс"
 	},
 	"chart": {
-		"title": "Market History",
+		"title": "История рынка",
 		"labels": {
-			"traded": "Traded Volume",
-			"low_p": "Daily Minimum Price",
-			"high_p": "Daily Maximum Price"
+			"traded": "Объем продаж",
+			"low_p": "Ежедневная минимальная цена",
+			"high_p": "Ежедневная максимальная цена"
 		}
 	}
 }
