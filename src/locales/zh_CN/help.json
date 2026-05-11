@@ -1,75 +1,75 @@
 {
-	"view_title": "Help",
-	"title": "Help & Changelog",
+	"view_title": "帮助",
+	"title": "帮助 & 更新日志",
 	"changelog": {
-		"title": "Changelog"
+		"title": "更新日志"
 	},
 	"tutorial": {
-		"intro": "PRUNplanner helps you design bases, organize empires, and calculate profits — without wasting in-game resources. It mirrors nearly every aspect of Prosperous Universe so you can plan smarter and play more confidently."
+		"intro": "PRUNplanner 帮助你设计基地、管理帝国并计算利润，而无需浪费游戏内资源。它几乎模拟了 Prosperous Universe 的各个方面，让你能够更聪明地规划，更有信心地游玩。"
 	},
 	"getting_started": {
-		"title": "Getting Started",
-		"image_label": "Management",
+		"title": "入门指南",
+		"image_label": "管理",
 		"l1": {
-			"title": "Create an Empire in {link}:",
-			"link": "Management",
-			"p": "By default, you'll already have one. But you can add more for different factions or regions. Assign a name and faction, and save."
+			"title": "在 {link} 中创建帝国：",
+			"link": "管理",
+			"p": "默认情况下，你已经拥有一个帝国。但你也可以为不同派系或区域添加更多帝国。填写名称和派系后保存即可。"
 		},
 		"l2": {
-			"title": "Setup an {link}:",
-			"link": "Exchange",
-			"p": "Go into Management and create your exchange. Switch to the Exchanges view to modify it. For most players, set it to Both (buying and selling) and choose the exchange your bases will use (e.g., CI1 for Benten). Save it."
+			"title": "设置 {link}：",
+			"link": "交易所",
+			"p": "进入“管理”并创建你的交易所偏好设置。切换到“交易所”页面进行修改。对大多数玩家来说，建议设为（买入和卖出），并选择你的基地会使用的交易所（例如 Benten 使用 CI1）。完成后保存。"
 		},
 		"l3": {
-			"title": "Search for a {link}:",
-			"link": "Planet",
-			"p": "Use the planet search to filter by resources, programs, or proximity to a CX. Select your target planet and view its modifiers, extraction rates, and infrastructure."
+			"title": "搜索 {link}：",
+			"link": "行星",
+			"p": "使用星球搜索，按资源、项目或与 CX 的距离进行筛选。选择目标星球后，可以查看其修正值、开采率和基础设施。"
 		},
 		"l4": {
-			"title": "Create a Plan:",
-			"p": "Choose your Empire, give it a name, then add buildings. For example: add a Refinery, set a production order, and save the plan. You can modify all aspects like COGC, expert bonuses and dive into optimizations."
+			"title": "创建计划：",
+			"p": "选择你的帝国，为计划命名，然后添加建筑。例如：添加一个精炼厂，设置生产订单并保存计划。你可以修改 CoGC、专家加成等各项参数，并进一步进行优化。"
 		},
 		"l5": {
-			"title": "Check ROI:",
-			"p": "Once set up, you'll see daily profits, inputs and outputs, and return on investment for each production line. Adjust, experiment, and optimize."
+			"title": "检查 ROI：",
+			"p": "设置完成后，你可以查看每条生产线的每日利润、输入与输出，以及投资回报率。然后进行调整、测试和优化。"
 		}
 	},
 	"core_concepts": {
-		"title": "Core Concepts",
+		"title": "核心概念",
 		"p1": {
-			"title": "Plans",
-			"p": "A plan represents a single base: its buildings, productions, and bonuses. Create a plan by choosing a planet, placing buildings, and assigning it to an Empire with a CX preference."
+			"title": "计划",
+			"p": "一个计划代表一个单独基地，包括建筑、生产和加成。你可以通过选择星球、放置建筑，并将其分配到带有 CX 偏好设置的帝国来创建计划。"
 		},
 		"p2": {
-			"title": "Empires",
-			"p": "An Empire is a container of multiple plans - essentially your entire network of bases. Empires keep your supply chains organized and allow you to manage multiple bases together."
+			"title": "帝国",
+			"p": "帝国是多个计划的容器，本质上代表你的整个基地网络。帝国可以帮助你整理供应链，并统一管理多个基地。"
 		},
 		"p3": {
-			"title": "Exchanges",
-			"p": "Exchange settings define how prices are calculated. Each Empire uses one Exchange for consistency. You can reuse the same Exchange setup across empires if needed."
+			"title": "交易所",
+			"p": "交易所设置决定价格的计算方式。每个帝国会使用一个交易所偏好设置以保持一致。如有需要，你可以在多个帝国之间复用同一套交易所设置。"
 		}
 	},
 	"key_features": {
-		"title": "Key Features",
+		"title": "核心功能",
 		"p1": {
-			"title": "Base Simulation",
-			"p": "Design and test bases without spending resources. From habitation to production to planet-specific modifiers and bonuses — PRUNplanner simulates it all."
+			"title": "基地模拟",
+			"p": "无需消耗游戏资源即可设计和测试基地。从居住需求、生产，到星球特定修正值和加成，PRUNplanner 都可以进行模拟。"
 		},
 		"p2": {
-			"title": "Empire Planning",
-			"p": "Manage your empire across multiple bases and supply chains. Keep your materials flowing, prevent bottlenecks, and run smoothly at scale. Always see what is going on and where the next best expansion starts."
+			"title": "帝国规划",
+			"p": "跨多个基地和供应链管理你的帝国。保持物资流动，避免瓶颈，并让规模化运营更加顺畅。你可以随时了解当前状况，并判断下一步最适合从哪里扩张。"
 		},
 		"p3": {
-			"title": "Game Data",
-			"p": "Market information is integrated directly from FIO, the community API. Plan expansions, check ROI, and make informed trade decisions. Explore historic market data or let PRUNplanner calculate production or resource extraction ROIs."
+			"title": "游戏数据",
+			"p": "市场信息直接集成自社区 API：FIO。你可以规划扩张、检查 ROI，并做出更有依据的交易决策。探索历史市场数据，或让 PRUNplanner 计算生产与资源开采的 ROI。"
 		},
 		"p4": {
-			"title": "Burn & Repair",
-			"p": "Track consumables and building wear. Avoid shortages and downtime by seeing exactly what your colony needs and when it needs it."
+			"title": "消耗与维修",
+			"p": "跟踪消耗品和建筑磨损情况。清楚了解你的殖民地需要什么、何时需要，从而避免短缺和停摆。"
 		},
 		"p5": {
-			"title": "A Wealth of Additional Tools",
-			"p": "Dive into historical prices, optimize habitation layouts, estimate visitation frequencies, and fine-tune production efficiency. PRUNplanner is packed with utilities to give you the edge."
+			"title": "丰富的附加工具",
+			"p": "深入查看历史价格，优化居住布局，估算访问频率，并微调生产效率。PRUNplanner 提供了丰富的实用工具，帮助你获得优势。"
 		}
 	}
 }

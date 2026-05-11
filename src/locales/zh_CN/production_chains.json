@@ -1,15 +1,15 @@
 {
-	"view_title": "Production Chains",
-	"title": "Production Chains",
+	"view_title": "生产链",
+	"title": "生产链",
 	"configuration": {
-		"title": "Configuration",
+		"title": "配置",
 		"material": "@:terms.materials",
-		"recipe_runs": "Recipe Runs",
-		"node_color": "Node Color",
-		"terminals": "Terminals",
-		"terminals_placeholder": "Comma-separated material tickers",
-		"terminals_info": "Terminals are materials whose inputs are excluded from the graph, useful if you buy them on the CX or locally and don't need to produce them.",
-		"recipe_selection": "Recipe Selection"
+		"recipe_runs": "配方运行",
+		"node_color": "节点颜色",
+		"terminals": "终端物资",
+		"terminals_placeholder": "用英文逗号分隔的物资代码",
+		"terminals_info": "终端物资是指其输入项会从图表中排除的物资。如果你会在 CX 或本地购买这些物资，而不需要自行生产，它们就很有用。",
+		"recipe_selection": "配方选择"
 	},
 	"analysis_materials": {
 		"title": "物料",
@@ -19,17 +19,17 @@
 		}
 	},
 	"analysis_expertise": {
-		"title": "Building Expertises",
+		"title": "建筑专长",
 		"table": {
-			"expertise": "Expertise",
+			"expertise": "专长",
 			"materials": "@:terms.materials_plural"
 		}
 	},
 	"analysis_workforce": {
-		"title": "Workforce",
+		"title": "劳动力",
 		"table": {
-			"workforce": "Workforce",
-			"required": "Required"
+			"workforce": "劳动力",
+			"required": "需要"
 		}
 	}
 }

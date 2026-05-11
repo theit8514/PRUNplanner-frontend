@@ -1,11 +1,11 @@
 {
-	"view_title": "Upkeep Price Calculator",
-	"title": "Upkeep Price Calculator",
+	"view_title": "维护价格计算器",
+	"title": "维护价格计算器",
 	"form": {
-		"cx_preference": "CX Preference"
+		"cx_preference": "CX 偏好设置"
 	},
 	"calculator": {
-		"calculating": "Calculating Upkeep Material Prices",
+		"calculating": "正在计算维护物资价格",
 		"needs": {
 			"safety": "@:game.upkeep.safety",
 			"health": "@:game.upkeep.health",
@@ -14,13 +14,13 @@
 			"education": "@:game.upkeep.education"
 		},
 		"details": {
-			"title": "Material Details",
+			"title": "物资详情",
 			"table": {
 				"material": "@:terms.materials",
 				"building": "@:terms.buildings",
-				"price_need": "ȼ/Need",
-				"cx_price": "@:terms.cx Price",
-				"qty_day": "Qty/Day"
+				"price_need": "ȼ/需求",
+				"cx_price": "@:terms.cx 价格",
+				"qty_day": "数量/天"
 			}
 		}
 	}

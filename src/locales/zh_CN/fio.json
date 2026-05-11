@@ -1,25 +1,25 @@
 {
 	"burn": {
-		"view_title": "FIO Burn",
-		"title": "FIO Burn:",
-		"fio_last_update": "FIO Data Update: {last_updated}",
+		"view_title": "FIO 消耗",
+		"title": "FIO 消耗：",
+		"fio_last_update": "FIO 数据更新：{last_updated}",
 		"form": {
 			"empire": "@:terms.empire",
-			"burn_thresholds": "Burn Thresholds",
-			"red": "Red",
-			"yellow": "Yellow"
+			"burn_thresholds": "消耗阈值",
+			"red": "红色",
+			"yellow": "黄色"
 		},
 		"components": {
 			"overview": {
-				"title": "Plan Burn Overview",
+				"title": "计划消耗概览",
 				"table": {
 					"plan": "@:terms.plan",
 					"planet": "@:terms.planets",
-					"burn": "Burn"
+					"burn": "日消耗"
 				}
 			},
 			"plans": {
-				"xit_title": "XIT Resupply: {plan_name}",
+				"xit_title": "XIT 补给：{plan_name}",
 				"table": {
 					"ticker": "@:terms.material_ticker",
 					"consumption": "@:terms.consumption",
@@ -27,23 +27,23 @@
 					"delta": "@:terms.delta",
 					"stock": "@:terms.stock",
 					"plan": "@:terms.plan",
-					"burn": "Burn",
-					"exhaustion": "Exhaustion"
+					"burn": "日消耗",
+					"exhaustion": "耗尽"
 				}
 			}
 		}
 	},
 	"repair": {
-		"view_title": "FIO Repair",
-		"title": "FIO Repair",
-		"fio_last_update": "FIO Data Update: {last_updated}",
+		"view_title": "FIO 维修",
+		"title": "FIO 维修",
+		"fio_last_update": "FIO 数据更新：{last_updated}",
 		"table": {
 			"title": "@:terms.planet_plural",
 			"planet": "@:terms.planets",
 			"buildings": "@:terms.buildings_plural",
-			"avg_condition": "⌀ Condition",
-			"min_condition": "Min. Condition",
-			"repair_age": "Repair Age"
+			"avg_condition": "平均状况",
+			"min_condition": "最低状况",
+			"repair_age": "距上次维修"
 		}
 	}
 }

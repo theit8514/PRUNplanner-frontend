@@ -1,57 +1,57 @@
 {
-	"view_title": "Market Live",
-	"title": "Market Live",
+	"view_title": "实时市场",
+	"title": "实时市场",
 	"status": {
-		"connected": "Connected",
-		"disconnected": "Disconnected"
+		"connected": "已连接",
+		"disconnected": "已断开"
 	},
 	"severity_type": {
-		"LOW": "LOW",
-		"MEDIUM": "MEDIUM",
-		"HIGH": "HIGH"
+		"LOW": "低",
+		"MEDIUM": "中",
+		"HIGH": "高"
 	},
 	"status_type": {
-		"active": "Active",
-		"paused": "Paused"
+		"active": "活动中",
+		"paused": "已暂停"
 	},
 	"rule_type": {
-		"static": "Value",
-		"previous": "Previous",
-		"previous_pct": "Offset %",
-		"text": "Text"
+		"static": "数值",
+		"previous": "上一次",
+		"previous_pct": "偏移 %",
+		"text": "文本"
 	},
 	"components": {
 		"feed": {
-			"title": "Alert Feed",
+			"title": "提醒动态",
 			"buttons": {
-				"open_manager": "Open Alert Manager",
-				"close_manager": "Close Alert Manager",
-				"clear_feed": "Clear Feed",
-				"show_overview": "Show Overview",
-				"hide_overview": "Hide Overview"
+				"open_manager": "打开提醒管理器",
+				"close_manager": "关闭提醒管理器",
+				"clear_feed": "清空动态",
+				"show_overview": "显示概览",
+				"hide_overview": "隐藏概览"
 			}
 		},
 		"alert_feed": {
-			"waiting": "Waiting for market events triggering alerts...",
+			"waiting": "正在等待触发提醒的市场事件……",
 			"table": {
-				"ticker_alert": "Ticker / Alert",
-				"severity": "Severity",
-				"logic": "Trigger Logic",
-				"event": "Event",
-				"time": "Time"
+				"ticker_alert": "代码 / 提醒",
+				"severity": "严重程度",
+				"logic": "触发逻辑",
+				"event": "事件",
+				"time": "时间"
 			}
 		},
 		"details": {
-			"price": "Price",
+			"price": "价格",
 			"ask": "@:{'terms.ask'}: {value}",
 			"bid": "@:{'terms.bid'}: {value}",
 			"spread": "@:{'terms.spread'}",
-			"buy_volume": "Buy Volume",
+			"buy_volume": "买入量",
 			"vwap": "@:{'terms.vwap'}: {value}",
-			"change": "Change: {value}",
-			"sell_volume": "Sell Volume",
-			"buy_volume_value": "Buy Volume: {value}",
-			"sell_volume_value": "Sell Volume: {value}"
+			"change": "变化：{value}",
+			"sell_volume": "卖出量",
+			"buy_volume_value": "买入量：{value}",
+			"sell_volume_value": "卖出量：{value}"
 		},
 		"point_table": {
 			"table": {
@@ -59,42 +59,42 @@
 				"price": "@:terms.price",
 				"bid": "@:terms.bid",
 				"ask": "@:terms.ask",
-				"spread_pct": "Spread %",
-				"buy_volume": "Buy Vol.",
-				"sell_volume": "Sell Vol."
+				"spread_pct": "价差 %",
+				"buy_volume": "买入量。",
+				"sell_volume": "卖出量。"
 			}
 		},
 		"history": {
-			"title": "Data History",
-			"received": "{value} @:terms.material_ticker received"
+			"title": "数据历史",
+			"received": "已收到 {value} @:terms.material_ticker"
 		},
 		"rule_builder": {
-			"new_rule_name": "New Rule",
+			"new_rule_name": "新规则",
 			"buttons": {
-				"add_condition": "Condition",
-				"add_group": "Group",
-				"remove": "Remove"
+				"add_condition": "条件",
+				"add_group": "分组",
+				"remove": "移除"
 			},
-			"error": "Error: {value}",
-			"empty": "Empty Group"
+			"error": "错误：{value}",
+			"empty": "空分组"
 		},
 		"alert_manager": {
-			"title": "Alert Manager",
-			"title_editing": "Edit Alert",
-			"info": "Alerts are currently stored on this device only and are not synced to your account.",
-			"no_alerts": "No alerts found. Start by creating your first detector signal",
+			"title": "提醒管理器",
+			"title_editing": "编辑提醒",
+			"info": "提醒目前仅存储在此设备上，不会同步到你的账户。",
+			"no_alerts": "未找到提醒。请先创建你的第一个检测信号",
 			"buttons": {
-				"create_alert": "Create New Alert",
-				"discard": "@:common.buttons.discard",
-				"save": "@:common.buttons.save",
+				"create_alert": "创建新提醒",
+				"discard": "@:common.butons.discard",
+				"save": "@:common.butons.save",
 				"delete": "@:common.buttons.delete"
 			},
 			"form": {
-				"alert_name": "Alert Name",
-				"severity": "Severity",
-				"status": "Status",
-				"logic_configuration": "Logic Configuration",
-				"previous_datapoint": "Previous Datepoint"
+				"alert_name": "提醒名称",
+				"severity": "告警级别",
+				"status": "状态",
+				"logic_configuration": "逻辑配置",
+				"previous_datapoint": "上一个数据点"
 			}
 		}
 	}

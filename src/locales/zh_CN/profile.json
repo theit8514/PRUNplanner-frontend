@@ -1,89 +1,89 @@
 {
-	"view_title": "Profile",
-	"title": "Profile",
+	"view_title": "个人资料",
+	"title": "个人资料",
 	"change_password": {
-		"title": "Change Password",
-		"button": "Change Password",
+		"title": "更改密码",
+		"button": "更改密码",
 		"form": {
-			"password_info": "Password must be at least 8 characters long",
-			"current_password": "Current Password",
-			"new_password": "New Password",
-			"change_success": "Password changed.",
-			"change_error": "Password change failed."
+			"password_info": "密码不得少于 8 个字符",
+			"current_password": "当前密码",
+			"new_password": "新密码",
+			"change_success": "密码已更改。",
+			"change_error": "密码更改失败。"
 		}
 	},
 	"change_profile": {
-		"title": "Profile",
+		"title": "个人资料",
 		"buttons": {
-			"update_profile": "Update Profile",
-			"verify_email": "Verify Email",
-			"resend_code": "Resend Code",
-			"code_requested": "Code requested."
+			"update_profile": "更新个人资料",
+			"verify_email": "验证电子邮件",
+			"resend_code": "重新发送验证码",
+			"code_requested": "验证码已发送。"
 		},
-		"fio_info": "FIO Data Updates are handled by PRUNplanners backend automatically.",
+		"fio_info": "FIO 数据更新由 PRUNplanner 后端自动处理。",
 		"form": {
 			"fio_apikey": "FIO API Key",
-			"prun_username": "PrUn Username",
-			"email_info": "It is not required to provide an email but highly recommended for increased account safety and password recovery.",
-			"email_address": "Email Address",
-			"email_verified": "Email Verified"
+			"prun_username": "PrUn 用户名",
+			"email_info": "邮箱不是必填项，但强烈建议填写，以提高账户安全性并用于密码找回。",
+			"email_address": "邮箱地址",
+			"email_verified": "邮箱已验证"
 		}
 	},
 	"storage_data": {
-		"title": "Browser Storage",
-		"description": "PRUNplanner minimizes API calls by storing data locally in your browser. Data refreshes automatically at set intervals.",
+		"title": "浏览器存储",
+		"description": "PRUNplanner 会将数据本地存储在浏览器中，以减少 API 调用。数据会按设定间隔自动刷新。",
 		"table": {
-			"storage": "Storage",
-			"records": "Records",
-			"size": "Approx. Size"
+			"storage": "存储",
+			"records": "记录",
+			"size": "约占空间"
 		}
 	},
 	"fio_information": {
-		"title": "What is FIO & Why should you use it?",
+		"title": "什么是 FIO？为什么要使用它？",
 		"help": {
-			"title": "5 Easy Steps to Integrate FIO and PRUNplanner",
-			"p1": "FIO is a community developed {link} that collects your game data, makes it available outside of Prosperous Universe and is completely free to use.",
-			"p2": "Just go ahead and install the Chrome or Firefox extension, reload your browser with APEX open and click the extension button in the upper-right in your browser to create an account. FIO will automatically collect (only) your game data while you keep playing.",
-			"p3": "You can now login to the {link} to see your data and create an API-Key PRUNplanner will use to import your storage (materials you have somewhere) and sites (planets, ships, warehouses) data.",
-			"p4": "Creating the key is easy, if you head to the {link} page and click the \"Create API Key\" button. Enter a name for your key (e.g., \"PRUNplanner\") and your FIO password. You don't need to \"Allow Writes\" as PRUNplanner will not manipulate any of your data, the tool just reads and uses it.",
-			"p5": "Give PRUNplanner a couple of minutes and your game data will appear, allowing you to see when to repair ships, what buildings you have already constructed when creating or modifying plans or when to resupply your bases.",
+			"title": "5 个简单步骤：集成 FIO 与 PRUNplanner",
+			"p1": "FIO 是由社区开发的 {link}，用于收集你的游戏数据，并让这些数据可在 Prosperous Universe 外部使用，而且完全免费。",
+			"p2": "安装 Chrome 或 Firefox 扩展，在打开 APEX 的情况下重新加载浏览器，然后点击浏览器右上角的扩展按钮创建账户。之后你继续游戏时，FIO 会自动收集（仅限）你的游戏数据。",
+			"p3": "现在你可以登录 {link} 查看你的数据，并创建一个 API Key。PRUNplanner 将使用它导入你的仓储数据（你在各处拥有的物资）以及站点数据（星球、飞船、仓库）。",
+			"p4": "创建 Key 很简单：前往 {link} 页面并点击“Create API Key”按钮。为你的 Key 输入一个名称（例如“PRUNplanner”）以及你的 FIO 密码。你不需要启用“Allow Writes”，因为 PRUNplanner 不会修改你的任何数据，只会读取并使用它。",
+			"p5": "等待 PRUNplanner 几分钟后，你的游戏数据就会显示出来。之后你就可以查看何时维修飞船、在创建或修改计划时查看已建建筑，以及判断何时为基地补给。",
 			"steps": {
-				"1": "Download and install the {link}",
-				"2": "Open your game, click the extensions button and register your FIO account",
-				"3": "Head to the FIO website, open your {link} and create an API-Key for PRUNplanner",
-				"4": "Copy and enter your API Key as well as your Prosperous Universe username to your profile above and press the \"Update Profile\" button",
-				"5": "Wait a few minutes for PRUNplanner to get your data and enjoy additional planning capabilities. Your data will be updated automatically in the background, no need to do anything."
+				"1": "下载并安装 {link}",
+				"2": "打开游戏，点击扩展按钮并注册你的 FIO 账户",
+				"3": "前往 FIO 网站，打开你的 {link}，并为 PRUNplanner 创建一个 API Key",
+				"4": "复制并在上方个人资料中输入你的 API Key 和 Prosperous Universe 用户名，然后点击“更新资料”按钮",
+				"5": "等待几分钟，让 PRUNplanner 获取你的数据，然后就可以使用更多规划功能。你的数据会在后台自动更新，无需额外操作。"
 			},
-			"refined_prun": "While you're enhancing your gameplay, also check out {link}: Another browser extension greatly simplifying the user interface and adding tons of features."
+			"refined_prun": "在增强游戏体验的同时，也可以看看 {link}：这是另一个浏览器扩展，可以大幅简化用户界面并添加大量功能。"
 		},
 		"links": {
-			"browser_extension": "Browser Extension",
-			"fio_website": "FIO Website",
-			"fio_settings": "FIO Settings",
-			"fio_extension": "FIO Browser Extension",
-			"settings_short": "Settings",
+			"browser_extension": "浏览器扩展",
+			"fio_website": "FIO 网站",
+			"fio_settings": "FIO 设置",
+			"fio_extension": "FIO 浏览器扩展",
+			"settings_short": "设置",
 			"refined_prun": "Refined PrUn"
 		}
 	},
 	"preferences": {
-		"title": "Preferences",
-		"description": "Your preferences are saved locally in your browser and aren't synced with the backend yet. Use this panel to review and customize your PRUNplanner settings.",
+		"title": "偏好设置",
+		"description": "你的偏好设置会保存在本地浏览器中，目前尚未与后端同步。你可以使用此面板查看并自定义 PRUNplanner 设置。",
 		"form": {
-			"tool_preferences": "Tool Preferences",
-			"language": "Language",
-			"language_note": "We want to make PRUNplanner accessible to everyone. If you'd like to see the tool in your native language - or help us polish an existing translation - join our localization project on {link}.",
-			"default_empire": "Default Empire",
-			"default_cx": "Default CX",
-			"fio_burn": "FIO Burn",
-			"red_threshold": "Red Threshold",
-			"yellow_threshold": "Yellow Threshold",
-			"resupply_days": "Resupply Days",
-			"xit_origin": "XIT Origin",
-			"buy_from_cx": "XIT Buy from CX",
-			"plan_specific": "Plan-Specific Settings",
-			"plan_specific_description": "These settings are managed within individual plans. This section provides an overview of the preferences you've customized so far - to modify them, navigate to the corresponding plan.",
-			"plan": "Plan",
-			"preferences": "Preferences"
+			"tool_preferences": "工具偏好设置",
+			"language": "语言",
+			"language_note": "我们希望让所有人都能使用 PRUNplanner。如果你希望看到自己的母语版本，或帮助我们完善现有翻译，欢迎加入我们的本地化项目：{link}。",
+			"default_empire": "默认帝国",
+			"default_cx": "默认 CX",
+			"fio_burn": "FIO 消耗",
+			"red_threshold": "红色阈值",
+			"yellow_threshold": "黄色阈值",
+			"resupply_days": "补给天数",
+			"xit_origin": "XIT 来源",
+			"buy_from_cx": "XIT 从 CX 购买",
+			"plan_specific": "计划专属设置",
+			"plan_specific_description": "这些设置在各个计划中单独管理。本部分展示你目前已自定义的偏好设置概览；如需修改，请前往对应的计划。",
+			"plan": "计划",
+			"preferences": "偏好设置"
 		}
 	}
 }

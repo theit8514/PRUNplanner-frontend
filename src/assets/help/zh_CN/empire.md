@@ -1,7 +1,7 @@
-The **Empire view** gives you a complete overview of your plans and their combined production within an empire. Here, you can also adjust your faction and permits, since both affect your production bonuses. Plans can be assigned to an empire in the **Management view**.
+帝国视图 会完整展示你的计划，以及这些计划在同一帝国内的综合生产情况。 你也可以在这里调整派系和许可证，因为它们都会影响你的生产加成。 计划可以在 管理视图 中分配到某个帝国。
 
-In addition to tracking production, the empire automatically calculates your **daily profit, costs** (including materials, workforce, and degradation), and total **revenue** based on your personal exchange preferences. These figures aren’t just a simple sum of your plans—they use weighted prices that take both production and consumption into account across the entire empire.
+除了追踪生产情况外，帝国还会根据你的个人交易所偏好，自动计算 每日利润、成本（包括物资、劳动力和损耗）以及总 收入。 这些数值并不是简单地把所有计划相加，而是使用加权价格，并综合考虑整个帝国内的生产与消耗。
 
-The **Empire Material I/O** view shows how much of each material your empire produces and where. You can filter consumables in or out, or focus purely on load balancing, comparing production and consumption at a glance.
+帝国物资 I/O 视图会显示你的帝国生产了多少各类物资，以及它们来自哪里。 你可以选择是否包含消耗品，也可以专注于负载平衡，一目了然地比较生产与消耗。
 
-Finally, the **Empire Analysis** provides charts that break down your profits by plans and materials. You can also explore what your empire net produces or consumes, as well as which materials are produced or consumed exclusively.
+最后，帝国分析 会提供图表，按计划和物资拆分你的利润。 你还可以查看帝国的净产出或净消耗，以及哪些物资属于仅生产或仅消耗。

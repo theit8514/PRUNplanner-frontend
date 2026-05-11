@@ -1,45 +1,45 @@
 {
-	"view_title": "API Keys",
-	"title": "API Keys",
+	"view_title": "API密钥",
+	"title": "API密钥",
 	"info": {
 		"description": {
-			"p1": "The {link} provides programmatic access to all your planning data, ingame metadata (buildings, recipes, materials) and calculated market metrics like VWAP. While public endpoints remain open for community use, access to private planning data - including your plan configurations - require secure authentication.",
-			"p2": "By utilizing these endpoints, you can synchronize your planning operations with external spreadsheets, custom dashboards, or even optimization algorithms.",
+			"p1": "{link} 提供对所有规划数据、游戏内元数据（建筑、配方、物资）以及 VWAP 等计算市场指标的程序化访问。公共端点仍可供社区使用，但访问私人规划数据 - 包括你的计划配置 - 需要安全认证。",
+			"p2": "通过使用这些端点，你可以将规划操作与外部电子表格、自定义仪表板，甚至优化算法同步。",
 			"link": "PRUNplanner REST API",
-			"warning": "API keys grant full access to your account data and remain valid indefinitely. Treat these credentials as sensitive as your password. Never commit keys to public repositories or share them with unverified third-party services. If a key is compromised, revoke it immediately and generate a replacement."
+			"warning": "API Key 可完全访问你的账户数据，并且会一直有效。请像保护密码一样保护这些凭据。切勿将 Key 提交到公开代码库，或分享给未经验证的第三方服务。如果 Key 泄露，请立即撤销并生成新的 Key。"
 		}
 	},
 	"manage": {
-		"title": "PRUNplanner API Keys",
+		"title": "PRUNplanner API 密钥",
 		"buttons": {
-			"new_apikey": "Create New Key",
-			"revoke_apikey": "Revoke"
+			"new_apikey": "创建新密钥",
+			"revoke_apikey": "撤销"
 		},
 		"table": {
-			"apikey_name": "Name",
-			"apikey_prefix": "Prefix",
-			"apikey_created": "Created",
-			"apikey_lastused": "Last Used"
+			"apikey_name": "名称",
+			"apikey_prefix": "前缀",
+			"apikey_created": "创建时间",
+			"apikey_lastused": "上次使用"
 		}
 	},
 	"implementation": {
-		"title": "Authorization Implementation",
-		"link": "View REST API Reference →"
+		"title": "授权执行情况",
+		"link": "查看REST API 参考值 →"
 	},
 	"create": {
-		"title": "Create API Key",
+		"title": "创建API密钥",
 		"form": {
-			"key_name": "Key Name",
-			"key_description": "Give your key a descriptive name to help you identify it later.",
-			"success_title": "Key Generated Successfully",
-			"success_key": "Your Secret Key (Save this Now!)",
-			"success_note": "For security, we cannot show this key again. If you lose it, you must revoke and create a new one.",
-			"error": "Error creating your API Key. Please try again later."
+			"key_name": "密钥名称",
+			"key_description": "给你的密钥起一个便于识别的名称。",
+			"success_title": "密钥生成成功",
+			"success_key": "你的私人密钥（请立即保存！）",
+			"success_note": "出于安全考虑，此密钥之后不会再次显示。如果遗失，你需要撤销并创建新的密钥。",
+			"error": "创建 API 密钥时出错，请稍后重试。"
 		},
 		"buttons": {
-			"create": "@:common.buttons.create",
-			"cancel": "@:common.buttons.cancel",
-			"saved": "I've saved my key"
+			"create": "@:common.butons.create",
+			"cancel": "@:common.butons.cancel",
+			"saved": "我已保存密钥"
 		}
 	}
 }
