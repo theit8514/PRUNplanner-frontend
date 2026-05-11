@@ -1,26 +1,26 @@
 {
-	"view_title": "ROI Overview",
-	"title": "ROI Overview",
-	"calculating": "Calculating Building Recipe ROI",
-	"cx_select": "@:terms.cx Preference",
+	"view_title": "Panoramica ROI",
+	"title": "Panoramica ROI",
+	"calculating": "Calcolo ROI ricette",
+	"cx_select": "Preferenza @:terms.cx",
 	"filters": {
 		"title": "@:terms.filter",
 		"building": "@:terms.buildings",
 		"cogc": "@:terms.cogc",
 		"output": "Output",
 		"input": "Input",
-		"positive_roi": "Positive ROI"
+		"positive_roi": "ROI Positivo"
 	},
 	"table": {
 		"building": "@:terms.buildings",
-		"optimal_setup": "Optimal Setup",
+		"optimal_setup": "Configurazione Ottimale",
 		"recipe_output": "@:terms.recipes Output",
 		"recipe_input": "@:terms.recipes Input",
 		"cogc": "@:terms.cogc",
 		"cogm": "@:terms.cogm",
-		"plan_cost": "@:terms.plan Cost",
-		"daily_profit": "Daily Profit",
-		"profit_area": "Profit/Area",
-		"plan_roi": "@:terms.plan ROI"
+		"plan_cost": "Costo del Piano",
+		"daily_profit": "Profitto Giornaliero",
+		"profit_area": "Profitto / Area",
+		"plan_roi": "ROI del Piano"
 	}
 }
