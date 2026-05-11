@@ -47,8 +47,12 @@
 			</div>
 			<div
 				class="flex flex-row gap-x-7 child:px-3 child:py-1 child:text-lg child:font-light child:hover:bg-white/10 child:hover:rounded-lg">
-				<div @click="toggleRegistration">Create Account</div>
-				<div @click="toggleLogin">Login</div>
+				<div @click="toggleRegistration">
+					{{ $t("homepage.navigation.registration") }}
+				</div>
+				<div @click="toggleLogin">
+					{{ $t("homepage.navigation.login") }}
+				</div>
 			</div>
 		</div>
 	</div>
