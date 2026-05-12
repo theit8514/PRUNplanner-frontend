@@ -35,7 +35,7 @@
 			"cx_placeholder": "Имя CX (максимум 100 символов)"
 		},
 		"table": {
-			"cx_name": "@:terms.cx Name",
+			"cx_name": "@:terms.cx название",
 			"assigned_to_empire": "Назначить империю?",
 			"nodata_title": "Нет доступных @:terms.cx.",
 			"nodata_label": "Укажите предпочитаемую биржу."
@@ -44,11 +44,11 @@
 	"filter": {
 		"title": "Фильтр",
 		"plan": "@:terms.plan",
-		"active_empire": "Active @:terms.empire"
+		"active_empire": "Активный @:terms.empire"
 	},
 	"assignments": {
-		"title": "Plan ↔ Empire Assignments",
-		"description": "Every planned base can be assigned to multiple empires. This allows you to simultaneously keep track of your existing Prosperous Universe empire, corporation production chains or future expansion plans.",
+		"title": "План ↔ Назначения империи",
+		"description": "Каждая запланированная база может быть назначена нескольким империям. Это позволяет одновременно отслеживать вашу текущую империю в Prosperous Universe, производственные цепочки корпорации или планы будущего расширения.",
 		"buttons": {
 			"update_assignments": "Обновить назначения плана",
 			"reload": "@:common.buttons.reload"
