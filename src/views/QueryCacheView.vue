@@ -36,7 +36,13 @@
 	<div class="p-3 flex flex-col gap-6">
 		<div>
 			<h2 class="text-2xl pb-3">Translations</h2>
-			<PButton @click="toggleKeyMode">Toogle Key Mode</PButton>
+			<div class="flex flex-row gap-3 items-center">
+				<PButton @click="toggleKeyMode">Toogle Key Mode</PButton>
+				<div>
+					To switch back to your selected language, please reload the
+					page.
+				</div>
+			</div>
 		</div>
 		<div>
 			<h2 class="text-2xl">Query Cache</h2>
