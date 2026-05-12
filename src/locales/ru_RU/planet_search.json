@@ -1,34 +1,34 @@
 {
-	"view_title": "Planet Search",
-	"title": "Planet Search",
+	"view_title": "Поиск планет",
+	"title": "Поиск планет",
 	"basic": {
-		"title": "Planet Name or ID",
-		"description": "Search must include at least 3 characters. Example Searches: \"OT-580b\", \"Montem\", \"OT-\" or \"580\".",
+		"title": "Имя или ID планеты",
+		"description": "Поиск должен содержать не менее 3 символов. Пример: \"OT-580b\", \"Montem\", \"OT-\" или \"580\".",
 		"form_id": "ID"
 	},
 	"advanced": {
-		"title": "Advanced Search",
+		"title": "Расширенный поиск",
 		"labels": {
 			"materials": "@:terms.materials_plural",
 			"cogc": "@:terms.cogc",
-			"min_richness": "Min. Richness %",
-			"planet_features": "Planet Features",
-			"system_distance": "System Distance",
-			"planet_environment": "Planet Environment"
+			"min_richness": "Мин. концентрация %",
+			"planet_features": "Особенности планеты",
+			"system_distance": "Расстояние между системами",
+			"planet_environment": "Условия среды"
 		}
 	},
 	"results": {
 		"columns": {
-			"plan": "Plan",
-			"planet": "Planet",
+			"plan": "План",
+			"planet": "Планета",
 			"fertility": "@:terms.fertility",
-			"resources": "Resources",
+			"resources": "Ресурсы",
 			"popr": "@:terms.popr",
-			"cogc_program": "COGC Program",
-			"environment": "Environment",
-			"infrastructure": "Infrastructure",
-			"distance": "Distance"
+			"cogc_program": "Программа COGC",
+			"environment": "Окружение",
+			"infrastructure": "Инфраструктура",
+			"distance": "Расстояние"
 		},
-		"colony_ship_required": "Colony Ship Required"
+		"colony_ship_required": "Требуется Колониальный корабль"
 	}
 }
