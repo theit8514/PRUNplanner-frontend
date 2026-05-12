@@ -48,7 +48,7 @@
 			"spread": "@:{'terms.spread'}",
 			"buy_volume": "Объем закупок",
 			"vwap": "@:{'terms.vwap'}: {value}",
-			"change": "Change: {value}",
+			"change": "Изменение: {value}",
 			"sell_volume": "Объем продаж",
 			"buy_volume_value": "Объем закупок: {value}",
 			"sell_volume_value": "Объем продаж: {value}"
@@ -59,14 +59,14 @@
 				"price": "@:terms.price",
 				"bid": "@:terms.bid",
 				"ask": "@:terms.ask",
-				"spread_pct": "Spread %",
-				"buy_volume": "Buy Vol.",
-				"sell_volume": "Sell Vol."
+				"spread_pct": "Спред %",
+				"buy_volume": "Объем закупок.",
+				"sell_volume": "Объем продаж."
 			}
 		},
 		"history": {
-			"title": "Data History",
-			"received": "{value} @:terms.material_ticker received"
+			"title": "История данных",
+			"received": "{value} @:terms.material_ticker получено"
 		},
 		"rule_builder": {
 			"new_rule_name": "Новое правило",
