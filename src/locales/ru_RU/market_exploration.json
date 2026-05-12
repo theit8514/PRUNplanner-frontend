@@ -1,41 +1,41 @@
 {
-	"view_title": "Market Exploration",
-	"title": "Market Exploration",
-	"switch_material": "Switch Material",
+	"view_title": "Изучение рынка",
+	"title": "Изучение рынка",
+	"switch_material": "Сменить материал",
 	"kpis": {
-		"universe_vwap_7d": "Universe VWAP @:terms.7d",
-		"universe_traded_7d": "Universe Traded Volume @:terms.7d",
-		"universe_market_delta": "Universe Market Delta",
-		"percent_trend": "% Trend",
+		"universe_vwap_7d": "VWAP вселенной @:terms.7d",
+		"universe_traded_7d": "Объём торгов вселенной @:terms.7d",
+		"universe_market_delta": "Дельта рынка вселенной",
+		"percent_trend": "% Тренд",
 		"30d": "@:{'terms.30d'}:",
 		"supply": "@:{'terms.supply'}:",
 		"demand": "@:{'terms.demand'}:",
-		"weighted_trend": "Weighted Trend",
-		"volume_adjusted_delta": "Volume-Adjusted Delta",
-		"price_cohesion": "Price Cohesion",
-		"variance_index": "Variance Index"
+		"weighted_trend": "Взвешенный тренд",
+		"volume_adjusted_delta": "Дельта с поправкой на объём",
+		"price_cohesion": "Ценовая согласованность",
+		"variance_index": "Индекс разницы"
 	},
 	"chart": {
-		"title": "Market Chart",
+		"title": "График рынка",
 		"intervals": {
-			"daily": "Daily",
-			"weekly": "Weekly",
-			"monthly": "Monthly"
+			"daily": "Ежедневно",
+			"weekly": "Еженедельно",
+			"monthly": "Ежемесячно"
 		}
 	},
 	"market_data": {
-		"title": "Market Data"
+		"title": "Данные рынка"
 	},
 	"overview": {
-		"title": "Material Market Overview",
+		"title": "Обзор рынка материалов",
 		"table": {
 			"material": "@:terms.materials",
 			"vwap_7d": "@:terms.vwap @:terms.7d",
 			"vwap_30d": "@:terms.vwap @:terms.30d",
-			"trend": "Trend",
+			"trend": "Тренд",
 			"volume_7d": "@:terms.volume @:terms.7d",
 			"volume_30d": "@:terms.volume @:terms.30d",
-			"details": "Details"
+			"details": "Детали"
 		}
 	}
 }
