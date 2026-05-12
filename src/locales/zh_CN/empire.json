@@ -11,22 +11,22 @@
 		"form": {
 			"name": "名称",
 			"faction": "派系",
-			"permits_total": "@:terms.permits_plural 总计",
-			"permits_used": "@:terms.permits_plural 已用"
+			"permits_total": "总计@:terms.permits_plural",
+			"permits_used": "已用@:terms.permits_plural"
 		},
 		"sync_warning": {
 			"title": "检测到不匹配：",
-			"body": "@:empire.configuration.sync_warning.title 已配置许可：{configured}，规划许可：{planned}。请使用游戏内的 {hq_buffer} 同步这些数值，以确保派系加成计算准确。"
+			"body": "@:empire.configuration.sync_warning.title已配置{configured}份许可，但规划使用{planned}份许可。请使用游戏内的{hq_buffer}同步这些数值，以确保派系加成计算准确。"
 		}
 	},
 	"plan_list": {
-		"no_plans": "@:terms.empire 中没有规划",
-		"setup_prompt": "在 {management} 中分配已有规划，或使用 {search} 创建一个。",
+		"no_plans": "@:terms.empire中没有规划",
+		"setup_prompt": "在{management}中分配已有规划，或使用{search}创建一个。",
 		"links": {
 			"management": "@:common.navigation.management",
 			"planet_search": "@:common.navigation.planet_search"
 		},
-		"permits_planned": "规划的 @:terms.permits 总数：{permits}"
+		"permits_planned": "规划的@:terms.permits总数：{permits}"
 	},
 	"material_io": {
 		"production_planets": "生产行星",
@@ -44,8 +44,8 @@
 		"material_costs": "材料成本",
 		"net_production": "净生产",
 		"net_consumption": "净消耗",
-		"exclusive_production": "仅生产物资",
-		"exclusive_consumption": "仅消耗物资"
+		"exclusive_production": "纯生产物资",
+		"exclusive_consumption": "纯消耗物资"
 	},
 	"opportunities": {
 		"headline": "生产机会",
@@ -54,15 +54,15 @@
 		"note": "不要仅依赖现有的机会。请结合交易量及交易所概览（可通过将鼠标悬停在物料上查看）来评估市场流动性和潜在的投资回报率。利用相关指标判断哪些具体物料正限制你的规模化潜力，或者出售你现有的多余物料是否比转向其他生产更具盈利性。",
 		"tiles": {
 			"opportunities": "机会",
-			"delta_required": "所需缺口",
+			"delta_required": "缺口过小",
 			"material_missing": "缺少物料"
 		},
 		"table": {
 			"building": "建筑",
-			"flow_inputs": "生产 (输入 &rarr; 输出)",
+			"flow_inputs": "生产（输入&rarr;输出）",
 			"analysis": "分析",
-			"sell_inputs": "出售输入项",
-			"sell_outputs": "出售输出项",
+			"sell_inputs": "售出输入项",
+			"sell_outputs": "售出输出项",
 			"potential_batches": "潜在批次",
 			"delta_required": "所需缺口",
 			"missing_material": "缺少物料"
