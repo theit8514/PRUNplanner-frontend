@@ -6,7 +6,7 @@
 		"message": "У вас нет предпочитаемой биржи. Перейдите в Менеджмент, чтобы выбрать биржу."
 	},
 	"buttons": {
-		"csv_import_export": "",
+		"csv_import_export": "@:exchanges.components.csv_import_export.title",
 		"save": "@:common.buttons.save",
 		"reload": "@:common.buttons.reload"
 	},
