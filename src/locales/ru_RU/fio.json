@@ -1,25 +1,25 @@
 {
 	"burn": {
-		"view_title": "FIO Burn",
-		"title": "FIO Burn:",
-		"fio_last_update": "FIO Data Update: {last_updated}",
+		"view_title": "Расход FIO",
+		"title": "Расход FIO:",
+		"fio_last_update": "Обновление данных FIO: {last_updated}",
 		"form": {
 			"empire": "@:terms.empire",
-			"burn_thresholds": "Burn Thresholds",
-			"red": "Red",
-			"yellow": "Yellow"
+			"burn_thresholds": "Пороги расхода",
+			"red": "Красный",
+			"yellow": "Желтый"
 		},
 		"components": {
 			"overview": {
-				"title": "Plan Burn Overview",
+				"title": "Обзор Планового расхода",
 				"table": {
 					"plan": "@:terms.plan",
 					"planet": "@:terms.planets",
-					"burn": "Burn"
+					"burn": "Расход"
 				}
 			},
 			"plans": {
-				"xit_title": "XIT Resupply: {plan_name}",
+				"xit_title": "Пополнение XIT: {plan_name}",
 				"table": {
 					"ticker": "@:terms.material_ticker",
 					"consumption": "@:terms.consumption",
@@ -27,23 +27,23 @@
 					"delta": "@:terms.delta",
 					"stock": "@:terms.stock",
 					"plan": "@:terms.plan",
-					"burn": "Burn",
-					"exhaustion": "Exhaustion"
+					"burn": "Расход",
+					"exhaustion": "Истощение"
 				}
 			}
 		}
 	},
 	"repair": {
-		"view_title": "FIO Repair",
-		"title": "FIO Repair",
+		"view_title": "Ремонт FIO",
+		"title": "Ремонт FIO",
 		"fio_last_update": "FIO Data Update: {last_updated}",
 		"table": {
 			"title": "@:terms.planet_plural",
 			"planet": "@:terms.planets",
 			"buildings": "@:terms.buildings_plural",
-			"avg_condition": "⌀ Condition",
-			"min_condition": "Min. Condition",
-			"repair_age": "Repair Age"
+			"avg_condition": "⌀ Состояние",
+			"min_condition": "Мин. Состояние",
+			"repair_age": "Время с последнего ремонта"
 		}
 	}
 }
