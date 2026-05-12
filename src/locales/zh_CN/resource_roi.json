@@ -12,7 +12,7 @@
 		"production": "@:terms.production",
 		"building": "@:terms.buildings",
 		"daily": "每日",
-		"percent_max": "% 最大值。",
+		"percent_max": "相对百分比",
 		"popr": "@:terms.popr",
 		"cogc": "@:terms.cogc",
 		"environment": "环境",
