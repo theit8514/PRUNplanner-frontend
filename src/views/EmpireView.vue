@@ -51,8 +51,12 @@
 
 	// Types & Interfaces
 	import { IPlan, IPlanEmpireElement } from "@/stores/planningStore.types";
-	import { IPlanResult } from "@/features/planning/usePlanCalculation.types";
 	import {
+		IPlanResult,
+		IProductionBuildingRecipeCOGM,
+	} from "@/features/planning/usePlanCalculation.types";
+	import {
+		IEmpireCOGMRow,
 		IEmpireCostOverview,
 		IEmpireMaterialIO,
 		IEmpirePlanListData,
@@ -236,12 +240,10 @@
 	 * @type {ComputedRef<IEmpirePlanListData[]>} Plan List Data
 	 */
 	const planListData: ComputedRef<IEmpirePlanListData[]> = computed(() => {
-		return Object.entries(calculatedPlans.value).map(
-			([planUuid, planResult]) => {
-				const plan: IPlan = planData.value.find(
-					(p) => p.uuid == planUuid
-				)!;
-
+		return Object.entries(calculatedPlans.value)
+			.map(([planUuid, planResult]) => {
+				const plan = planData.value.find((p) => p.uuid == planUuid);
+				if (!plan) return null;
 				return {
 					uuid: planUuid,
 					name: plan.plan_name,
@@ -250,8 +252,8 @@
 					cogc: plan.plan_cogc,
 					profit: planResult.profit,
 				};
-			}
-		);
+			})
+			.filter((row): row is IEmpirePlanListData => row != null);
 	});
 
 	/**
@@ -262,11 +264,10 @@
 	 */
 	const empireMaterialIO: ComputedRef<IEmpirePlanMaterialIO[]> = computed(
 		() => {
-			return Object.entries(calculatedPlans.value).map(
-				([planUuid, planResult]) => {
-					const plan: IPlan = planData.value.find(
-						(p) => p.uuid == planUuid
-					)!;
+			return Object.entries(calculatedPlans.value)
+				.map(([planUuid, planResult]) => {
+					const plan = planData.value.find((p) => p.uuid == planUuid);
+					if (!plan) return null;
 					return {
 						planetId: plan.planet_natural_id,
 						planUuid: planUuid,
@@ -274,14 +275,76 @@
 						planCOGC: plan.plan_cogc,
 						materialIO: planResult.materialio,
 					};
-				}
-			);
+				})
+				.filter((row): row is IEmpirePlanMaterialIO => row != null);
 		}
 	);
 
 	const combinedEmpireMaterialIO: ComputedRef<IEmpireMaterialIO[]> = computed(
 		() => combineEmpireMaterialIO(empireMaterialIO.value)
 	);
+
+	/**
+	 * Stable signature for recipe inputs (ticker:amount pairs, sorted by ticker)
+	 * so rows with the same plan, inputs and output can be deduplicated.
+	 */
+	function getCogmInputSignature(cogm: IProductionBuildingRecipeCOGM): string {
+		return cogm.inputCost
+			.slice()
+			.sort((a, b) => a.ticker.localeCompare(b.ticker))
+			.map((c) => `${c.ticker}:${c.amount}`)
+			.join(",");
+	}
+
+	/**
+	 * Holds computed COGM rows for the currently selected empire.
+	 * Rows with the same plan, input set and output ticker are merged; recipes
+	 * with different inputs stay separate.
+	 */
+	const empireCogm: ComputedRef<IEmpireCOGMRow[]> = computed(() => {
+		const rawRows: { key: string; row: IEmpireCOGMRow }[] = [];
+
+		for (const [planUuid, planResult] of Object.entries(
+			calculatedPlans.value
+		)) {
+			const plan = planData.value.find((p) => p.uuid === planUuid);
+			if (!plan) continue;
+
+			const planName = plan.plan_name ?? planUuid ?? "Unknown";
+			const planetNaturalId = plan.planet_natural_id ?? "";
+
+			for (const building of planResult.production.buildings) {
+				for (const recipe of building.activeRecipes) {
+					if (
+						recipe.cogm?.outputCOGM == null ||
+						recipe.cogm.visible !== true
+					)
+						continue;
+
+					for (const output of recipe.cogm.outputCOGM) {
+						rawRows.push({
+							key: `${planUuid}|${getCogmInputSignature(recipe.cogm)}|${output.ticker}`,
+							row: {
+								planUuid,
+								planName,
+								planetNaturalId,
+								ticker: output.ticker,
+								amount: output.amount,
+								costSplit: output.costSplit,
+								cogm: recipe.cogm,
+							},
+						});
+					}
+				}
+			}
+		}
+
+		const grouped = new Map<string, IEmpireCOGMRow>();
+		for (const r of rawRows) {
+			if (!grouped.has(r.key)) grouped.set(r.key, r.row);
+		}
+		return Array.from(grouped.values());
+	});
 
 	/**
 	 * Holds computed empire options
@@ -297,9 +360,9 @@
 		})
 	);
 
-	const mainContent = ref<"materialio" | "analysis" | "opportunities">(
-		"materialio"
-	);
+	const mainContent = ref<
+		"materialio" | "analysis" | "opportunities" | "cogm"
+	>("materialio");
 </script>
 
 <template>
@@ -376,6 +439,15 @@
 										)
 									}}
 								</PButton>
+								<PButton
+									:type="
+										mainContent === 'cogm'
+											? 'primary'
+											: 'secondary'
+									"
+									@click="() => (mainContent = 'cogm')">
+									{{ $t("empire.views.cogm") }}
+								</PButton>
 							</PButtonGroup>
 							<HelpDrawer file-name="empire" />
 						</div>
@@ -431,6 +503,7 @@
 									:empire-material-i-o="
 										combinedEmpireMaterialIO
 									"
+									:empire-cogm="empireCogm"
 									:cx-uuid="selectedCXUuid"
 									:plan-list-data="planListData" />
 							</div>

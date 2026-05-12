@@ -2,7 +2,24 @@ import {
 	PLAN_COGCPROGRAM_TYPE,
 	PLAN_FACTION,
 } from "@/stores/planningStore.types";
-import { IMaterialIO } from "@/features/planning/usePlanCalculation.types";
+import {
+	IMaterialIO,
+	IProductionBuildingRecipeCOGM,
+} from "@/features/planning/usePlanCalculation.types";
+
+interface IEmpireCOGMRow {
+	planUuid: string;
+	planName: string;
+	planetNaturalId: string;
+	ticker: string;
+	amount: number;
+	costSplit: number;
+	cogm: IProductionBuildingRecipeCOGM;
+	/** CX sell price per unit (when CX selected); set during enrichment. */
+	cxSellValue?: number | null;
+	/** cxSellValue - costSplit; set during enrichment. */
+	sellMinusCogm?: number | null;
+}
 
 interface IEmpirePlanListData {
 	uuid: string;

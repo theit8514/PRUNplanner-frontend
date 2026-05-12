@@ -4,4 +4,6 @@ In addition to tracking production, the empire automatically calculates your **d
 
 La vista de **Material del Imperio I/O** muestra cuánto de cada material tu imperio produce y dónde. Puede filtrar los consumibles dentro o fuera, o centrarse exclusivamente en el balance de carga, comparando producción y consumo de un vistazo.
 
-Finally, the **Empire Analysis** provides charts that break down your profits by plans and materials. También puede explorar lo que su red imperial produce o consume, así como qué materiales se producen o consumen exclusivamente.
+The **Empire Analysis** provides charts that break down your profits by plans and materials. También puede explorar lo que su red imperial produce o consume, así como qué materiales se producen o consumen exclusivamente.
+
+Finally, the **COGM** (Cost of Goods Manufactured) view lists each plan's recipes with its inputs, output, and COGM cost split. Use the details button to open the full COGM breakdown and to adjust CX preferences.

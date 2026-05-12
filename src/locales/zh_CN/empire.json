@@ -4,7 +4,8 @@
 	"views": {
 		"material_io": "物料输入/输出",
 		"analysis": "分析",
-		"production_opportunities": "生产机会"
+		"production_opportunities": "生产机会",
+		"cogm": "生产成本"
 	},
 	"configuration": {
 		"title": "配置",

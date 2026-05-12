@@ -1,0 +1,243 @@
+<script setup lang="ts">
+	import { PropType, onBeforeUnmount, ref, Ref, toRef, watch } from "vue";
+
+	// Components
+	import MaterialTile from "@/features/material_tile/components/MaterialTile.vue";
+	import PlanCOGM from "@/features/planning/components/tools/PlanCOGM.vue";
+
+	// Composables
+	import { usePrice } from "@/features/cx/usePrice";
+
+	// Util
+	import { formatNumber } from "@/util/numbers";
+
+	// Types & Interfaces
+	import type { IProductionBuildingRecipeCOGM } from "@/features/planning/usePlanCalculation.types";
+	import type { IEmpireCOGMRow } from "@/features/empire/empire.types";
+
+	// UI
+	import { PButton } from "@/ui";
+	import { XNDataTable, XNDataTableColumn } from "@skit/x.naive-ui";
+	import { NModal } from "naive-ui";
+	import { AnalyticsOutlined } from "@vicons/material";
+
+	const props = defineProps({
+		rows: {
+			type: Array as PropType<IEmpireCOGMRow[]>,
+			default: () => [],
+		},
+		cxUuid: {
+			type: String,
+			required: false,
+			default: undefined,
+		},
+	});
+
+	const cxUuidRef = toRef(props, "cxUuid");
+
+	/** Base rows + CX sell / profit enrichment (computed only while this tab is mounted). */
+	const displayRows: Ref<IEmpireCOGMRow[]> = ref([]);
+
+	let latestEnrichGeneration = 0;
+
+	watch(
+		[() => props.rows, cxUuidRef],
+		async () => {
+			const runId = ++latestEnrichGeneration;
+			const base = props.rows;
+			const enriched: IEmpireCOGMRow[] = base.map((r) => ({
+				...r,
+				cxSellValue: null,
+				sellMinusCogm: null,
+			}));
+			if (!cxUuidRef.value || base.length === 0) {
+				if (runId !== latestEnrichGeneration) return;
+				displayRows.value = enriched;
+				return;
+			}
+			const byPlanet = new Map<string, IEmpireCOGMRow[]>();
+			for (const row of enriched) {
+				const list = byPlanet.get(row.planetNaturalId) ?? [];
+				list.push(row);
+				byPlanet.set(row.planetNaturalId, list);
+			}
+			for (const [planetId, rows] of byPlanet) {
+				if (runId !== latestEnrichGeneration) return;
+				const planetRef = ref(planetId);
+				const { getPrice } = await usePrice(cxUuidRef, planetRef);
+				if (runId !== latestEnrichGeneration) return;
+				for (const row of rows) {
+					const sell = await getPrice(row.ticker, "SELL");
+					if (runId !== latestEnrichGeneration) return;
+					row.cxSellValue = sell;
+					row.sellMinusCogm = sell - row.costSplit;
+				}
+			}
+			if (runId !== latestEnrichGeneration) return;
+			displayRows.value = enriched;
+		},
+		{ immediate: true, deep: true }
+	);
+
+	onBeforeUnmount(() => {
+		latestEnrichGeneration++;
+	});
+
+	const showDetails: Ref<boolean> = ref(false);
+	const detailsCogm: Ref<IProductionBuildingRecipeCOGM | null> = ref(null);
+	const detailsPlanetId: Ref<string | undefined> = ref(undefined);
+	/** Key of the row currently shown in the details modal (so we can refresh when rows update). */
+	const detailsRowKey: Ref<string | null> = ref(null);
+
+	function rowKey(row: IEmpireCOGMRow): string {
+		const inputSig = row.cogm.inputCost
+			.slice()
+			.sort((a, b) => a.ticker.localeCompare(b.ticker))
+			.map((c) => `${c.ticker}:${c.amount}`)
+			.join(",");
+		return `${row.planUuid}|${row.ticker}|${inputSig}`;
+	}
+
+	function openDetails(row: IEmpireCOGMRow): void {
+		detailsCogm.value = row.cogm;
+		detailsPlanetId.value = row.planetNaturalId ?? undefined;
+		detailsRowKey.value = rowKey(row);
+		showDetails.value = true;
+	}
+
+	function getDifferenceClass(diff: number): string {
+		if (diff > 0) return "text-positive";
+		if (diff < 0) return "text-negative";
+		return "";
+	}
+
+	// When rows are recalculated (e.g. after Save/Reload in popup), refresh the modal data if it's open.
+	watch(
+		displayRows,
+		(rows) => {
+			if (!showDetails.value || !detailsRowKey.value || !rows.length)
+				return;
+			const match = rows.find((r) => rowKey(r) === detailsRowKey.value);
+			if (match) {
+				detailsCogm.value = match.cogm;
+				detailsPlanetId.value = match.planetNaturalId ?? undefined;
+			}
+		},
+		{ deep: true }
+	);
+</script>
+
+<template>
+	<n-modal
+		v-model:show="showDetails"
+		preset="card"
+		title="Cost of Goods Manufactured"
+		:class="cxUuid ? 'max-w-250' : 'max-w-150'">
+		<PlanCOGM
+			v-if="detailsCogm"
+			:cogm-data="detailsCogm"
+			:cx-uuid="cxUuid"
+			:planet-id="detailsPlanetId" />
+	</n-modal>
+	<XNDataTable :data="displayRows" striped>
+		<XNDataTableColumn
+			key="planName"
+			title="Plan"
+			sorter="default"
+			default-sort-order="ascend">
+			<template #render-cell="{ rowData }">
+				{{ rowData.planName }}
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="inputs" title="Inputs">
+			<template #render-cell="{ rowData }">
+				<div class="flex flex-wrap gap-1">
+					<MaterialTile
+						v-for="input in rowData.cogm.inputCost"
+						:key="input.ticker"
+						:ticker="input.ticker"
+						:amount="input.amount" />
+				</div>
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="ticker" title="Output" sorter="default">
+			<template #render-cell="{ rowData }">
+				<MaterialTile
+					:key="`#${rowData.ticker}#${rowData.amount}`"
+					:ticker="rowData.ticker"
+					:amount="rowData.amount" />
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="costSplit" title="COGM" sorter="default">
+			<template #title>
+				<div class="text-end">COGM</div>
+			</template>
+			<template #render-cell="{ rowData }">
+				<div class="text-nowrap text-end">
+					{{ formatNumber(rowData.costSplit) }}
+					<span class="pl-1 font-light text-white/50"> $ </span>
+				</div>
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="cxSellValue" title="CX Sell" sorter="default">
+			<template #title>
+				<div class="text-end">CX Sell</div>
+			</template>
+			<template #render-cell="{ rowData }">
+				<div class="text-nowrap text-end">
+					<template
+						v-if="
+							rowData.cxSellValue !== undefined &&
+							rowData.cxSellValue !== null
+						">
+						{{ formatNumber(rowData.cxSellValue) }}
+						<span class="pl-1 font-light text-white/50"> $ </span>
+					</template>
+					<template v-else>—</template>
+				</div>
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn
+			key="sellMinusCogm"
+			title="Estimated Profit"
+			sorter="default">
+			<template #title>
+				<div class="text-end">Estimated Profit</div>
+			</template>
+			<template #render-cell="{ rowData }">
+				<div
+					class="text-nowrap text-end"
+					:class="
+						rowData.sellMinusCogm !== undefined &&
+						rowData.sellMinusCogm !== null
+							? getDifferenceClass(rowData.sellMinusCogm)
+							: ''
+					">
+					<template
+						v-if="
+							rowData.sellMinusCogm !== undefined &&
+							rowData.sellMinusCogm !== null
+						">
+						{{ formatNumber(rowData.sellMinusCogm) }}
+						<span class="pl-1 font-light text-white/50"> $ </span>
+					</template>
+					<template v-else>—</template>
+				</div>
+			</template>
+		</XNDataTableColumn>
+		<XNDataTableColumn key="details" title="">
+			<template #render-cell="{ rowData }">
+				<div class="flex justify-center">
+					<PButton
+						size="sm"
+						title="COGM details"
+						@click="openDetails(rowData)">
+						<template #icon>
+							<AnalyticsOutlined />
+						</template>
+					</PButton>
+				</div>
+			</template>
+		</XNDataTableColumn>
+	</XNDataTable>
+</template>

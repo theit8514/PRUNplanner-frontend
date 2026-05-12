@@ -6,6 +6,7 @@
 	import EmpireMaterialIO from "@/features/empire/components/EmpireMaterialIO.vue";
 	import EmpireAnalysis from "@/features/empire/components/EmpireAnalysis.vue";
 	import EmpireOpportunities from "@/features/empire/components/EmpireOpportunities.vue";
+	import EmpireCOGM from "@/features/empire/components/EmpireCOGM.vue";
 
 	// Composables
 	import { usePlanetData } from "@/database/services/usePlanetData";
@@ -16,6 +17,7 @@
 
 	// Types & Interfaces
 	import {
+		IEmpireCOGMRow,
 		IEmpireMaterialIO,
 		IEmpirePlanListData,
 	} from "@/features/empire/empire.types";
@@ -25,9 +27,13 @@
 	const props = defineProps({
 		content: {
 			type: String as PropType<
-				"materialio" | "analysis" | "opportunities"
+				"materialio" | "analysis" | "opportunities" | "cogm"
 			>,
 			required: true,
+		},
+		empireCogm: {
+			type: Array as PropType<IEmpireCOGMRow[]>,
+			default: () => [],
 		},
 		empireMaterialIO: {
 			type: Array as PropType<IEmpireMaterialIO[]>,
@@ -54,9 +60,11 @@
 
 	// Local State
 	const localEmpireMaterialIO: Ref<IEmpireMaterialIO[]> = ref([]);
+	const localEmpireCogm: Ref<IEmpireCOGMRow[]> = ref([]);
 	const localPlanListData = computed(() => props.planListData);
 
 	const filteredMaterialIO: Ref<IEmpireMaterialIO[]> = ref([]);
+	const filteredCogmRows: Ref<IEmpireCOGMRow[]> = ref([]);
 	const refMaterialSelectOptions: Ref<PSelectOption[]> = ref([]);
 	const refFilterMaterials: Ref<string[]> = ref([]);
 	const refPlanetSelectOptions: Ref<PSelectOption[]> = ref([]);
@@ -70,6 +78,16 @@
 		(newData: IEmpireMaterialIO[]) => {
 			localEmpireMaterialIO.value = newData;
 			createFilter();
+			applyFilter();
+		},
+		{ immediate: true }
+	);
+
+	watch(
+		() => props.empireCogm,
+		(newData: IEmpireCOGMRow[]) => {
+			localEmpireCogm.value = newData;
+			void createFilter();
 			applyFilter();
 		},
 		{ immediate: true }
@@ -106,6 +124,10 @@
 			);
 		});
 
+		localEmpireCogm.value.map((c) => {
+			availPlanetIds = availPlanetIds.concat([c.planetNaturalId]);
+		});
+
 		refPlanetSelectOptions.value = await Promise.all(
 			[...new Set(availPlanetIds)].map(async (o) => {
 				return {
@@ -124,11 +146,15 @@
 	 */
 	function applyFilter(): void {
 		filteredMaterialIO.value = inertClone(localEmpireMaterialIO.value);
+		let cogmFiltered = [...localEmpireCogm.value];
 
 		// material
 		if (refFilterMaterials.value.length > 0) {
 			filteredMaterialIO.value = filteredMaterialIO.value.filter((m) =>
 				refFilterMaterials.value.includes(m.ticker)
+			);
+			cogmFiltered = cogmFiltered.filter((c) =>
+				refFilterMaterials.value.includes(c.ticker)
 			);
 		}
 
@@ -149,7 +175,12 @@
 					)
 				);
 			});
+			cogmFiltered = cogmFiltered.filter((c) =>
+				refFilterPlanets.value.flat().includes(c.planetNaturalId)
+			);
 		}
+
+		filteredCogmRows.value = cogmFiltered;
 
 		// loadbalance
 		if (refFilterLoadbalance.value) {
@@ -177,6 +208,7 @@
 				v-model:hide-consumables="refFilterHideConsumables"
 				v-model:filter-materials="refFilterMaterials"
 				v-model:filter-planets="refFilterPlanets"
+				:hide-display-consumables="content === 'cogm'"
 				:material-options="refMaterialSelectOptions"
 				:planet-options="refPlanetSelectOptions"
 				@apply-filter="applyFilter" />
@@ -191,6 +223,10 @@
 		<EmpireOpportunities
 			v-else-if="content === 'opportunities'"
 			:empire-material-i-o="empireMaterialIO"
+			:cx-uuid="cxUuid" />
+		<EmpireCOGM
+			v-else-if="content === 'cogm'"
+			:rows="filteredCogmRows"
 			:cx-uuid="cxUuid" />
 	</div>
 </template>

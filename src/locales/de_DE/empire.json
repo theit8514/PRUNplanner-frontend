@@ -4,7 +4,8 @@
 	"views": {
 		"material_io": "Material I/O",
 		"analysis": "Analyse",
-		"production_opportunities": "Produktionschancen"
+		"production_opportunities": "Produktionschancen",
+		"cogm": "COGM"
 	},
 	"configuration": {
 		"title": "Konfiguration",
