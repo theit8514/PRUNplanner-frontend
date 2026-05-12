@@ -8,9 +8,9 @@
 		}
 	},
 	"indicator": {
-		"value": "价值",
+		"value": "数值",
 		"max": "最大值",
-		"pct_max": "% / 最大值"
+		"pct_max": "相对百分比"
 	},
 	"chart": {
 		"title": "市场历史",
