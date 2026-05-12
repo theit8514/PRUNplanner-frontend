@@ -1,25 +1,25 @@
 {
 	"notifications": {
-		"must_have_name": "Must set a plan name in Configuration to save"
+		"must_have_name": "Необходимо выбрать название плана в конфигурации, чтобы сохранить"
 	},
 	"tools": {
 		"labels": {
-			"popr": "POPR",
-			"visitation_frequency": "Visitation Frequency",
-			"construction_cart": "Construction Cart",
-			"supply_cart": "Supply Cart",
-			"repair_analysis": "Repair Analysis",
-			"workforce": "Workforce"
+			"popr": "ПОПР",
+			"visitation_frequency": "Частота посещений",
+			"construction_cart": "Корзина строительства",
+			"supply_cart": "Корзина снабжения",
+			"repair_analysis": "Анализ ремонта",
+			"workforce": "Рабочая сила"
 		},
 		"popr": {
-			"title": "Latest Population Report",
-			"error": "Error loading latest population report. The planet might not have population.",
-			"loading": "Loading Population Report"
+			"title": "Последний отчет по популяции",
+			"error": "Ошибка при загрузке последнего отчета о популяции. Планета может быть необитаема.",
+			"loading": "Загрузка отчета о популяции"
 		},
 		"visitation_frequency": {
-			"title": "Visitation Frequency",
+			"title": "Частота посещений",
 			"storage": {
-				"label": "Storage",
+				"label": "Хранилище",
 				"info": "Your plan involves adding {storages} giving you a total storage capacity of {total_weight} t and {total_volume} m³.",
 				"info_no_storage": "Your plan has a total storage capacity of {total_weight} t and {total_volume} m³.",
 				"table": {
