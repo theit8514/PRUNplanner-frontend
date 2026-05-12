@@ -179,9 +179,7 @@
 			</template>
 
 			<template #hq_buffer>
-				<span class="font-mono bg-white/10 px-1.5">
-					{{ $t("terms.hq") }}
-				</span>
+				<span class="font-mono bg-white/10 px-1.5"> HQ </span>
 				{{ $t("terms.buffer") }}
 			</template>
 		</i18n-t>
