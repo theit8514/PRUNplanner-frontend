@@ -1,15 +1,15 @@
 {
 	"view_title": "Empire",
-	"switch_empire": "Switch Empire",
+	"switch_empire": "Changer d'empire",
 	"views": {
 		"material_io": "Material I/O",
-		"analysis": "Analysis",
-		"production_opportunities": "Production Opportunities"
+		"analysis": "Analyse",
+		"production_opportunities": "Opportunités de production"
 	},
 	"configuration": {
 		"title": "Configuration",
 		"form": {
-			"name": "Name",
+			"name": "Nom",
 			"faction": "Faction",
 			"permits_total": "@:terms.permits_plural Total",
 			"permits_used": "@:terms.permits_plural Used"
@@ -29,36 +29,36 @@
 		"permits_planned": "Total @:terms.permits planned: {permits}"
 	},
 	"material_io": {
-		"production_planets": "Production Planets",
-		"consumption_planets": "Consumption Planets"
+		"production_planets": "Planètes de production",
+		"consumption_planets": "Planètes de consommation"
 	},
 	"filters": {
-		"display": "Display",
-		"consumables": "Consumables",
-		"all": "All",
+		"display": "Affichage",
+		"consumables": "Consommables",
+		"all": "Tout",
 		"loadbalance": "Loadbalance"
 	},
 	"analysis": {
-		"profitable_plans": "Profitable Plans",
-		"material_profits": "Material Profits",
-		"material_costs": "Material Costs",
-		"net_production": "Net Production",
-		"net_consumption": "Net Consumption",
+		"profitable_plans": "Plans rentables",
+		"material_profits": "Bénéfices matériels",
+		"material_costs": "Coûts des matériaux",
+		"net_production": "Production nette",
+		"net_consumption": "Consommation nette",
 		"exclusive_production": "Exclusive Production",
 		"exclusive_consumption": "Exclusive Consumption"
 	},
 	"opportunities": {
-		"headline": "Production Opportunities",
+		"headline": "Opportunités de production",
 		"intro": "Find recipe opportunities to convert excess materials into other products. This view identifies production opportunities where your Material I/O shows a positive delta, prioritized by input availability",
-		"please_note": "Please Note:",
+		"please_note": "Important à savoir :",
 		"note": "Do not rely on the available opportunity alone. Cross-reference trade volumes and exchange overviews (via hover on the material) to assess market liquidity and potential ROI. Use indicators to identify which specific material is bottlenecking your scaling potential or if selling your available delta is more profitable than moving to another production.",
 		"tiles": {
-			"opportunities": "Opportunities",
+			"opportunities": "Opportunités",
 			"delta_required": "Delta Required",
-			"material_missing": "Material Missing"
+			"material_missing": "Matériau manquant"
 		},
 		"table": {
-			"building": "Building",
+			"building": "Bâtiment",
 			"flow_inputs": "Production (Inputs &rarr; Outputs)",
 			"analysis": "Analysis",
 			"sell_inputs": "Sell Inputs",
