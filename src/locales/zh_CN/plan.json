@@ -13,7 +13,7 @@
 		},
 		"popr": {
 			"title": "最新人口报告",
-			"error": "加载最新人口报告时出错。该星球可能没有人口。",
+			"error": "加载最新人口报告时出错。该行星可能没有人口。",
 			"loading": "正在加载人口报告"
 		},
 		"visitation_frequency": {
@@ -31,7 +31,7 @@
 					"storage_filled": "仓储占用",
 					"filled_unit": "天"
 				},
-				"exclusion_info": "对于完全在星球本地处理的物资，例如本地市场销售、采购或合同，可将本地物资排除在访问频率计算之外。"
+				"exclusion_info": "对于完全在行星本地处理的物资，例如本地市场销售、采购或合同，可将本地物资排除在访问频率计算之外。"
 			},
 			"shipping": {
 				"label": "运输",
@@ -114,9 +114,9 @@
 			}
 		},
 		"cogm": {
-			"title": "制成品成本",
+			"title": "成品成本",
 			"cogm": "@:terms.cogm",
-			"info": "制成品成本会根据计划设置计算，并计入生产效率、配方运行时间、建筑损耗、输入物资成本、劳动力需求及相关劳动力成本。最终成本会按每单位产出显示，并基于数量或完整成本分摊计算。",
+			"info": "成品成本会根据计划设置计算，并计入生产效率、配方运行时间、建筑损耗、输入物资成本、劳动力需求及相关劳动力成本。最终成本会按每单位产出显示，并基于数量或完整成本分摊计算。",
 			"cx_preferences": "@:terms.cx_plural 偏好设置",
 			"empire_ticker": "@:terms.empire 代码",
 			"planet_ticker": "@:terms.planet 代码",
@@ -169,7 +169,7 @@
 		},
 		"bonuses": {
 			"corp_hq": "集团 HQ",
-			"corp_hq_tooltip": "你所属的集团在该星球设有总部（不是你的个人公司）。",
+			"corp_hq_tooltip": "你所属的集团在该行星设有总部（不是你个人的公司总部）。",
 			"cogc": "@:terms.cogc"
 		},
 		"infrastructure": {
@@ -272,7 +272,7 @@
 			}
 		},
 		"production_recipe": {
-			"cogm_title": "制成品成本",
+			"cogm_title": "成品成本",
 			"cogm_error": "无法计算 COGM。请在“管理”页面检查你的帝国是否已分配 CX。",
 			"buttons": {
 				"cogm": "@:terms.cogm"

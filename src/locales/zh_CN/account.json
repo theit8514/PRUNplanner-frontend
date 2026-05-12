@@ -36,7 +36,7 @@
 				"email_placeholder": "可选，但建议填写。",
 				"email_info": "可选，可提升账户安全性。",
 				"security_question": "安全问题",
-				"question": "输入星球 {planet} 的名称。可在 Prosperous Universe 中新建缓存窗口并使用指令 {command} 查找，你将在行星信息中“名称”栏找到它的名称",
+				"question": "输入行星 {planet} 的名称。可在 Prosperous Universe 中新建缓存窗口并使用指令 {command} 查找，你将在行星信息中“名称”栏找到它的名称",
 				"planet_name": "名称"
 			}
 		},

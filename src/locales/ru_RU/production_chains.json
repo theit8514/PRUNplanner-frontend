@@ -1,35 +1,35 @@
 {
-	"view_title": "Production Chains",
-	"title": "Production Chains",
+	"view_title": "Производственные цепочки",
+	"title": "Производственные цепочки",
 	"configuration": {
-		"title": "Configuration",
+		"title": "Конфигурация",
 		"material": "@:terms.materials",
-		"recipe_runs": "Recipe Runs",
-		"node_color": "Node Color",
-		"terminals": "Terminals",
-		"terminals_placeholder": "Comma-separated material tickers",
-		"terminals_info": "Terminals are materials whose inputs are excluded from the graph, useful if you buy them on the CX or locally and don't need to produce them.",
-		"recipe_selection": "Recipe Selection"
+		"recipe_runs": "Циклов рецепта",
+		"node_color": "Цвет узла",
+		"terminals": "Терминалы",
+		"terminals_placeholder": "Тикеры материалов через запятую",
+		"terminals_info": "Терминалы — это материалы, входные ресурсы которых исключены из графика. Это удобно если вы покупаете их на бирже или локально и не нуждаетесь в их производстве.",
+		"recipe_selection": "Выбор рецепта"
 	},
 	"analysis_materials": {
-		"title": "Materials",
+		"title": "Материалы",
 		"table": {
 			"material": "@:terms.materials",
 			"amount": "@:terms.amount"
 		}
 	},
 	"analysis_expertise": {
-		"title": "Building Expertises",
+		"title": "Специализации зданий",
 		"table": {
-			"expertise": "Expertise",
+			"expertise": "Экспертиза",
 			"materials": "@:terms.materials_plural"
 		}
 	},
 	"analysis_workforce": {
-		"title": "Workforce",
+		"title": "Рабочая сила",
 		"table": {
-			"workforce": "Workforce",
-			"required": "Required"
+			"workforce": "Рабочая сила",
+			"required": "Требуется"
 		}
 	}
 }
