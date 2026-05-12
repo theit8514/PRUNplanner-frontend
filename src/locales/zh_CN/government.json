@@ -1,16 +1,16 @@
 {
 	"popr_button": {
-		"no_data": "星球 {planet_id} 没有人口数据",
+		"no_data": "行星 {planet_id} 没有人口数据",
 		"buttons": {
-			"no_popr": "无 POPR"
+			"no_popr": "无人口报告"
 		},
 		"table": {
 			"total_population": "总人口",
 			"free_population": "空闲人口",
 			"free_population_pct": "空闲人口 %",
 			"unfilled_jobs": "空缺职位",
-			"plan_need": "@:terms.plan 需求",
-			"plan_check": "@:terms.plan 检查"
+			"plan_need": "@:terms.plan需求",
+			"plan_check": "@:terms.plan检查"
 		}
 	}
 }
