@@ -2,6 +2,14 @@
 	import { computed } from "vue";
 	import { useQueryStore } from "@/lib/query_cache/queryStore";
 
+	// i18n
+	import { i18n } from "@/lib/i18n";
+
+	const toggleKeyMode = () => {
+		const { locale } = i18n.global;
+		locale.value = locale.value === "keymode" ? "en_US" : "keymode";
+	};
+
 	import { PButton, PTag, PTable } from "@/ui";
 
 	// Grab the Pinia store
@@ -25,8 +33,12 @@
 </script>
 
 <template>
-	<div class="p-3">
-		<div class="flex flex-row justify-between pb-3">
+	<div class="p-3 flex flex-col gap-6">
+		<div>
+			<h2 class="text-2xl pb-3">Translations</h2>
+			<PButton @click="toggleKeyMode">Toogle Key Mode</PButton>
+		</div>
+		<div>
 			<h2 class="text-2xl">Query Cache</h2>
 		</div>
 		<PTable striped>
