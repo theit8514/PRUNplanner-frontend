@@ -1,21 +1,21 @@
 {
-	"loading": "Loading Data...",
+	"loading": "Chargement des données...",
 	"gamedata": {
-		"material_data": "@:terms.materials Data",
-		"exchange_data": "@:terms.exchanges Data",
-		"building_data": "@:terms.buildings Data",
-		"recipe_data": "@:terms.recipes Data",
-		"planet_data": "@:terms.planets '{name}' Data",
-		"planet_multiple_data": "@:terms.planet_plural '{names}' Data"
+		"material_data": "Données @:terms.materials",
+		"exchange_data": "Données @:terms.exchanges",
+		"building_data": "Données @:terms.buildings",
+		"recipe_data": "Données @:terms.recipes",
+		"planet_data": "Données @:terms.planets '{name}'",
+		"planet_multiple_data": "Données @:terms.planet_plural '{names}'"
 	},
 	"planning_data": {
-		"shared_plan": "Shared @:terms.plan Configuration",
-		"empires": "@:terms.empire Configuration",
-		"plan": "@:terms.plan Configuration",
-		"plans_all": "All @:terms.plans_plural Configuration",
-		"planet_data": "@:terms.planets '{name}' Data",
-		"cx": "@:terms.cx '{name}' Configuration",
-		"shared_list": "Shared @:terms.plans_plural Configurations",
-		"empire_plans": "@:terms.empire @:terms.plans_plural Configurations"
+		"shared_plan": "Configuration @:terms.plan partagé",
+		"empires": "Configuration @:terms.empire",
+		"plan": "Configuration @:terms.plan",
+		"plans_all": "Configuration de tous les @:terms.plans_plural",
+		"planet_data": "Données @:terms.planets '{name}'",
+		"cx": "Configuration @:terms.cx '{name}'",
+		"shared_list": "Configurations @:terms.plans_plural partagés",
+		"empire_plans": "Configurations @:terms.empire @:terms.plans_plural"
 	}
 }

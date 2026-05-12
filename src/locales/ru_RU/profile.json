@@ -42,8 +42,8 @@
 		"title": "Что такое FIO & Почему вы должны его использовать?",
 		"help": {
 			"title": "5 Простых шагов по интеграции FIO и PRUNplanner",
-			"p1": "FIO is a community developed {link} that collects your game data, makes it available outside of Prosperous Universe and is completely free to use.",
-			"p2": "Just go ahead and install the Chrome or Firefox extension, reload your browser with APEX open and click the extension button in the upper-right in your browser to create an account. FIO will automatically collect (only) your game data while you keep playing.",
+			"p1": "FIO — это разработанный сообществом {link}, который собирает данные вашей игры, делает их доступными за пределами Prosperous Universe и полностью бесплатен в использовании.",
+			"p2": "Просто установите расширение для Chrome или Firefox, перезагрузите браузер с открытым APEX и нажмите кнопку расширения в правом верхнем углу браузера, чтобы создать аккаунт. FIO будет автоматически собирать (только) ваши игровые данные пока вы продолжаете играть.",
 			"p3": "You can now login to the {link} to see your data and create an API-Key PRUNplanner will use to import your storage (materials you have somewhere) and sites (planets, ships, warehouses) data.",
 			"p4": "Creating the key is easy, if you head to the {link} page and click the \"Create API Key\" button. Enter a name for your key (e.g., \"PRUNplanner\") and your FIO password. You don't need to \"Allow Writes\" as PRUNplanner will not manipulate any of your data, the tool just reads and uses it.",
 			"p5": "Give PRUNplanner a couple of minutes and your game data will appear, allowing you to see when to repair ships, what buildings you have already constructed when creating or modifying plans or when to resupply your bases.",

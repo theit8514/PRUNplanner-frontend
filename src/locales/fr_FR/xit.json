@@ -1,6 +1,6 @@
 {
 	"form": {
-		"origin": "Origin",
+		"origin": "Origine",
 		"target_days": "Target Days",
 		"buy_from_cx": "Buy From CX",
 		"buy_from_cx_warning": "Only warehouse origin allows purchasing.",
@@ -9,7 +9,7 @@
 		"json": "JSON"
 	},
 	"buttons": {
-		"copy_json": "Copy XIT JSON",
+		"copy_json": "Copier XIT JSON",
 		"copy": "@:common.buttons.copy"
 	},
 	"table": {

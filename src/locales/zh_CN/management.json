@@ -51,7 +51,7 @@
 		"description": "每个被计划的基地都可以分配给多个帝国。这允许你同时跟踪现有的PrUn帝国、公司生产链或未来的扩展计划。",
 		"buttons": {
 			"update_assignments": "更新计划分配",
-			"reload": "@:common.butons.reload"
+			"reload": "@:common.buttons.reload"
 		},
 		"deletion": {
 			"title": "确认删除计划",

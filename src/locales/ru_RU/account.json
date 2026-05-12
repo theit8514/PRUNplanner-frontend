@@ -1,80 +1,80 @@
 {
 	"components": {
 		"login": {
-			"title": "Login",
-			"error": "Error logging in. Please check your username and password.",
+			"title": "Вход",
+			"error": "Ошибка входа. Пожалуйста, проверьте имя пользователя и пароль.",
 			"buttons": {
-				"login": "Login"
+				"login": "Вход"
 			},
 			"form": {
-				"username": "Username",
-				"password": "Password"
+				"username": "Логин",
+				"password": "Пароль"
 			},
-			"tos": "By using PRUNplanner you agree to the {tos_link}.",
-			"tos_link": "Terms of Service",
-			"forgot": "Forgot your password? Request a {forgot_link}.",
-			"forgot_link": "Password Reset"
+			"tos": "Используя PRUNplanner вы соглашаетесь с {tos_link}.",
+			"tos_link": "Пользовательское Соглашение",
+			"forgot": "Забыли пароль? Сбросить {forgot_link}.",
+			"forgot_link": "Восстановление пароля"
 		},
 		"registration": {
-			"title": "Account Information",
-			"tos": "PRUNplanner is free to use. By creating an account, you acknowledge and agree to the {tos_link}.",
-			"tos_link": "Terms of Service",
+			"title": "Данные учётной записи",
+			"tos": "PRUNplanner бесплатен в использовании. Создавая аккаунт, вы принимаете и соглашаетесь с {tos_link}.",
+			"tos_link": "Пользовательское Соглашение",
 			"result": {
-				"ok_header": "Welcome, {username}!",
-				"ok_message": "Registration succesful. You can now login to PRUNplanner.",
-				"error": "Error during registration."
+				"ok_header": "Добро пожаловать, {username}!",
+				"ok_message": "Регистрация прошла успешно. Теперь вы можете войти в PRUNplanner.",
+				"error": "Ошибка при регистрации."
 			},
 			"buttons": {
-				"register": "Create Account"
+				"register": "Создать учетную запись"
 			},
 			"form": {
-				"username": "Username",
-				"username_info": "Must be at least 3 characters long. Can't contain spaces.",
-				"password": "Password",
-				"password_info": "Must be at least 8 characters long.",
-				"email": "Email",
-				"email_placeholder": "Not mandatory, but recommended.",
-				"email_info": "Not mandatory. Increases your account security.",
-				"security_question": "Security Question",
-				"question": "Enter the name of planet {planet}. To find it, open a new Prosperous Universe buffer with the command {command}. You'll see the planets name listed under 'Name' in the planet information",
-				"planet_name": "Name"
+				"username": "Логин",
+				"username_info": "Должно быть как минимум 3 символа. Не может содержать пробелы.",
+				"password": "Пароль",
+				"password_info": "Должно быть не менее 8 символов.",
+				"email": "Электронная почта",
+				"email_placeholder": "Не обязательно, но рекомендуется.",
+				"email_info": "Не обязательно. Повышает безопасность вашего аккаунта.",
+				"security_question": "Секретный вопрос",
+				"question": "Введите название планеты {planet}. Чтобы найти его, откройте новый буфер в игре командой {command}. Название планеты будет указано в поле «Название» в информации о планете",
+				"planet_name": "Имя"
 			}
 		},
 		"password_reset": {
-			"title": "Reset your Password",
-			"info": "Please enter the code sent to your email, along with your new password.",
+			"title": "Сбросить пароль",
+			"info": "Пожалуйста, введите код отправленный на вашу почту, а также новый пароль.",
 			"buttons": {
-				"send": "Reset Password"
+				"send": "Сброс пароля"
 			},
 			"form": {
-				"email": "Email",
-				"code": "Code",
-				"password": "Password",
-				"password_info": "Must be at least 8 characters long."
+				"email": "Электронная почта",
+				"code": "Код",
+				"password": "Пароль",
+				"password_info": "Должно быть не менее 8 символов."
 			}
 		},
 		"request_password_reset": {
-			"title": "Password Reset Request",
-			"info": "Enter the verified email address linked to your PRUNplanner account. If we recognize it, we'll send you a code to reset your password.",
+			"title": "Запросить восстановление пароля",
+			"info": "Введите подтверждённый email адрес привязанный к вашему аккаунту PRUNplanner. Если мы его найдём, мы отправим вам код для сброса пароля.",
 			"form": {
-				"email_placeholder": "Email Address"
+				"email_placeholder": "Адрес электронной почты"
 			},
 			"buttons": {
-				"send": "Request Password Reset"
+				"send": "Запросить сброс пароля"
 			}
 		},
 		"verify_email": {
-			"title": "Email Verification",
-			"info": "Please enter the verification code you received via email. Maybe check your spam folder.",
+			"title": "Подтверждение электронной почты",
+			"info": "Пожалуйста, введите код подтверждения полученный на вашу электронную почту. Возможно, стоит проверить папку со спамом.",
 			"buttons": {
-				"send": "Verify Email Address"
+				"send": "Подтвердите адрес электронной почты"
 			},
 			"form": {
-				"code_placeholder": "Verification Code"
+				"code_placeholder": "Код верификации"
 			},
 			"result": {
-				"ok": "Email address verified.",
-				"error": "Invalid code or already verified."
+				"ok": "Адрес электронной почты подтвержден.",
+				"error": "Неверный код или уже верифицирован."
 			}
 		}
 	}

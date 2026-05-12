@@ -1,15 +1,15 @@
 {
-	"universe": "UNIVERSE",
+	"universe": "UNIVERS",
 	"vwap": "@:terms.vwap",
-	"traded_volume": "Traded Volume",
-	"market_live_data": "Market Live Data",
-	"supply_vs_demand": "S / D",
-	"insights": "Insights",
-	"market_breadth": "Market Breadth",
-	"liquidity_ratio": "Liquidity Ratio",
-	"demand_vs_supply": "Demand / Supply",
-	"weighted_trend": "Weighted Trend",
-	"volume_adjusted_delta": "Volume-Adjusted Delta",
-	"price_cohesion": "Price Cohesion",
-	"variance_index": "Variance Index"
+	"traded_volume": "Volume d'échange",
+	"market_live_data": "Données de marché en temps réel",
+	"supply_vs_demand": "O / D",
+	"insights": "Analyses",
+	"market_breadth": "Étendue du marché",
+	"liquidity_ratio": "Ratio de liquidité",
+	"demand_vs_supply": "Demande / Offre",
+	"weighted_trend": "Tendance pondérée",
+	"volume_adjusted_delta": "Volume Delta",
+	"price_cohesion": "Cohésion des prix",
+	"variance_index": "Indice de dispersion"
 }

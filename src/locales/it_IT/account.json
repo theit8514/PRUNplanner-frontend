@@ -1,80 +1,80 @@
 {
 	"components": {
 		"login": {
-			"title": "Login",
-			"error": "Error logging in. Please check your username and password.",
+			"title": "Accedi",
+			"error": "Errore durante l'accesso. Controlla il tuo nome utente e password.",
 			"buttons": {
-				"login": "Login"
+				"login": "Accedi"
 			},
 			"form": {
-				"username": "Username",
+				"username": "Nome utente",
 				"password": "Password"
 			},
-			"tos": "By using PRUNplanner you agree to the {tos_link}.",
-			"tos_link": "Terms of Service",
-			"forgot": "Forgot your password? Request a {forgot_link}.",
-			"forgot_link": "Password Reset"
+			"tos": "Utilizzando PRUNplanner accetti i {tos_link}.",
+			"tos_link": "Termini di servizio",
+			"forgot": "Hai dimenticato la password? {forgot_link}.",
+			"forgot_link": "Reimposta la password"
 		},
 		"registration": {
-			"title": "Account Information",
-			"tos": "PRUNplanner is free to use. By creating an account, you acknowledge and agree to the {tos_link}.",
-			"tos_link": "Terms of Service",
+			"title": "Informazioni sull'account",
+			"tos": "PRUNplanner è gratuito. Creando un account, riconosci e accetti i {tos_link}.",
+			"tos_link": "Termini di servizio",
 			"result": {
-				"ok_header": "Welcome, {username}!",
-				"ok_message": "Registration succesful. You can now login to PRUNplanner.",
-				"error": "Error during registration."
+				"ok_header": "Benvenuto {username}!",
+				"ok_message": "Registrazione riuscita. Ora puoi accedere a PRUNplanner.",
+				"error": "Errore durante la registrazione."
 			},
 			"buttons": {
-				"register": "Create Account"
+				"register": "Crea Account"
 			},
 			"form": {
-				"username": "Username",
-				"username_info": "Must be at least 3 characters long. Can't contain spaces.",
+				"username": "Nome utente",
+				"username_info": "Deve essere di almeno 3 caratteri. Non deve contenere spazi.",
 				"password": "Password",
-				"password_info": "Must be at least 8 characters long.",
+				"password_info": "La password deve contenere almeno 8 caratteri.",
 				"email": "Email",
-				"email_placeholder": "Not mandatory, but recommended.",
-				"email_info": "Not mandatory. Increases your account security.",
-				"security_question": "Security Question",
-				"question": "Enter the name of planet {planet}. To find it, open a new Prosperous Universe buffer with the command {command}. You'll see the planets name listed under 'Name' in the planet information",
-				"planet_name": "Name"
+				"email_placeholder": "Non obbligatorio, ma consigliato.",
+				"email_info": "Non obbligatorio. Aumenta la sicurezza del tuo account.",
+				"security_question": "Domanda di sicurezza",
+				"question": "Inserisci il nome del pianeta {planet}. Per trovarlo, apri un nuovo buffer di Prosperous Universe con il comando {command}. Vedrai il nome del pianeta elencato sotto 'Nome' nelle informazioni dei pianeti",
+				"planet_name": "Nome"
 			}
 		},
 		"password_reset": {
-			"title": "Reset your Password",
-			"info": "Please enter the code sent to your email, along with your new password.",
+			"title": "Reimposta la tua password",
+			"info": "Inserisci il codice inviato alla tua email, insieme alla tua nuova password.",
 			"buttons": {
-				"send": "Reset Password"
+				"send": "Reimposta password"
 			},
 			"form": {
 				"email": "Email",
-				"code": "Code",
+				"code": "Codice",
 				"password": "Password",
-				"password_info": "Must be at least 8 characters long."
+				"password_info": "La password deve contenere almeno 8 caratteri."
 			}
 		},
 		"request_password_reset": {
-			"title": "Password Reset Request",
-			"info": "Enter the verified email address linked to your PRUNplanner account. If we recognize it, we'll send you a code to reset your password.",
+			"title": "Richiesta di ripristino password",
+			"info": "Inserisci l'indirizzo email verificato collegato al tuo account PRUNplanner. Se lo riconosciamo, ti invieremo un codice per reimpostare la password.",
 			"form": {
-				"email_placeholder": "Email Address"
+				"email_placeholder": "Indirizzo email"
 			},
 			"buttons": {
-				"send": "Request Password Reset"
+				"send": "Reimposta password"
 			}
 		},
 		"verify_email": {
-			"title": "Email Verification",
-			"info": "Please enter the verification code you received via email. Maybe check your spam folder.",
+			"title": "Verifica dell'email",
+			"info": "Inserisci il codice di verifica che hai ricevuto via email. Controlla la cartella spam.",
 			"buttons": {
-				"send": "Verify Email Address"
+				"send": "Verifica indirizzo email"
 			},
 			"form": {
-				"code_placeholder": "Verification Code"
+				"code_placeholder": "Codice di verifica"
 			},
 			"result": {
-				"ok": "Email address verified.",
-				"error": "Invalid code or already verified."
+				"ok": "Indirizzo email verificato.",
+				"error": "Codice non valido o già verificato."
 			}
 		}
 	}

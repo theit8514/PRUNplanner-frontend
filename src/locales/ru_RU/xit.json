@@ -1,15 +1,15 @@
 {
 	"form": {
-		"origin": "Origin",
-		"target_days": "Target Days",
-		"buy_from_cx": "Buy From CX",
-		"buy_from_cx_warning": "Only warehouse origin allows purchasing.",
-		"fit_ship": "Fit Ship",
-		"hide_infinite": "Hide Infinite",
+		"origin": "Точка отправления",
+		"target_days": "Целевой запас",
+		"buy_from_cx": "Купить в CX",
+		"buy_from_cx_warning": "Закупка доступна только со склада.",
+		"fit_ship": "Загрузить корабль",
+		"hide_infinite": "Скрыть бесконечные",
 		"json": "JSON"
 	},
 	"buttons": {
-		"copy_json": "Copy XIT JSON",
+		"copy_json": "Копировать XIT JSON",
 		"copy": "@:common.buttons.copy"
 	},
 	"table": {
