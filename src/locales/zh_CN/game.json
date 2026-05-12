@@ -7,12 +7,12 @@
 	"workforce_type": {
 		"pioneer": "先驱者",
 		"settler": "定居者",
-		"technician": "技术员",
+		"technician": "职技工",
 		"engineer": "工程师",
 		"scientist": "科学家"
 	},
 	"efficiency_type": {
-		"WORKFORCE": "劳动力",
+		"WORKFORCE": "生产力",
 		"HQ": "总部",
 		"EXPERT": "专家",
 		"COGC": "COGC",
@@ -162,8 +162,8 @@
 		"chemicals": "化学品",
 		"construction_materials": "建筑材料",
 		"construction_parts": "建筑部件",
-		"construction_prefabs": "预制建筑件",
-		"consumable_bundles": "消耗品包",
+		"construction_prefabs": "建筑预制件",
+		"consumable_bundles": "消耗品套包",
 		"consumables_(basic)": "基础消耗品",
 		"consumables_(luxury)": "奢侈消耗品",
 		"drones": "无人机",

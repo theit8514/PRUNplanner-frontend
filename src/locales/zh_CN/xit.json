@@ -2,7 +2,7 @@
 	"form": {
 		"origin": "来源地",
 		"target_days": "目标天数",
-		"buy_from_cx": "从 CX 购买",
+		"buy_from_cx": "从交易所购买",
 		"buy_from_cx_warning": "只有来源地为仓库时才能采购。",
 		"fit_ship": "适配飞船",
 		"hide_infinite": "隐藏无限项",

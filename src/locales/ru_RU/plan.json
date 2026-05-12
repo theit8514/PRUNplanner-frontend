@@ -1,79 +1,79 @@
 {
 	"notifications": {
-		"must_have_name": "Must set a plan name in Configuration to save"
+		"must_have_name": "Необходимо выбрать название плана в конфигурации, чтобы сохранить"
 	},
 	"tools": {
 		"labels": {
-			"popr": "POPR",
-			"visitation_frequency": "Visitation Frequency",
-			"construction_cart": "Construction Cart",
-			"supply_cart": "Supply Cart",
-			"repair_analysis": "Repair Analysis",
-			"workforce": "Workforce"
+			"popr": "ПОПР",
+			"visitation_frequency": "Частота посещений",
+			"construction_cart": "Корзина строительства",
+			"supply_cart": "Корзина снабжения",
+			"repair_analysis": "Анализ ремонта",
+			"workforce": "Рабочая сила"
 		},
 		"popr": {
-			"title": "Latest Population Report",
-			"error": "Error loading latest population report. The planet might not have population.",
-			"loading": "Loading Population Report"
+			"title": "Последний отчет по популяции",
+			"error": "Ошибка при загрузке последнего отчета о популяции. Планета может быть необитаема.",
+			"loading": "Загрузка отчета о популяции"
 		},
 		"visitation_frequency": {
-			"title": "Visitation Frequency",
+			"title": "Частота посещений",
 			"storage": {
-				"label": "Storage",
-				"info": "Your plan involves adding {storages} giving you a total storage capacity of {total_weight} t and {total_volume} m³.",
-				"info_no_storage": "Your plan has a total storage capacity of {total_weight} t and {total_volume} m³.",
+				"label": "Хранилище",
+				"info": "Ваш план включает добавление {storages} дающее вам общую вместимость хранилища {total_weight} и {total_volume} m3.",
+				"info_no_storage": "Общий объем хранилища вашего плана составляет {total_weight} и {total_volume} м3.",
 				"table": {
 					"weight": "t",
 					"volume": "m³",
 					"import": "@:terms.import",
 					"export": "@:terms.export",
 					"sum": "@:terms.sum",
-					"storage_filled": "Storage Filled",
-					"filled_unit": "days"
+					"storage_filled": "Заполненность хранилища",
+					"filled_unit": "дни"
 				},
-				"exclusion_info": "Exclude local materials from visitation frequency calculation for items handled exclusively planet-side, like local market sales, purchases or contracts."
+				"exclusion_info": "Исключить местные материалы из расчета частоты посещений для предметов торгующихся на внутреннем рынке планеты."
 			},
 			"shipping": {
-				"label": "Shipping",
+				"label": "Доставка",
 				"table": {
-					"ship_weight": "Ship t",
-					"ship_volume": "Ship m³",
-					"visitation_days": "Visitation (days)",
-					"limit": "Limit",
+					"ship_weight": "Масса корабля",
+					"ship_volume": "Объем корабля",
+					"visitation_days": "Посещаемость (дни)",
+					"limit": "Лимит",
 					"export_frequency": "@:terms.export Frequency",
 					"import_frequency": "@:terms.import Frequency"
 				}
 			}
 		},
 		"construction_cart": {
-			"title": "Construction Cart",
-			"unplanned_info": "Base has unplanned {buildings} (FIO: {fio_updated}). Demolish to ensure area, habitation and materials are accurate.",
+			"title": "Корзина строительства",
+			"unplanned_info": "База имеет незапланированный {buildings} (FIO: {fio_updated}). Снесите постройки для обеспечения точности в корпусах и материалах.",
 			"table": {
 				"building": "@:terms.buildings",
-				"built": "Built",
-				"amount": "Amount",
-				"habitation_info": "Insufficient habitation will reduce production efficiency.",
-				"planned": "Planned",
-				"materials_sum": "Materials Sum",
-				"total_cost": "Total Cost",
+				"built": "Построено",
+				"amount": "Количество",
+				"habitation_info": "Недостаток жилплощади уменьшит эффективность производства.",
+				"planned": "Запланировано",
+				"materials_sum": "Сумма материалов",
+				"total_cost": "Общая стоимость",
 				"total_weight": "@:terms.total_weight",
 				"total_volume": "@:terms.total_volume",
-				"material": "Material",
-				"storage": "Storage",
-				"stock": "Stock",
-				"stock_override": "Stock Override",
-				"need": "Need"
+				"material": "Материал",
+				"storage": "Хранилище",
+				"stock": "Запас",
+				"stock_override": "Переопределение запаса",
+				"need": "Необходимо"
 			}
 		},
 		"supply_cart": {
-			"title": "Supply Cart",
+			"title": "Корзина снабжения",
 			"info": {
-				"p": "The Supply Cart provides updates on your plans needs combined with existing inventory sourced from FIO. You have the flexibility to opt for alternative storage locations to replenish your base. Tailor your selection based on whether you wish to restock workforce and production supplies or focus on a specific category, and specify the duration for which the supplied stock should sustain. Use the {link} tool for more advanced supply cart options.",
+				"p": "Корзина снабжения предоставляет обновления о ваших планах в сочетании с существующим инвентарием из FIO. Вы можете выбрать альтернативные места хранения для снабжения своей базы. делайте ваш выбор на основе того, хотите ли вы пополнить рабочую силу и материалы производства или сосредоточиться на конкретной категории. Укажите продолжительность, на которую должен поддерживаться поставляемый запас. Используйте инструмент {link} для более продвинутых опций корзины поставок.",
 				"link": "FIO Burn"
 			},
 			"buttons": {
-				"all": "All",
-				"workforce": "Workforce",
+				"all": "Всё",
+				"workforce": "Рабочая сила",
 				"production": "Production"
 			},
 			"table": {
@@ -125,25 +125,25 @@
 				"recipe_runtime": "@:terms.recipes Runtime",
 				"percent_day": "% / day",
 				"efficiency": "Efficiency",
-				"degradation": "Degradation",
+				"degradation": "Деградация",
 				"cost": "@:terms.cost",
 				"materials": "@:terms.materials_plural",
-				"input_total": "Input Total",
+				"input_total": "Всего ввода",
 				"material": "@:terms.materials",
-				"cost_unit": "ȼ / Unit",
-				"cost_total": "Cost Total",
+				"cost_unit": "ȼ / Единица",
+				"cost_total": "Общая стоимость",
 				"cost_total_unit": "ȼ Total",
-				"workforce": "Workforce",
-				"total_cost": "Total Cost",
+				"workforce": "Рабочая сила",
+				"total_cost": "Общая стоимость",
 				"recipe_profit": "@:terms.recipes Profit",
-				"cost_split": "Cost Split"
+				"cost_split": "Разница в цене"
 			}
 		},
 		"plan_analytics": {
-			"title": "Planning Insights",
-			"info": "Insights are aggregated from active player plans on {planet}. PRUNplanner enforces minimum sample thresholds to ensure both anonymity and statistical accuracy.",
+			"title": "Идеи для планирования",
+			"info": "Идеи собираются из данных активных планов игроков на {planet}. PRUNplanner используем минимальные пороговые значения, чтобы обеспечить анонимность и статистическую точность.",
 			"labels": {
-				"experts": "Experts",
+				"experts": "Эксперты",
 				"production_buildings": "Production @:terms.buildings_plural",
 				"recipes": "@:terms.recipes_plural"
 			}
@@ -151,58 +151,58 @@
 	},
 	"components": {
 		"status": {
-			"hq": "HQ",
+			"hq": "Головной офис",
 			"cogc": "@:{'terms.cogc'}:",
 			"area": "@:{'terms.area'}:",
 			"profit": "@:{'terms.profit'}:",
 			"experts": "@:{'terms.experts_plural'}:"
 		},
 		"configuration": {
-			"label": "Configuration",
-			"name": "Name",
+			"label": "Конфигурация",
+			"name": "Имя",
 			"empire": "@:terms.empire"
 		},
 		"area": {
 			"permits": "@:terms.permits_plural",
 			"area": "@:terms.area",
-			"free": "Free"
+			"free": "Свободно"
 		},
 		"bonuses": {
-			"corp_hq": "Corp. HQ",
-			"corp_hq_tooltip": "The corporation you belong to has its headquarters on this planet (not your individual company).",
+			"corp_hq": "Штаб-квартира корпорации",
+			"corp_hq_tooltip": "Корпорация, которую вы принадлежите, имеет свою штаб-квартиру на этой планете (не вашу индивидуальную компанию).",
 			"cogc": "@:terms.cogc"
 		},
 		"infrastructure": {
-			"label": "Infrastructure",
-			"auto_optimize": "Auto-Optimize Habs",
-			"auto_optimize_tooltip": "Automatically optimize habitations to meet workforce needs as buildings are added.",
+			"label": "Инфраструктура",
+			"auto_optimize": "Автоматическая оптимизация заселения",
+			"auto_optimize_tooltip": "Автоматическая оптимизация поселений для удовлетворения кадровых потребностей по мере добавления зданий.",
 			"buttons": {
-				"optimize_cost": "Optimize Cost",
-				"optimize_area": "Optimize Area"
+				"optimize_cost": "Оптимизация по цене",
+				"optimize_area": "Оптимизация по площади"
 			}
 		},
 		"experts": {
-			"label": "Experts",
-			"warning": "Maximum number of experts on a base is 6. You currently have {expert_number} experts assigned."
+			"label": "Эксперты",
+			"warning": "Максимальное количество экспертов на базе - 6. В настоящее время назначены эксперты {expert_number}."
 		},
 		"workforce": {
-			"label": "Workforce",
+			"label": "Рабочая сила",
 			"table": {
-				"type": "Type",
-				"need": "Need",
-				"supply": "Supply",
-				"open": "Open",
-				"luxuries": "Luxuries",
-				"pct_eff": "Eff. %"
+				"type": "Тип",
+				"need": "Необходимо",
+				"supply": "Снабжение",
+				"open": "Открыто",
+				"luxuries": "Предметы роскоши",
+				"pct_eff": "Эффективность"
 			}
 		},
 		"overview": {
-			"label": "Overview",
+			"label": "Обзор",
 			"table": {
-				"daily_cost": "Daily Cost",
-				"degradation": "Degradation",
-				"plan_cost": "Plan Cost",
-				"daily_profit": "Daily Profit",
+				"daily_cost": "Суточная стоимость",
+				"degradation": "Деградация",
+				"plan_cost": "Стоимость плана",
+				"daily_profit": "Дневной доход",
 				"roi": "ROI",
 				"profit_area": "@:terms.profit_per_area"
 			}
@@ -264,34 +264,34 @@
 				"add_recipe": "@:terms.recipes"
 			},
 			"table": {
-				"expertise": "Expertise",
-				"efficiency": "Efficiency",
+				"expertise": "Экспертиза",
+				"efficiency": "Эффективность",
 				"revenue": "@:terms.revenue",
 				"area": "@:terms.area",
-				"construction": "Construction"
+				"construction": "Строительство"
 			}
 		},
 		"production_recipe": {
-			"cogm_title": "Cost Of Goods Manufactured",
-			"cogm_error": "COGM Calculation not possible. Check your Management View if your Empire has a CX assigned.",
+			"cogm_title": "Затраты на изготовленные товары",
+			"cogm_error": "Вычисление COGM невозможно. Проверьте ваше представление управления, если вашей империи присваивается CX.",
 			"buttons": {
 				"cogm": "@:terms.cogm"
 			},
 			"table": {
-				"input": "Input",
-				"time": "Time",
-				"output": "Output",
-				"daily_revenue": "ȼ / Day",
-				"profit_area": "ȼ / Area",
-				"roi": "ROI"
+				"input": "Ввод",
+				"time": "Время",
+				"output": "Вывод",
+				"daily_revenue": "ȼ / День",
+				"profit_area": "ȼ / Площадь",
+				"roi": "Доходность"
 			},
 			"info": {
-				"p1_strong": "Revenue / Day",
-				"p1": "is calculated by taking the daily income generated from a recipe and subtracting both the daily workforce cost (all luxuries provided) and the daily building degradation cost (1/180th of the construction cost). The income from the recipe is based on the difference between the input material costs and the output material values.",
-				"p2_strong": "ȼ / Area",
-				"p2": "is the daily revenue divided by the area for one production building and its proportionate share of the area for a CM and habs required for an optimal base of such buildings in Recipe ROI.",
-				"p3_strong": "ROI",
-				"p3": "is the time required for a continuously operating recipe to generate enough revenue to offset the building's construction cost. This considers daily degradation and workforce costs as well."
+				"p1_strong": "Доход в день",
+				"p1": "рассчитывается на основе ежедневного дохода, полученного от рецепта и вычитающего как ежедневную стоимость рабочей силы (С учетом предметов роскоши), так и ежедневную стоимость ремонта зданий (1/180-е место от стоимости строительства). Доход от рецепта основан на разнице между входными затратами и стоимостью выходного материала.",
+				"p2_strong": "ȼ / Площадь",
+				"p2": "это ежедневный доход от площади для одного производственного здания и пропорциональная доля этого участка для КМ и жилищ, необходимых для оптимальной застройки таких зданий в доходности рецепта.",
+				"p3_strong": "Доходность",
+				"p3": "Время окупаемости проекта с учетом затрат на ремонт и обслуживание."
 			}
 		}
 	}

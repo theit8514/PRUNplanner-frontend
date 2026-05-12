@@ -14,7 +14,7 @@
 		"plan": "Configuration @:terms.plan",
 		"plans_all": "Configuration de tous les @:terms.plans_plural",
 		"planet_data": "Données @:terms.planets '{name}'",
-		"cx": "Configuration @:terms.cx '{name}'",
+		"cx": "@:terms.cx Configurations",
 		"shared_list": "Configurations @:terms.plans_plural partagés",
 		"empire_plans": "Configurations @:terms.empire @:terms.plans_plural"
 	}

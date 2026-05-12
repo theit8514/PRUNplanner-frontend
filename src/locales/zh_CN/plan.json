@@ -248,7 +248,7 @@
 			"planet_resources": "@:terms.planets @:terms.resources_plural",
 			"form": {
 				"match_cogc": "匹配 @:terms.cogc",
-				"select_placeholder": "选择 @:terms.buildings & 添加到 @:terms.plan"
+				"select_placeholder": "选择@:terms.buildings并添加到@:terms.plan中"
 			},
 			"table": {
 				"building_recipe": "@:terms.buildings / @:terms.recipes",
