@@ -74,69 +74,69 @@
 			"buttons": {
 				"all": "Tutto",
 				"workforce": "Lavoratori",
-				"production": "Production"
+				"production": "Produzione"
 			},
 			"table": {
-				"stock_duration": "Stock Duration (days)",
-				"storage": "Storage",
-				"xit_name": "Supply Cart",
+				"stock_duration": "Durata Magazzino (giorni)",
+				"storage": "Magazzino",
+				"xit_name": "Carrello per il Rifornimento",
 				"ticker": "Ticker",
-				"daily_need": "Daily Need",
-				"daily_cost": "Daily Cost",
-				"stock": "Stock",
-				"full_need": "Full Need",
-				"final_need": "Final Need",
+				"daily_need": "Necessità Giornaliera",
+				"daily_cost": "Costo giornaliero",
+				"stock": "Inventario",
+				"full_need": "Necessità totale",
+				"final_need": "Necessità finale",
 				"weight": "t",
 				"volume": "m³",
-				"workforce": "Workforce",
-				"production": "Production",
-				"total_cost": "Total Cost",
+				"workforce": "Lavoratori",
+				"production": "Produzione",
+				"total_cost": "Costo Totale",
 				"total_weight": "@:terms.total_weight",
 				"total_volume": "@:terms.total_volume"
 			}
 		},
 		"repair_analysis": {
-			"title": "Repair Analysis",
+			"title": "Analisi Riparazione",
 			"plan": "@:terms.plan",
 			"table": {
-				"select_day": "Select Day",
-				"material": "Material",
-				"amount": "Amount",
-				"cost": "Cost",
-				"total_cost": "Total Cost",
+				"select_day": "Seleziona Giorno",
+				"material": "Materiali",
+				"amount": "Quantità",
+				"cost": "Costo",
+				"total_cost": "Costo Totale",
 				"total_weight": "@:terms.total_weight",
 				"total_volume": "@:terms.total_volume"
 			},
 			"graph": {
-				"select_building": "Select @:terms.buildings",
-				"individual_building": "Individual @:terms.buildings",
-				"repair_cost_breakdown": "Repair Cost Breakdown"
+				"select_building": "Seleziona @:terms.buildings",
+				"individual_building": "@:terms.buildings Individuale",
+				"repair_cost_breakdown": "Ripartizione Costi Di Riparazione"
 			}
 		},
 		"cogm": {
-			"title": "Cost of Goods Manufactured",
+			"title": "Costo di produzione dei beni",
 			"cogm": "@:terms.cogm",
-			"info": "The cost of goods manufactured is calculated using plan settings that factor in production efficiency, recipe runtime, building degradation, input material costs, labor requirements, and associated labor costs. The final cost is shown per unit of output, based on quantity or full cost allocation.",
-			"cx_preferences": "@:terms.cx_plural Preferences",
-			"empire_ticker": "@:terms.empire Ticker",
-			"planet_ticker": "@:terms.planet Ticker",
+			"info": "Il costo di produzione dei beni è calcolato usando le impostazioni del piano, includendo efficienza, durata delle ricette, stato dell'edificio, costo dei materiali in ingresso e il costo della manodopera. Il costo finale è indicato per unità prodotta, basandosi sulla quantità o sulla ripartizione completa dei costi.",
+			"cx_preferences": "Preferenza @:terms.cx_plural",
+			"empire_ticker": "Override per l'Impero",
+			"planet_ticker": "Override per il pianeta",
 			"table": {
-				"parameters": "Parameters",
-				"recipe_runtime": "@:terms.recipes Runtime",
-				"percent_day": "% / day",
-				"efficiency": "Efficiency",
-				"degradation": "Degradation",
+				"parameters": "Parametri",
+				"recipe_runtime": "Durata della @:terms.recipes",
+				"percent_day": "% / giornata",
+				"efficiency": "Efficienza",
+				"degradation": "Deterioramento",
 				"cost": "@:terms.cost",
 				"materials": "@:terms.materials_plural",
-				"input_total": "Input Total",
+				"input_total": "Input Totale",
 				"material": "@:terms.materials",
-				"cost_unit": "ȼ / Unit",
-				"cost_total": "Cost Total",
-				"cost_total_unit": "ȼ Total",
-				"workforce": "Workforce",
-				"total_cost": "Total Cost",
-				"recipe_profit": "@:terms.recipes Profit",
-				"cost_split": "Cost Split"
+				"cost_unit": "ȼ / Unità",
+				"cost_total": "Costo Totale",
+				"cost_total_unit": "ȼ Totale",
+				"workforce": "Lavoratori",
+				"total_cost": "Costo Totale",
+				"recipe_profit": "Profitto @:terms.recipes",
+				"cost_split": "Divisione Costo"
 			}
 		},
 		"plan_analytics": {
@@ -158,69 +158,69 @@
 			"experts": "@:{'terms.experts_plural'}:"
 		},
 		"configuration": {
-			"label": "Configuration",
-			"name": "Name",
+			"label": "Opzioni",
+			"name": "Nome",
 			"empire": "@:terms.empire"
 		},
 		"area": {
 			"permits": "@:terms.permits_plural",
 			"area": "@:terms.area",
-			"free": "Free"
+			"free": "Libera"
 		},
 		"bonuses": {
 			"corp_hq": "Corp. HQ",
-			"corp_hq_tooltip": "The corporation you belong to has its headquarters on this planet (not your individual company).",
+			"corp_hq_tooltip": "La corporazione a cui appartieni ha il suo quartier generale su questo pianeta (non la tua azienda individuale).",
 			"cogc": "@:terms.cogc"
 		},
 		"infrastructure": {
-			"label": "Infrastructure",
-			"auto_optimize": "Auto-Optimize Habs",
-			"auto_optimize_tooltip": "Automatically optimize habitations to meet workforce needs as buildings are added.",
+			"label": "Infrastruttura",
+			"auto_optimize": "Ottimizza Automaticamente Abitazioni",
+			"auto_optimize_tooltip": "Ottimizza automaticamente le abitazioni per soddisfare le esigenze della forza lavoro man mano che vengono aggiunti gli edifici.",
 			"buttons": {
-				"optimize_cost": "Optimize Cost",
-				"optimize_area": "Optimize Area"
+				"optimize_cost": "Ottimizza Costo",
+				"optimize_area": "Ottimizza Area"
 			}
 		},
 		"experts": {
-			"label": "Experts",
-			"warning": "Maximum number of experts on a base is 6. You currently have {expert_number} experts assigned."
+			"label": "Esperti",
+			"warning": "Il numero massimo di esperti in una base è 6. Al momento hai {expert_number} esperti assegnati."
 		},
 		"workforce": {
-			"label": "Workforce",
+			"label": "Lavoratori",
 			"table": {
-				"type": "Type",
-				"need": "Need",
-				"supply": "Supply",
-				"open": "Open",
-				"luxuries": "Luxuries",
-				"pct_eff": "Eff. %"
+				"type": "Categoria",
+				"need": "Necessità",
+				"supply": "Quantità",
+				"open": "Liberi",
+				"luxuries": "Beni di Lusso",
+				"pct_eff": "% Eff."
 			}
 		},
 		"overview": {
-			"label": "Overview",
+			"label": "Panoramica",
 			"table": {
-				"daily_cost": "Daily Cost",
-				"degradation": "Degradation",
-				"plan_cost": "Plan Cost",
-				"daily_profit": "Daily Profit",
+				"daily_cost": "Costo giornaliero",
+				"degradation": "Deterioramento",
+				"plan_cost": "Costo Del Piano",
+				"daily_profit": "Profitto Giornaliero",
 				"roi": "ROI",
 				"profit_area": "@:terms.profit_per_area"
 			}
 		},
 		"storage": {
-			"label": "Storage",
+			"label": "Magazzino",
 			"table": {
 				"weight": "t",
 				"volume": "m³",
-				"import": "@:terms.import",
+				"import": "Importazione",
 				"export": "@:terms.export",
 				"sum": "@:terms.sum",
-				"filled": "Filled"
+				"filled": "Riempito"
 			}
 		},
 		"materialio": {
-			"label": "Material I/O",
-			"label_production": "Production",
+			"label": "I/O Materiali",
+			"label_production": "Produzione",
 			"label_workforce": "Workforce",
 			"buttons": {
 				"toggle_weight_volume": "Toggle Weight & Volume",
