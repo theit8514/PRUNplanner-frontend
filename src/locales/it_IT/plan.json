@@ -68,12 +68,12 @@
 		"supply_cart": {
 			"title": "Carrello per il Rifornimento",
 			"info": {
-				"p": "The Supply Cart provides updates on your plans needs combined with existing inventory sourced from FIO. You have the flexibility to opt for alternative storage locations to replenish your base. Tailor your selection based on whether you wish to restock workforce and production supplies or focus on a specific category, and specify the duration for which the supplied stock should sustain. Use the {link} tool for more advanced supply cart options.",
+				"p": "Il carrello per il rifornimento fornisce aggiornamenti su ciò che serve al tuo piano contando l'inventario presente con FIO. Puoi optare per magazzini alternativi per rifornire la tua base. Personalizza la tua scelta decidendo se desideri rifornire la manodopera e la produzione, o concentrarti su una categoria specifica, e seleziona la durata per la quale l'inventario dovrebbe sostenere la base. Usa lo strumento {link} per le opzioni avanzate.",
 				"link": "FIO Burn"
 			},
 			"buttons": {
-				"all": "All",
-				"workforce": "Workforce",
+				"all": "Tutto",
+				"workforce": "Lavoratori",
 				"production": "Production"
 			},
 			"table": {
