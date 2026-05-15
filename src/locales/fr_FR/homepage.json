@@ -1,22 +1,22 @@
 {
 	"navigation": {
-		"registration": "Create Account",
-		"login": "Login"
+		"registration": "Créer un compte",
+		"login": "Se connecter"
 	},
 	"images": {
-		"section_title": "Command Your Empire from Anywhere",
-		"section_lead": "Monitor bases, manage production, and control your plans effortlessly. With intuitive, powerful tools, you can strategize, expand, and outsmart your rivals wherever you are.",
-		"empire": "Empire: Track production, supply chains, and growth across all your planets.",
-		"plan": "Plan: Strategize and analyze without spending in-game resources.",
-		"management": "Management: Coordinate plans, expansions, and your next moves effortlessly.",
-		"exchanges": "Exchanges: Optimize in-game pricing and trading strategies.",
-		"market_exploration": "Exploration: Analyze years of market data for smarter insights.",
-		"planet_search": "Search: Find the exact planets and resources you need instantly."
+		"section_title": "Dirigez votre empire depuis n'importe où",
+		"section_lead": "Supervisez vos bases, organisez votre production et suivez vos plans sans effort. Grâce à des outils faciles d'accès et puissants, vous pouvez créer des stratégies, vous développer et surpasser vos rivaux où que vous soyez.",
+		"empire": "Empire : Suivez la production, les chaînes d'approvisionnement et la croissance de toutes vos planètes.",
+		"plan": "Plan : Montez une stratégie et analysez sans dépenser de ressources en jeu.",
+		"management": "Gestion : Coordonnez les plans, les agrandissements et vos prochaines actions sans effort.",
+		"exchanges": "Échanges : Optimisez la gestion des prix et de trading en jeu.",
+		"market_exploration": "Exploration : Analysez des années de données de marché pour avoir toujours un coup d'avance.",
+		"planet_search": "Recherche : Trouvez instantanément les planètes et les ressources dont vous avez besoin."
 	},
 	"hero": {
-		"title": "Plan your empire",
-		"subtitle": "Rule Prosperous Universe",
-		"lead": "Say goodbye to cumbersome spreadsheets and hello to seamless management of your in-game assets."
+		"title": "Planifiez votre empire",
+		"subtitle": "Règle de Prosperous Universe",
+		"lead": "Dites adieu aux feuilles de calcul barbantes et bonjour à une gestion sans accroc de vos actifs en jeu."
 	},
 	"features": {
 		"section_title": "Powerful Features, Free For Everyone",

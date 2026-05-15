@@ -1,79 +1,79 @@
 {
 	"notifications": {
-		"must_have_name": "Must set a plan name in Configuration to save"
+		"must_have_name": "È necessario impostare un nome del piano in Configurazione per poter salvare"
 	},
 	"tools": {
 		"labels": {
 			"popr": "POPR",
-			"visitation_frequency": "Visitation Frequency",
-			"construction_cart": "Construction Cart",
-			"supply_cart": "Supply Cart",
-			"repair_analysis": "Repair Analysis",
-			"workforce": "Workforce"
+			"visitation_frequency": "Frequenza Di Visitazione",
+			"construction_cart": "Carrello per la Costruzione",
+			"supply_cart": "Carrello per il Rifornimento",
+			"repair_analysis": "Analisi Riparazione",
+			"workforce": "Lavoratori"
 		},
 		"popr": {
-			"title": "Latest Population Report",
-			"error": "Error loading latest population report. The planet might not have population.",
-			"loading": "Loading Population Report"
+			"title": "Ultima Rapporto Sulla Popolazione",
+			"error": "Errore nel caricare l'ultimo rapporto sulla popolazione. Il pianeta potrebbe non avere popolazione.",
+			"loading": "Caricamento Rapporto Popolazione"
 		},
 		"visitation_frequency": {
-			"title": "Visitation Frequency",
+			"title": "Frequenza Di Visitazione",
 			"storage": {
-				"label": "Storage",
-				"info": "Your plan involves adding {storages} giving you a total storage capacity of {total_weight} t and {total_volume} m³.",
-				"info_no_storage": "Your plan has a total storage capacity of {total_weight} t and {total_volume} m³.",
+				"label": "Magazzino",
+				"info": "Il tuo piano prevede l'aggiunta di {storages} dandoti una capacità totale di {total_weight} t e {total_volume} m³.",
+				"info_no_storage": "Il tuo piano ha una capacità dei magazzini totale di {total_weight} t e {total_volume} m³.",
 				"table": {
 					"weight": "t",
 					"volume": "m³",
 					"import": "@:terms.import",
 					"export": "@:terms.export",
 					"sum": "@:terms.sum",
-					"storage_filled": "Storage Filled",
-					"filled_unit": "days"
+					"storage_filled": "Stoccaggio Pieno",
+					"filled_unit": "giorni"
 				},
-				"exclusion_info": "Exclude local materials from visitation frequency calculation for items handled exclusively planet-side, like local market sales, purchases or contracts."
+				"exclusion_info": "Escludere i materiali locali dal calcolo della frequenza di visita per gli oggetti gestiti esclusivamente a livello planetario, come le vendite e acquisti sul mercato locale o i contratti."
 			},
 			"shipping": {
-				"label": "Shipping",
+				"label": "Trasporto",
 				"table": {
-					"ship_weight": "Ship t",
-					"ship_volume": "Ship m³",
-					"visitation_days": "Visitation (days)",
-					"limit": "Limit",
-					"export_frequency": "@:terms.export Frequency",
-					"import_frequency": "@:terms.import Frequency"
+					"ship_weight": "t Nave",
+					"ship_volume": "m³ Nave",
+					"visitation_days": "Frequenza Visite (giorni)",
+					"limit": "Limitazione",
+					"export_frequency": "Frequenza @:terms.export",
+					"import_frequency": "Frequenza @:terms.import"
 				}
 			}
 		},
 		"construction_cart": {
-			"title": "Construction Cart",
-			"unplanned_info": "Base has unplanned {buildings} (FIO: {fio_updated}). Demolish to ensure area, habitation and materials are accurate.",
+			"title": "Carrello per la Costruzione",
+			"unplanned_info": "La base ha un {buildings} non incluso nel piano (FIO: {fio_updated}). Demolisci per garantire che l'area, le abitazioni e i materiali siano accurati.",
 			"table": {
 				"building": "@:terms.buildings",
-				"built": "Built",
-				"amount": "Amount",
-				"habitation_info": "Insufficient habitation will reduce production efficiency.",
-				"planned": "Planned",
-				"materials_sum": "Materials Sum",
-				"total_cost": "Total Cost",
+				"built": "Costruiti",
+				"amount": "Quantità",
+				"habitation_info": "L'insufficiente numero di abitazioni ridurrà l'efficienza.",
+				"planned": "Pianificati",
+				"materials_sum": "Totale Materiali",
+				"total_cost": "Costo Totale",
 				"total_weight": "@:terms.total_weight",
 				"total_volume": "@:terms.total_volume",
-				"material": "Material",
-				"storage": "Storage",
-				"stock": "Stock",
-				"stock_override": "Stock Override",
-				"need": "Need"
+				"material": "Materiali",
+				"storage": "Magazzino",
+				"stock": "Inventario",
+				"stock_override": "Sovrascrivi inventario",
+				"need": "Necessario"
 			}
 		},
 		"supply_cart": {
-			"title": "Supply Cart",
+			"title": "Carrello per il Rifornimento",
 			"info": {
-				"p": "The Supply Cart provides updates on your plans needs combined with existing inventory sourced from FIO. You have the flexibility to opt for alternative storage locations to replenish your base. Tailor your selection based on whether you wish to restock workforce and production supplies or focus on a specific category, and specify the duration for which the supplied stock should sustain. Use the {link} tool for more advanced supply cart options.",
+				"p": "Il carrello per il rifornimento fornisce aggiornamenti su ciò che serve al tuo piano contando l'inventario presente con FIO. Puoi optare per magazzini alternativi per rifornire la tua base. Personalizza la tua scelta decidendo se desideri rifornire la manodopera e la produzione, o concentrarti su una categoria specifica, e seleziona la durata per la quale l'inventario dovrebbe sostenere la base. Usa lo strumento {link} per le opzioni avanzate.",
 				"link": "FIO Burn"
 			},
 			"buttons": {
-				"all": "All",
-				"workforce": "Workforce",
+				"all": "Tutto",
+				"workforce": "Lavoratori",
 				"production": "Production"
 			},
 			"table": {
