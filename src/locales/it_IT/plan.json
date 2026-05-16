@@ -221,77 +221,77 @@
 		"materialio": {
 			"label": "I/O Materiali",
 			"label_production": "Produzione",
-			"label_workforce": "Workforce",
+			"label_workforce": "Lavoratori",
 			"buttons": {
-				"toggle_weight_volume": "Toggle Weight & Volume",
-				"toggle_production_workforce": "Toggle Production & Workforce Split"
+				"toggle_weight_volume": "Mostra Peso e Volume",
+				"toggle_production_workforce": "Mostra divisione tra Produzione e Lavoratori"
 			},
 			"table": {
-				"input": "In",
-				"output": "Out",
+				"input": "In entrata",
+				"output": "In uscita",
 				"delta": "Δ",
-				"cost_day": "ȼ / day",
+				"cost_day": "ȼ / giorno",
 				"total_weight": "Δ t",
 				"total_volume": "Δ m³"
 			}
 		},
 		"save_as": {
-			"title": "Save As",
+			"title": "Salva come",
 			"form": {
-				"plan_name": "Name",
-				"plan_name_placeholder": "New @:terms.plan Name",
+				"plan_name": "Nome",
+				"plan_name_placeholder": "Nuovo nome del @:terms.plan",
 				"empire": "@:terms.empire"
 			}
 		},
 		"production": {
-			"label": "Production",
-			"planet_resources": "@:terms.planets @:terms.resources_plural",
+			"label": "Produzione",
+			"planet_resources": "@:terms.resources_plural del @:terms.planets",
 			"form": {
-				"match_cogc": "Match @:terms.cogc",
-				"select_placeholder": "Select @:terms.buildings & Add to @:terms.plan"
+				"match_cogc": "Solo corrispondenza @:terms.cogc",
+				"select_placeholder": "Seleziona @:terms.buildings e aggiungi al @:terms.plan"
 			},
 			"table": {
 				"building_recipe": "@:terms.buildings / @:terms.recipes",
-				"runtime": "Runtime",
+				"runtime": "Durata",
 				"share": "Share",
-				"tools": "Tools"
+				"tools": "Strumenti"
 			}
 		},
 		"production_building": {
-			"no_recipe": "No Active @:terms.recipes_plural",
-			"qty": "Qty",
+			"no_recipe": "Nessuna @:terms.recipes_plural attiva",
+			"qty": "Q.tà",
 			"buttons": {
 				"add_recipe": "@:terms.recipes"
 			},
 			"table": {
-				"expertise": "Expertise",
-				"efficiency": "Efficiency",
+				"expertise": "Maestria",
+				"efficiency": "Efficienza",
 				"revenue": "@:terms.revenue",
 				"area": "@:terms.area",
-				"construction": "Construction"
+				"construction": "Costruzione"
 			}
 		},
 		"production_recipe": {
-			"cogm_title": "Cost Of Goods Manufactured",
-			"cogm_error": "COGM Calculation not possible. Check your Management View if your Empire has a CX assigned.",
+			"cogm_title": "Costo di produzione dei beni",
+			"cogm_error": "Calcolo CPDB non possibile. Controlla la pagina Gestione se il tuo Impero ha una borsa assegnata.",
 			"buttons": {
 				"cogm": "@:terms.cogm"
 			},
 			"table": {
 				"input": "Input",
-				"time": "Time",
+				"time": "Durata",
 				"output": "Output",
-				"daily_revenue": "ȼ / Day",
-				"profit_area": "ȼ / Area",
+				"daily_revenue": "ȼ / giorno",
+				"profit_area": "ȼ / area",
 				"roi": "ROI"
 			},
 			"info": {
-				"p1_strong": "Revenue / Day",
-				"p1": "is calculated by taking the daily income generated from a recipe and subtracting both the daily workforce cost (all luxuries provided) and the daily building degradation cost (1/180th of the construction cost). The income from the recipe is based on the difference between the input material costs and the output material values.",
-				"p2_strong": "ȼ / Area",
-				"p2": "is the daily revenue divided by the area for one production building and its proportionate share of the area for a CM and habs required for an optimal base of such buildings in Recipe ROI.",
+				"p1_strong": "I ricavi giornalieri",
+				"p1": "sono calcolati prendendo il reddito giornaliero generato da una ricetta, togliendo sia il costo dei lavoratori (con tutti i beni di lusso) e il costo della degradazione dell'edificio giornaliera (1/180esimo del costo di costruzione dell'edificio). Il reddito della ricetta è basato sulla differenza tra il costo dei materiali in input e il valore dei materiali prodotti.",
+				"p2_strong": "ȼ / area",
+				"p2": "è il ricavo giornaliero diviso per l’area occupata da un edificio di produzione e dalla sua quota proporzionale dell’area di un CM e degli alloggi necessari per una base ottimale composta da tali edifici.",
 				"p3_strong": "ROI",
-				"p3": "is the time required for a continuously operating recipe to generate enough revenue to offset the building's construction cost. This considers daily degradation and workforce costs as well."
+				"p3": "è il tempo di funzionamento continuo di una ricetta richiesto per generare abbastanza profitto per compensare i costi di costruzione dell'edificio. Tiene conto anche della degradazione dell'edificio."
 			}
 		}
 	}
