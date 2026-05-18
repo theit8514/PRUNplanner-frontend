@@ -215,7 +215,8 @@
 								v-for="material in rowData.inputs"
 								:key="`${rowData.building_ticker}#INPUT#${material.material_ticker}`"
 								:ticker="material.material_ticker"
-								:amount="material.material_amount" />
+								:amount="material.material_amount"
+								:enable-popover="false" />
 						</div>
 					</template>
 				</XNDataTableColumn>
@@ -238,7 +239,8 @@
 								v-for="material in rowData.outputs"
 								:key="`${rowData.building_ticker}#OUTPUT#${material.material_ticker}`"
 								:ticker="material.material_ticker"
-								:amount="material.material_amount" />
+								:amount="material.material_amount"
+								:enable-popover="false" />
 						</div>
 					</template>
 				</XNDataTableColumn>
