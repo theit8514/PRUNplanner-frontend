@@ -80,13 +80,5 @@
 		"vitest": "^4.1.4",
 		"vue-eslint-parser": "^10.4.0",
 		"vue-tsc": "3.2.5"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"core-js",
-			"esbuild",
-			"protobufjs",
-			"vue-demi"
-		]
 	}
 }
