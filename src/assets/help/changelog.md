@@ -1,3 +1,12 @@
+# 2026-05-18 - v. 0.29.0
+
+This release is fully dedicated to bringing localization and community translation support to PRUNplanner. Both the user interface and help pages have been refactored to seamlessly integrate with [Crowdin](https://crowdin.com/project/prunplanner), and the community has already stepped up to deliver complete UI translations for German, Russian, and Chinese. A massive thank you to everyone who contributed to making this milestone possible! If you want to see PRUNplanner in your native language or help refine our existing strings, head over to the [Translations Project](https://crowdin.com/project/prunplanner) and join the effort.
+
+Additional changes:
+
+- The Exchange popup on the recipe selector was deactivated [[PR-462]](https://github.com/PRUNplanner/frontend/pull/462)
+- Recipe selector ROI column sorting was fixed [[PR-430]](https://github.com/PRUNplanner/frontend/pull/430)
+
 # 2026-04-29 - v. 0.28.0
 
 - Implements the "API Keys" view to manage PRUNplanner API keys from the UI [[PR-408]](https://github.com/PRUNplanner/frontend/pull/408)
