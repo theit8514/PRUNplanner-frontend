@@ -35,7 +35,7 @@ jobs:
           context: .
           push: true
           platforms: linux/arm64
-		  no-cache: true
+          no-cache: true
           tags: |
             ghcr.io/prunplanner/prunplanner-frontend:latest
             ghcr.io/prunplanner/prunplanner-frontend:${{ github.ref_name }}
