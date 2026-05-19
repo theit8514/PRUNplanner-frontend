@@ -175,7 +175,7 @@
 	// Plan Preferences
 	const planPrefs = computed<ReturnType<typeof usePlanPreferences> | null>(
 		() => {
-			return !props.disabled && props.planData.uuid !== undefined
+			return props.planData.uuid !== undefined
 				? usePlanPreferences(props.planData.uuid)
 				: null;
 		}
