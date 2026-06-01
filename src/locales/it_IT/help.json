@@ -1,23 +1,23 @@
 {
-	"view_title": "Help",
-	"title": "Help & Changelog",
+	"view_title": "Guida",
+	"title": "Guida e Changelog",
 	"changelog": {
 		"title": "Changelog"
 	},
 	"tutorial": {
-		"intro": "PRUNplanner helps you design bases, organize empires, and calculate profits — without wasting in-game resources. It mirrors nearly every aspect of Prosperous Universe so you can plan smarter and play more confidently."
+		"intro": "PRUNplanner ti aiuta a progettare basi, organizzare gli imperi e calcolare i profitti — senza sprecare risorse nel gioco. Ricrea quasi ogni aspetto di Prosperous Universe in modo da poter pianificare in modo più intelligente e giocare in modo più sicuro."
 	},
 	"getting_started": {
-		"title": "Getting Started",
+		"title": "Come iniziare",
 		"image_label": "Gestione",
 		"l1": {
-			"title": "Create an Empire in {link}:",
+			"title": "Crea un Impero in {link}:",
 			"link": "Gestione",
 			"p": "By default, you'll already have one. But you can add more for different factions or regions. Assign a name and faction, and save."
 		},
 		"l2": {
-			"title": "Setup an {link}:",
-			"link": "Exchange",
+			"title": "Imposta una {link}:",
+			"link": "Borsa",
 			"p": "Go into Management and create your exchange. Switch to the Exchanges view to modify it. For most players, set it to Both (buying and selling) and choose the exchange your bases will use (e.g., CI1 for Benten). Save it."
 		},
 		"l3": {

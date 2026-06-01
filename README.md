@@ -14,7 +14,30 @@
 - Advanced Optimization Tools like ROI & Profit Calculator: Detailed calculations for production costs and profit per area.
 - Efficient Material I/O: Visual and data-based analysis of production vs. consumption to identify bottlenecks and resource gaps.
 
+
+# Localization & Community Translations
+
+Driven by the incredible efforts of the PRUNplanner community, our planning tools and features are accessible globally. The platform natively supports multiple languages, with more on the horizon:
+
+**🇺🇸 English** (Native) | **🇩🇪 Deutsch** | **🇷🇺 Русский** | **🇨🇳 简体中文**
+
+Want to see PRUNplanner in your language or help refine existing strings?
+
+[![Crowdin](https://badges.crowdin.net/prunplanner/localized.svg)](https://crowdin.com/project/prunplanner)
+
+👉 **[Join our translation project on Crowdin](https://crowdin.com/project/prunplanner)**
+
+A huge thank you to the following community members who volunteered their time to translate and maintain PRUNplanner translations:
+
+| Language | Core Contributors |
+| :--- | :--- |
+| **🇩🇪 Deutsch** | `Eisberi` |
+| **🇷🇺 Русский** | `hameronlive`, `Razenpok` |
+| **🇨🇳 简体中文** | `YuLun-bili`, `PHANTOMSPACE`, `MioandMeow` |
+
+
 # Development
+
 ## Stack
 
 - [Vue3](https://vuejs.org/)

@@ -1,45 +1,45 @@
 {
-	"view_title": "API Keys",
-	"title": "API Keys",
+	"view_title": "Ключи API",
+	"title": "Ключи API",
 	"info": {
 		"description": {
-			"p1": "The {link} provides programmatic access to all your planning data, ingame metadata (buildings, recipes, materials) and calculated market metrics like VWAP. While public endpoints remain open for community use, access to private planning data - including your plan configurations - require secure authentication.",
-			"p2": "By utilizing these endpoints, you can synchronize your planning operations with external spreadsheets, custom dashboards, or even optimization algorithms.",
+			"p1": "Интерфейс {link} обеспечивает программный доступ ко всем вашим данным планирования, игровым метаданным (здания, рецепты, материалы) и расчётным рыночным показателям, таким как VWAP. Публичные эндпоинты остаются открытыми для использования сообществом, однако доступ к приватным данным планирования — включая конфигурации ваших планов — требует безопасной аутентификации.",
+			"p2": "Используя эти эндпоинты, вы можете синхронизировать свои операции планирования с внешними таблицами, пользовательскими панелями управления или даже алгоритмами оптимизации.",
 			"link": "PRUNplanner REST API",
-			"warning": "API keys grant full access to your account data and remain valid indefinitely. Treat these credentials as sensitive as your password. Never commit keys to public repositories or share them with unverified third-party services. If a key is compromised, revoke it immediately and generate a replacement."
+			"warning": "API ключи предоставляют полный доступ к данным вашего аккаунта и действуют бессрочно. Относитесь к этим учётным данным так же серьёзно, как к своему паролю. Никогда не публикуйте ключи в общедоступных репозиториях и не передавайте их непроверенным сторонним сервисам. Если ключ был скомпрометирован — немедленно отзовите его и создайте новый."
 		}
 	},
 	"manage": {
-		"title": "PRUNplanner API Keys",
+		"title": "API Ключи PRUNplanner",
 		"buttons": {
-			"new_apikey": "Create New Key",
-			"revoke_apikey": "Revoke"
+			"new_apikey": "Создать новый ключ",
+			"revoke_apikey": "Отозвать"
 		},
 		"table": {
-			"apikey_name": "Name",
-			"apikey_prefix": "Prefix",
-			"apikey_created": "Created",
-			"apikey_lastused": "Last Used"
+			"apikey_name": "Имя",
+			"apikey_prefix": "Префикс",
+			"apikey_created": "Создано",
+			"apikey_lastused": "Последнее использование"
 		}
 	},
 	"implementation": {
-		"title": "Authorization Implementation",
-		"link": "View REST API Reference →"
+		"title": "Внедрение авторизации",
+		"link": "Открыть справочник REST API →"
 	},
 	"create": {
-		"title": "Create API Key",
+		"title": "Создать ключ API",
 		"form": {
-			"key_name": "Key Name",
-			"key_description": "Give your key a descriptive name to help you identify it later.",
-			"success_title": "Key Generated Successfully",
-			"success_key": "Your Secret Key (Save this Now!)",
-			"success_note": "For security, we cannot show this key again. If you lose it, you must revoke and create a new one.",
-			"error": "Error creating your API Key. Please try again later."
+			"key_name": "Имя ключа",
+			"key_description": "Дайте ключу понятное название, чтобы легко его идентифицировать в будущем.",
+			"success_title": "Ключ успешно создан",
+			"success_key": "Ваш секретный ключ (Сохраните его сейчас!)",
+			"success_note": "В целях безопасности мы не можем показать этот ключ повторно. Если вы его потеряете, необходимо отозвать его и создать новый.",
+			"error": "Ошибка при создании ключа API. Пожалуйста, повторите попытку позже."
 		},
 		"buttons": {
 			"create": "@:common.buttons.create",
 			"cancel": "@:common.buttons.cancel",
-			"saved": "I've saved my key"
+			"saved": "Я сохранил свой ключ"
 		}
 	}
 }

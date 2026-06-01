@@ -1,4 +1,9 @@
 <script setup lang="ts">
+	import { computed } from "vue";
+
+	// Components
+	import HomepageLanguage from "@/layout/components/HomepageLanguage.vue";
+
 	const screenshots: { image: string; text: string }[] = [
 		{
 			image: "/images/homepage/homepage-empire.png",
@@ -25,6 +30,12 @@
 			text: "homepage.images.planet_search",
 		},
 	];
+
+	// check, if user language is not English
+	const showLanguageSelector = computed<boolean>(() => {
+		if (typeof window === "undefined") return true;
+		return !!navigator.language.startsWith("en");
+	});
 </script>
 
 <template>
@@ -43,9 +54,15 @@
 		<h1 class="pb-4 text-4xl tracking-tight text-white text-center mt-30">
 			{{ $t("homepage.features.section_title") }}
 		</h1>
-		<p class="text-white/60 text-center text-xl mb-10">
+		<p
+			class="text-white/60 text-center text-xl"
+			:class="showLanguageSelector ? 'mb-' : 'mb-10'">
 			{{ $t("homepage.features.section_lead") }}
 		</p>
+
+		<div v-if="showLanguageSelector" class="p-10">
+			<HomepageLanguage />
+		</div>
 
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-white/20 gap-px child:p-10 child:hover:bg-linear-315 child:from-white/10 child:to-transparent mb-20">

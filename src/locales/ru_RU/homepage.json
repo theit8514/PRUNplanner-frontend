@@ -1,75 +1,75 @@
 {
 	"navigation": {
-		"registration": "Create Account",
-		"login": "Login"
+		"registration": "Создать учетную запись",
+		"login": "Вход"
 	},
 	"images": {
-		"section_title": "Command Your Empire from Anywhere",
-		"section_lead": "Monitor bases, manage production, and control your plans effortlessly. With intuitive, powerful tools, you can strategize, expand, and outsmart your rivals wherever you are.",
-		"empire": "Empire: Track production, supply chains, and growth across all your planets.",
-		"plan": "Plan: Strategize and analyze without spending in-game resources.",
-		"management": "Management: Coordinate plans, expansions, and your next moves effortlessly.",
-		"exchanges": "Exchanges: Optimize in-game pricing and trading strategies.",
-		"market_exploration": "Exploration: Analyze years of market data for smarter insights.",
-		"planet_search": "Search: Find the exact planets and resources you need instantly."
+		"section_title": "Управляйте вашей Империей откуда угодно",
+		"section_lead": "Отслеживайте базы, управляйте своими планами и управляйте ими. С интуитивно понятными инструментами вы можете создавать стратегии, расширять и развлекать своих конкурентов, где бы вы ни находились.",
+		"empire": "Империя: Отслеживайте производство, поставку и рост на всех ваших планетах.",
+		"plan": "Планы: Создавайте стратегии и анализируйте без использования игровых ресурсов.",
+		"management": "Управление: координируйте планы, расширения и свои следующие шаги без лишних усилий.",
+		"exchanges": "Биржи: Оптимизируйте игровые цены и торговые стратегии.",
+		"market_exploration": "Исследование: анализируйте многолетние рыночные данные для более взвешенных решений.",
+		"planet_search": "Поиск: Найти точные планеты и ресурсы, которые вам нужны, мгновенно."
 	},
 	"hero": {
-		"title": "Plan your empire",
-		"subtitle": "Rule Prosperous Universe",
-		"lead": "Say goodbye to cumbersome spreadsheets and hello to seamless management of your in-game assets."
+		"title": "Спланируйте свою империю",
+		"subtitle": "Покоряйте Prosperous Universe",
+		"lead": "Попрощайтесь с громоздкими электронными таблицами и приветствуйте для беспрепятственного управления вашими внутри игровыми активами."
 	},
 	"features": {
-		"section_title": "Powerful Features, Free For Everyone",
-		"section_lead": "Streamline your planning and resource management, ensure you stay ahead in the galaxy.",
+		"section_title": "Мощные возможности, Бесплатно для всех",
+		"section_lead": "Упорядочивайте процесс планирования и управления ресурсами, убедитесь, что вы будете первым в галактике.",
 		"simulation": {
-			"label": "Base Simulation",
-			"text": "PRUNplanner lets you design and try new bases without spending in-game resources. It mirrors all aspects of a base, from habitation and production buildings to COGC programs and planet resources."
+			"label": "Симулятор базы",
+			"text": "PRUNplanner позволяет разрабатывать и тестировать новые базы без использования игровых ресурсов. Он отражает все аспекты базы, от жительства и производственных зданий до COGC программ и планетарных ресурсов."
 		},
 		"planning": {
-			"label": "Empire Planning",
-			"text": "Effortlessly organize and manage your entire empire. With PRUNplanner, you can plan across multiple bases and complex supply chains, ensuring your material flows remain on schedule and your empire runs smoothly."
+			"label": "Планирование Империи",
+			"text": "Усилия организуют и управляют всей вашей империей. С помощью PRUNplanner вы можете спланировать различные базы и сложные цепочки поставок, чтобы ваши потоки материалов оставались в графике и ваша империя работает плавно."
 		},
 		"gamedata": {
-			"label": "Game Data",
-			"text": "Stay ahead with up-to-date market information integrated directly from the game's community API (FIO). Make informed planning and expansion decisions based on actual markets and the best ROI."
+			"label": "Игровые данные",
+			"text": "Будьте в курсе актуальной информации о рынке, интегрированной непосредственно с API сообщества игры (FIO). Принимайте обоснованные решения по планированию и расширению на основе реальных рынков и лучших показателей ROI."
 		},
 		"burn_repair": {
-			"label": "Burn & Repair",
-			"text": "Prevent shortages and bottlenecks with detailed management tools. PRUNplanner tracks your resources and consumables, ensuring you have everything you need right when you need it, keeping your operations seamless."
+			"label": "Расход и ремонт",
+			"text": "Предотвращение нехватки и узких мест с помощью подробных инструментов управления. PRUNplanner следит за вашими ресурсами и расходуемыми материалами, обеспечивая Вам все необходимое для того, чтобы Ваши операции были безупречными."
 		},
 		"market_exploration": {
-			"label": "Market Exploration",
-			"text": "Explore historic market trends from past years and uncover how markets truly behave. Spot exciting opportunities, and effortlessly calculate Return on Investment for every recipe and resource — giving you the strategic edge you need for smarter planning."
+			"label": "Исследование рынка",
+			"text": "Откройте для себя исторические тенденции рынка за последние годы и узнайте, как рынок действительно действует. Увлекательные возможности и удобные расчеты прибыли от инвестиций по каждому рецепту и ресурсу — давая вам стратегическое преимущество, которое необходимо для более эффективного планирования."
 		},
 		"tools": {
-			"label": "A Wealth of Additional Tools",
-			"text": "Explore material prices from now to years past, know the optimal times for repairing production buildings, monitor expert spawn times, and optimize habitation buildings for minimal area or cost. PRUNplanner offers these features and many more."
+			"label": "Богатый выбор дополнительных инструментов",
+			"text": "Исследуйте цены на материалы за прошедшие годы, знайте оптимальное время для ремонта зданий, отслеживайте время приплода экспертов, оптимизируйте жилища к минимизации площади или цены."
 		}
 	},
 	"concepts": {
-		"section_title": "Core Concepts",
-		"section_lead": "PRUNplanner consists of three main components that allow you to plan and manage your Prosperous Universe empire.",
+		"section_title": "Ключевые концепты",
+		"section_lead": "PRUNplanner состоит из трех основных компонентов, которые позволяют планировать и управлять вашей империей в Prosperous Universe.",
 		"plans": {
-			"label": "Plans",
-			"text": "Plans are the backbone of what you do in PRUNplanner. They consist of all buildings, productions and bonuses of a base you can put down in Prosperous Universe. You can create new plans by searching for the planet you would like to create a base for. Also, a plan should be assigned a CX Exchange preference, as well as be assigned to an Empire."
+			"label": "Планы",
+			"text": "Планы лежат в основе того, что вы делаете в PRUNplanner. Они состоят из всех зданий, производств и бонусов базы вы можете расположиться в Prosperous Universe. Вы можете создать новые планы, находить планеты на которой вы хотите создать базу. Кроме того, плану следует назначить предпочтение биржи, также назначенное империи."
 		},
 		"empires": {
-			"label": "Empires",
-			"text": "An Empire is a collection of plans (e.g. all the bases you currently have settled in Prosperous Universe, or that you would like to settle, all interconnected together). Each empire is like a container that consists of multiple plans. Additionally, an exchange preference can be assigned to each Empire."
+			"label": "Империи",
+			"text": "Империя - это коллекция планов (напр. Все базы, которые вы сейчас поселили в Prosperous Universe, или что вы хотели бы поселиться, Все взаимосвязано). Каждая империя похожа на контейнер, который состоит из нескольких планов. Кроме того, предпочтение биржи может быть присвоено каждой империи."
 		},
 		"exchanges": {
-			"label": "Exchanges",
-			"text": "The Exchange Settings allow you to define market preferences for the pricing of materials. Each preference can be used in multiple Empires. However, each Empire can only have a single Exchange preference assigned to it. This ensures that prices are properly calculated for all individual plans that are part of the Empire."
+			"label": "Биржи",
+			"text": "Настройки биржи позволяют задать рыночные предпочтения для ценообразования материалов. Каждая настройка может использоваться в нескольких империях. Однако каждой империи может быть назначена только одна настройка биржи. Это гарантирует корректный расчёт цен для всех отдельных планов входящих в состав империи."
 		}
 	},
 	"tools": {
-		"section_title": "Powered by tools we love to use"
+		"section_title": "Работает на инструментах, которые мы любим использовать"
 	},
 	"open_source": {
-		"section_title": "Free & Open Source",
-		"section_lead": "PRUNplanner is completely free to use, and its frontend is fully {link}.",
-		"prompt": "Love it? We'd be thrilled if you contributed!",
-		"link_open_source": "Open Source"
+		"section_title": "Бесплатный и Открытый Исходный код",
+		"section_lead": "\"PRUNplanner абсолютно бесплатен в использовании, а его фронтенд полностью {link}.",
+		"prompt": "Нравится? Мы будем рады вашему вкладу!",
+		"link_open_source": "Открытый исходный код"
 	},
-	"love": "Made with ♥  in Munich, with contributions from around the world."
+	"love": "Сделано с ♥ в Мюнхене, при участии людей со всего мира."
 }

@@ -40,8 +40,8 @@
 					"ship_volume": "Объем корабля",
 					"visitation_days": "Посещаемость (дни)",
 					"limit": "Лимит",
-					"export_frequency": "@:terms.export Frequency",
-					"import_frequency": "@:terms.import Frequency"
+					"export_frequency": "Частота @:terms.export",
+					"import_frequency": "Частота @:terms.import"
 				}
 			}
 		},
@@ -69,62 +69,62 @@
 			"title": "Корзина снабжения",
 			"info": {
 				"p": "Корзина снабжения предоставляет обновления о ваших планах в сочетании с существующим инвентарием из FIO. Вы можете выбрать альтернативные места хранения для снабжения своей базы. делайте ваш выбор на основе того, хотите ли вы пополнить рабочую силу и материалы производства или сосредоточиться на конкретной категории. Укажите продолжительность, на которую должен поддерживаться поставляемый запас. Используйте инструмент {link} для более продвинутых опций корзины поставок.",
-				"link": "FIO Burn"
+				"link": "Расход FIO"
 			},
 			"buttons": {
 				"all": "Всё",
 				"workforce": "Рабочая сила",
-				"production": "Production"
+				"production": "Производство"
 			},
 			"table": {
-				"stock_duration": "Stock Duration (days)",
-				"storage": "Storage",
-				"xit_name": "Supply Cart",
-				"ticker": "Ticker",
-				"daily_need": "Daily Need",
-				"daily_cost": "Daily Cost",
-				"stock": "Stock",
-				"full_need": "Full Need",
-				"final_need": "Final Need",
+				"stock_duration": "Срок запасов (дней)",
+				"storage": "Хранилище",
+				"xit_name": "Корзина поставок",
+				"ticker": "Тикер",
+				"daily_need": "Ежедневная потребность",
+				"daily_cost": "Дневные затраты",
+				"stock": "Запас",
+				"full_need": "Полная потребность",
+				"final_need": "Окончательная потребность",
 				"weight": "t",
 				"volume": "m³",
-				"workforce": "Workforce",
-				"production": "Production",
-				"total_cost": "Total Cost",
+				"workforce": "Рабочая сила",
+				"production": "Производство",
+				"total_cost": "Общая стоимость",
 				"total_weight": "@:terms.total_weight",
 				"total_volume": "@:terms.total_volume"
 			}
 		},
 		"repair_analysis": {
-			"title": "Repair Analysis",
+			"title": "Анализ ремонта",
 			"plan": "@:terms.plan",
 			"table": {
-				"select_day": "Select Day",
-				"material": "Material",
-				"amount": "Amount",
-				"cost": "Cost",
-				"total_cost": "Total Cost",
+				"select_day": "Выберите день",
+				"material": "Материал",
+				"amount": "Количество",
+				"cost": "Стоимость",
+				"total_cost": "Общая стоимость",
 				"total_weight": "@:terms.total_weight",
 				"total_volume": "@:terms.total_volume"
 			},
 			"graph": {
-				"select_building": "Select @:terms.buildings",
-				"individual_building": "Individual @:terms.buildings",
-				"repair_cost_breakdown": "Repair Cost Breakdown"
+				"select_building": "Выберите @:terms.buildings",
+				"individual_building": "Индивидуальные @:terms.buildings",
+				"repair_cost_breakdown": "Распределение расходов на ремонт"
 			}
 		},
 		"cogm": {
-			"title": "Cost of Goods Manufactured",
+			"title": "Себестоимость произведённой продукции",
 			"cogm": "@:terms.cogm",
-			"info": "The cost of goods manufactured is calculated using plan settings that factor in production efficiency, recipe runtime, building degradation, input material costs, labor requirements, and associated labor costs. The final cost is shown per unit of output, based on quantity or full cost allocation.",
-			"cx_preferences": "@:terms.cx_plural Preferences",
-			"empire_ticker": "@:terms.empire Ticker",
-			"planet_ticker": "@:terms.planet Ticker",
+			"info": "Себестоимость произведённой продукции рассчитывается с использованием настроек плана, учитывающих эффективность производства, время выполнения рецепта, износ зданий, стоимость входных материалов, потребность в рабочей силе и связанные с ней затраты. Итоговая стоимость отображается за единицу продукции на основе количества или полного распределения затрат.",
+			"cx_preferences": "Настройки @:terms.cx_plural",
+			"empire_ticker": "@:terms.empire Тикер",
+			"planet_ticker": "@:terms.planet Тикер",
 			"table": {
-				"parameters": "Parameters",
-				"recipe_runtime": "@:terms.recipes Runtime",
-				"percent_day": "% / day",
-				"efficiency": "Efficiency",
+				"parameters": "Параметры",
+				"recipe_runtime": "Время выполнения @:terms.recipes",
+				"percent_day": "% / День",
+				"efficiency": "Эффективность",
 				"degradation": "Деградация",
 				"cost": "@:terms.cost",
 				"materials": "@:terms.materials_plural",
@@ -132,10 +132,10 @@
 				"material": "@:terms.materials",
 				"cost_unit": "ȼ / Единица",
 				"cost_total": "Общая стоимость",
-				"cost_total_unit": "ȼ Total",
+				"cost_total_unit": "ȼ Всего",
 				"workforce": "Рабочая сила",
 				"total_cost": "Общая стоимость",
-				"recipe_profit": "@:terms.recipes Profit",
+				"recipe_profit": "Прибыль @:terms.recipes",
 				"cost_split": "Разница в цене"
 			}
 		},
@@ -144,7 +144,7 @@
 			"info": "Идеи собираются из данных активных планов игроков на {planet}. PRUNplanner используем минимальные пороговые значения, чтобы обеспечить анонимность и статистическую точность.",
 			"labels": {
 				"experts": "Эксперты",
-				"production_buildings": "Production @:terms.buildings_plural",
+				"production_buildings": "Производство @terms.buildings_plural",
 				"recipes": "@:terms.recipes_plural"
 			}
 		}
@@ -208,58 +208,58 @@
 			}
 		},
 		"storage": {
-			"label": "Storage",
+			"label": "Хранилище",
 			"table": {
 				"weight": "t",
 				"volume": "m³",
 				"import": "@:terms.import",
 				"export": "@:terms.export",
 				"sum": "@:terms.sum",
-				"filled": "Filled"
+				"filled": "Заполнено"
 			}
 		},
 		"materialio": {
-			"label": "Material I/O",
-			"label_production": "Production",
-			"label_workforce": "Workforce",
+			"label": "I/O Материалов",
+			"label_production": "Производство",
+			"label_workforce": "Рабочая сила",
 			"buttons": {
-				"toggle_weight_volume": "Toggle Weight & Volume",
-				"toggle_production_workforce": "Toggle Production & Workforce Split"
+				"toggle_weight_volume": "Переключить вес и объем",
+				"toggle_production_workforce": "Переключить производство и разделение рабочей силы"
 			},
 			"table": {
-				"input": "In",
-				"output": "Out",
+				"input": "Вход",
+				"output": "Выход",
 				"delta": "Δ",
-				"cost_day": "ȼ / day",
+				"cost_day": "ȼ / День",
 				"total_weight": "Δ t",
 				"total_volume": "Δ m³"
 			}
 		},
 		"save_as": {
-			"title": "Save As",
+			"title": "Сохранить как",
 			"form": {
-				"plan_name": "Name",
-				"plan_name_placeholder": "New @:terms.plan Name",
+				"plan_name": "Имя",
+				"plan_name_placeholder": "Новое имя @:terms.plan",
 				"empire": "@:terms.empire"
 			}
 		},
 		"production": {
-			"label": "Production",
+			"label": "Производство",
 			"planet_resources": "@:terms.planets @:terms.resources_plural",
 			"form": {
-				"match_cogc": "Match @:terms.cogc",
-				"select_placeholder": "Select @:terms.buildings & Add to @:terms.plan"
+				"match_cogc": "Соответствие @:terms.cogc",
+				"select_placeholder": "Выбрать @:terms.buildings и добавить в @:terms.plan"
 			},
 			"table": {
 				"building_recipe": "@:terms.buildings / @:terms.recipes",
-				"runtime": "Runtime",
-				"share": "Share",
-				"tools": "Tools"
+				"runtime": "Время работы",
+				"share": "Поделиться",
+				"tools": "Инструменты"
 			}
 		},
 		"production_building": {
-			"no_recipe": "No Active @:terms.recipes_plural",
-			"qty": "Qty",
+			"no_recipe": "Нет активных @:terms.recipes_plural",
+			"qty": "Кол-во",
 			"buttons": {
 				"add_recipe": "@:terms.recipes"
 			},

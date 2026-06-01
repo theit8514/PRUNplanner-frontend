@@ -1,0 +1,10 @@
+packages:
+    - "."
+
+allowBuilds:
+    core-js: true
+    esbuild: true
+    protobufjs: true
+    vue-demi: true
+
+strictDepBuilds: true

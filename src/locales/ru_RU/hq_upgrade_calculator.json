@@ -1,25 +1,25 @@
 {
 	"view_title": "HQ",
-	"title": "HQ Upgrade Calculator",
+	"title": "Калькулятор улучшения HQ",
 	"form": {
-		"from_level": "From HQ Level",
-		"to_level": "To HQ Level",
-		"cx_preference": "@:terms.cx Preference",
-		"show_locations": "Show Locations"
+		"from_level": "С уровня HQ",
+		"to_level": "До уровня HQ",
+		"cx_preference": "Установки @:terms.cx",
+		"show_locations": "Показать местоположение"
 	},
 	"cost": {
-		"total_cost": "Total @:terms.cost",
-		"total_weight": "Total @:terms.weight",
-		"total_volume": "Total @:terms.volume"
+		"total_cost": "Всего @:terms.cost",
+		"total_weight": "Всего @:terms.weight",
+		"total_volume": "Всего @:terms.volume"
 	},
 	"table": {
 		"material": "@:terms.materials",
 		"amount": "@:terms.amount",
 		"storage": "@:terms.storage",
-		"override_stock": "Override Stock",
-		"required": "Required",
-		"cost_unit": "Cost / Unit",
-		"cost_total": "Total Cost",
-		"storage_locations": "@:terms.storage Locations"
+		"override_stock": "Переопределить запас",
+		"required": "Требуется",
+		"cost_unit": "Цена за единицу",
+		"cost_total": "Общая стоимость",
+		"storage_locations": "@:terms.storage Местоположения"
 	}
 }

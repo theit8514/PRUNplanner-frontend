@@ -6,7 +6,7 @@
 		"message": "У вас нет предпочитаемой биржи. Перейдите в Менеджмент, чтобы выбрать биржу."
 	},
 	"buttons": {
-		"csv_import_export": "",
+		"csv_import_export": "@:exchanges.components.csv_import_export.title",
 		"save": "@:common.buttons.save",
 		"reload": "@:common.buttons.reload"
 	},
@@ -25,11 +25,11 @@
 	},
 	"components": {
 		"ticker": {
-			"no_data": "Нет",
+			"no_data": "Настройки @:terms.material_ticker не заданы",
 			"material_placeholder": "@:terms.materials"
 		},
 		"exchanges": {
-			"no_data": "No @:terms.exchanges Preference Configured"
+			"no_data": "Нету @:terms.exchanges Preference Configured"
 		},
 		"planet_preferences": {
 			"title": "Планетарные предпочтения",
@@ -39,8 +39,8 @@
 			},
 			"table": {
 				"planet": "@:terms.planets",
-				"exchange_preference": "@:terms.exchanges Preferences",
-				"ticker_preference": "@:terms.material_ticker Preferences"
+				"exchange_preference": "Настройки @:terms.exchanges",
+				"ticker_preference": "Настройки @:terms.material_ticker"
 			}
 		},
 		"csv_import_export": {

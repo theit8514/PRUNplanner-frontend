@@ -26,7 +26,7 @@ ENV VITE_API_BASE_URL=$VITE_API_BASE_URL \
     VITE_INDEXEDDB_DBNAME=$VITE_INDEXEDDB_DBNAME
 
 # Copy package manager files
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile

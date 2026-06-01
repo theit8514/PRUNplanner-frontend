@@ -14,7 +14,7 @@
 		"plan": "@:terms.plan配置",
 		"plans_all": "全部@:terms.plans_plural配置",
 		"planet_data": "@:terms.planets数据：{name}",
-		"cx": "@:terms.cx Configurations",
+		"cx": "@:terms.cx配置",
 		"shared_list": "共享@:terms.plans_plural配置",
 		"empire_plans": "@:terms.empire@:terms.plans_plural配置"
 	}

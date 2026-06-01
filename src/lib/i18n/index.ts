@@ -49,14 +49,14 @@ export const SupportedLanguages: PSelectOption[] = [
 	// 	label: "Español",
 	// 	value: "es_ES",
 	// },
-	{
-		label: "Français",
-		value: "fr_FR",
-	},
-	{
-		label: "Italiano",
-		value: "it_IT",
-	},
+	// {
+	// 	label: "Français",
+	// 	value: "fr_FR",
+	// },
+	// {
+	// 	label: "Italiano",
+	// 	value: "it_IT",
+	// },
 	// {
 	// 	label: "日本",
 	// 	value: "ja_JP",
@@ -65,10 +65,10 @@ export const SupportedLanguages: PSelectOption[] = [
 	// 	label: "한국어",
 	// 	value: "ko_KR",
 	// },
-	{
-		label: "Nederlands",
-		value: "nl_NL",
-	},
+	// {
+	// 	label: "Nederlands",
+	// 	value: "nl_NL",
+	// },
 	// {
 	// 	label: "Português",
 	// 	value: "pt_PT",

@@ -1,25 +1,25 @@
 {
-	"view_title": "API Keys",
-	"title": "API Keys",
+	"view_title": "Clés API",
+	"title": "Clés API",
 	"info": {
 		"description": {
-			"p1": "The {link} provides programmatic access to all your planning data, ingame metadata (buildings, recipes, materials) and calculated market metrics like VWAP. While public endpoints remain open for community use, access to private planning data - including your plan configurations - require secure authentication.",
-			"p2": "By utilizing these endpoints, you can synchronize your planning operations with external spreadsheets, custom dashboards, or even optimization algorithms.",
-			"link": "PRUNplanner REST API",
-			"warning": "API keys grant full access to your account data and remain valid indefinitely. Treat these credentials as sensitive as your password. Never commit keys to public repositories or share them with unverified third-party services. If a key is compromised, revoke it immediately and generate a replacement."
+			"p1": "Le {link} permet d'accéder par programmation à toutes vos données de planification, aux métadonnées du jeu (bâtiments, recettes, matériaux) et aux indicateurs de marché calculés comme le VWAP. Bien que les points d'accès publics restent ouverts à l'usage de la communauté, l'accès aux données de planification privées — y compris vos configurations de plan — nécessite une authentification sécurisée.",
+			"p2": "En utilisant ces points de terminaison, vous pouvez synchroniser vos opérations de planification avec des feuilles de calcul externes, des tableaux de bord personnalisés, ou même des algorithmes d'optimisation.",
+			"link": "API REST PRUNplanner",
+			"warning": "Les clés API donnent un accès complet aux données de votre compte et restent valides indéfiniment. Traitez-les avec la même confidentialité que votre mot de passe. Ne les enregistrez jamais dans des bases de données publiques et ne les partagez jamais avec des services tiers non vérifiés. Si une clé est compromise, révoquez-la immédiatement et générez-en une nouvelle."
 		}
 	},
 	"manage": {
-		"title": "PRUNplanner API Keys",
+		"title": "Clés API PRUNplanner",
 		"buttons": {
-			"new_apikey": "Create New Key",
-			"revoke_apikey": "Revoke"
+			"new_apikey": "Créer nouvelle clé",
+			"revoke_apikey": "Révoquer"
 		},
 		"table": {
-			"apikey_name": "Name",
-			"apikey_prefix": "Prefix",
-			"apikey_created": "Created",
-			"apikey_lastused": "Last Used"
+			"apikey_name": "Nom",
+			"apikey_prefix": "Préfixe",
+			"apikey_created": "Créée",
+			"apikey_lastused": "Dernièrement utilisée"
 		}
 	},
 	"implementation": {
@@ -27,14 +27,14 @@
 		"link": "View REST API Reference →"
 	},
 	"create": {
-		"title": "Create API Key",
+		"title": "Créer clé API",
 		"form": {
-			"key_name": "Key Name",
-			"key_description": "Give your key a descriptive name to help you identify it later.",
-			"success_title": "Key Generated Successfully",
-			"success_key": "Your Secret Key (Save this Now!)",
-			"success_note": "For security, we cannot show this key again. If you lose it, you must revoke and create a new one.",
-			"error": "Error creating your API Key. Please try again later."
+			"key_name": "Nom de la clé",
+			"key_description": "Donnez à votre clé un nom descriptif pour aider à l'identifier plus tard.",
+			"success_title": "Clé générée",
+			"success_key": "Votre clé sécrète (Sauvegarde la maintenant !)",
+			"success_note": "Pour des raisons de sécurité, nous ne pouvons plus afficher cette clé. Si vous la perdez, vous devez la révoquer et en créer une nouvelle.",
+			"error": "Erreur lors de la création de votre clé API. Veuillez réessayer plus tard."
 		},
 		"buttons": {
 			"create": "@:common.buttons.create",

@@ -44,46 +44,46 @@
 			"title": "5 Простых шагов по интеграции FIO и PRUNplanner",
 			"p1": "FIO — это разработанный сообществом {link}, который собирает данные вашей игры, делает их доступными за пределами Prosperous Universe и полностью бесплатен в использовании.",
 			"p2": "Просто установите расширение для Chrome или Firefox, перезагрузите браузер с открытым APEX и нажмите кнопку расширения в правом верхнем углу браузера, чтобы создать аккаунт. FIO будет автоматически собирать (только) ваши игровые данные пока вы продолжаете играть.",
-			"p3": "You can now login to the {link} to see your data and create an API-Key PRUNplanner will use to import your storage (materials you have somewhere) and sites (planets, ships, warehouses) data.",
-			"p4": "Creating the key is easy, if you head to the {link} page and click the \"Create API Key\" button. Enter a name for your key (e.g., \"PRUNplanner\") and your FIO password. You don't need to \"Allow Writes\" as PRUNplanner will not manipulate any of your data, the tool just reads and uses it.",
-			"p5": "Give PRUNplanner a couple of minutes and your game data will appear, allowing you to see when to repair ships, what buildings you have already constructed when creating or modifying plans or when to resupply your bases.",
+			"p3": "Теперь вы можете войти в {link} чтобы просмотреть свои данные и создать API-ключ. PRUNplanner использует его для импорта ваших запасов (материалы на складах) и объектов (планеты, корабли, склады).",
+			"p4": "Создать ключ просто — перейдите на страницу {link} и нажмите кнопку «Создать API-ключ». Введите название ключа (например «PRUNplanner») и свой пароль FIO. Не нужно включать «Разрешить запись», так как PRUNplanner не изменяет ваши данные — инструмент только читает и использует их.",
+			"p5": "Дайте PRUNplanner несколько минут и ваши игровые данные появятся. Это позволит вам видеть когда ремонтировать корабли, какие здания уже построены при создании или изменении планов, а также когда пополнять запасы баз.",
 			"steps": {
-				"1": "Download and install the {link}",
-				"2": "Open your game, click the extensions button and register your FIO account",
-				"3": "Head to the FIO website, open your {link} and create an API-Key for PRUNplanner",
-				"4": "Copy and enter your API Key as well as your Prosperous Universe username to your profile above and press the \"Update Profile\" button",
-				"5": "Wait a few minutes for PRUNplanner to get your data and enjoy additional planning capabilities. Your data will be updated automatically in the background, no need to do anything."
+				"1": "Скачать и установить {link}",
+				"2": "Откройте игру, нажмите кнопку расширений и зарегистрируйте свой аккаунт FIO",
+				"3": "Перейдите на сайт FIO, откройте {link} и создайте API-ключ для PRUNplanner",
+				"4": "Скопируйте и введите ваш API-ключ, а также имя пользователя в Prosperous Universe в профиль выше и нажмите кнопку «Обновить профиль»",
+				"5": "Подождите несколько минут пока PRUNplanner загрузит ваши данные и наслаждайтесь расширенными возможностями планирования. Ваши данные будут обновляться автоматически в фоновом режиме — никаких дополнительных действий не требуется."
 			},
-			"refined_prun": "While you're enhancing your gameplay, also check out {link}: Another browser extension greatly simplifying the user interface and adding tons of features."
+			"refined_prun": "Пока вы улучшаете игровой процесс, также обратите внимание на {link}: ещё одно расширение для браузера, которое значительно упрощает интерфейс и добавляет множество функций."
 		},
 		"links": {
-			"browser_extension": "Browser Extension",
-			"fio_website": "FIO Website",
-			"fio_settings": "FIO Settings",
-			"fio_extension": "FIO Browser Extension",
-			"settings_short": "Settings",
+			"browser_extension": "Расширение для браузера",
+			"fio_website": "Сайт FIO",
+			"fio_settings": "Настройки FIO",
+			"fio_extension": "Расширение FIO для браузера",
+			"settings_short": "Настройки",
 			"refined_prun": "Refined PrUn"
 		}
 	},
 	"preferences": {
-		"title": "Preferences",
-		"description": "Your preferences are saved locally in your browser and aren't synced with the backend yet. Use this panel to review and customize your PRUNplanner settings.",
+		"title": "Параметры",
+		"description": "Ваши настройки сохраняются локально в браузере и пока не синхронизируются с сервером. Используйте эту панель для просмотра и настройки параметров PRUNplanner.",
 		"form": {
-			"tool_preferences": "Tool Preferences",
-			"language": "Language",
-			"language_note": "We want to make PRUNplanner accessible to everyone. If you'd like to see the tool in your native language - or help us polish an existing translation - join our localization project on {link}.",
-			"default_empire": "Default Empire",
-			"default_cx": "Default CX",
-			"fio_burn": "FIO Burn",
-			"red_threshold": "Red Threshold",
-			"yellow_threshold": "Yellow Threshold",
-			"resupply_days": "Resupply Days",
-			"xit_origin": "XIT Origin",
-			"buy_from_cx": "XIT Buy from CX",
-			"plan_specific": "Plan-Specific Settings",
-			"plan_specific_description": "These settings are managed within individual plans. This section provides an overview of the preferences you've customized so far - to modify them, navigate to the corresponding plan.",
-			"plan": "Plan",
-			"preferences": "Preferences"
+			"tool_preferences": "Настройки инструментов",
+			"language": "Язык",
+			"language_note": "Мы хотим сделать PRUNplanner доступным для всех. Если вы хотите видеть инструмент на своём родном языке или помочь улучшить существующий перевод — присоединяйтесь к нашему проекту локализации на {link}.",
+			"default_empire": "Империя по умолчанию",
+			"default_cx": "CX по умолчанию",
+			"fio_burn": "Расход FIO",
+			"red_threshold": "Красный Порог",
+			"yellow_threshold": "Жёлтый порог",
+			"resupply_days": "Дней до пополнения",
+			"xit_origin": "Источник XIT",
+			"buy_from_cx": "Купить XIT через CX",
+			"plan_specific": "Индивидуальные настройки плана",
+			"plan_specific_description": "Эти настройки управляются в рамках отдельных планов. Данный раздел предоставляет обзор настроек которые вы уже изменили — чтобы их изменить, перейдите к соответствующему плану.",
+			"plan": "План",
+			"preferences": "Параметры"
 		}
 	}
 }

@@ -1,4 +1,4 @@
-# Browser Storage
+# Browser Speicher
 
 To reduce the load on the backend API and improve performance, PRUNplanner stores game data directly in your browser. This allows for faster access and a smoother user experience. The tool also automatically refreshes stored data after a set period to ensure it remains up to date.
 

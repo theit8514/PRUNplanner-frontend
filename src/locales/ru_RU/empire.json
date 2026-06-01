@@ -49,24 +49,24 @@
 		"exclusive_consumption": "Эксклюзивное потребление"
 	},
 	"opportunities": {
-		"headline": "Production Opportunities",
-		"intro": "Find recipe opportunities to convert excess materials into other products. This view identifies production opportunities where your Material I/O shows a positive delta, prioritized by input availability",
-		"please_note": "Please Note:",
-		"note": "Do not rely on the available opportunity alone. Cross-reference trade volumes and exchange overviews (via hover on the material) to assess market liquidity and potential ROI. Use indicators to identify which specific material is bottlenecking your scaling potential or if selling your available delta is more profitable than moving to another production.",
+		"headline": "Производственные возможности",
+		"intro": "Находите возможности для переработки избыточных материалов в другие продукты. Этот раздел выявляет производственные возможности там где ваш материальный ввод/вывод показывает положительную дельту, с приоритетом по доступности входных материалов",
+		"please_note": "Обратите внимание:",
+		"note": "Не полагайтесь только на доступные возможности. Сверяйтесь с объёмами торгов и обзорами биржи (при наведении на материал) чтобы оценить ликвидность рынка и потенциальный ROI. Используйте индикаторы чтобы определить какой конкретный материал ограничивает ваш потенциал масштабирования, или выгоднее ли продать имеющуюся дельту чем переходить к другому производству.",
 		"tiles": {
-			"opportunities": "Opportunities",
-			"delta_required": "Delta Required",
-			"material_missing": "Material Missing"
+			"opportunities": "Возможности",
+			"delta_required": "Необходима дельта",
+			"material_missing": "Материал отсутствует"
 		},
 		"table": {
-			"building": "Building",
-			"flow_inputs": "Production (Inputs &rarr; Outputs)",
-			"analysis": "Analysis",
-			"sell_inputs": "Sell Inputs",
-			"sell_outputs": "Sell Outputs",
-			"potential_batches": "Potential Batches",
-			"delta_required": "Delta Required",
-			"missing_material": "Missing Material"
+			"building": "Строительство",
+			"flow_inputs": "Производство (Входные &rarr; Выходные материалы)",
+			"analysis": "Аналитика",
+			"sell_inputs": "Продать входные",
+			"sell_outputs": "Продать выходные",
+			"potential_batches": "Потенциальные партии",
+			"delta_required": "Необходима дельта",
+			"missing_material": "Отсутствующие материалы"
 		}
 	}
 }
