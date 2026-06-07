@@ -13,6 +13,8 @@
 	const {
 		burnResupplyDays,
 		burnOrigin,
+		burnDefaultMode,
+		burnFullCoverThreshold,
 		getBurnDisplayClass,
 		defaultBuyItemsFromCX,
 	} = usePreferences();
@@ -106,10 +108,8 @@
 	const refHideInfinite: Ref<boolean> = ref(false);
 	const refMaterialOverrides: Ref<Record<string, number>> = ref({});
 	const refMaterialInactives: Ref<Set<string>> = ref(new Set([]));
-	const refBurnMode: Ref<"simple" | "solver"> = ref("simple");
 	const refShipWeightCapacity: Ref<number> = ref(1000);
 	const refShipVolumeCapacity: Ref<number> = ref(1000);
-	const refFullCoverThreshold: Ref<number> = ref(1.0);
 
 	const modeOptions = computed(() => [
 		{ label: t("xit.form.mode_simple"), value: "simple" },
@@ -118,7 +118,7 @@
 
 	const { materialTable, totalWeightVolume, totalPrice, fit } =
 		await useBurnXITAction(
-			refBurnMode,
+			burnDefaultMode,
 			localElements,
 			burnResupplyDays,
 			refHideInfinite,
@@ -128,7 +128,7 @@
 			ref(undefined),
 			refShipWeightCapacity,
 			refShipVolumeCapacity,
-			refFullCoverThreshold
+			burnFullCoverThreshold
 		);
 
 	function applyShipPreset(weight: number, volume: number): void {
@@ -152,7 +152,7 @@
 					<PForm>
 						<PFormItem :label="t('xit.form.mode')">
 							<PSelect
-								v-model:value="refBurnMode"
+								v-model:value="burnDefaultMode"
 								:options="modeOptions"
 								class="w-full" />
 						</PFormItem>
@@ -182,7 +182,7 @@
 									burnOrigin === 'Configure on Execution'
 								" />
 						</PFormItem>
-						<template v-if="refBurnMode === 'solver'">
+						<template v-if="burnDefaultMode === 'solver'">
 							<PFormItem :label="t('xit.form.ship_weight')">
 								<PInputNumber
 									v-model:value="refShipWeightCapacity"
@@ -216,7 +216,7 @@
 								:label="t('xit.form.full_cover_threshold')">
 								<div class="flex flex-row items-center gap-x-2">
 									<PInputNumber
-										v-model:value="refFullCoverThreshold"
+										v-model:value="burnFullCoverThreshold"
 										:min="0"
 										show-buttons
 										class="w-full" />

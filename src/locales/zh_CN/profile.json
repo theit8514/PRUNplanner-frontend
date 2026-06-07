@@ -80,6 +80,8 @@
 			"resupply_days": "补给天数",
 			"xit_origin": "XIT 来源",
 			"buy_from_cx": "XIT 从 CX 购买",
+			"burn_default_mode": "Default Burn Mode",
+			"burn_full_cover_threshold": "Burn Full Cover Threshold",
 			"plan_specific": "计划专属设置",
 			"plan_specific_description": "这些设置在各个计划中单独管理。本部分展示你目前已自定义的偏好设置概览；如需修改，请前往对应的计划。",
 			"plan": "计划",
