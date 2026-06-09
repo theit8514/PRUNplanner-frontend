@@ -80,8 +80,6 @@
 			"resupply_days": "Nachschub-Tage",
 			"xit_origin": "XIT Origin",
 			"buy_from_cx": "XIT Buy from CX",
-			"burn_default_mode": "Default Burn Mode",
-			"burn_full_cover_threshold": "Burn Full Cover Threshold",
 			"plan_specific": "Planspezifische Einstellungen",
 			"plan_specific_description": "Diese Einstellungen werden in einzelnen Plänen verwaltet. Dieser Abschnitt bietet eine Übersicht über die Einstellungen, die du bisher angepasst hast - um sie zu ändern, wähle den entsprechenden Plan.",
 			"plan": "Plan",
