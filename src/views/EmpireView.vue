@@ -330,7 +330,7 @@
 								planetNaturalId,
 								ticker: output.ticker,
 								amount: output.amount,
-								costSplit: output.costSplit,
+								costTotal: output.costTotal,
 								cogm: recipe.cogm,
 							},
 						});
