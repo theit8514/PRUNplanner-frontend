@@ -1,10 +1,17 @@
 {
 	"form": {
+		"mode": "Mode",
+		"mode_simple": "Simple (days)",
+		"mode_solver": "Solver (ship target)",
 		"origin": "来源地",
 		"target_days": "目标天数",
 		"buy_from_cx": "从交易所购买",
 		"buy_from_cx_warning": "只有来源地为仓库时才能采购。",
 		"fit_ship": "适配飞船",
+		"ship_weight": "Ship Weight (t)",
+		"ship_volume": "Ship Volume (m³)",
+		"full_cover_threshold": "Full Cover",
+		"full_cover_threshold_info": "Materials whose daily burn is at or below this value are shipped to their full target-days quantity first, before the solver balances the rest of the cargo. This guarantees tiny-burn items are not starved by the optimization. Set to 0 to disable.",
 		"hide_infinite": "隐藏无限项",
 		"json": "JSON"
 	},

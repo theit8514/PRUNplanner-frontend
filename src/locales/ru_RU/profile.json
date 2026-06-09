@@ -80,6 +80,8 @@
 			"resupply_days": "Дней до пополнения",
 			"xit_origin": "Источник XIT",
 			"buy_from_cx": "Купить XIT через CX",
+			"burn_default_mode": "Default Burn Mode",
+			"burn_full_cover_threshold": "Burn Full Cover Threshold",
 			"plan_specific": "Индивидуальные настройки плана",
 			"plan_specific_description": "Эти настройки управляются в рамках отдельных планов. Данный раздел предоставляет обзор настроек которые вы уже изменили — чтобы их изменить, перейдите к соответствующему плану.",
 			"plan": "План",
