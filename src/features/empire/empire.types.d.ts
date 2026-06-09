@@ -13,11 +13,11 @@ interface IEmpireCOGMRow {
 	planetNaturalId: string;
 	ticker: string;
 	amount: number;
-	costSplit: number;
+	costTotal: number;
 	cogm: IProductionBuildingRecipeCOGM;
 	/** CX sell price per unit (when CX selected); set during enrichment. */
 	cxSellValue?: number | null;
-	/** cxSellValue - costSplit; set during enrichment. */
+	/** cxSellValue - costTotal; set during enrichment. */
 	sellMinusCogm?: number | null;
 }
 

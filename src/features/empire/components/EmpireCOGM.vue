@@ -70,7 +70,7 @@
 					const sell = await getPrice(row.ticker, "SELL");
 					if (runId !== latestEnrichGeneration) return;
 					row.cxSellValue = sell;
-					row.sellMinusCogm = sell - row.costSplit;
+					row.sellMinusCogm = sell - row.costTotal;
 				}
 			}
 			if (runId !== latestEnrichGeneration) return;
@@ -168,13 +168,13 @@
 					:amount="rowData.amount" />
 			</template>
 		</XNDataTableColumn>
-		<XNDataTableColumn key="costSplit" title="COGM" sorter="default">
+		<XNDataTableColumn key="costTotal" title="COGM" sorter="default">
 			<template #title>
 				<div class="text-end">COGM</div>
 			</template>
 			<template #render-cell="{ rowData }">
 				<div class="text-nowrap text-end">
-					{{ formatNumber(rowData.costSplit) }}
+					{{ formatNumber(rowData.costTotal) }}
 					<span class="pl-1 font-light text-white/50"> $ </span>
 				</div>
 			</template>
