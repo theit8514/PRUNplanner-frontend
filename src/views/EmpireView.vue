@@ -316,6 +316,7 @@
 			for (const building of planResult.production.buildings) {
 				for (const recipe of building.activeRecipes) {
 					if (
+						recipe.amount <= 0 ||
 						recipe.cogm?.outputCOGM == null ||
 						recipe.cogm.visible !== true
 					)
